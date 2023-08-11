@@ -1,3 +1,32 @@
+/*Gerais*/
+html {
+    scroll-behavior: smooth;
+}
 body {
     background: black;
+    background-image: url("../img/background.jpg")!important;
 }
+/*ANIMAÇÕES E OUTRAS FUNÇÕES/DECLARAÇÕES*/
+:root {
+    --color-white: #fff;
+}
+@keyframes written_tex {
+    100% {
+        color: var(--color-white);
+    }
+}
+/*header---------------------------------------------------------------------------------------------------------*/
+
+/*main-----------------------------------------------------------------------------------------------------------*/
+/*animação principal*/
+section div h1 {
+    padding: 0px 4px;
+    font-size: 4.5rem;
+    line-height: 6rem;
+    color: transparent;
+    animation: written_tex .5s ease forwards;
+}
+section div h1:nth-child(1){
+    animation-delay: 1s;
+}
+/*footer---------------------------------------------------------------------------------------------------------*/
