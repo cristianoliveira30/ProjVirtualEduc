@@ -29,4 +29,9 @@ section div h1 {
 section div h1:nth-child(1){
     animation-delay: 1s;
 }
+/*animação do texto*/
+section .DivText {
+    width: 800px;
+    height: 250px;
+}
 /*footer---------------------------------------------------------------------------------------------------------*/
