@@ -15,6 +15,28 @@ body {
         color: var(--color-white);
     }
 }
+@keyframes written_tex_2 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: auto;
+    }
+}
+@keyframes open_square {
+    0% {
+        width: 10px;
+        height: 0;
+    }
+    50% {
+        height: 250px;
+        width: 10px;
+    }
+    100% {
+        width: 800px;
+        height: 250px;
+    }
+}
 /*header---------------------------------------------------------------------------------------------------------*/
 
 /*main-----------------------------------------------------------------------------------------------------------*/
@@ -33,5 +55,14 @@ section div h1:nth-child(1){
 section .DivText {
     width: 800px;
     height: 250px;
+    animation: open_square .5s ease forwards;
+    animation-duration: 1s;
+}
+#texto {
+    margin: 0 auto;
+    font-family: 'Roboto Mono', monospace;
+    border-right: 2px solid yellow;
+
+    /*animation: written_tex_2  .1s ease forwards;*/
 }
 /*footer---------------------------------------------------------------------------------------------------------*/
