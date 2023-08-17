@@ -35,8 +35,22 @@ body {
     100% {
         width: 800px;
         height: 250px;
+        visibility: visible;
     }
 }
+@keyframes type{ 
+    from { width: 0; } 
+  } 
+  
+  @keyframes type2{
+    0%{width: 0;}
+    50%{width: 0;}
+    100%{ width: 100; } 
+  } 
+  
+  @keyframes blink{
+    to{opacity: .0;}
+  }
 /*header---------------------------------------------------------------------------------------------------------*/
 
 /*main-----------------------------------------------------------------------------------------------------------*/
@@ -58,11 +72,21 @@ section .DivText {
     animation: open_square .5s ease forwards;
     animation-duration: 1s;
 }
+/*animação da caixa de texto*/
 #texto {
-    margin: 0 auto;
-    font-family: 'Roboto Mono', monospace;
-    border-right: 2px solid yellow;
-
-    /*animation: written_tex_2  .1s ease forwards;*/
+  font-family: "Courier";
+  font-size: 20px;
+  margin: 10px 0 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 30em;
+  animation: type 4s steps(60, end);
+  animation-delay: 3s;
+  visibility: hidden;
 }
+  span{
+    animation: blink 1s infinite;
+  }
+  
+  
 /*footer---------------------------------------------------------------------------------------------------------*/
