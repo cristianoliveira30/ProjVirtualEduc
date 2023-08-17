@@ -9,6 +9,7 @@ body {
 /*ANIMAÇÕES E OUTRAS FUNÇÕES/DECLARAÇÕES*/
 :root {
     --color-white: #fff;
+    --color-transp: #ffffff00;
 }
 @keyframes written_tex {
     100% {
@@ -35,11 +36,12 @@ body {
     100% {
         width: 800px;
         height: 250px;
-        visibility: visible;
     }
 }
 @keyframes type{ 
     from { width: 0; } 
+    0% { color: var(--color-transp);}
+    20% {color: yellow;}
   } 
   
   @keyframes type2{
@@ -81,8 +83,7 @@ section .DivText {
   overflow: hidden;
   width: 30em;
   animation: type 4s steps(60, end);
-  animation-delay: 3s;
-  visibility: hidden;
+  animation-delay: 2s;
 }
   span{
     animation: blink 1s infinite;
