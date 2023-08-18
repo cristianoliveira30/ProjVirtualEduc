@@ -50,7 +50,7 @@
      <!-- Fim do Cabeçalho-->
       <!-- Início do Corpo-->
     <main class="rounded-pill">
-        <div class="w-30 position-absolute top-50 start-50 translate-middle bg-dark-subtle border border-primary" id="caixa">
+        <div class="w-30   translate-middle bg-dark-subtle border border-primary" id="caixa">
             <form>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email</label>
