@@ -42,6 +42,7 @@ body {
     from { width: 0; } 
     0% { color: var(--color-transp);}
     20% {color: yellow;}
+    100% {color: yellow;}
   } 
   
   @keyframes type2{
@@ -76,13 +77,14 @@ section .DivText {
 }
 /*animação da caixa de texto*/
 #texto {
+    color: transparent;
   font-family: "Courier";
   font-size: 20px;
   margin: 10px 0 0 10px;
   white-space: nowrap;
   overflow: hidden;
   width: 30em;
-  animation: type 4s steps(60, end);
+  animation: type 4s steps(60, end) forwards;
   animation-delay: 2s;
 }
   span{
