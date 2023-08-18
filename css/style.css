@@ -41,8 +41,8 @@ body {
 @keyframes type{ 
     from { width: 0; } 
     0% { color: var(--color-transp);}
-    20% {color: yellow;}
-    100% {color: yellow;}
+    20% {color: orange;}
+    100% {color: orange;}
   } 
   
   @keyframes type2{
