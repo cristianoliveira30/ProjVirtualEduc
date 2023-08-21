@@ -1,3 +1,7 @@
+/*Gerais*/
+html {
+    scroll-behavior: smooth;
+}
 body {
     background: black;
     background-image: url("../img/background.jpg")!important;
@@ -71,7 +75,7 @@ section .DivText {
     animation: open_square .5s ease forwards;
     animation-duration: 1s;
 }
-/*animação da caixa de texto*/
+/*animação do texto da caixa de texto*/
 #texto {
     color: transparent;
   font-family: "Courier";
@@ -83,3 +87,9 @@ section .DivText {
   animation: type 4s steps(60, end) forwards;
   animation-delay: 2s;
 }
+  span{
+    animation: blink 1s infinite;
+  }
+  
+  
+/*footer---------------------------------------------------------------------------------------------------------*/
