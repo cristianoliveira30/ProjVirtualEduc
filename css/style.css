@@ -1,3 +1,6 @@
+/*includes*/
+@import './cores.scss';
+
 /*Gerais*/
 html {
     scroll-behavior: smooth;

@@ -8,33 +8,49 @@ body {
 }
 @keyframes open_square {
     0% {
-        width: 10px!important;
+        width: 0px!important;
         height: 0;
-    }
-    50% {
-        height: 500px;
-        width: 10px!important;
     }
     100% {
         width: 500px!important;
         height: 500px;
     }
 }
-@keyframes aparecer {
+@keyframes open_labels {
     0% {
-        overflow: hidden;
+        width: 0px!important;
     }
     100% {
-        overflow: visible;
+        width: auto!important;
+    }
+}
+@keyframes open_inputs {
+    0% {
+        height: 0px!important;
+    }
+    100% {
+        height: 5px!important;
+    }
+}
+@keyframes aparecer {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
     }
 }
 /*main-----------------------------------------------------------------------------------------------------------*/
-#FromCadastro {
+main .FromCadastro {
     width: 450px;
     height: 50px;
 
     animation: open_square 2s ease forwards;
 }
-#FromCadastro > * {
-    animation: open_square 2s ease forwards;
-}
+/* Aplica a animação aparecer aos itens dentro do formulário */
+.FormCadastro label,button,input,select {
+    opacity: 0%;
+    animation: aparecer 2s ease forwards!important;
+    animation-delay: 1s!important;
+  }
+  
