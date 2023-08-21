@@ -2,3 +2,39 @@
 body {
     background: darkblue;
 }
+/*ANIMAÇÕES E OUTRAS FUNÇÕES/DECLARAÇÕES*/
+:root {
+    --color-transp: #ffffff00;
+}
+@keyframes open_square {
+    0% {
+        width: 10px!important;
+        height: 0;
+    }
+    50% {
+        height: 500px;
+        width: 10px!important;
+    }
+    100% {
+        width: 500px!important;
+        height: 500px;
+    }
+}
+@keyframes aparecer {
+    0% {
+        overflow: hidden;
+    }
+    100% {
+        overflow: visible;
+    }
+}
+/*main-----------------------------------------------------------------------------------------------------------*/
+#FromCadastro {
+    width: 450px;
+    height: 50px;
+
+    animation: open_square 2s ease forwards;
+}
+#FromCadastro > * {
+    animation: open_square 2s ease forwards;
+}
