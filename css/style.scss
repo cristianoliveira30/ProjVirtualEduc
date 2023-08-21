@@ -1,6 +1,3 @@
-/*includes*/
-@import './cores.scss';
-
 /*Gerais*/
 html {
     scroll-behavior: smooth;
@@ -17,6 +14,14 @@ body {
 @keyframes written_tex {
     100% {
         color: var(--color-white);
+    }
+}
+@keyframes written_tex_2 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: auto;
     }
 }
 @keyframes open_square {
@@ -39,6 +44,13 @@ body {
     20% {color: orange;}
     100% {color: orange;}
   } 
+  
+  @keyframes type2{
+    0%{width: 0;}
+    50%{width: 0;}
+    100%{ width: 100; } 
+  } 
+  
   @keyframes blink{
     to{opacity: .0;}
   }

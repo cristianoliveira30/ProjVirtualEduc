@@ -9,9 +9,9 @@
 </head>
 <body class="bg-dark">
     <header></header>
-    <main class="position-absolute top-50 start-50 translate-middle">
-        <div id="FromCadastro" class="border-primary top-50 start-50 border p-3 rounded-4 text-bg-dark-subtle bg-dark-subtle d-inline-block">
-            <form id="FormCadastro" class="row g-3">
+    <main class="position-fixed top-50 start-50 translate-middle">
+        <div class="FromCadastro bg-dark-subtle rounded-4 top-50 start-50 border border-primary p-3 text-bg-dark-subtle d-inline-block">
+            <form class="FormCadastro row g-3">
                 <div class="col-md-6">
                   <label for="inputEmail4" class="form-label">Email</label>
                   <input type="email" class="form-control" id="inputEmail4">
