@@ -75,7 +75,7 @@ section .DivText {
     animation: open_square .5s ease forwards;
     animation-duration: 1s;
 }
-/*animação da caixa de texto*/
+/*animação do texto da caixa de texto*/
 #texto {
     color: transparent;
   font-family: "Courier";
