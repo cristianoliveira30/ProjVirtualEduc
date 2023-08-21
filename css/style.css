@@ -16,14 +16,6 @@ body {
         color: var(--color-white);
     }
 }
-@keyframes written_tex_2 {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: auto;
-    }
-}
 @keyframes open_square {
     0% {
         width: 10px;
@@ -44,13 +36,6 @@ body {
     20% {color: orange;}
     100% {color: orange;}
   } 
-  
-  @keyframes type2{
-    0%{width: 0;}
-    50%{width: 0;}
-    100%{ width: 100; } 
-  } 
-  
   @keyframes blink{
     to{opacity: .0;}
   }
