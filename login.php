@@ -9,7 +9,8 @@
 </head>
 <body class="bg-dark">
     <!-- Início do Cabeçalho-->
-    <header>
+    <header class="">
+      <!--barra de navegação-->
         <nav class="navbar navbar-expand-lg bg-dark">
             <div class="container-fluid">
               <a class=" link-light navbar-brand" href="#">VirtualEduc</a>
@@ -47,10 +48,10 @@
             </div>
         </nav>
     </header>
-     <!-- Fim do Cabeçalho-->
-      <!-- Início do Corpo-->
+
     <main class="rounded-pill">
-        <div class="w-30 position-absolute top-50 start-50 translate-middle bg-dark-subtle border border-primary" id="caixa">
+      <!--formulário do login-->
+        <div class="w-30   translate-middle bg-dark-subtle border border-primary" id="caixa">
             <form>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email</label>
@@ -68,13 +69,10 @@
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
         </div>
-    </main>
-    <!-- Fim do Corpo-->
-    <!-- Início do Rodapé-->
-    <footer>
+    </main class="">
 
+    <footer class="">
     </footer>
-    <!-- Fim do Rodapé-->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     

@@ -10,7 +10,7 @@
 <body class="bg-dark">
     <header></header>
     <main class="position-absolute top-50 start-50 translate-middle">
-        <div id="FromCadastro" class="border-light top-50 start-50 border p-3 rounded-4 text-bg-dark-subtle bg-dark-subtle d-inline-block">
+        <div id="FromCadastro" class="border-primary top-50 start-50 border p-3 rounded-4 text-bg-dark-subtle bg-dark-subtle d-inline-block">
             <form id="FormCadastro" class="row g-3">
                 <div class="col-md-6">
                   <label for="inputEmail4" class="form-label">Email</label>
