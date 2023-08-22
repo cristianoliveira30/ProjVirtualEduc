@@ -10,5 +10,10 @@ body {
     border-radius: 20px;
     padding: 10px;
     margin: 20px;
-    animation: open_square 2s ease forwards;
+    animation: open_square_3 2s ease forwards;
+}
+#caixa form {
+    opacity: 0;
+    animation: aparecer 3s ease forwards;
+    animation-delay: 2s;
 }

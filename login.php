@@ -52,7 +52,7 @@
     <main class="rounded-pill">
       <!--formulário do login-->
       <div class="w-28 position-absolute top-50 start-50 translate-middle bg-dark-subtle border border-primary" id="caixa">
-            <form>
+            <form class=" align-items-center">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">

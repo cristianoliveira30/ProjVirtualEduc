@@ -22,14 +22,14 @@ section div h1 {
 section div h1:nth-child(1){
     animation-delay: 1s;
 }
-/*animação do texto*/
+/*animação do quadro do texto*/
 section .DivText {
     width: 0px;
     height: 0px;
     animation: open_square .5s ease forwards;
     animation-duration: 1s;
 }
-/*animação do texto da caixa de texto*/
+/*animação do texto dp quadro do texto*/
 #texto {
     color: transparent;
   font-family: "Courier";

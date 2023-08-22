@@ -36,6 +36,16 @@ pra manter o sistema organizado*/
     height: 500px;
   }
 }
+@keyframes open_square_3 {
+  0% {
+    width: 0px !important;
+    height: 0;
+  }
+  100% {
+    width: 600px !important;
+    height: 300px !important;
+  }
+}
 @keyframes type {
   from {
     width: 0;
@@ -87,7 +97,7 @@ section div h1:nth-child(1) {
   animation-delay: 1s;
 }
 
-/*animação do texto*/
+/*animação do quadro do texto*/
 section .DivText {
   width: 0px;
   height: 0px;
@@ -95,7 +105,7 @@ section .DivText {
   animation-duration: 1s;
 }
 
-/*animação do texto da caixa de texto*/
+/*animação do texto dp quadro do texto*/
 #texto {
   color: transparent;
   font-family: "Courier";

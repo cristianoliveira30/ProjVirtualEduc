@@ -33,6 +33,20 @@ pra manter o sistema organizado*/
         height: 500px;
     }
 }
+@keyframes open_square_3 { //abre um quadro
+    0% {
+        width: 10px;
+        height: 0;
+    }
+    50% {
+        height: 350px;
+        width: 10px;
+    }
+    100% {
+        width: 400px;
+        height: 350px;
+    }
+}
 @keyframes type{ //efeito de digitação de texto
     from { width: 0; } 
     0% { color: var(--color-transp);}
