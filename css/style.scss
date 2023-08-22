@@ -1,59 +1,13 @@
+/*importações*/
+@import './animações.scss';
+
 /*Gerais*/
 html {
     scroll-behavior: smooth;
 }
 body {
-    background: black;
     background-image: url("../img/background.jpg")!important;
 }
-/*ANIMAÇÕES E OUTRAS FUNÇÕES/DECLARAÇÕES*/
-:root {
-    --color-white: #fff;
-    --color-transp: #ffffff00;
-}
-@keyframes written_tex {
-    100% {
-        color: var(--color-white);
-    }
-}
-@keyframes written_tex_2 {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: auto;
-    }
-}
-@keyframes open_square {
-    0% {
-        width: 10px;
-        height: 0;
-    }
-    50% {
-        height: 250px;
-        width: 10px;
-    }
-    100% {
-        width: 800px;
-        height: 250px;
-    }
-}
-@keyframes type{ 
-    from { width: 0; } 
-    0% { color: var(--color-transp);}
-    20% {color: orange;}
-    100% {color: orange;}
-  } 
-  
-  @keyframes type2{
-    0%{width: 0;}
-    50%{width: 0;}
-    100%{ width: 100; } 
-  } 
-  
-  @keyframes blink{
-    to{opacity: .0;}
-  }
 /*header---------------------------------------------------------------------------------------------------------*/
 
 /*main-----------------------------------------------------------------------------------------------------------*/

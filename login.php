@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/login.scss">
 </head>
 <body class="bg-dark">
     <!-- Início do Cabeçalho-->
@@ -51,7 +51,7 @@
 
     <main class="rounded-pill">
       <!--formulário do login-->
-        <div class="w-30   translate-middle bg-dark-subtle border border-primary" id="caixa">
+      <div class="w-28 position-absolute top-50 start-50 translate-middle bg-dark-subtle border border-primary" id="caixa">
             <form>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email</label>
