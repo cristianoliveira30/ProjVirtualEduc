@@ -1,0 +1,115 @@
+@charset "UTF-8";
+/*importações*/
+/*Galera esse arquivo aqui foi feito pra conter todas as animações que formos usar e criar
+pra manter o sistema organizado*/
+:root {
+  --color-white: #fff;
+  --color-transp: #ffffff00;
+}
+
+@keyframes written_tex {
+  100% {
+    color: var(--color-white);
+  }
+}
+@keyframes open_square {
+  0% {
+    width: 10px;
+    height: 0;
+  }
+  50% {
+    height: 250px;
+    width: 10px;
+  }
+  100% {
+    width: 800px;
+    height: 250px;
+  }
+}
+@keyframes open_square_2 {
+  0% {
+    width: 0px !important;
+    height: 0;
+  }
+  100% {
+    width: 500px !important;
+    height: 500px;
+  }
+}
+@keyframes type {
+  from {
+    width: 0;
+  }
+  0% {
+    color: var(--color-transp);
+  }
+  20% {
+    color: orange;
+  }
+  100% {
+    color: orange;
+  }
+}
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes aparecer {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+/*Gerais*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url("../img/background.jpg") !important;
+}
+
+/*header---------------------------------------------------------------------------------------------------------*/
+/*main-----------------------------------------------------------------------------------------------------------*/
+/*animação principal*/
+section div h1 {
+  padding: 0px 4px;
+  font-size: 4.5rem;
+  line-height: 6rem;
+  color: transparent;
+  animation: written_tex 0.5s ease forwards;
+}
+
+section div h1:nth-child(1) {
+  animation-delay: 1s;
+}
+
+/*animação do texto*/
+section .DivText {
+  width: 0px;
+  height: 0px;
+  animation: open_square 0.5s ease forwards;
+  animation-duration: 1s;
+}
+
+/*animação do texto da caixa de texto*/
+#texto {
+  color: transparent;
+  font-family: "Courier";
+  font-size: 20px;
+  margin: 10px 0 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 30em;
+  animation: type 4s steps(60, end) forwards;
+  animation-delay: 2s;
+}
+
+span {
+  animation: blink 1s infinite;
+}
+
+/*footer---------------------------------------------------------------------------------------------------------*//*# sourceMappingURL=style.css.map */

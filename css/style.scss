@@ -24,8 +24,8 @@ section div h1:nth-child(1){
 }
 /*animação do texto*/
 section .DivText {
-    width: 800px;
-    height: 250px;
+    width: 0px;
+    height: 0px;
     animation: open_square .5s ease forwards;
     animation-duration: 1s;
 }

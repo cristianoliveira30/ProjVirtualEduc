@@ -1,0 +1,83 @@
+@charset "UTF-8";
+/*importações*/
+/*Galera esse arquivo aqui foi feito pra conter todas as animações que formos usar e criar
+pra manter o sistema organizado*/
+:root {
+  --color-white: #fff;
+  --color-transp: #ffffff00;
+}
+
+@keyframes written_tex {
+  100% {
+    color: var(--color-white);
+  }
+}
+@keyframes open_square {
+  0% {
+    width: 10px;
+    height: 0;
+  }
+  50% {
+    height: 250px;
+    width: 10px;
+  }
+  100% {
+    width: 800px;
+    height: 250px;
+  }
+}
+@keyframes open_square_2 {
+  0% {
+    width: 0px !important;
+    height: 0;
+  }
+  100% {
+    width: 500px !important;
+    height: 500px;
+  }
+}
+@keyframes type {
+  from {
+    width: 0;
+  }
+  0% {
+    color: var(--color-transp);
+  }
+  20% {
+    color: orange;
+  }
+  100% {
+    color: orange;
+  }
+}
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes aparecer {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+/*gerais*/
+body {
+  background: darkblue;
+}
+
+/*main-----------------------------------------------------------------------------------------------------------*/
+main .FromCadastro {
+  width: 450px;
+  height: 50px;
+  animation: open_square_2 2s ease forwards;
+}
+
+/* Aplica a animação aparecer aos itens dentro do formulário */
+.FormCadastro label, button, input, select {
+  opacity: 0%;
+  animation: aparecer 2s ease forwards !important;
+  animation-delay: 1s !important;
+}/*# sourceMappingURL=cadastro.css.map */
