@@ -31,9 +31,12 @@ pra manter o sistema organizado*/
     width: 0px !important;
     height: 0;
   }
+  50% {
+    width: 500px;
+  }
   100% {
     width: 500px !important;
-    height: 500px;
+    height: 450px;
   }
 }
 @keyframes open_square_3 {

@@ -8,7 +8,45 @@
     <title>Cadastro</title>
 </head>
 <body class="bg-dark">
-    <header></header>
+    <header>
+            <!--barra de navegação-->
+            <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container-fluid">
+              <a class=" link-light navbar-brand" href="#">VirtualEduc</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class=" link-light nav-link active" aria-current="page" href="#">Como Usar</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class=" link-light nav-link" href="#">Quem somos</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class=" link-light nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class=" link-light dropdown-item" href="#">Action</a></li>
+                      <li><a class=" link-light dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class=" link-light dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class=" link-light nav-link disabled" aria-disabled="true">Acessar Conteúdo</a>
+                  </li>
+                </ul>
+                <div name="buttons" class="position-absolute end-0 me-4">
+                  <a class=" link-light btn btn-primary" href="./index.php" role="button">Início</a>
+                  <a class=" link-light btn btn-info" href="./login.php" role="button">Login</a>
+                </div>
+              </div>
+            </div>
+        </nav>
+    </header>
     <main class="position-fixed top-50 start-50 translate-middle">
         <div class="FromCadastro bg-dark-subtle rounded-4 top-50 start-50 border border-primary p-3 text-bg-dark-subtle d-inline-block">
             <form class="FormCadastro row g-3">
