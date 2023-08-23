@@ -1,12 +1,14 @@
 /*importações*/
 @import './animações.scss';
+@import './bgindex.scss';
 
 /*Gerais*/
 html {
     scroll-behavior: smooth;
 }
 body {
-    background-image: url("../img/background.jpg")!important;
+  background: black;
+    //background-image: url("../img/background.jpg")!important;
 }
 /*header---------------------------------------------------------------------------------------------------------*/
 
