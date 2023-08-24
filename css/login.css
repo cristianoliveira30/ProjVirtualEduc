@@ -7,9 +7,29 @@ pra manter o sistema organizado*/
   --color-transp: #ffffff00;
 }
 
+@-webkit-keyframes written_tex {
+  100% {
+    color: var(--color-white);
+  }
+}
+
 @keyframes written_tex {
   100% {
     color: var(--color-white);
+  }
+}
+@-webkit-keyframes open_square {
+  0% {
+    width: 10px;
+    height: 0;
+  }
+  50% {
+    height: 250px;
+    width: 10px;
+  }
+  100% {
+    width: 800px;
+    height: 250px;
   }
 }
 @keyframes open_square {
@@ -26,17 +46,38 @@ pra manter o sistema organizado*/
     height: 250px;
   }
 }
+@-webkit-keyframes open_square_2 {
+  0% {
+    width: 0px !important;
+    height: 0;
+  }
+  100% {
+    width: 500px !important;
+    height: 450px;
+  }
+}
 @keyframes open_square_2 {
   0% {
     width: 0px !important;
     height: 0;
   }
-  50% {
-    width: 500px;
-  }
   100% {
     width: 500px !important;
     height: 450px;
+  }
+}
+@-webkit-keyframes open_square_3 {
+  0% {
+    width: 10px;
+    height: 0;
+  }
+  50% {
+    height: 350px;
+    width: 10px;
+  }
+  100% {
+    width: 400px;
+    height: 350px;
   }
 }
 @keyframes open_square_3 {
@@ -53,6 +94,20 @@ pra manter o sistema organizado*/
     height: 350px;
   }
 }
+@-webkit-keyframes type {
+  from {
+    width: 0;
+  }
+  0% {
+    color: var(--color-transp);
+  }
+  20% {
+    color: orange;
+  }
+  100% {
+    color: orange;
+  }
+}
 @keyframes type {
   from {
     width: 0;
@@ -67,9 +122,22 @@ pra manter o sistema organizado*/
     color: orange;
   }
 }
+@-webkit-keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
 @keyframes blink {
   to {
     opacity: 0;
+  }
+}
+@-webkit-keyframes aparecer {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
   }
 }
 @keyframes aparecer {
@@ -90,11 +158,14 @@ body {
   border-radius: 20px;
   padding: 10px;
   margin: 20px;
-  animation: open_square_3 2s ease forwards;
+  -webkit-animation: open_square_3 2s ease forwards;
+          animation: open_square_3 2s ease forwards;
 }
 
 #caixa form {
   opacity: 0;
-  animation: aparecer 3s ease forwards;
-  animation-delay: 2s;
+  -webkit-animation: aparecer 3s ease forwards;
+          animation: aparecer 3s ease forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }/*# sourceMappingURL=login.css.map */
