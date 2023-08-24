@@ -4,36 +4,41 @@
 
 /*Gerais*/
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
+
 body {
   background: black;
-    //background-image: url("../img/background.jpg")!important;
+  //background-image: url("../img/background.jpg")!important;
 }
+
 /*header---------------------------------------------------------------------------------------------------------*/
 
 /*main-----------------------------------------------------------------------------------------------------------*/
 /*animação principal*/
 section div h1 {
-    padding: 0px 4px;
-    font-size: 4.5rem;
-    line-height: 6rem;
-    color: transparent;
-    animation: written_tex .5s ease forwards;
+  padding: 0px 4px;
+  font-size: 4.5rem;
+  line-height: 6rem;
+  color: transparent;
+  animation: written_tex .5s ease forwards;
 }
-section div h1:nth-child(1){
-    animation-delay: 1s;
+
+section div h1:nth-child(1) {
+  animation-delay: 1s;
 }
+
 /*animação do quadro do texto*/
 section .DivText {
-    width: 0px;
-    height: 0px;
-    animation: open_square .5s ease forwards;
-    animation-duration: 1s;
+  width: 0px;
+  height: 0px;
+  animation: open_square .5s ease forwards;
+  animation-duration: 1s;
 }
+
 /*animação do texto dp quadro do texto*/
 #texto {
-    color: transparent;
+  color: transparent;
   font-family: "Courier";
   font-size: 20px;
   margin: 10px 0 0 10px;
@@ -43,9 +48,10 @@ section .DivText {
   animation: type 4s steps(60, end) forwards;
   animation-delay: 2s;
 }
-  span{
-    animation: blink 1s infinite;
-  }
-  
-  
+
+span {
+  animation: blink 1s infinite;
+}
+
+
 /*footer---------------------------------------------------------------------------------------------------------*/

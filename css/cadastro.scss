@@ -5,6 +5,7 @@
 body {
     background: darkblue;
 }
+
 /*main-----------------------------------------------------------------------------------------------------------*/
 main .FromCadastro {
     width: 450px;
@@ -12,10 +13,13 @@ main .FromCadastro {
 
     animation: open_square_2 2s ease forwards;
 }
+
 /* Aplica a animação aparecer aos itens dentro do formulário */
-.FormCadastro label,button,input,select {
+.FormCadastro label,
+button,
+input,
+select {
     opacity: 0%;
-    animation: aparecer 2s ease forwards!important;
-    animation-delay: 1s!important;
-  }
-  
+    animation: aparecer 2s ease forwards !important;
+    animation-delay: 1s !important;
+}

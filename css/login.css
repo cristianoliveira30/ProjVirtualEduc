@@ -5,6 +5,7 @@ pra manter o sistema organizado*/
 :root {
   --color-white: #fff;
   --color-transp: #ffffff00;
+  --color-light: #f8f9fa;
 }
 
 @-webkit-keyframes written_tex {

@@ -4,6 +4,7 @@
 body {
     font: optional;
 }
+
 /* Para adcionar uma borda*/
 #caixa {
     border: solid 1px black;
@@ -12,6 +13,7 @@ body {
     margin: 20px;
     animation: open_square_3 2s ease forwards;
 }
+
 #caixa form {
     opacity: 0;
     animation: aparecer 3s ease forwards;

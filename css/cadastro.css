@@ -5,6 +5,7 @@ pra manter o sistema organizado*/
 :root {
   --color-white: #fff;
   --color-transp: #ffffff00;
+  --color-light: #f8f9fa;
 }
 
 @-webkit-keyframes written_tex {
@@ -162,7 +163,10 @@ main .FromCadastro {
 }
 
 /* Aplica a animação aparecer aos itens dentro do formulário */
-.FormCadastro label, button, input, select {
+.FormCadastro label,
+button,
+input,
+select {
   opacity: 0%;
   -webkit-animation: aparecer 2s ease forwards !important;
           animation: aparecer 2s ease forwards !important;
