@@ -1,0 +1,11 @@
+<?php
+
+//VALIDAÇÕES
+$email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+$senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
+$nomeUsu = filter_input(INPUT_POST, 'nomeusu', FILTER_SANITIZE_SPECIAL_CHARS);
+$nomeComp = filter_input(INPUT_POST, 'nomecomp', FILTER_SANITIZE_SPECIAL_CHARS);
+$tel = filter_input(INPUT_POST, 'tel', FILTER_SANITIZE_NUMBER_INT);
+$escolaridade = filter_input(INPUT_POST, 'escolaridade');
+
+//ADICIONAR AO BANCO DE DADOS
