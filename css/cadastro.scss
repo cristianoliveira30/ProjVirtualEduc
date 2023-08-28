@@ -1,0 +1,28 @@
+/*importações*/
+@import './animações.scss';
+@import './cores.scss';
+
+/*gerais*/
+body {
+    min-height: 100vh;
+    background: radial-gradient(ellipse at bottom, $blue 0%, #0c0d13 100%);
+    overflow: hidden;
+}
+
+/*main-----------------------------------------------------------------------------------------------------------*/
+main .FromCadastro {
+    width: 450px;
+    height: 50px;
+
+    animation: open_square_2 2s ease forwards;
+}
+
+/* Aplica a animação aparecer aos itens dentro do formulário */
+.FormCadastro label,
+button,
+input,
+select {
+    opacity: 0%;
+    animation: aparecer 2s ease forwards !important;
+    animation-delay: 1s !important;
+}

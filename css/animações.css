@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/*importações*/
 /*Galera esse arquivo aqui foi feito pra conter todas as animações que formos usar e criar
 pra manter o sistema organizado*/
 :root {
@@ -148,27 +147,4 @@ pra manter o sistema organizado*/
   100% {
     opacity: 100%;
   }
-}
-body {
-  min-height: 100vh;
-  background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
-  overflow: hidden;
-}
-
-/* Para adcionar uma borda*/
-#caixa {
-  border: solid 1px black;
-  border-radius: 20px;
-  padding: 10px;
-  margin: 20px;
-  -webkit-animation: open_square_3 2s ease forwards;
-          animation: open_square_3 2s ease forwards;
-}
-
-#caixa form {
-  opacity: 0;
-  -webkit-animation: aparecer 3s ease forwards;
-          animation: aparecer 3s ease forwards;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-}/*# sourceMappingURL=login.css.map */
+}/*# sourceMappingURL=animações.css.map */

@@ -1,0 +1,23 @@
+/*importações*/
+@import './animações.scss';
+
+body {
+    min-height: 100vh;
+    background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+    overflow: hidden;
+}
+
+/* Para adcionar uma borda*/
+#caixa {
+    border: solid 1px black;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 20px;
+    animation: open_square_3 2s ease forwards;
+}
+
+#caixa form {
+    opacity: 0;
+    animation: aparecer 3s ease forwards;
+    animation-delay: 2s;
+}

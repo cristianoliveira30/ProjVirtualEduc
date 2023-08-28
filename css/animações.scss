@@ -1,0 +1,109 @@
+//ANIMAÇÕES E DECLARAÇÕES
+/*Galera esse arquivo aqui foi feito pra conter todas as animações que formos usar e criar
+pra manter o sistema organizado*/
+
+:root {
+    --color-white: #fff;
+    --color-transp: #ffffff00;
+    --color-light: #f8f9fa;
+}
+
+@keyframes written_tex {
+
+    //Texto aparece cor branca
+    100% {
+        color: var(--color-white);
+    }
+}
+
+@keyframes open_square {
+
+    //Abre um quadro
+    0% {
+        width: 10px;
+        height: 0;
+    }
+
+    50% {
+        height: 250px;
+        width: 10px;
+    }
+
+    100% {
+        width: 800px;
+        height: 250px;
+    }
+}
+
+@keyframes open_square_2 {
+
+    //abre um quadro
+    0% {
+        width: 0px !important;
+        height: 0;
+    }
+
+    100% {
+        width: 500px !important;
+        height: 450px;
+    }
+}
+
+@keyframes open_square_3 {
+
+    //abre um quadro
+    0% {
+        width: 10px;
+        height: 0;
+    }
+
+    50% {
+        height: 350px;
+        width: 10px;
+    }
+
+    100% {
+        width: 400px;
+        height: 350px;
+    }
+}
+
+@keyframes type {
+
+    //efeito de digitação de texto
+    from {
+        width: 0;
+    }
+
+    0% {
+        color: var(--color-transp);
+    }
+
+    20% {
+        color: orange;
+    }
+
+    100% {
+        color: orange;
+    }
+}
+
+@keyframes blink {
+
+    //efeito piscante do @type
+    to {
+        opacity: .0;
+    }
+}
+
+@keyframes aparecer {
+
+    //efeito de opacidade 0 - 100
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
