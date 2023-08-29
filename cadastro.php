@@ -53,37 +53,44 @@
   </header>
   <main class="position-fixed top-50 start-50 translate-middle">
     <div class="FromCadastro bg-dark-subtle rounded-4 top-50 start-50 border border-primary p-3 text-bg-dark-subtle d-inline-block">
-      <form class="FormCadastro row g-3">
+      <form class="FormCadastro row g-3" action="./validation.php" method="post" enctype="multipart/form">
         <div class="col-md-6">
           <label for="inputEmail4" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputEmail4">
+          <input type="email" class="form-control" id="inputEmail4" name="email" placeholder="Seu E-mail">
         </div>
         <div class="col-md-6">
-          <label for="inputPassword4" class="form-label">Password</label>
-          <input type="password" class="form-control" id="inputPassword4">
+          <label for="inputPassword4" class="form-label">Senha</label>
+          <input type="password" class="form-control" id="inputPassword4" name="senha" placeholder="Sua Senha">
         </div>
         <div class="col-12">
-          <label for="inputAddress" class="form-label">Address</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+          <label for="inputAddress" class="form-label">Nome de Usuário</label>
+          <input type="text" class="form-control" id="inputAddress" name="nomeusu" placeholder="Nome de Usuário">
         </div>
         <div class="col-12">
-          <label for="inputAddress2" class="form-label">Address 2</label>
-          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+          <label for="inputAddress2" class="form-label">Nome Completo</label>
+          <input type="text" class="form-control" id="inputAddress2" name="nomecomp" placeholder="Nome Completo">
         </div>
         <div class="col-md-6">
-          <label for="inputCity" class="form-label">City</label>
-          <input type="text" class="form-control" id="inputCity">
+          <label for="inputCity" class="form-label">Telefone</label>
+          <input type="text" class="form-control" id="inputCity" name="tel" placeholder="+55 (99) 99999-9999">
         </div>
         <div class="col-md-4">
-          <label for="inputState" class="form-label">State</label>
-          <select id="inputState" class="form-select">
-            <option selected>Choose...</option>
-            <option>...</option>
+          <label for="inputState" class="form-label">Escolaridade</label>
+          <select id="inputState" class="form-select" name="escolaridade">
+            <option selected>Não informado</option>
+            <option>Ensino fundamental incompleto </option>
+            <option>Ensino fundamental completo </option>
+            <option>Ensino médio incompleto </option>
+            <option>Ensino médio completo </option>
+            <option>Ensino superior incompleto </option>
+            <option>Ensino superior completo </option>
+            <option>Pós-Graduação incompleta </option>
+            <option>Pós-Graduação completa </option>
+            <option>Mestrado incompleto </option>
+            <option>Mestrado completo </option>
+            <option>Doutorado incompleto </option>
+            <option>Doutorado Completo </option>
           </select>
-        </div>
-        <div class="col-md-2">
-          <label for="inputZip" class="form-label">Zip</label>
-          <input type="text" class="form-control" id="inputZip">
         </div>
         <div class="col-12">
           <div class="form-check">
