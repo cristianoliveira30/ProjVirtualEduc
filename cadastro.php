@@ -51,7 +51,7 @@
   </header>
   <main class="position-fixed top-50 start-50 translate-middle">
     <div class="FromCadastro bg-dark-subtle rounded-4 top-50 start-50 border border-primary p-3 text-bg-dark-subtle d-inline-block">
-      <form class="FormCadastro row g-3" action="./validation.php" method="post" enctype="multipart/form">
+      <form class="FormCadastro row g-3" action="./BEnd/configBD.php" method="post" enctype="multipart/form">
         <div class="col-md-6">
           <label for="inputEmail4" class="form-label">Email</label>
           <input type="email" class="form-control" id="inputEmail4" name="email" placeholder="Seu E-mail">
