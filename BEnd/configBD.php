@@ -26,13 +26,14 @@ class MyCRUD
         if ($mysqli->connect_errno) {
             echo "Falha ao conectar (" . $mysqli->connect_errno . ")" . $mysqli->connect_errno;
         }
-        return $mysqli;
 
         header("AcessControl-Allow-Origin: *");
         header("Acess-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTION");
         header("ContentType: application/json");
-        echo json_encode($avisos);
-        exit;
+        if ($avisos) {
+            echo json_encode($avisos);
+        }
+        return $mysqli;
     }
 
     //FUNÇÃO PARA INSERIR DADOS DOD FORMULÁRIOS
@@ -53,11 +54,11 @@ class MyCRUD
             //VERIFICANDO AS INFORMAÇÕES MENOS COMPLEXAS
             if ($email && $senha && $nomeUsu && $escolaridade) {
                 global $mysqli;
-
+            
                 //verifica se já tem o EMAIL cadastrado no sistema
-                $mysqli->prepare("SELECT * FROM clientesativos WHERE EMAIL = :email");
-                $mysqli->bindValue(":email", $email);
-                $mysqli->execute();
+                $stmt = $mysqli->prepare("SELECT * FROM clientesativos WHERE EMAIL = :email");
+                $stmt->bindValue(":email", $email);
+                $stmt->execute();
 
                 if ($mysqli->rowCount() === 0) { //SE N TIVER EMAIL CADASTRADO AINDA...
                     $mysqli->prepare("INSERT INTO clientesativos (NOME, SENHA, EMAIL, ESCOLARIDADE) VALUES (:name, :senha, :email, :escolaridade)");

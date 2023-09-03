@@ -74,7 +74,7 @@
         </div>
         <div class="col-md-4">
           <label for="inputState" class="form-label">Escolaridade</label>
-          <select id="inputState" class="form-select" name="escolaridade">
+          <select id="inputState" class="form-selecting bordder border-secundary" name="escolaridade">
             <option selected>Não informado</option>
             <option>Ensino fundamental incompleto </option>
             <option>Ensino fundamental completo </option>
