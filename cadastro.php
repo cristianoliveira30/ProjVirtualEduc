@@ -2,12 +2,12 @@
 <html lang="pt-BR">
 <head>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/cadastro.css">
+  <!--<link rel="stylesheet" href="./css/cadastro.css">-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro</title>
 </head>
-<body class="bg-dark">
+<body class="bg-light">
   <header>
     <!--barra de navegação-->
     <nav class="navbar navbar-expand-lg bg-dark">
@@ -51,7 +51,7 @@
   </header>
   <main class="position-fixed top-50 start-50 translate-middle">
     <div class="FromCadastro bg-dark-subtle rounded-4 top-50 start-50 border border-primary p-3 text-bg-dark-subtle d-inline-block">
-      <form class="FormCadastro row g-3" action="./validation.php" method="post" enctype="multipart/form">
+      <form class="#FormCadastro row g-3" action="#./validation.php" method="post" enctype="multipart/form">
         <div class="col-md-6">
           <label for="inputEmail4" class="form-label">Email</label>
           <input type="email" class="form-control" id="inputEmail4" name="email" placeholder="Seu E-mail">
@@ -99,12 +99,19 @@
           </div>
         </div>
         <div class="col-12">
-          <button type="submit" id="btn-submit" class="btn btn-primary">Sign in</button>
+          <button type="button" id="btn" class="btn btn-primary" data-bs-dismiss="modal">Sign in</button>
         </div>
       </form>
     </div>
-    <div id="janela-modal" class="janela-modal p-3 mb-2 bg-white text-dark rounded d-none">
-      <div class="" id="abrir">
+    <div id="janelamodal" class="modal d-flex" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+          <div class="" id="modal">
         <form class="row g-3">
           <div class="col-md-6">
             <label for="inputEmail4" class="form-label">Email</label>
@@ -150,7 +157,15 @@
           </div>
         </form>
       </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
     </div>
+
   </main>
   <footer></footer>
   <!--bootstrap-->

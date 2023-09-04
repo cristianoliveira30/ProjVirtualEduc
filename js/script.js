@@ -8,10 +8,13 @@
  * a janela modal. Esse evento acontecera, quando o botão for clicado
 */
 
-const btn_evento = document.querySelector("#btn-submit");
-btn_evento.addEventListener("click", clicar);
+const btn = document.querySelector("#btn");
+const abrir = document.querySelector(".modal");
+btn.addEventListener('click', clicar);
 
 function clicar() {
-    let janela = document.querySelector("#janela-modal");
-    janela.classList.add("janela-modal")
+    if (abrir.style.display == "none") {
+        abrir.style.display = "flex";
+        window.alert("Oi")
+    }
 }
