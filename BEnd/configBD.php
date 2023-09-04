@@ -54,7 +54,7 @@ class MyCRUD
             //VERIFICANDO AS INFORMAÇÕES MENOS COMPLEXAS
             if ($email && $senha && $nomeUsu && $escolaridade) {
                 global $mysqli;
-            
+
                 //verifica se já tem o EMAIL cadastrado no sistema
                 $stmt = $mysqli->prepare("SELECT * FROM clientesativos WHERE EMAIL = :email");
                 $stmt->bindValue(":email", $email);
@@ -71,6 +71,13 @@ class MyCRUD
 
                     header('location: home.php');
                     exit;
+                    //SE DER ERRO NO CÓDIGO DE ACESSO VAI EXIBIR
+                    if ($mysqli->connect_errno) {
+                        echo "Falha na conexão (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+                    }
+                    if ($stmt === false) {
+                        echo "Erro na preparação da consulta (" . $mysqli->errno . ") " . $mysqli->error;
+                    }
                 } else { //CASO JÁ TENHA EMAIL CADASTRADO
                     header('location: cadastro.php');
                     exit;
@@ -84,6 +91,6 @@ class MyCRUD
         }
     }
 }
-
+//EXECUTANDO
 $EntrarBd = new MyCRUD;
 $EntrarBd->inserir();
