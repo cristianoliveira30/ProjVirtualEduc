@@ -50,8 +50,8 @@
     </nav>
   </header>
   <main class="position-fixed top-50 start-50 translate-middle">
-    <div class="FromCadastro bg-dark-subtle rounded-4 top-50 start-50 border border-primary p-3 text-bg-dark-subtle d-inline-block">
-      <form class="FormCadastro row g-3" action="./BEnd/configBD.php" method="post" enctype="multipart/form">
+    <div class="container0 FromCadastro bg-dark-subtle rounded-4 top-50 start-50 border border-primary text-bg-dark-subtle d-inline-block p-3">
+      <form class="container0 FormCadastro row g-3" action="./BEnd/configBD.php" method="post" enctype="multipart/form">
         <div class="col-md-6">
           <label for="inputEmail4" class="form-label">Email</label>
           <input type="email" class="form-control" id="inputEmail4" name="email" placeholder="Seu E-mail">
@@ -103,53 +103,8 @@
         </div>
       </form>
     </div>
-    <div id="janela-modal" class="janela-modal p-3 mb-2 bg-white text-dark rounded d-none">
-      <div class="" id="abrir">
-        <form class="row g-3">
-          <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Email</label>
-            <input type="email" class="form-control" id="inputEmail4">
-          </div>
-          <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Password</label>
-            <input type="password" class="form-control" id="inputPassword4">
-          </div>
-          <div class="col-12">
-            <label for="inputAddress" class="form-label">Address</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-          </div>
-          <div class="col-12">
-            <label for="inputAddress2" class="form-label">Address 2</label>
-            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-          </div>
-          <div class="col-md-6">
-            <label for="inputCity" class="form-label">City</label>
-            <input type="text" class="form-control" id="inputCity">
-          </div>
-          <div class="col-md-4">
-            <label for="inputState" class="form-label">State</label>
-            <select id="inputState" class="form-select">
-              <option selected>Choose...</option>
-              <option>...</option>
-            </select>
-          </div>
-          <div class="col-md-2">
-            <label for="inputZip" class="form-label">Zip</label>
-            <input type="text" class="form-control" id="inputZip">
-          </div>
-          <div class="col-12">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="gridCheck">
-              <label class="form-check-label" for="gridCheck">
-                Check me out
-              </label>
-            </div>
-          </div>
-          <div class="col-12">
-            <button type="submit" class="btn btn-primary">Sign in</button>
-          </div>
-        </form>
-      </div>
+    <div class="container d-none">
+      <iframe src="form1.php" frameborder="0"></iframe>
     </div>
   </main>
   <footer></footer>

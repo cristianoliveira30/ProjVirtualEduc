@@ -27,7 +27,8 @@ select {
     animation: aparecer 2s ease forwards !important;
     animation-delay: 1s !important;
 }
-main  #inputState {
+/* Tentando resolver selection*/
+main  form #inputState {
     transition: none;
     width: 197px!important;
 }
@@ -52,3 +53,9 @@ main  #inputState {
     border-radius: var(--bs-border-radius);
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+/* Propriedades do iframe */
+iframe {
+    width: 800px;
+    height: 400px;
+    border-radius: 20px;
+  }
