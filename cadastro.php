@@ -104,8 +104,59 @@
         </div>
       </form>
     </div>
-    <div class="container d-none">
-      <iframe src="form1.php" frameborder="0"></iframe>
+    <!-- Etapa2 -->
+    <div class="container1 FromCadastro bg-dark-subtle rounded-4 top-50 start-50 border border-primary text-bg-dark-subtle d-inline-block p-3 d-none">
+      <form class="container0 FormCadastro row g-3" action="./BEnd/configBD.php" method="post" enctype="multipart/form">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail4" name="email" placeholder="Seu E-mail">
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Password</label>
+          <input type="password" class="form-control" id="inputPassword4" name="senha" placeholder="Sua Senha">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Nome de Usuário</label>
+          <input type="text" class="form-control" id="inputAddress" name="nomeusu" placeholder="Nome de Usuário">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress2" class="form-label">Nome Completo</label>
+          <input type="text" class="form-control" id="inputAddress2" name="nomecomp" placeholder="Nome Completo">
+        </div>
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">Telefone</label>
+          <input type="text" class="form-control" id="inputCity" name="tel" placeholder="+55 (99) 99999-9999">
+        </div>
+        <div class="col-md-4">
+          <label for="inputState" class="form-label">Escolaridade</label>
+          <select id="inputState" class="form-selecting bordder border-secundary" name="escolaridade">
+            <option selected>Não informado</option>
+            <option>Ensino fundamental incompleto </option>
+            <option>Ensino fundamental completo </option>
+            <option>Ensino médio incompleto </option>
+            <option>Ensino médio completo </option>
+            <option>Ensino superior incompleto </option>
+            <option>Ensino superior completo </option>
+            <option>Pós-Graduação incompleta </option>
+            <option>Pós-Graduação completa </option>
+            <option>Mestrado incompleto </option>
+            <option>Mestrado completo </option>
+            <option>Doutorado incompleto </option>
+            <option>Doutorado Completo </option>
+          </select>
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              Check me out
+            </label>
+          </div>
+        </div>
+        <div class="col-12">
+          <button type="submit" id="btn-submit" class="btn btn-primary">Sign in</button>
+        </div>
+      </form>
     </div>
   </main>
   <footer></footer>
