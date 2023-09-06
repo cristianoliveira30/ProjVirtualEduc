@@ -16,9 +16,9 @@ class MyCRUD
     {
         global $avisos;
 
-        $host = "localhost";
+        $host = "192.168.1.248";
         $usernome = "root";
-        $usersenha = "M/vUz[rC124r899y";
+        $usersenha = " ";
         $database = "myclientes";
         $mysqli = new mysqli($host, $usernome, $usersenha, $database);
         $mysqli->set_charset("utf8");
