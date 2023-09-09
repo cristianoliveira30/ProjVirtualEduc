@@ -105,7 +105,7 @@
       </form>
     </div>
     <!-- Etapa2 -->
-    <div class="container1 FromCadastro bg-dark-subtle rounded-4 top-50 start-50 border border-primary text-bg-dark-subtle d-inline-block p-3 d-none">
+    <div class="FromCadastro1 bg-dark-subtle rounded-4 top-50 start-50 border border-primary text-bg-dark-subtle d-inline-block p-3 d-none">
       <form class="container0 FormCadastro row g-3" action="./BEnd/configBD.php" method="post" enctype="multipart/form">
         <div class="col-md-6">
           <label for="inputEmail4" class="form-label">Email</label>
@@ -159,28 +159,9 @@
       </form>
     </div>
   </main>
-  <footer></footer>
-  <!--bootstrap-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-  <!-- link do arquivo js externo-->
-  <script src="./js/script.js"></script>
-  <div class="boxad" id="boxad">
-   <div class="content">
-
-   <script>
-    // Event listener para detectar quando o conteúdo da página foi carregado
-    window.addEventListener("load", function() {
-      var boxad = document.getElementById("boxad");
-      boxad.style.display = "none"; // Oculta o spinner
-    });
-
-    // Simula atraso para interromper o carregamento após um tempo
-    setTimeout(function() {
-      var boxad = document.getElementById("boxad");
-      boxad.style.display = "none"; // Oculta o spinner
-    }, 5000); // Interrompe o carregamento após 5 segundos (ajuste conforme necessário)
-  </script>
-
+  <footer>
+    <div class="boxad" id="boxad">
+      <div class="content">
         <svg id="loader" xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 -10 261 355">
           <g>
             <path d="M230.023 80.02l-.023.03v15.044l-11.96.006v20.75l-19.354 9.142V95.107l-9.93-.04v34.6l-19.417 9.254-.003-43.777-14.146-.016v50.414l-19.354 9.146.002-59.55-9.93.027v59.434l-19.508-9.212V95.15l-13.774-.13-.002 43.766-19.332-9.053V95.12l-9.97.045v29.893l-19.398-9.187V95.177l-11.983.006v15.03l-17.122-8.09 17.078-6.983V80.22L.286 95.257 0 95.12v188.953l123.418 58.308 7.543 3.56 7.542-3.56 123.42-58.306V95.12l-.233.11-31.667-15.06zm-.002 15.076l17.126 7.002-17.125 8.09zM15.083 118.93l108.336 51.177v155.59L15.082 274.52zm231.756 0v155.59l-108.336 51.177v-155.59z">
@@ -193,9 +174,12 @@
             </path>
           </g>
         </svg>
-
-
-   </div>
-</div>
+      </div>
+    </div>
+  </footer>
+  <!--bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <!-- link do arquivo js externo-->
+  <script src="./JS/script.js"></script>
 </body>
 </html>
