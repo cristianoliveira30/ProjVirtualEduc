@@ -41,3 +41,11 @@ function clicar() {
 }, 5000); */
 
 // Interrompe o carregamento após 5 segundos (ajuste conforme necessário)
+
+let btn = document.querySelector("#btn");
+let container0 = document.querySelector(".FromCadastro1");
+let container1 = document.querySelector(".FromCadastro1");
+
+btn.addEventListener("click", function() {
+    container0.style.display = 'none';
+});

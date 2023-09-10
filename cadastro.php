@@ -105,7 +105,7 @@
       </form>
     </div>
     <!-- Etapa2 -->
-    <div class="container1 FromCadastro1 bg-dark-subtle rounded-4 top-50 start-50 border border-primary text-bg-dark-subtle d-inline-block p-3">
+    <div class="FromCadastro1 bg-dark-subtle rounded-4 top-50 start-50 border border-primary text-bg-dark-subtle p-3 d-none" id="FromCadastro">
       <form class="container0 FormCadastro row g-3" action="./BEnd/configBD.php" method="post" enctype="multipart/form">
         <div class="col-md-6">
           <label for="inputEmail4" class="form-label">Email</label>
@@ -178,8 +178,8 @@
     </div>
   </footer>
   <!--bootstrap-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>-->
   <!-- link do arquivo js externo-->
-  <script src="./JS/script.js"></script>
+  <script src="./Javascript/script.js"></script>
 </body>
 </html>

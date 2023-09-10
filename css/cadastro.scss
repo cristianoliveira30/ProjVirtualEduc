@@ -53,6 +53,7 @@ main  form #inputState {
     border-radius: var(--bs-border-radius);
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+<<<<<<< HEAD
 /*<<<<<<< HEAD*/
 /* Propriedades do iframe */
 iframe {
@@ -61,10 +62,12 @@ iframe {
     border-radius: 20px;
   }
 /*=======*/
+=======
+>>>>>>> 26a802327983a3d9ba8d917d6e32ce42b7b4c5d1
 
 /*--------------------------------loading----------------------------------*/
 
-.boxad{
+.boxad {
     position: absolute;
     width:100%;height:100%;
     
@@ -148,5 +151,9 @@ iframe {
         100% {
           fill: #513B56;
         }
+<<<<<<< HEAD
       }
 /*>>>>>>> 710249584c7ecc76b196f75caecc310cd8bd6c2b*/
+=======
+      }
+>>>>>>> 26a802327983a3d9ba8d917d6e32ce42b7b4c5d1
