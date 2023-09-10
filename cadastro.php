@@ -105,7 +105,7 @@
       </form>
     </div>
     <!-- Etapa2 -->
-    <div class="FromCadastro1 bg-dark-subtle rounded-4 top-50 start-50 border border-primary text-bg-dark-subtle d-inline-block p-3 d-none">
+    <div class="container1 FromCadastro1 bg-dark-subtle rounded-4 top-50 start-50 border border-primary text-bg-dark-subtle d-inline-block p-3">
       <form class="container0 FormCadastro row g-3" action="./BEnd/configBD.php" method="post" enctype="multipart/form">
         <div class="col-md-6">
           <label for="inputEmail4" class="form-label">Email</label>
