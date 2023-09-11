@@ -1,10 +1,3 @@
-<?php 
-require './BEnd/configBD.php';
-require './BEnd/DAO/usuaruosDAO.php';
-
-$usuarioDao = new UsuarioDAOMysql($pdo);
-$lista = $usuarioDao->findAll();
- ?>
 <!DOCTYPE html>
 <html lang="en">
 
