@@ -55,7 +55,7 @@
       <form class="container0 FormCadastro row g-3" action="./BEnd/valiusu.php" method="post" enctype="multipart/form">
         <div class="col-md-6">
           <label for="inputEmail4" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputEmail4" name="email" placeholder="Seu E-mail">
+          <input typgite="email" class="form-control" id="inputEmail4" name="email" placeholder="Seu E-mail">
         </div>
         <div class="col-md-6">
           <label for="inputPassword4" class="form-label">Senha</label>
@@ -180,6 +180,6 @@
   <!--bootstrap-->
   <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>-->
   <!-- link do arquivo js externo-->
-  <script src="./Javascript/script.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 </html>

@@ -30,14 +30,14 @@
 
 // Interrompe o carregamento após 5 segundos (ajuste conforme necessário)
 
+alert('Oi');
 
-
-btn.addEventListener("click", function() {
+btn.addEventListener('click', function() {
     const btn = document.querySelector('#btn');
     const form1 = document.querySelector('.FromCadastro');
     const form2 = document.querySelector('.FromCadastro1');
     
-    form1.style.display = "none";
-    form2.style.display = "block";
+    form1.style.display = 'none';
+    form2.style.display = 'block';
 });
 
