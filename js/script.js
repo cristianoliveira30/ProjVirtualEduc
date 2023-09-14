@@ -30,7 +30,6 @@
 
 // Interrompe o carregamento após 5 segundos (ajuste conforme necessário)
 
-alert('Oi');
 
 btn.addEventListener('click', function() {
     const btn = document.querySelector('#btn');
