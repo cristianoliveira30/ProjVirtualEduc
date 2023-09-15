@@ -105,6 +105,7 @@
       </form>
     </div>
     <!-- Etapa2 -->
+
     <div class="FromCadastro1 position-absolute top-50 start-50 translate-middle bg-dark-subtle rounded-4 border border-primary text-bg-dark-subtle p-3" id="FromCadastro">
       <form class="container0 FormCadastro row g-3" action="./BEnd/configBD.php" method="post" enctype="multipart/form">
         <div class="col-md-6">
