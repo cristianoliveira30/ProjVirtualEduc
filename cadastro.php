@@ -50,8 +50,8 @@
       </div>
     </nav>
   </header>
-  <main class="position-fixed top-50 start-50 translate-middle">
-    <div class="container0 FromCadastro bg-dark-subtle rounded-4 top-50 start-50 border border-primary text-bg-dark-subtle d-inline-block p-3">
+  <main class="">
+    <div class="FromCadastro bg-dark-subtle rounded-4 top-50 start-50 border border-primary text-bg-dark-subtle position-absolute top-50 start-50 translate-middle p-3">
       <form class="container0 FormCadastro row g-3" action="./BEnd/valiusu.php" method="post" enctype="multipart/form">
         <div class="col-md-6">
           <label for="inputEmail4" class="form-label">Email</label>
@@ -105,11 +105,11 @@
       </form>
     </div>
     <!-- Etapa2 -->
-    <div class="FromCadastro1 bg-dark-subtle rounded-4 top-50 start-50 border border-primary text-bg-dark-subtle p-3 d-none" id="FromCadastro">
+    <div class="FromCadastro1 position-absolute top-50 start-50 translate-middle bg-dark-subtle rounded-4 border border-primary text-bg-dark-subtle p-3" id="FromCadastro">
       <form class="container0 FormCadastro row g-3" action="./BEnd/configBD.php" method="post" enctype="multipart/form">
         <div class="col-md-6">
-          <label for="inputEmail4" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputEmail4" name="email" placeholder="Seu E-mail">
+          <label for="inputEmail4" class="form-label">CPF</label>
+          <input type="email" class="form-control" id="inputCPF" name="email" placeholder="Seu CPF" maxlength="14">
         </div>
         <div class="col-md-6">
           <label for="inputPassword4" class="form-label">Password</label>
