@@ -19,12 +19,28 @@ btn.addEventListener('click', function() {
 
 // Mascara para cpf
 
-const cpf = document.querySelector('#inputCPF');
+let btncpf = document.querySelector("#inputCPF");
 
-cpf.addEventListener('keypress', function() {
-    let cpflength = cpf.value.legth;
+btncpf.addEventListener("keyup", function() {
+    let cpf = document.querySelector("#inputCPF");
 
-    if ((cpflength === 3) || (cpflength === 7) || (cpflength === 10)) {
-        cpf.value += '.';
+    if (cpf.value.length == 3 || cpf.value.length == 7) {
+        cpf.value += ".";
+    } else if (cpf.value.length == 11) {
+        cpf.value += "-";
+    }
+});
+
+// Mascara Telefone
+
+let input_tel = document.querySelector("#telefone");
+
+input_tel.addEventListener("click", function() {
+    let telefone = document.querySelector("#telefone");
+
+    if (telefone.value.length == 0) {
+        telefone.value += "(  )";
+    } else if (telefone.value.length == 3) {
+        telefone
     }
 });
