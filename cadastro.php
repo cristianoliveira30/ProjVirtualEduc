@@ -113,16 +113,16 @@
           <input type="email" class="form-control" id="inputCPF" name="email" placeholder="Seu CPF" maxlength="14">
         </div>
         <div class="col-md-6">
-          <label for="inputPassword4" class="form-label">Password</label>
-          <input type="password" class="form-control" id="inputPassword4" name="senha" placeholder="Sua Senha">
+          <label for="inputPassword4" class="form-label">Data</label>
+          <input type="text" class="form-control" id="data" name="data" placeholder="Data" maxlength="10">
         </div>
-        <div class="col-12">
-          <label for="inputAddress" class="form-label">Nome de Usuário</label>
-          <input type="text" class="form-control" id="inputAddress" name="nomeusu" placeholder="Nome de Usuário">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">RG</label>
+          <input type="email" class="form-control" id="inputCPF" name="email" placeholder="RG" maxlength="14">
         </div>
-        <div class="col-12">
-          <label for="inputAddress2" class="form-label">Nome Completo</label>
-          <input type="text" class="form-control" id="inputAddress2" name="nomecomp" placeholder="Nome Completo">
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Data</label>
+          <input type="text" class="form-control" id="data" name="data" placeholder="Data" maxlength="10">
         </div>
         <div class="col-md-6">
           <label for="inputCity" class="form-label">Telefone</label>

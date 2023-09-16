@@ -5,16 +5,16 @@
 
 /* 
  * Estou criando um script para chamar 
- * a janela modal. Esse evento acontecera, quando o botão for clicado
+ * uma div e ocultar outra div. Esse evento vai acontecer, quando o botão for * clicado
 */
 
-btn.addEventListener('click', function() {
-    const btn = document.querySelector('#btn');
-    const form1 = document.querySelector('.FromCadastro');
-    const form2 = document.querySelector('.FromCadastro1');
+btn.addEventListener("click", function() {
+    const btn = document.querySelector("#btn");
+    const form1 = document.querySelector(".FromCadastro");
+    const form2 = document.querySelector(".FromCadastro1");
     
-    form1.style.display = 'none';
-    form2.style.display = 'block';
+    form1.style.display = "none";
+    form2.style.display = "block";
 });
 
 // Mascara para cpf
@@ -31,16 +31,14 @@ btncpf.addEventListener("keyup", function() {
     }
 });
 
-// Mascara Telefone
+// Mascara Data
 
-let input_tel = document.querySelector("#telefone");
+let iddata = document.querySelector("#data");
 
-input_tel.addEventListener("click", function() {
-    let telefone = document.querySelector("#telefone");
+iddata.addEventListener("keyup", function() {
+    let data = document.querySelector("#data");
 
-    if (telefone.value.length == 0) {
-        telefone.value += "(  )";
-    } else if (telefone.value.length == 3) {
-        telefone
+    if (data.value.length == 2 || data.value.length == 5) {
+        data.value += "/";
     }
 });
