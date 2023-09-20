@@ -14,7 +14,7 @@ btn.addEventListener("click", function() {
     const form2 = document.querySelector(".FromCadastro1");
     
     form1.style.display = "none";
-    form2.style.display = "block";
+    form2.style.display = "flex";
 });
 
 // Mascara para cpf

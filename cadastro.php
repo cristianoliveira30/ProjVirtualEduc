@@ -108,7 +108,7 @@
           </div>
         </div>
         <!-- Etapa2 -->
-        <div class="FromCadastro1 row g-3 bg-dark-subtle rounded-4 border border-primary text-bg-dark-subtle position-absolute top-50 start-50 translate-middle p-0">
+        <div class="FromCadastro1 row g-3 bg-dark-subtle rounded-4 border border-primary text-bg-dark-subtle position-absolute top-50 start-50 translate-middle">
           <div class="col-md-6">
             <label for="inputEmail4" class="form-label">CPF</label>
             <input type="email" class="form-control" id="inputCPF" name="email" placeholder="Seu CPF" maxlength="14">
@@ -121,11 +121,6 @@
           <div class="col-md-6">
             <label for="inputEmail4" class="form-label">RG</label>
             <input type="email" class="form-control" id="inputCPF" name="email" placeholder="RG" maxlength="14">
-          </div>
-
-          <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Data</label>
-            <input type="text" class="form-control" id="data" name="data" placeholder="Data" maxlength="10">
           </div>
 
           <div class="col-md-6">
