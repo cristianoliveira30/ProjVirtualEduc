@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/cadastro.css">
@@ -8,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro</title>
 </head>
+
 <body class="bg-light">
   <header>
     <!--barra de navegação-->
@@ -51,113 +53,117 @@
     </nav>
   </header>
   <main class="">
-    <div class="FromCadastro bg-dark-subtle rounded-4 top-50 start-50 border border-primary text-bg-dark-subtle position-absolute top-50 start-50 translate-middle p-3">
-      <form class="container0 FormCadastro row g-3" action="./BEnd/valiusu.php" method="post" enctype="multipart/form">
-        <div class="col-md-6">
-          <label for="inputEmail4" class="form-label">Email</label>
-          <input typgite="email" class="form-control" id="inputEmail4" name="email" placeholder="Seu E-mail">
-        </div>
-        <div class="col-md-6">
-          <label for="inputPassword4" class="form-label">Senha</label>
-          <input type="password" class="form-control" id="inputPassword4" name="senha" placeholder="Sua Senha">
-        </div>
-        <div class="col-12">
-          <label for="inputAddress" class="form-label">Nome de Usuário</label>
-          <input type="text" class="form-control" id="inputAddress" name="nomeusu" placeholder="Nome de Usuário">
-        </div>
-        <div class="col-12">
-          <label for="inputAddress2" class="form-label">Nome Completo</label>
-          <input type="text" class="form-control" id="inputAddress2" name="nomecomp" placeholder="Nome Completo">
-        </div>
-        <div class="col-md-6">
-          <label for="inputCity" class="form-label">Telefone</label>
-          <input type="text" class="form-control" id="inputCity" name="tel" placeholder="+55 (99) 99999-9999">
-        </div>
-        <div class="col-md-4">
-          <label for="inputState" class="form-label">Escolaridade</label>
-          <select id="inputState" class="form-selecting bordder border-secundary" name="escolaridade">
-            <option selected>Não informado</option>
-            <option>Ensino fundamental incompleto </option>
-            <option>Ensino fundamental completo </option>
-            <option>Ensino médio incompleto </option>
-            <option>Ensino médio completo </option>
-            <option>Ensino superior incompleto </option>
-            <option>Ensino superior completo </option>
-            <option>Pós-Graduação incompleta </option>
-            <option>Pós-Graduação completa </option>
-            <option>Mestrado incompleto </option>
-            <option>Mestrado completo </option>
-            <option>Doutorado incompleto </option>
-            <option>Doutorado Completo </option>
-          </select>
-        </div>
-        <div class="col-12">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-              Check me out
-            </label>
+    <div class="">
+      <form class="FormCadastro" action="./BEnd/valiusu.php" method="post" enctype="multipart/form">
+        <!-- Etapa1 -->
+        <div class="FromCadastro bg-dark-subtle rounded-4 border border-primary text-bg-dark-subtle position-absolute top-50 start-50 translate-middle p-0 row g-3" id="form1">
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Email</label>
+            <input typgite="email" class="form-control" id="inputEmail4" name="email" placeholder="Seu E-mail">
+          </div>
+          <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="inputPassword4" name="senha" placeholder="Sua Senha">
+          </div>
+          <div class="col-12">
+            <label for="inputAddress" class="form-label">Nome de Usuário</label>
+            <input type="text" class="form-control" id="inputAddress" name="nomeusu" placeholder="Nome de Usuário">
+          </div>
+          <div class="col-12">
+            <label for="inputAddress2" class="form-label">Nome Completo</label>
+            <input type="text" class="form-control" id="inputAddress2" name="nomecomp" placeholder="Nome Completo">
+          </div>
+          <div class="col-md-6">
+            <label for="inputCity" class="form-label">Telefone</label>
+            <input type="text" class="form-control" id="inputCity" name="tel" placeholder="+55 (99) 99999-9999">
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">Escolaridade</label>
+            <select id="inputState" class="form-selecting bordder border-secundary" name="escolaridade">
+              <option selected>Não informado</option>
+              <option>Ensino fundamental incompleto </option>
+              <option>Ensino fundamental completo </option>
+              <option>Ensino médio incompleto </option>
+              <option>Ensino médio completo </option>
+              <option>Ensino superior incompleto </option>
+              <option>Ensino superior completo </option>
+              <option>Pós-Graduação incompleta </option>
+              <option>Pós-Graduação completa </option>
+              <option>Mestrado incompleto </option>
+              <option>Mestrado completo </option>
+              <option>Doutorado incompleto </option>
+              <option>Doutorado Completo </option>
+            </select>
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label class="form-check-label" for="gridCheck">
+                Check me out
+              </label>
+            </div>
+          </div>
+          <div class="col-12">
+            <button type="button" id="btn" class="btn btn-primary" data-bs-dismiss="modal">Sign in</button>
           </div>
         </div>
-        <div class="col-12">
-          <button type="button" id="btn" class="btn btn-primary" data-bs-dismiss="modal">Sign in</button>
+        <!-- Etapa2 -->
+        <div class="FromCadastro1 row g-3 bg-dark-subtle rounded-4 border border-primary text-bg-dark-subtle position-absolute top-50 start-50 translate-middle p-0">
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">CPF</label>
+            <input type="email" class="form-control" id="inputCPF" name="email" placeholder="Seu CPF" maxlength="14">
+          </div>
+          <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Data</label>
+            <input type="text" class="form-control" id="data" name="data" placeholder="Data" maxlength="10">
+          </div>
+
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">RG</label>
+            <input type="email" class="form-control" id="inputCPF" name="email" placeholder="RG" maxlength="14">
+          </div>
+
+          <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Data</label>
+            <input type="text" class="form-control" id="data" name="data" placeholder="Data" maxlength="10">
+          </div>
+
+          <div class="col-md-6">
+            <label for="inputCity" class="form-label">Telefone</label>
+            <input type="text" class="form-control" id="inputCity" name="tel" placeholder="+55 (99) 99999-9999">
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">Escolaridade</label>
+            <select id="inputState" class="form-selecting bordder border-secundary" name="escolaridade">
+              <option selected>Não informado</option>
+              <option>Ensino fundamental incompleto </option>
+              <option>Ensino fundamental completo </option>
+              <option>Ensino médio incompleto </option>
+              <option>Ensino médio completo </option>
+              <option>Ensino superior incompleto </option>
+              <option>Ensino superior completo </option>
+              <option>Pós-Graduação incompleta </option>
+              <option>Pós-Graduação completa </option>
+              <option>Mestrado incompleto </option>
+              <option>Mestrado completo </option>
+              <option>Doutorado incompleto </option>
+              <option>Doutorado Completo </option>
+            </select>
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label class="form-check-label" for="gridCheck">
+                Check me out
+              </label>
+            </div>
+          </div>
+          <div class="col-12">
+            <button type="submit" id="btn-submit" class="btn btn-primary">Sign in</button>
+          </div>
         </div>
       </form>
     </div>
-    <!-- Etapa2 -->
-
-    <div class="FromCadastro1 position-absolute top-50 start-50 translate-middle bg-dark-subtle rounded-4 border border-primary text-bg-dark-subtle p-3" id="FromCadastro">
-      <form class="container0 FormCadastro row g-3" action="./BEnd/configBD.php" method="post" enctype="multipart/form">
-        <div class="col-md-6">
-          <label for="inputEmail4" class="form-label">CPF</label>
-          <input type="email" class="form-control" id="inputCPF" name="email" placeholder="Seu CPF" maxlength="14">
-        </div>
-        <div class="col-md-6">
-          <label for="inputPassword4" class="form-label">Data</label>
-          <input type="text" class="form-control" id="data" name="data" placeholder="Data" maxlength="10">
-        </div>
-        <div class="col-md-6">
-          <label for="inputEmail4" class="form-label">RG</label>
-          <input type="email" class="form-control" id="inputCPF" name="email" placeholder="RG" maxlength="14">
-        </div>
-        <div class="col-md-6">
-          <label for="inputPassword4" class="form-label">Data</label>
-          <input type="text" class="form-control" id="data" name="data" placeholder="Data" maxlength="10">
-        </div>
-        <div class="col-md-6">
-          <label for="inputCity" class="form-label">Telefone</label>
-          <input type="text" class="form-control" id="inputCity" name="tel" placeholder="+55 (99) 99999-9999">
-        </div>
-        <div class="col-md-4">
-          <label for="inputState" class="form-label">Escolaridade</label>
-          <select id="inputState" class="form-selecting bordder border-secundary" name="escolaridade">
-            <option selected>Não informado</option>
-            <option>Ensino fundamental incompleto </option>
-            <option>Ensino fundamental completo </option>
-            <option>Ensino médio incompleto </option>
-            <option>Ensino médio completo </option>
-            <option>Ensino superior incompleto </option>
-            <option>Ensino superior completo </option>
-            <option>Pós-Graduação incompleta </option>
-            <option>Pós-Graduação completa </option>
-            <option>Mestrado incompleto </option>
-            <option>Mestrado completo </option>
-            <option>Doutorado incompleto </option>
-            <option>Doutorado Completo </option>
-          </select>
-        </div>
-        <div class="col-12">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-              Check me out
-            </label>
-          </div>
-        </div>
-        <div class="col-12">
-          <button type="submit" id="btn-submit" class="btn btn-primary">Sign in</button>
-        </div>
-      </form>
     </div>
   </main>
   <footer>
@@ -183,4 +189,5 @@
   <!-- link do arquivo js externo-->
   <script src="./js/script.js"></script>
 </body>
+
 </html>
