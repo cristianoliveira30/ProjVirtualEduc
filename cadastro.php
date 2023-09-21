@@ -75,7 +75,7 @@
           </div>
           <div class="col-md-6">
             <label for="inputCity" class="form-label">Telefone</label>
-            <input type="text" class="form-control" id="inputCity" name="tel" placeholder="+55 (99) 99999-9999">
+            <input type="text" class="form-control" id="telefone" name="tel" placeholder="+55 (99) 99999-9999">
           </div>
           <div class="col-md-4">
             <label for="inputState" class="form-label">Escolaridade</label>
@@ -125,7 +125,7 @@
 
           <div class="col-md-6">
             <label for="inputCity" class="form-label">Telefone</label>
-            <input type="text" class="form-control" id="inputCity" name="tel" placeholder="+55 (99) 99999-9999">
+            <input type="text" class="form-control" id="inputCity" name="tel" placeholder="+55 (99) 99999-9999" maxlength="12">
           </div>
           <div class="col-md-4">
             <label for="inputState" class="form-label">Escolaridade</label>
@@ -180,7 +180,8 @@
     </div>
   </footer>
   <!--bootstrap-->
-  <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>-->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script> -->
+
   <!-- link do arquivo js externo-->
   <script src="./js/script.js"></script>
 </body>

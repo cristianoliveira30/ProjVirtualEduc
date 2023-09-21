@@ -8,13 +8,13 @@
  * uma div e ocultar outra div. Esse evento vai acontecer, quando o botão for * clicado
 */
 
+let btn = document.querySelector("#btn");
 btn.addEventListener("click", function() {
-    const btn = document.querySelector("#btn");
-    const form1 = document.querySelector(".FromCadastro");
-    const form2 = document.querySelector(".FromCadastro1");
-    
-    form1.style.display = "none";
-    form2.style.display = "flex";
+    let FromCadastro = document.querySelector(".FromCadastro");
+    let FromCadastro1 = document.querySelector(".FromCadastro1");
+
+    FromCadastro.style.display = "none";
+    FromCadastro1.style.display = "flex";
 });
 
 // Mascara para cpf
@@ -40,5 +40,16 @@ iddata.addEventListener("keyup", function() {
 
     if (data.value.length == 2 || data.value.length == 5) {
         data.value += "/";
+    }
+});
+
+// Mascara Telefone
+
+let masc = document.querySelector("#telefone");
+masc.addEventListener("click", function() {
+    let telefone = document.querySelector("#telefone");
+
+    if (telefone.value.length == 0 || telefone.value.length == 3) {
+        telefone.value += "(";
     }
 });
