@@ -180,8 +180,12 @@
     </div>
   </footer>
   <!--bootstrap-->
+<<<<<<< HEAD
   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script> -->
 
+=======
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+>>>>>>> 91aa181ed88c32d225bc7943ffc0d9462b7c2ee0
   <!-- link do arquivo js externo-->
   <script src="./js/script.js"></script>
 </body>
