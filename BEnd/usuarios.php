@@ -32,20 +32,20 @@ class Usuario {
     public function getEmail() {
         return $this->email;
     }
-    public function setEmail($mail) {
-        $this->email = strtolower(trim($mail));
+    public function setEmail($email) {
+        $this->email = strtolower(trim($email));
     }
     public function getSenha() {
-
+        return $this->senha;
     }
     public function setSenha() {
 
     }
     public function getCpf() {
-
+        return $this->cpf;
     }
-    public function setCpf() {
-
+    public function setCpf($cpf) {
+        $this->cpf = is_int($cpf);
     }
     public function getEscolaridade() {
 
