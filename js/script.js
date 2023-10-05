@@ -46,10 +46,10 @@ iddata.addEventListener("keyup", function() {
 // Mascara Telefone
 
 let masc = document.querySelector("#telefone");
-masc.addEventListener("click", function() {
+masc.addEventListener("keyup", function() {
     let telefone = document.querySelector("#telefone");
 
-    if (telefone.value.length == 0 || telefone.value.length == 3) {
+    if (telefone.value.length == 1 || telefone.value.length == 2) {
         telefone.value += "(";
     }
 });

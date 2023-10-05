@@ -125,7 +125,7 @@
 
           <div class="col-md-6">
             <label for="inputCity" class="form-label">Telefone</label>
-            <input type="text" class="form-control" id="inputCity" name="tel" placeholder="+55 (99) 99999-9999" maxlength="12">
+            <input type="text" class="form-control" id="telefone" name="tel" placeholder="+55 (99) 99999-9999" maxlength="12">
           </div>
           <div class="col-md-4">
             <label for="inputState" class="form-label">Escolaridade</label>
