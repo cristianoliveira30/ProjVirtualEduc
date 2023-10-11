@@ -1,4 +1,10 @@
-body {}
+body {
+    font: normal;
+}
+
+header {
+    margin-bottom: 50px;
+}
 
 h2 {
     text-align: center;
@@ -8,19 +14,123 @@ h3 {
     text-align: center;
 }
 
-.container01 {
-    height: 150px;
+.navbar1 {
+    height: 200px;
 }
 
-.img {
-    width: 1350px;
+.slider {
+    margin: 0 auto;
+    width: 1200px;
     height: 500px;
+    overflow: hidden;
 }
 
-.carousel {
-    padding: 30px;
+.slides {
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
     position: relative;
-    width: 1350px;
+    transition: 2s;
+
+}
+
+.slide img {
+    width: 1200px;
+}
+
+.manual-navigation {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    margin-top: -1px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background-color: white;
+}
+
+#radio1:checked~.first {
+    margin-left: 0;
+}
+
+#radio2:checked~.first {
+    margin-left: -25%;
+}
+
+#radio3:checked~.first {
+    margin-left: -50%;
+}
+
+#radio4:checked~.first {
+    margin-left: -75%;
+}
+
+.navigation-auto div {
+    border: 2px solid #20a6ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+    margin-top: 400px;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked~.navigation-auto .auto-btn1 {
+    background-color: white;
+}
+
+#radio2:checked~.navigation-auto .auto-btn1 {
+    background-color: white;
+}
+
+#radio3:checked~.navigation-auto .auto-btn1 {
+    background-color: white;
+}
+
+#radio4:checked~.navigation-auto .auto-btn1 {
+    background-color: white;
+}
+
+p {
+    padding: 50px;
 }
 
 .boas-vidas {
@@ -45,12 +155,16 @@ h3 {
     margin-bottom: 50px;
 }
 
+#h3 {
+    padding: 0px;
+}
+
 #img2 {
     width: 580px;
     height: 350px;
 }
 
-.slides {
+.slides1 {
     padding: 30px;
     display: flex;
     justify-content: space-between;
@@ -68,10 +182,9 @@ h3 {
     font-size: 14pt;
 }
 
-.containe0 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+p {
+    margin: 5px;
+    padding: 0px;
 }
 
 .slides2 {
