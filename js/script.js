@@ -9,7 +9,7 @@
 */
 
 let btn = document.querySelector("#btn");
-btn.addEventListener("click", function() {
+btn.addEventListener("click", function () {
     let FromCadastro = document.querySelector(".FromCadastro");
     let FromCadastro1 = document.querySelector(".FromCadastro1");
 
@@ -21,7 +21,7 @@ btn.addEventListener("click", function() {
 
 let btncpf = document.querySelector("#inputCPF");
 
-btncpf.addEventListener("keyup", function() {
+btncpf.addEventListener("keyup", function () {
     let cpf = document.querySelector("#inputCPF");
 
     if (cpf.value.length == 3 || cpf.value.length == 7) {
@@ -35,7 +35,7 @@ btncpf.addEventListener("keyup", function() {
 
 let iddata = document.querySelector("#data");
 
-iddata.addEventListener("keyup", function() {
+iddata.addEventListener("keyup", function () {
     let data = document.querySelector("#data");
 
     if (data.value.length == 2 || data.value.length == 5) {
@@ -46,7 +46,7 @@ iddata.addEventListener("keyup", function() {
 // Mascara Telefone
 
 let masc = document.querySelector("#telefone");
-masc.addEventListener("keyup", function() {
+masc.addEventListener("keyup", function () {
     let telefone = document.querySelector("#telefone");
 
     if (telefone.value.length == 1 || telefone.value.length == 2) {

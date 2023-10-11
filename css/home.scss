@@ -1,0 +1,130 @@
+body {}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+.container01 {
+    height: 150px;
+}
+
+.img {
+    width: 1350px;
+    height: 500px;
+}
+
+.carousel {
+    padding: 30px;
+    position: relative;
+    width: 1350px;
+}
+
+.boas-vidas {
+    padding: 30px;
+}
+
+.container-projeto {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sobre-o-projeto {
+    width: 800px;
+    height: 200px;
+    background-color: rgb(38, 153, 219);
+    color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16pt;
+    margin-bottom: 50px;
+}
+
+#img2 {
+    width: 580px;
+    height: 350px;
+}
+
+.slides {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.texto {
+    position: relative;
+    top: 30px;
+    right: 100px;
+    width: 500px;
+    height: 430px;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 14pt;
+}
+
+.containe0 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slides2 {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.texto2 {
+    position: relative;
+    top: 30px;
+    left: 6px;
+    width: 500px;
+    height: 430px;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 14pt;
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    height: 300px;
+    align-items: center;
+}
+
+.menu-rodapé {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    right: 10%;
+}
+
+.menu-rodapé,
+li {
+    color: white;
+    list-style: none;
+}
+
+#h2 {
+    color: white;
+    padding: 30px;
+}
+
+.a {
+    position: relative;
+    right: 10px;
+    bottom: 10px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
