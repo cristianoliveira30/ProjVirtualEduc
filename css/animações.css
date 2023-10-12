@@ -23,7 +23,7 @@ pra manter o sistema organizado*/
   }
   100% {
     width: 800px;
-    height: 250px;
+    height: auto;
   }
 }
 @keyframes open_square_mobile {
