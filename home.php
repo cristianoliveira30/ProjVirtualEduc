@@ -119,6 +119,22 @@
 			</div>
 			<img src="./img/paisagem01.jpg" alt="" id="img2">
 		</div>
+		<hr>
+		<div class="slides1">
+			<img src="./img/paisagem01.jpg" alt="" id="img2">
+			<div class="texto">
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam adipisci modi, facilis aperiam voluptas magni? Laboriosam sunt expedita nulla nesciunt similique veritatis nihil aliquid inventore blanditiis quo! Hic, labore cumque!</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatibus a sint eveniet blanditiis mollitia eligendi amet laborum commodi doloremque? Tempora animi voluptate necessitatibus quia cum magni nobis repellat officia!</p>
+			</div>
+		</div>
+		<hr>
+		<div class="slides2">
+			<div class="texto2">
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam adipisci modi, facilis aperiam voluptas magni? Laboriosam sunt expedita nulla nesciunt similique veritatis nihil aliquid inventore blanditiis quo! Hic, labore cumque!</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatibus a sint eveniet blanditiis mollitia eligendi amet laborum commodi doloremque? Tempora animi voluptate necessitatibus quia cum magni nobis repellat officia!</p>
+			</div>
+			<img src="./img/paisagem01.jpg" alt="" id="img2">
+		</div>
 	</main>
 	<footer class="navbar navbar-dark bg-dark">
 		<h2 id="h2">VirtualEduc</h2>
