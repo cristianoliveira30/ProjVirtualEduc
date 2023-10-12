@@ -34,6 +34,24 @@ pra manter o sistema organizado*/
         height: 250px;
     }
 }
+@keyframes open_square_mobile {
+
+    //Abre um quadro
+    0% {
+        width: 10px;
+        height: 0;
+    }
+
+    50% {
+        height: 250px;
+        width: 10px;
+    }
+
+    100% {
+        width: 350px;
+        height: auto;
+    }
+}
 
 @keyframes open_square_2 {
 

@@ -24,6 +24,12 @@ section div h1:nth-child(1) {
 }
 
 /*animação do quadro do texto*/
+section .DivTextMobile {
+	width: 0px;
+	height: 0px;
+	animation: open_square_mobile .5s ease forwards;
+	animation-duration: 1s;
+}
 section .DivText {
 	width: 0px;
 	height: 0px;
