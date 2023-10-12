@@ -45,30 +45,16 @@ iddata.addEventListener("keyup", function () {
 
 // Mascara Telefone
 
-let masc = document.querySelector("#telefone");
-masc.addEventListener("keyup", function () {
-    let telefone = document.querySelector("#telefone");
+function mascararTelefone(input) {
+    // Remove todos os caracteres não numéricos do valor de entrada
+    const unmaskedValue = input.value.replace(/\D/g, '');
 
-    if (telefone.value.length == 1 || telefone.value.length == 2) {
-        telefone.value += "(";
+    // Verifica o tamanho do valor desmascarado
+    if (unmaskedValue.length <= 10) {
+      // Se for menor que 10, a máscara não pode ser aplicada completamente
+      input.value = `(${unmaskedValue.slice(0, 2)}) ${unmaskedValue.slice(2, 6)}`;
+    } else {
+      // Caso contrário, aplica a máscara completa
+      input.value = `(${unmaskedValue.slice(0, 2)}) ${unmaskedValue.slice(2, 6)} - ${unmaskedValue.slice(6, 10)}`;
     }
-});
-
-// Sliders 
-
-let count = 1;
-document.getElementById("radio1").checked = true;
-
-setInterval(function () {
-    nextImagem();
-}, 5000)
-
-function nextImagem() {
-    count++;
-    if (count > 4) {
-        count = 1;
-    }
-
-    document.getElementById("radio" + count).checked = true;
-
-}
+  }

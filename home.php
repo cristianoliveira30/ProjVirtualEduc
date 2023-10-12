@@ -12,7 +12,7 @@
 
 <body>
 	<header>
-		<nav class="navbar1 navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="#">VirtualEduc</a>
 				<div class="collapse navbar-collapse " id="navbarSupportedContent">
@@ -187,8 +187,8 @@
 		</div>
 	</footer>
 
-
 	<script src="./js/home.js"></script>
+
 </body>
 
 </html>
