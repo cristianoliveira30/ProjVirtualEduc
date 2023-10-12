@@ -148,11 +148,15 @@ main  form #inputState {
 
 .FromCadastro1 {
   width: 450px;
+  height: 450px;
 
-  animation: open_square_2 2s ease forwards;
+  // animation: open_square_2 2s ease forwards;
   display: none;
   padding: 15px;
 }
 svg {
   display: none;
+}
+.navbar1 {
+  height: 200px;
 }
