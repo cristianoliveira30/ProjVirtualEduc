@@ -45,19 +45,9 @@ iddata.addEventListener("keyup", function () {
 
 // Mascara Telefone
 
-function mascararTelefone(input) {
-    // Remove todos os caracteres não numéricos do valor de entrada
-    const unmaskedValue = input.value.replace(/\D/g, '');
+$("#telefone").mask("(99) 99999-9999")
 
-    // Verifica o tamanho do valor desmascarado
-    if (unmaskedValue.length <= 10) {
-        // Se for menor que 10, a máscara não pode ser aplicada completamente
-        input.value = `(${unmaskedValue.slice(0, 2)}) ${unmaskedValue.slice(2, 6)}`;
-    } else {
-        // Caso contrário, aplica a máscara completa
-        input.value = `(${unmaskedValue.slice(0, 2)}) ${unmaskedValue.slice(2, 6)} - ${unmaskedValue.slice(6, 10)}`;
-    }
-}
+
 //se o useragente for mobile vai retornar true
 function isMobile() {
     return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);

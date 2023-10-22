@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Home</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link rel="stylesheet" href="./css/home.css">
 	<link rel="stylesheet" href="./css/home.scss">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
-
 <body>
 	<header>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark col pt-5 pb-4">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="#">VirtualEduc</a>
 				<div class="collapse navbar-collapse " id="navbarSupportedContent">
@@ -56,42 +57,31 @@
 		</nav>
 	</header>
 	<main>
-		<div class="slider">
-			<div class="slides">
-				<!-- Radio butto -->
-				<input type="radio" name="radio-btn" id="radio1">
-				<input type="radio" name="radio-btn" id="radio2">
-				<input type="radio" name="radio-btn" id="radio3">
-				<input type="radio" name="radio-btn" id="radio4">
-				<!-- Fim radio button -->
-				<!-- Slide images -->
-				<div class="slide first">
-					<img src="./img/pexels-cytonn-photography-955405.jpg" alt="imagem1">
+		<div id="carouselExampleIndicators" class="carousel slide w-100 container-fluid img-fluid carrossel" data-bs-ride="carousel">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			</div>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="img/paisagem.jpg" class="carrossel">
 				</div>
-				<div class="slide">
-					<img src="./img/pexels-digital-buggu-374559.jpg" alt="imagem2">
+				<div class="carousel-item">
+					<img src="img/paisagem01.jpg" class="carrossel" alt="...">
 				</div>
-				<div class="slide">
-					<img src="./img/pexels-luis-gomes-546819.jpg" alt="imagem3">
-				</div>
-				<div class="slide">
-					<img src="./img/pexels-digital-buggu-374559.jpg" alt="imagem4">
-				</div>
-				<!-- Fim Slide images -->
-				<!-- Navigation auto -->
-				<div class="navigation-auto">
-					<div class="auto-btn1"></div>
-					<div class="auto-btn2"></div>
-					<div class="auto-btn3"></div>
-					<div class="auto-btn4"></div>
+				<div class="carousel-item">
+					<img src="img/imagem02.jpeg" class="carrossel" alt="...">
 				</div>
 			</div>
-			<div class="manual-navigation">
-				<label for="radio1" class="manual-btn"></label>
-				<label for="radio2" class="manual-btn"></label>
-				<label for="radio3" class="manual-btn"></label>
-				<label for="radio4" class="manual-btn"></label>
-			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
 		</div>
 		<div class="boas-vidas">
 			<h2>Olá, Seja Bem Vindo ao</h2>
@@ -99,96 +89,127 @@
 		</div>
 		<div class="container-projeto">
 			<div class="sobre-o-projeto">
-				<h3 id="h3">O que é o Projeto VirtualEduc?</h3>
-				<p>É um projeto desenvolvido pelos alunos da escola Eetepa Dr Celso Malcher. A plataforma tem como objetivo o apoio as turmas, onde serão disponibilizados contéudos programaticos, livros, pdfs e eventos que ocorram entre as turmas.</p>
+				<h3 id="titulo-de-boas-vindas">O que é o Projeto VirtualEduc?</h3>
+				<p class="mb-3">É um projeto desenvolvido pelos alunos da escola Eetepa Dr Celso Malcher. A plataforma tem como objetivo o apoio as turmas, onde serão disponibilizados contéudos programaticos, livros, pdfs e eventos que ocorram entre as turmas.</p>
 			</div>
 		</div>
 		<hr>
-		<div class="slides1">
-			<img src="./img/paisagem01.jpg" alt="" id="img2">
+		<div class="p-">
+			<img src="./img/paisagem01.jpg" alt="" id="img2" class="img-fluid">
 			<div class="texto">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam adipisci modi, facilis aperiam voluptas magni? Laboriosam sunt expedita nulla nesciunt similique veritatis nihil aliquid inventore blanditiis quo! Hic, labore cumque!</p>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatibus a sint eveniet blanditiis mollitia eligendi amet laborum commodi doloremque? Tempora animi voluptate necessitatibus quia cum magni nobis repellat officia!</p>
+				<p class="text-break">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam adipisci modi, facilis aperiam voluptas magni? Laboriosam sunt expedita nulla nesciunt similique veritatis nihil aliquid inventore blanditiis quo! Hic, labore cumque!</p>
+				<p class="paragrafo-responsivo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatibus a sint eveniet blanditiis mollitia eligendi amet laborum commodi doloremque? Tempora animi voluptate necessitatibus quia cum magni nobis repellat officia!</p>
 			</div>
 		</div>
 		<hr>
 		<div class="slides2">
 			<div class="texto2">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam adipisci modi, facilis aperiam voluptas magni? Laboriosam sunt expedita nulla nesciunt similique veritatis nihil aliquid inventore blanditiis quo! Hic, labore cumque!</p>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatibus a sint eveniet blanditiis mollitia eligendi amet laborum commodi doloremque? Tempora animi voluptate necessitatibus quia cum magni nobis repellat officia!</p>
+				<p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam adipisci modi, facilis aperiam voluptas magni? Laboriosam sunt expedita nulla nesciunt similique veritatis nihil aliquid inventore blanditiis quo! Hic, labore cumque!</p>
+				<p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatibus a sint eveniet blanditiis mollitia eligendi amet laborum commodi doloremque? Tempora animi voluptate necessitatibus quia cum magni nobis repellat officia!</p>
 			</div>
-			<img src="./img/paisagem01.jpg" alt="" id="img2">
+			<img src="./img/paisagem01.jpg" alt="" id="img2" class="img-fluid">
 		</div>
 		<hr>
-		<div class="slides1">
+		<div class="slides1 col">
 			<img src="./img/paisagem01.jpg" alt="" id="img2">
 			<div class="texto">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam adipisci modi, facilis aperiam voluptas magni? Laboriosam sunt expedita nulla nesciunt similique veritatis nihil aliquid inventore blanditiis quo! Hic, labore cumque!</p>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatibus a sint eveniet blanditiis mollitia eligendi amet laborum commodi doloremque? Tempora animi voluptate necessitatibus quia cum magni nobis repellat officia!</p>
+				<p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam adipisci modi, facilis aperiam voluptas magni? Laboriosam sunt expedita nulla nesciunt similique veritatis nihil aliquid inventore blanditiis quo! Hic, labore cumque!</p>
+				<p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatibus a sint eveniet blanditiis mollitia eligendi amet laborum commodi doloremque? Tempora animi voluptate necessitatibus quia cum magni nobis repellat officia!</p>
 			</div>
 		</div>
 		<hr>
-		<div class="slides2">
+		<div class="slides2 col">
 			<div class="texto2">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam adipisci modi, facilis aperiam voluptas magni? Laboriosam sunt expedita nulla nesciunt similique veritatis nihil aliquid inventore blanditiis quo! Hic, labore cumque!</p>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatibus a sint eveniet blanditiis mollitia eligendi amet laborum commodi doloremque? Tempora animi voluptate necessitatibus quia cum magni nobis repellat officia!</p>
+				<p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam adipisci modi, facilis aperiam voluptas magni? Laboriosam sunt expedita nulla nesciunt similique veritatis nihil aliquid inventore blanditiis quo! Hic, labore cumque!</p>
+				<p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatibus a sint eveniet blanditiis mollitia eligendi amet laborum commodi doloremque? Tempora animi voluptate necessitatibus quia cum magni nobis repellat officia!</p>
 			</div>
 			<img src="./img/paisagem01.jpg" alt="" id="img2">
 		</div>
 	</main>
-	<footer class="navbar navbar-dark bg-dark">
-		<h2 id="h2">VirtualEduc</h2>
-		<div class="menu-rodapé">
-			<ul>
-				<div class="a"><a href="#"><label for="">Quem somos</label></a></div>
-				<a href="#">
-					<li>Projeto</li>
-				</a>
-				<a href="#">
-					<li>Membros</li>
-				</a>
-				<a href="#">
-					<li>Novidades</li>
-				</a>
-				<a href="#">
-					<li>Mais</li>
-				</a>
-			</ul>
-			<ul>
-				<div class="a"><a href="#"><label for=""><label for="">Contatos</label></a></div>
-				<a href="#">
-					<li>E-mail</li>
-				</a>
-				<a href="#">
-					<li>Telefone</li>
-				</a>
-				<a href="#">
-					<li>Instagram</li>
-				</a>
-				<a href="#">
-					<li>Facebook</li>
-				</a>
-			</ul>
-			<ul>
-				<div class="a"><a href="#"><label for="">Parceiros</label></a></div>
-				<a href="#">
-					<li>Eetepa Dr Celso Malcher</li>
-				</a>
-				<a href="#">
-					<li>UFPA</li>
-				</a>
-				<a href="#">
-					<li>Parque de Guamã</li>
-				</a>
-				<a href="#">
-					<li>Alunos</li>
-				</a>
-			</ul>
+	<footer class="bg-dark text-white pt-5 pb-4">
+		<div class="container text-center text-md-left">
+			<div class="row text-start text-md-left">
+				<div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Company Name</h5>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae neque repellendus consequatur illo, id numquam facilis a quia officia</p>
+				</div>
+				<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Products</h5>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> TheProvders</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> Creativity</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> SourcesFiles</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> bootstrap 5 alpha</a>
+					</p>
+				</div>
+				<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Useful links</h5>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> Ypur Account</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> Become an Affliates</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> Shipping Rates</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> Help</a>
+					</p>
+				</div>
+				<div class="col-mb-4 col-lg-3 col-xl-3 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact </h5>
+					<p>
+						<i class="fas fa-home mr-3"></i> New York, NY, 2333, US
+					</p>
+					<p>
+						<i class="fas fa-envelope mr-3 "></i> theproviders98@gmail.com
+					</p>
+					<p>
+						<i class="fas fa-phone mr-3 "></i> (99)99999-9999
+					<p>
+						<i class="fas fa-print mr-3 "></i> +01 335 633 77
+					</p>
+				</div>
+			</div>
+			<hr class="mb-4">
+			<div class="row align-items-center">
+				<div class="col-md-7 col-lg-8">
+					<p> Copyright 2023 All rights reserved by: <a href="#" style="text-decoration: none;">
+							<strong class="text-warning">The Providers</strong>
+						</a></p>
+				</div>
+				<div class="col-md-5 col-lg-4">
+					<div class="text-center text-md-right">
+						<ul class="list-unstyled list-inline">
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-facebook"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-twitter"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-google-plus"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-linkedin-in"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-youtube"></i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
 	</footer>
-
-	<script src="./js/home.js"></script>
-
+	<script src=""></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
-
 </html>
