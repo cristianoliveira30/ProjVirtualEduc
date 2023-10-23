@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,9 +12,10 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+
 <body>
 	<header>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark col pt-5 pb-4">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark col pt-5 pb-4 container-fluid">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="#">VirtualEduc</a>
 				<div class="collapse navbar-collapse " id="navbarSupportedContent">
@@ -57,7 +59,7 @@
 		</nav>
 	</header>
 	<main>
-		<div id="carouselExampleIndicators" class="carousel slide w-100 container-fluid img-fluid carrossel" data-bs-ride="carousel">
+		<div id="carouselExampleIndicators" class="carousel slide container w-100" data-bs-ride="carousel">
 			<div class="carousel-indicators">
 				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
 				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -65,13 +67,13 @@
 			</div>
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<img src="img/paisagem.jpg" class="carrossel">
+					<img src="./img/paisagem.jpg" class="imagem-slider img-fluid" alt="...">
 				</div>
 				<div class="carousel-item">
-					<img src="img/paisagem01.jpg" class="carrossel" alt="...">
+					<img src="./img/paisagem01.jpg" class="imagem-slider img-fluid" alt="...">
 				</div>
 				<div class="carousel-item">
-					<img src="img/imagem02.jpeg" class="carrossel" alt="...">
+					<img src="./img/pexels-luis-gomes-546819.jpg" class="imagem-slider img-fluid" alt="...">
 				</div>
 			</div>
 			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -83,52 +85,67 @@
 				<span class="visually-hidden">Next</span>
 			</button>
 		</div>
-		<div class="boas-vidas">
-			<h2>Olá, Seja Bem Vindo ao</h2>
-			<h2>VirtualEduc</h2>
+		<div class="container p-5">
+			<h3>Seja Bem Vindo ao VirtualEduc</h3>
 		</div>
-		<div class="container-projeto">
-			<div class="sobre-o-projeto">
-				<h3 id="titulo-de-boas-vindas">O que é o Projeto VirtualEduc?</h3>
-				<p class="mb-3">É um projeto desenvolvido pelos alunos da escola Eetepa Dr Celso Malcher. A plataforma tem como objetivo o apoio as turmas, onde serão disponibilizados contéudos programaticos, livros, pdfs e eventos que ocorram entre as turmas.</p>
+		<hr>
+		<div class="container" class="container01">
+			<div class="row">
+				<div class="col-md-6">
+					<img src="./img/paisagem01.jpg" alt="" class="img-fluid imagem01">
+				</div>
+				<div class="col-md-6 p-2" style="text-align: justify;">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, sint eum, nihil voluptatibus voluptates odio sit vero reprehenderit earum, beatae dolor? Illo deleniti maiores ducimus, optio cupiditate consequuntur modi unde!</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, magni adipisci modi ab nemo quibusdam sequi aperiam. Illum, architecto eligendi voluptate repellat, molestiae non ipsam laudantium odio ea aut et.</p>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio cupiditate voluptates voluptas vel? Iusto eos odit ducimus! Provident eaque minus voluptatum, dicta, culpa rem distinctio consectetur, quae unde dolor nemo?</p>
+				</div>
 			</div>
 		</div>
 		<hr>
-		<div class="p-">
-			<img src="./img/paisagem01.jpg" alt="" id="img2" class="img-fluid">
-			<div class="texto">
-				<p class="text-break">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam adipisci modi, facilis aperiam voluptas magni? Laboriosam sunt expedita nulla nesciunt similique veritatis nihil aliquid inventore blanditiis quo! Hic, labore cumque!</p>
-				<p class="paragrafo-responsivo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatibus a sint eveniet blanditiis mollitia eligendi amet laborum commodi doloremque? Tempora animi voluptate necessitatibus quia cum magni nobis repellat officia!</p>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 p-2">
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi explicabo corrupti dolores quam et sapiente cumque doloremque sit dignissimos obcaecati consequatur, atque sint. Quibusdam, voluptate tempora assumenda iure distinctio pariatur?</p>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur culpa quidem laborum reiciendis eum facere nobis dicta, architecto illum. Iusto a obcaecati repellat sequi, quaerat in quas et voluptas ad.</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, consequuntur expedita explicabo provident sunt accusantium. Et quibusdam consequatur ipsam vel doloremque beatae ducimus dolorem aliquid expedita quas, eaque aut impedit!</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ratione. Magni facilis nobis maxime quidem? Minus, quaerat! Maxime error possimus non. Perferendis perspiciatis, quis ex molestiae cum debitis libero rem.</p>
+				</div>
+				<div class="col-md-6">
+					<img src="./img/paisagem01.jpg" alt="" class="img-fluid imagem01">
+				</div>
 			</div>
 		</div>
 		<hr>
-		<div class="slides2">
-			<div class="texto2">
-				<p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam adipisci modi, facilis aperiam voluptas magni? Laboriosam sunt expedita nulla nesciunt similique veritatis nihil aliquid inventore blanditiis quo! Hic, labore cumque!</p>
-				<p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatibus a sint eveniet blanditiis mollitia eligendi amet laborum commodi doloremque? Tempora animi voluptate necessitatibus quia cum magni nobis repellat officia!</p>
-			</div>
-			<img src="./img/paisagem01.jpg" alt="" id="img2" class="img-fluid">
-		</div>
-		<hr>
-		<div class="slides1 col">
-			<img src="./img/paisagem01.jpg" alt="" id="img2">
-			<div class="texto">
-				<p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam adipisci modi, facilis aperiam voluptas magni? Laboriosam sunt expedita nulla nesciunt similique veritatis nihil aliquid inventore blanditiis quo! Hic, labore cumque!</p>
-				<p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatibus a sint eveniet blanditiis mollitia eligendi amet laborum commodi doloremque? Tempora animi voluptate necessitatibus quia cum magni nobis repellat officia!</p>
+		<div class="container p-4" class="container01">
+			<div class="row">
+				<div class="col-md-6">
+					<img src="./img/paisagem01.jpg" alt="" class="img-fluid imagem01">
+				</div>
+				<div class="col-md-6 p-2" style="text-align: justify;">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, sint eum, nihil voluptatibus voluptates odio sit vero reprehenderit earum, beatae dolor? Illo deleniti maiores ducimus, optio cupiditate consequuntur modi unde!</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, magni adipisci modi ab nemo quibusdam sequi aperiam. Illum, architecto eligendi voluptate repellat, molestiae non ipsam laudantium odio ea aut et.</p>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio cupiditate voluptates voluptas vel? Iusto eos odit ducimus! Provident eaque minus voluptatum, dicta, culpa rem distinctio consectetur, quae unde dolor nemo?</p>
+				</div>
 			</div>
 		</div>
 		<hr>
-		<div class="slides2 col">
-			<div class="texto2">
-				<p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam adipisci modi, facilis aperiam voluptas magni? Laboriosam sunt expedita nulla nesciunt similique veritatis nihil aliquid inventore blanditiis quo! Hic, labore cumque!</p>
-				<p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatibus a sint eveniet blanditiis mollitia eligendi amet laborum commodi doloremque? Tempora animi voluptate necessitatibus quia cum magni nobis repellat officia!</p>
+		<div class="container p-4">
+			<div class="row">
+				<div class="col-md-6 p-2">
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi explicabo corrupti dolores quam et sapiente cumque doloremque sit dignissimos obcaecati consequatur, atque sint. Quibusdam, voluptate tempora assumenda iure distinctio pariatur?</p>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur culpa quidem laborum reiciendis eum facere nobis dicta, architecto illum. Iusto a obcaecati repellat sequi, quaerat in quas et voluptas ad.</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, consequuntur expedita explicabo provident sunt accusantium. Et quibusdam consequatur ipsam vel doloremque beatae ducimus dolorem aliquid expedita quas, eaque aut impedit!</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ratione. Magni facilis nobis maxime quidem? Minus, quaerat! Maxime error possimus non. Perferendis perspiciatis, quis ex molestiae cum debitis libero rem.</p>
+				</div>
+				<div class="col-md-6">
+					<img src="./img/paisagem01.jpg" alt="" class="img-fluid imagem01">
+				</div>
 			</div>
-			<img src="./img/paisagem01.jpg" alt="" id="img2">
 		</div>
 	</main>
 	<footer class="bg-dark text-white pt-5 pb-4">
 		<div class="container text-center text-md-left">
-			<div class="row text-start text-md-left">
+			<div class="row text-start text-md-left container">
 				<div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
 					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Company Name</h5>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae neque repellendus consequatur illo, id numquam facilis a quia officia</p>
@@ -209,7 +226,8 @@
 			</div>
 		</div>
 	</footer>
-	<script src=""></script>
+	<script src="/js/script.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
+
 </html>

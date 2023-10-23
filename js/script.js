@@ -43,11 +43,6 @@ iddata.addEventListener("keyup", function () {
     }
 });
 
-// Mascara Telefone
-
-$("#telefone").mask("(99) 99999-9999")
-
-
 //se o useragente for mobile vai retornar true
 function isMobile() {
     return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
