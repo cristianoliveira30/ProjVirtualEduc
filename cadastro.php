@@ -1,167 +1,168 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-	<link rel="stylesheet" href="./css/cadastro.css">
-	<link rel="stylesheet" href="./css/cadastro.scss"><!-- Arquivo para ajustar o select-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Cadastro</title>
+	<!-- link para o bootstrap 5 -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	<link rel="stylesheet" href="./css/cadastro.css">
+	<link rel="stylesheet" href="./css/cadastro.scss">
+	<!-- link para a biblioteca Jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<!-- link Jquery mask plugin -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+	<!-- link Jquery validate plugin -->
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
 </head>
-<body class="bg-light">
+<body>
 	<header>
-		<nav class="container01 navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark">
+		<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="#">VirtualEduc</a>
-				<div class="collapse navbar-collapse " id="navbarSupportedContent">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse m-3 mr-3" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="home.php">Home</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Quem somos</a>
+							<a class="nav-link" href="index.php">Início</a>
 						</li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-								Novidades
+								Categoria
 							</a>
 							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<li><a class="dropdown-item" href="#">Biblioteca</a></li>
-								<li><a class="dropdown-item" href="#">Categorias de Lvros</a></li>
+								<li><a class="dropdown-item" href="#">Livros</a></li>
 								<li><a class="dropdown-item" href="#">Documentos</a></li>
-								<li>
-									<hr class="dropdown-divider">
-								</li>
-								<li><a class="dropdown-item" href="#">Something else here</a></li>
+								<li><a class="dropdown-item" href="#">Curso</a></li>
+								<li><a class="dropdown-item" href="#">Material</a></li>
 							</ul>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Projeto</a>
+							<a class="nav-link" href="#">Novidades</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Sobre o Projeto</a>
 						</li>
 					</ul>
-					<div>
-						<a class="btn btn-primary" href="cadastro.php" role="button">Cadastre-se</a>
-						<a class="btn btn-primary" href="login.php" role="button">
-							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-								<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-								<path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
-							</svg>
-							Login
-						</a>
-					</div>
+					<ul class="d-flex justify-content-lg-end m-lg-3  navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link text-white" href="cadastro.php">Cadastre-se</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="login.php">Entrar</a>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</nav>
 	</header>
-	<main class="">
-		<div class="">
-			<form class="FormCadastro" action="./BEnd/valiusu.php" method="post" enctype="multipart/form">
-				<!-- Etapa1 -->
-				<div class="FromCadastro bg-dark-subtle rounded-4 border border-primary text-bg-dark-subtle position-absolute top-50 start-50 translate-middle p-0 row g-3" id="form1">
-					<div class="col-md-6">
-						<label for="inputEmail4" class="form-label">Email</label>
-						<input typgite="email" class="form-control" id="inputEmail4" name="email" placeholder="Seu E-mail">
-					</div>
-					<div class="col-md-6">
-						<label for="inputPassword4" class="form-label">Senha</label>
-						<input type="password" class="form-control" id="inputPassword4" name="senha" placeholder="Sua Senha" maxlength="8">
-					</div>
-					<div class="col-12">
-						<label for="inputAddress" class="form-label">Nome de Usuário</label>
-						<input type="text" class="form-control" id="inputAddress" name="nomeusu" placeholder="Nome de Usuário">
-					</div>
-					<div class="col-12">
-						<label for="inputAddress2" class="form-label">Nome Completo</label>
-						<input type="text" class="form-control" id="inputAddress2" name="nomecomp" placeholder="Nome Completo">
-					</div>
-					<div class="col-md-6">
-						<label for="inputCity" class="form-label">Telefone</label>
-						<input type="text" class="form-control" id="telefone" name="tel" placeholder="+55 (99) 99999-9999" maxlength="17" oninput="mascararTelefone(this)">
-					</div>
-					<div class="col-md-4">
-						<label for="inputState" class="form-label">Escolaridade</label>
-						<select id="inputState" class="form-selecting bordder border-secundary" name="escolaridade">
-							<option selected>Não informado</option>
-							<option>Ensino fundamental incompleto </option>
-							<option>Ensino fundamental completo </option>
-							<option>Ensino médio incompleto </option>
-							<option>Ensino médio completo </option>
-							<option>Ensino superior incompleto </option>
-							<option>Ensino superior completo </option>
-							<option>Pós-Graduação incompleta </option>
-							<option>Pós-Graduação completa </option>
-							<option>Mestrado incompleto </option>
-							<option>Mestrado completo </option>
-							<option>Doutorado incompleto </option>
-							<option>Doutorado Completo </option>
-						</select>
-					</div>
-					<div class="col-12">
-						<div class="form-check">
-							<input class="form-check-input" type="checkbox" id="gridCheck">
-							<label class="form-check-label" for="gridCheck">
-								Check me out
-							</label>
-						</div>
-					</div>
-					<div class="col-12">
-						<button type="button" id="btn" class="btn btn-primary" data-bs-dismiss="modal">Sign in</button>
+	<main>
+		<form class="container-fluid" action="./BEnd/valiusu.php" method="post" enctype="multipart/form" id="cadastro">
+			<!-- Etapa1 -->
+			<div class="FormCadastro container-fluid w-50 mt-5 bg-dark-subtle rounded-4 border border-primary text-bg-dark-subtle p-3 row g-3 mx-auto etapa01 mb-5">
+				<div class="col-md-6">
+					<label for="inputEmail4" class="form-label">Email</label>
+					<input typgite="email" class="form-control" id="inputEmail" name="email" placeholder="Seu E-mail" maxlength="30">
+				</div>
+				<div class="col-md-6">
+					<label for="inputPassword4" class="form-label">Senha</label>
+					<input type="password" class="form-control" id="inputPassword" name="senha" placeholder="Sua Senha" maxlength="8">
+				</div>
+				<div class="col-12">
+					<label for="inputAddress" class="form-label">Nome de Usuário</label>
+					<input type="text" class="form-control" id="inputAddress" name="nomeusu" placeholder="Nome de Usuário">
+				</div>
+				<div class="col-12">
+					<label for="inputAddress2" class="form-label">Nome Completo</label>
+					<input type="text" class="form-control" id="inputNome" name="nomecomp" placeholder="Nome Completo">
+				</div>
+				<div class="col-md-6">
+					<label for="inputCity" class="form-label">Telefone</label>
+					<input type="text" class="form-control" id="telefone" name="tel" placeholder="+55 (99) 99999-9999" maxlength="17">
+				</div>
+				<div class="col-md-4">
+					<label for="inputState" class="form-label">Escolaridade</label>
+					<select id="inputState" class="form-selecting bordder border-secundary" name="escolaridade">
+						<option selected>Não informado</option>
+						<option>Ensino fundamental incompleto </option>
+						<option>Ensino fundamental completo </option>
+						<option>Ensino médio incompleto </option>
+						<option>Ensino médio completo </option>
+						<option>Ensino superior incompleto </option>
+						<option>Ensino superior completo </option>
+						<option>Pós-Graduação incompleta </option>
+						<option>Pós-Graduação completa </option>
+						<option>Mestrado incompleto </option>
+						<option>Mestrado completo </option>
+						<option>Doutorado incompleto </option>
+						<option>Doutorado Completo </option>
+					</select>
+				</div>
+				<div class="col-12">
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="gridCheck">
+						<label class="form-check-label" for="gridCheck">
+							Li e concordo com os termos!
+						</label>
 					</div>
 				</div>
-				<!-- Etapa2 -->
-				<div class="FromCadastro1 row g-3 bg-dark-subtle rounded-4 border border-primary text-bg-dark-subtle position-absolute top-50 start-50 translate-middle">
-					<div class="col-md-6">
-						<label for="inputEmail4" class="form-label">CPF</label>
-						<input type="email" class="form-control" id="inputCPF" name="email" placeholder="Seu CPF" maxlength="14">
-					</div>
-					<div class="col-md-6">
-						<label for="inputPassword4" class="form-label">Data</label>
-						<input type="text" class="form-control" id="data" name="data" placeholder="Data" maxlength="10">
-					</div>
+				<div class="col-12">
+					<button type="button" id="btn" class="btn btn-primary" data-bs-dismiss="modal">Enviar</button>
+				</div>
+			</div>
+			<!-- Etapa2 -->
+			<div class="FormCadastro container-fluid w-50 mt-5 bg-dark-subtle rounded-4 border border-primary text-bg-dark-subtle p-3 row g-3 mx-auto etapa02">
+				<div class="col-md-6">
+					<label for="inputEmail4" class="form-label">CPF</label>
+					<input type="email" class="form-control" id="cpf" name="email" placeholder="Seu CPF" maxlength="14">
+				</div>
+				<div class="col-md-6">
+					<label for="inputPassword4" class="form-label">Data</label>
+					<input type="text" class="form-control" id="data" name="data" placeholder="Data" maxlength="10">
+				</div>
 
-					<div class="col-md-6">
-						<label for="inputEmail4" class="form-label">RG</label>
-						<input type="email" class="form-control" id="inputCPF" name="email" placeholder="RG" maxlength="14">
-					</div>
+				<div class="col-md-6">
+					<label for="inputEmail4" class="form-label">RG</label>
+					<input type="email" class="form-control" id="rg" name="email" placeholder="RG" maxlength="7">
+				</div>
 
-					<div class="col-md-6">
-						<label for="inputCity" class="form-label">Telefone</label>
-						<input type="text" class="form-control" id="telefone" name="tel" placeholder="+55 (99) 99999-9999" maxlength="12">
-					</div>
-					<div class="col-md-4">
-						<label for="inputState" class="form-label">Escolaridade</label>
-						<select id="inputState" class="form-selecting bordder border-secundary" name="escolaridade">
-							<option selected>Não informado</option>
-							<option>Ensino fundamental incompleto </option>
-							<option>Ensino fundamental completo </option>
-							<option>Ensino médio incompleto </option>
-							<option>Ensino médio completo </option>
-							<option>Ensino superior incompleto </option>
-							<option>Ensino superior completo </option>
-							<option>Pós-Graduação incompleta </option>
-							<option>Pós-Graduação completa </option>
-							<option>Mestrado incompleto </option>
-							<option>Mestrado completo </option>
-							<option>Doutorado incompleto </option>
-							<option>Doutorado Completo </option>
-						</select>
-					</div>
-					<div class="col-12">
-						<div class="form-check">
-							<input class="form-check-input" type="checkbox" id="gridCheck">
-							<label class="form-check-label" for="gridCheck">
-								Check me out
-							</label>
-						</div>
-					</div>
-					<div class="col-12">
-						<button type="submit" id="btn-submit" class="btn btn-primary">Sign in</button>
+				<div class="col-md-6">
+					<label for="inputCity" class="form-label">Telefone</label>
+					<input type="text" class="form-control" id="telefone2" name="tel" placeholder="+55 (99) 99999-9999" maxlength="12">
+				</div>
+				<div class="col-md-4">
+					<label for="inputState" class="form-label">Escolaridade</label>
+					<select id="inputState" class="form-selecting bordder border-secundary" name="escolaridade">
+						<option selected>Não informado</option>
+						<option>Ensino fundamental incompleto </option>
+						<option>Ensino fundamental completo </option>
+						<option>Ensino médio incompleto </option>
+						<option>Ensino médio completo </option>
+						<option>Ensino superior incompleto </option>
+						<option>Ensino superior completo </option>
+						<option>Pós-Graduação incompleta </option>
+						<option>Pós-Graduação completa </option>
+						<option>Mestrado incompleto </option>
+						<option>Mestrado completo </option>
+						<option>Doutorado incompleto </option>
+						<option>Doutorado Completo </option>
+					</select>
+				</div>
+				<div class="col-12">
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="gridCheck">
+						<label class="form-check-label" for="gridCheck">
+							Li e concordo com os termos!
+						</label>
 					</div>
 				</div>
-			</form>
-		</div>
-		</div>
+				<div class="col-12">
+					<button type="submit" id="btn-submit" class="btn btn-primary">Enviar</button>
+				</div>
+			</div>
+		</form>
 	</main>
 	<footer>
 		<div class="boxad" id="boxad">
@@ -181,12 +182,32 @@
 			</div>
 		</div>
 	</footer>
-	<!--bootstrap-->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-	<!-- link do arquivo js externo-->
-	<script src="./js/script.js"></script>
+
 	<script>
-		$("#telefone").mask("(99) 99999-9999")
+
+		// Mascaras de input com a biblioteca jQuery
+
+		$(document).ready(function() {
+
+			$("#telefone").mask("(00) 00000-0000");
+			$("#cpf").mask("000.000.000-00");
+			$("#data").mask("00/00/0000");
+			$("#telefone2").mask("(00) 00000-0000");
+
+			// Função para aceitar apenas valores numericoss
+
+			const input = $('#rg');
+			input.on('input', function() {
+				input.val(input.val().replace(/[^0-9]/g, ''));
+			});
+
+		});
+
 	</script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+	<script src="./js/script.js"></script>
+
 </body>
 </html>
