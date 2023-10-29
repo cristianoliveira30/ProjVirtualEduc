@@ -139,7 +139,7 @@
 			</div>
 		</div>
 	</main>
-	<footer class="bg-dark text-white pt-5 pb-4 mb-5">
+	<footer class="bg-dark text-white pt-5 pb-4">
 		<div class="container text-center text-md-left">
 			<div class="row text-start text-md-left container">
 				<div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">

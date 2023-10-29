@@ -1,308 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/style.css">
-  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>home</title>
+  <link rel="stylesheet" href="./css/home.css">
+  <link rel="stylesheet" href="./css/home.scss">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
-<body class="bg-animated">
-
-  <script>
-    //
-    // Event listener para detectar quando o conteúdo da página foi carregado
-    window.addEventListener("load", function() {
-      var boxad = document.getElementById("boxad");
-      boxad.style.display = "none"; // Oculta o spinner
-    });
-
-    // Simula atraso para interromper o carregamento após um tempo
-    setTimeout(function() {
-      var boxad = document.getElementById("boxad");
-      boxad.style.display = "none"; // Oculta o spinner
-    }, 5000); // Interrompe o carregamento após 5 segundos (ajuste conforme necessário)
-  </script>
-
-  <div class="boxad" id="boxad">
-    <div class="content">
-
-
-      <svg id="loader" xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 -10 261 355">
-        <g>
-          <path d="M230.023 80.02l-.023.03v15.044l-11.96.006v20.75l-19.354 9.142V95.107l-9.93-.04v34.6l-19.417 9.254-.003-43.777-14.146-.016v50.414l-19.354 9.146.002-59.55-9.93.027v59.434l-19.508-9.212V95.15l-13.774-.13-.002 43.766-19.332-9.053V95.12l-9.97.045v29.893l-19.398-9.187V95.177l-11.983.006v15.03l-17.122-8.09 17.078-6.983V80.22L.286 95.257 0 95.12v188.953l123.418 58.308 7.543 3.56 7.542-3.56 123.42-58.306V95.12l-.233.11-31.667-15.06zm-.002 15.076l17.126 7.002-17.125 8.09zM15.083 118.93l108.336 51.177v155.59L15.082 274.52zm231.756 0v155.59l-108.336 51.177v-155.59z">
-          </path>
-          <path id="pen1" d="M68.26.058L31.934 51.22l.002 58.06H43.9V59.536h19.423v49.742h9.97V59.536H92.62v49.742h11.967V51.22l-1.105-1.554L68.262.058zm6.43 29.72l14.047 19.788H47.784L61.67 30.01l13.02-.23z">
-          </path>
-          <path id="pen2" d="M130.808 13.936L94.48 65.098l.002 58.058h11.964V73.414h19.424v49.742h9.97V73.414h19.327v49.742h11.967V65.098l-1.105-1.555-35.222-49.607zm6.427 29.72l14.05 19.787H110.33l13.886-19.556 13.02-.23z">
-          </path>
-          <path id="pen3" d="M193.684.083l-36.328 51.162.002 58.058h11.965V59.56h19.424v49.743h9.97V59.56h19.326v49.743h11.967V51.245l-1.105-1.555L193.685.083zm6.428 29.72l14.05 19.787h-40.955l13.885-19.556 13.02-.23z">
-          </path>
-        </g>
-      </svg>
-
-
-    </div>
-  </div>
+<body>
   <header>
+  <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">VirtualEduc</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse m-3 mr-3" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" href="index.php">Início</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								Categoria
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<li><a class="dropdown-item" href="#">Livros</a></li>
+								<li><a class="dropdown-item" href="#">Documentos</a></li>
+								<li><a class="dropdown-item" href="#">Curso</a></li>
+								<li><a class="dropdown-item" href="#">Material</a></li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Novidades</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Sobre o Projeto</a>
+						</li>
+					</ul>
+					<ul class="d-flex justify-content-lg-end m-lg-3  navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link text-white" href="cadastro.php">Cadastre-se</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="login.php">Entrar</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
   </header>
   <main>
-    <section class="">
-      <div class="">
-        <h1 class="text-center">Imagine um lugar...</h1>
+    <div class="container-fluid p-5 mb-5 mt-5 d-inline justify-content-between " id="container">
+      <div class="container m-3 bg-dark" id="seu-cadastro">
+        <h3 class="text-center text-white ">Seu cadastro</h3>
       </div>
-      <div id="divtext" class="DivText bg-dark rounded-4 position-absolute top-50 start-50 translate-middle border border-warning p-1">
-        <p id="texto" class="fs-4 text-start ms-3 mt-2">
-          O texto...<span>|</span>
-        </p>
+      <div class="container m-3 bg-dark" id="materias">
+        <h3 class="text-center text-white">Seus Matérias</h3>
       </div>
-      <button id="buttongammer" class="position-absolute start-50 translate-middle" style="top: 350px;">
-        P L A Y
-        <div id="clip">
-          <div id="leftTop" class="corner"></div>
-          <div id="rightBottom" class="corner"></div>
-          <div id="rightTop" class="corner"></div>
-          <div id="leftBottom" class="corner"></div>
-        </div>
-        <span id="rightArrow" class="arrow"></span>
-        <span id="leftArrow" class="arrow"></span>
-      </button>
-    </section>
-    <div class="stars">
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
+      <div class="container-fluid m-3 bg-dark" id="cursos">
+        <h3 class="text-center text-white">Cursos</h3>
+      </div>
+      <div class="container m-3 bg-dark" id="inscriçoes">
+        <h2 class="text-center text-white">Inscriçoes</h2>
+      </div>
     </div>
   </main>
-  <footer>
-  </footer>
-  <script src="./js/script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-  <script>
-    if (isMobile()) { //verifica se é mobile e aplica as alterações
-      $("#divtext").removeClass("DivText").addClass("DivTextMobile");
-    }
+  <footer class="bg-dark text-white pt-5 pb-4">
+		<div class="container text-center text-md-left">
+			<div class="row text-start text-md-left container">
+				<div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Company Name</h5>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae neque repellendus consequatur illo, id numquam facilis a quia officia</p>
+				</div>
+				<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Products</h5>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> TheProvders</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> Creativity</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> SourcesFiles</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> bootstrap 5 alpha</a>
+					</p>
+				</div>
+				<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Useful links</h5>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> Ypur Account</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> Become an Affliates</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> Shipping Rates</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> Help</a>
+					</p>
+				</div>
+				<div class="col-mb-4 col-lg-3 col-xl-3 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact </h5>
+					<p>
+						<i class="fas fa-home mr-3"></i> New York, NY, 2333, US
+					</p>
+					<p>
+						<i class="fas fa-envelope mr-3 "></i> theproviders98@gmail.com
+					</p>
+					<p>
+						<i class="fas fa-phone mr-3 "></i> (99)99999-9999
+					<p>
+						<i class="fas fa-print mr-3 "></i> +01 335 633 77
+					</p>
+				</div>
+			</div>
+			<hr class="mb-4">
+			<div class="row align-items-center">
+				<div class="col-md-7 col-lg-8">
+					<p> Copyright 2023 All rights reserved by: <a href="#" style="text-decoration: none;">
+							<strong class="text-warning">The Providers</strong>
+						</a></p>
+				</div>
+				<div class="col-md-5 col-lg-4">
+					<div class="text-center text-md-right">
+						<ul class="list-unstyled list-inline">
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-facebook"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-twitter"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-google-plus"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-linkedin-in"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-youtube"></i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
 
-    $(document).ready(function () {
-    $("#buttongammer").click(function () {
-      window.location.href = './home.php';
-    });
-  });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </body>
-
 </html>
-
-<style>
-  /* estilização do button gammer */
-  button {
-    position: relative;
-    width: 11em;
-    height: 4em;
-    outline: none;
-    transition: 0.1s;
-    background-color: transparent;
-    border: none;
-    font-size: 13px;
-    font-weight: bold;
-    color: #ddebf0;
-  }
-
-  #clip {
-    --color: #2761c3;
-    position: absolute;
-    top: 0;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    border: 5px double var(--color);
-    box-shadow: inset 0px 0px 15px #195480;
-    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-  }
-
-  .arrow {
-    position: absolute;
-    transition: 0.2s;
-    background-color: #2761c3;
-    top: 35%;
-    width: 11%;
-    height: 30%;
-  }
-
-  #leftArrow {
-    left: -13.5%;
-    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 50%);
-  }
-
-  #rightArrow {
-    -webkit-clip-path: polygon(100% 49%, 0 0, 0 100%);
-    left: 102%;
-  }
-
-  button:hover #rightArrow {
-    background-color: #27c39f;
-    left: -15%;
-    animation: 0.6s ease-in-out both infinite alternate rightArrow8;
-  }
-
-  button:hover #leftArrow {
-    background-color: #27c39f;
-    left: 103%;
-    animation: 0.6s ease-in-out both infinite alternate leftArrow8;
-  }
-
-  .corner {
-    position: absolute;
-    width: 4em;
-    height: 4em;
-    background-color: #2761c3;
-    box-shadow: inset 1px 1px 8px #2781c3;
-    transform: scale(1) rotate(45deg);
-    transition: 0.2s;
-  }
-
-  #rightTop {
-    top: -1.98em;
-    left: 91%;
-  }
-
-  #leftTop {
-    top: -1.96em;
-    left: -3.0em;
-  }
-
-  #leftBottom {
-    top: 2.10em;
-    left: -2.15em;
-  }
-
-  #rightBottom {
-    top: 45%;
-    left: 88%;
-  }
-
-  button:hover #leftTop {
-    animation: 0.1s ease-in-out 0.05s both changeColor8,
-      0.2s linear 0.4s both lightEffect8;
-  }
-
-  button:hover #rightTop {
-    animation: 0.1s ease-in-out 0.15s both changeColor8,
-      0.2s linear 0.4s both lightEffect8;
-  }
-
-  button:hover #rightBottom {
-    animation: 0.1s ease-in-out 0.25s both changeColor8,
-      0.2s linear 0.4s both lightEffect8;
-  }
-
-  button:hover #leftBottom {
-    animation: 0.1s ease-in-out 0.35s both changeColor8,
-      0.2s linear 0.4s both lightEffect8;
-  }
-
-  button:hover .corner {
-    transform: scale(1.25) rotate(45deg);
-  }
-
-  button:hover #clip {
-    animation: 0.2s ease-in-out 0.55s both greenLight8;
-    --color: #27c39f;
-  }
-
-  @keyframes changeColor8 {
-    from {
-      background-color: #2781c3;
-    }
-
-    to {
-      background-color: #27c39f;
-    }
-  }
-
-  @keyframes lightEffect8 {
-    from {
-      box-shadow: 1px 1px 5px #27c39f;
-    }
-
-    to {
-      box-shadow: 0 0 2px #27c39f;
-    }
-  }
-
-  @keyframes greenLight8 {
-    from {}
-
-    to {
-      box-shadow: inset 0px 0px 32px #27c39f;
-    }
-  }
-
-  @keyframes leftArrow8 {
-    from {
-      transform: translate(0px);
-    }
-
-    to {
-      transform: translateX(10px);
-    }
-  }
-
-  @keyframes rightArrow8 {
-    from {
-      transform: translate(0px);
-    }
-
-    to {
-      transform: translateX(-10px);
-    }
-  }
-</style>

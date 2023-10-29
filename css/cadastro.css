@@ -1,8 +1,8 @@
-@charset "UTF-8";
+/* @charset "UTF-8";
 /*importações*/
 /*Galera esse arquivo aqui foi feito pra conter todas as animações que formos usar e criar
 pra manter o sistema organizado*/
-:root {
+/* :root {
   --color-white: #fff;
   --color-transp: #ffffff00;
   --color-light: #f8f9fa;
@@ -148,16 +148,17 @@ pra manter o sistema organizado*/
   100% {
     opacity: 100%;
   }
-}
+} */
 /*gerais*/
+
 body {
   min-height: 100vh;
   background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /*main-----------------------------------------------------------------------------------------------------------*/
-main .FromCadastro {
+/* main .FromCadastro {
   width: 450px;
   height: 50px;
   -webkit-animation: open_square_2 2s ease forwards;
@@ -165,7 +166,7 @@ main .FromCadastro {
 }
 
 /* Aplica a animação aparecer aos itens dentro do formulário */
-.FormCadastro label,
+/* .FormCadastro label,
 button,
 input,
 select {
@@ -174,4 +175,5 @@ select {
           animation: aparecer 2s ease forwards !important;
   -webkit-animation-delay: 1s !important;
           animation-delay: 1s !important;
-}/*# sourceMappingURL=cadastro.css.map */
+} */
+/*# sourceMappingURL=cadastro.css.map */

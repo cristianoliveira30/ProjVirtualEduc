@@ -6,6 +6,7 @@
 	<title>Cadastro</title>
 	<!-- link para o bootstrap 5 -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	<!-- Referente aos aquivos css -->
 	<link rel="stylesheet" href="./css/cadastro.css">
 	<link rel="stylesheet" href="./css/cadastro.scss">
 	<!-- link para a biblioteca Jquery -->
@@ -14,6 +15,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 	<!-- link Jquery validate plugin -->
 	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
 	<header>
@@ -59,113 +62,123 @@
 		</nav>
 	</header>
 	<main>
-		<form class="container-fluid" action="./BEnd/valiusu.php" method="post" enctype="multipart/form" id="cadastro">
-			<!-- Etapa1 -->
-			<div class="FormCadastro container-fluid w-50 mt-5 bg-dark-subtle rounded-4 border border-primary text-bg-dark-subtle p-3 row g-3 mx-auto etapa01 mb-5">
-				<div class="col-md-6">
-					<label for="inputEmail4" class="form-label">Email</label>
-					<input typgite="email" class="form-control" id="inputEmail" name="email" placeholder="Seu E-mail" maxlength="30">
+		<div class="login-card mt-5 mb-5 p-5" id="form">
+			<div class="etapa01" id="etapa01">
+				<div class="card-header">
+					<div class="log">Cadastro</div>
 				</div>
-				<div class="col-md-6">
-					<label for="inputPassword4" class="form-label">Senha</label>
-					<input type="password" class="form-control" id="inputPassword" name="senha" placeholder="Sua Senha" maxlength="8">
+				<form action="./BEnd/valiusu.php" method="post" enctype="multipart/form" id="cadastro">
+					<div class="form-group">
+						<label for="username">Email</label>
+						<input required="" name="username" id="username" type="text" maxlength="50">
+					</div>
+					<div class="form-group">
+						<label for="password">Senha</label>
+						<input required="" name="password" id="password" type="password" maxlength="8">
+					</div>
+					<div class="form-group">
+						<label for="username">Nome de Usuário</label>
+						<input required="" name="username" id="username" type="text" maxlength="50">
+					</div>
+					<div class="form-group">
+						<label for="username">Nome Completo</label>
+						<input required="" name="username" id="username" type="text" maxlength="50">
+					</div>
+					<div class="form-group">
+						<label for="username">Telefone</label>
+						<input required="" name="username" id="telefone" type="text" maxlength="50">
+					</div>
+					<div class="form-group">
+						<label for="username">Escolaridade</label>
+						<select name="username" id="username">
+							<option selected>Não Informado</option>
+							<option>Ensino fundamental incompleto </option>
+							<option>Ensino fundamental completo </option>
+							<option>Ensino médio incompleto </option>
+							<option>Ensino médio completo </options>
+							<option>Ensino superior incompleto </option>
+							<option>Ensino superior completo </option>
+							<option>Pós-Graduação incompleta </option>
+							<option>Pós-Graduação completa </option>
+							<option>Mestrado incompleto </option>
+							<option>Mestrado completo </option>
+							<option>Doutorado incompleto </option>
+							<option>Doutorado Completo </option>
+						</select>
+					</div>
+					<div class="form-group">
+						<input value="Login" type="button" id="btn">
+					</div>
+			</div>
+
+			<!-- Etapa02 -->
+
+			<div class="etapa02">
+				<div class="card-header">
+					<div class="log">Cadastro</div>
 				</div>
-				<div class="col-12">
-					<label for="inputAddress" class="form-label">Nome de Usuário</label>
-					<input type="text" class="form-control" id="inputAddress" name="nomeusu" placeholder="Nome de Usuário">
+				<div class="form-group">
+					<label for="username">CPF</label>
+					<input required="" name="cpf" id="cpf" type="text" maxlength="14">
 				</div>
-				<div class="col-12">
-					<label for="inputAddress2" class="form-label">Nome Completo</label>
-					<input type="text" class="form-control" id="inputNome" name="nomecomp" placeholder="Nome Completo">
+				<div class="form-group">
+					<label for="password">Data</label>
+					<input required="" name="data" id="data" type="text" maxlength="8">
 				</div>
-				<div class="col-md-6">
-					<label for="inputCity" class="form-label">Telefone</label>
-					<input type="text" class="form-control" id="telefone" name="tel" placeholder="+55 (99) 99999-9999" maxlength="17">
+				<div class="form-group">
+					<label for="username">RG</label>
+					<input required="" name="username" id="rg" type="text" maxlength="7">
 				</div>
-				<div class="col-md-4">
-					<label for="inputState" class="form-label">Escolaridade</label>
-					<select id="inputState" class="form-selecting bordder border-secundary" name="escolaridade">
-						<option selected>Não informado</option>
-						<option>Ensino fundamental incompleto </option>
-						<option>Ensino fundamental completo </option>
-						<option>Ensino médio incompleto </option>
-						<option>Ensino médio completo </option>
-						<option>Ensino superior incompleto </option>
-						<option>Ensino superior completo </option>
-						<option>Pós-Graduação incompleta </option>
-						<option>Pós-Graduação completa </option>
-						<option>Mestrado incompleto </option>
-						<option>Mestrado completo </option>
-						<option>Doutorado incompleto </option>
-						<option>Doutorado Completo </option>
+				<div class="form-group">
+					<label for="username">Endereço</label>
+					<input required="" name="endereço" id="endereço" type="text" maxlength="50">
+				</div>
+				<div class="form-group">
+					<label for="username">CEP</label>
+					<input required="" name="cep" id="cep" type="text" maxlength="50">
+				</div>
+				<div class="form-group">
+					<label for="username">Estado</label>
+					<select name="estado" id="estado">
+						<option selected>Não Informado</option>
+						<option>AC </option>
+						<option>AL </option>
+						<option>AP </option>
+						<option>AM </options>
+						<option>BA </option>
+						<option>CE </option>
+						<option>DF </option>
+						<option>ES </option>
+						<option>GO </option>
+						<option>MA </option>
+						<option>MT </option>
+						<option>MS </option>
+						<option>MG </option>
+						<option>PA </option>
+						<option>PB </option>
+						<option>PR </option>
+						<option>PE </option>
+						<option>PI </option>
+						<option>RJ </option>
+						<option>RN </option>
+						<option>RS </option>
+						<option>RO </option>
+						<option>RR </option>
+						<option>SC </option>
+						<option>SP </option>
+						<option>SE </option>
+						<option>TO </option>
 					</select>
 				</div>
-				<div class="col-12">
-					<div class="form-check">
-						<input class="form-check-input" type="checkbox" id="gridCheck">
-						<label class="form-check-label" for="gridCheck">
-							Li e concordo com os termos!
-						</label>
-					</div>
-				</div>
-				<div class="col-12">
-					<button type="button" id="btn" class="btn btn-primary" data-bs-dismiss="modal">Enviar</button>
+				<div class="form-group">
+					<input value="Login" type="submit">
 				</div>
 			</div>
-			<!-- Etapa2 -->
-			<div class="FormCadastro container-fluid w-50 mt-5 bg-dark-subtle rounded-4 border border-primary text-bg-dark-subtle p-3 row g-3 mx-auto etapa02">
-				<div class="col-md-6">
-					<label for="inputEmail4" class="form-label">CPF</label>
-					<input type="email" class="form-control" id="cpf" name="email" placeholder="Seu CPF" maxlength="14">
-				</div>
-				<div class="col-md-6">
-					<label for="inputPassword4" class="form-label">Data</label>
-					<input type="text" class="form-control" id="data" name="data" placeholder="Data" maxlength="10">
-				</div>
-
-				<div class="col-md-6">
-					<label for="inputEmail4" class="form-label">RG</label>
-					<input type="email" class="form-control" id="rg" name="email" placeholder="RG" maxlength="7">
-				</div>
-
-				<div class="col-md-6">
-					<label for="inputCity" class="form-label">Telefone</label>
-					<input type="text" class="form-control" id="telefone2" name="tel" placeholder="+55 (99) 99999-9999" maxlength="12">
-				</div>
-				<div class="col-md-4">
-					<label for="inputState" class="form-label">Escolaridade</label>
-					<select id="inputState" class="form-selecting bordder border-secundary" name="escolaridade">
-						<option selected>Não informado</option>
-						<option>Ensino fundamental incompleto </option>
-						<option>Ensino fundamental completo </option>
-						<option>Ensino médio incompleto </option>
-						<option>Ensino médio completo </option>
-						<option>Ensino superior incompleto </option>
-						<option>Ensino superior completo </option>
-						<option>Pós-Graduação incompleta </option>
-						<option>Pós-Graduação completa </option>
-						<option>Mestrado incompleto </option>
-						<option>Mestrado completo </option>
-						<option>Doutorado incompleto </option>
-						<option>Doutorado Completo </option>
-					</select>
-				</div>
-				<div class="col-12">
-					<div class="form-check">
-						<input class="form-check-input" type="checkbox" id="gridCheck">
-						<label class="form-check-label" for="gridCheck">
-							Li e concordo com os termos!
-						</label>
-					</div>
-				</div>
-				<div class="col-12">
-					<button type="submit" id="btn-submit" class="btn btn-primary">Enviar</button>
-				</div>
-			</div>
-		</form>
+			</form>
+		</div>
 	</main>
-	<footer>
-		<div class="boxad" id="boxad">
+	<footer class="bg-dark text-white pt-5 pb-4">
+		<!-- <div class="boxad" id="boxad">
 			<div class="content">
 				<svg id="loader" xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 -10 261 355">
 					<g>
@@ -180,11 +193,91 @@
 					</g>
 				</svg>
 			</div>
+		</div> -->
+		<div class="container text-center text-md-left">
+			<div class="row text-start text-md-left container">
+				<div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Company Name</h5>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae neque repellendus consequatur illo, id numquam facilis a quia officia</p>
+				</div>
+				<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Products</h5>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> TheProvders</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> Creativity</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> SourcesFiles</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> bootstrap 5 alpha</a>
+					</p>
+				</div>
+				<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Useful links</h5>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> Ypur Account</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> Become an Affliates</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> Shipping Rates</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> Help</a>
+					</p>
+				</div>
+				<div class="col-mb-4 col-lg-3 col-xl-3 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact </h5>
+					<p>
+						<i class="fas fa-home mr-3"></i> New York, NY, 2333, US
+					</p>
+					<p>
+						<i class="fas fa-envelope mr-3 "></i> theproviders98@gmail.com
+					</p>
+					<p>
+						<i class="fas fa-phone mr-3 "></i> (99)99999-9999
+					<p>
+						<i class="fas fa-print mr-3 "></i> +01 335 633 77
+					</p>
+				</div>
+			</div>
+			<hr class="mb-4">
+			<div class="row align-items-center">
+				<div class="col-md-7 col-lg-8">
+					<p> Copyright 2023 All rights reserved by: <a href="#" style="text-decoration: none;">
+							<strong class="text-warning">The Providers</strong>
+						</a></p>
+				</div>
+				<div class="col-md-5 col-lg-4">
+					<div class="text-center text-md-right">
+						<ul class="list-unstyled list-inline">
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-facebook"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-twitter"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-google-plus"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-linkedin-in"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-youtube"></i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
 	</footer>
 
 	<script>
-
 		// Mascaras de input com a biblioteca jQuery
 
 		$(document).ready(function() {
@@ -193,6 +286,7 @@
 			$("#cpf").mask("000.000.000-00");
 			$("#data").mask("00/00/0000");
 			$("#telefone2").mask("(00) 00000-0000");
+			$("#cep").mask("00000-000");
 
 			// Função para aceitar apenas valores numericoss
 
@@ -202,7 +296,6 @@
 			});
 
 		});
-
 	</script>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

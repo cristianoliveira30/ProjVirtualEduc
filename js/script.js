@@ -14,7 +14,8 @@ const etapa02 = document.querySelector(".etapa02");
 
 btn.addEventListener("click", function () {
 	etapa01.style.display = "none";
-	etapa02.style.display = "flex";
+	etapa02.style.display = "block";
+
 });
 
 //se o useragente for mobile vai retornar true
