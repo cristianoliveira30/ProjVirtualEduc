@@ -62,12 +62,12 @@
 		</nav>
 	</header>
 	<main>
-		<div class="login-card mt-5 mb-5 p-5" id="form">
-			<div class="etapa01" id="etapa01">
+		<div class="container-fluid" id="form">
+			<form class="login-card mt-5 mb-5 p-5" action="./BEnd/valiusu.php" method="post" enctype="multipart/form" id="cadastro">
 				<div class="card-header">
 					<div class="log">Cadastro</div>
 				</div>
-				<form action="./BEnd/valiusu.php" method="post" enctype="multipart/form" id="cadastro">
+				<div class="etapa01" id="etapa01">
 					<div class="form-group">
 						<label for="username">Email</label>
 						<input required="" name="username" id="username" type="text" maxlength="50">
@@ -89,91 +89,98 @@
 						<input required="" name="username" id="telefone" type="text" maxlength="50">
 					</div>
 					<div class="form-group">
-						<label for="username">Escolaridade</label>
+						<label for="username">Serie</label>
 						<select name="username" id="username">
 							<option selected>Não Informado</option>
-							<option>Ensino fundamental incompleto </option>
-							<option>Ensino fundamental completo </option>
-							<option>Ensino médio incompleto </option>
-							<option>Ensino médio completo </options>
-							<option>Ensino superior incompleto </option>
-							<option>Ensino superior completo </option>
-							<option>Pós-Graduação incompleta </option>
-							<option>Pós-Graduação completa </option>
-							<option>Mestrado incompleto </option>
-							<option>Mestrado completo </option>
-							<option>Doutorado incompleto </option>
-							<option>Doutorado Completo </option>
+							<option>1° ano </option>
+							<option>2° ano </option>
+							<option>3° ano </option>
+							<option>4° ano </option>
 						</select>
 					</div>
 					<div class="form-group">
-						<input value="Login" type="button" id="btn">
+						<label for="username">Curso</label>
+						<select name="username" id="username">
+							<option selected>Não informado</option>
+							<option>Informática </option>
+							<option>Informática pra Internet </option>
+							<option>Meio Ambiênte </option>
+							<option>Administração </option>
+							<option>Logística</option>
+						</select>
 					</div>
-			</div>
+					<div class="form-group">
+						<label class="container d-flex">
+							<input type="checkbox">
+							<a href="#" class=" m-2"><label for="">Li e concordo com os termos!</label></a>
+						</label>
 
-			<!-- Etapa02 -->
+					</div>
+					<div class="form-group">
+						<input value="Enviar" type="button" id="btn">
+					</div>
+				</div>
 
-			<div class="etapa02">
-				<div class="card-header">
-					<div class="log">Cadastro</div>
+				<!-- Etapa02 -->
+
+				<div class="etapa02">
+					<div class="form-group">
+						<label for="username">CPF</label>
+						<input required="" name="cpf" id="cpf" type="text" maxlength="14">
+					</div>
+					<div class="form-group">
+						<label for="password">Data</label>
+						<input required="" name="data" id="data" type="text" maxlength="8">
+					</div>
+					<div class="form-group">
+						<label for="username">RG</label>
+						<input required="" name="username" id="rg" type="text" maxlength="7">
+					</div>
+					<div class="form-group">
+						<label for="username">Endereço</label>
+						<input required="" name="endereço" id="endereço" type="text" maxlength="50">
+					</div>
+					<div class="form-group">
+						<label for="username">CEP</label>
+						<input required="" name="cep" id="cep" type="text" maxlength="50">
+					</div>
+					<div class="form-group">
+						<label for="username">Estado</label>
+						<select name="estado" id="estado">
+							<option selected>Não Informado</option>
+							<option>AC </option>
+							<option>AL </option>
+							<option>AP </option>
+							<option>AM </options>
+							<option>BA </option>
+							<option>CE </option>
+							<option>DF </option>
+							<option>ES </option>
+							<option>GO </option>
+							<option>MA </option>
+							<option>MT </option>
+							<option>MS </option>
+							<option>MG </option>
+							<option>PA </option>
+							<option>PB </option>
+							<option>PR </option>
+							<option>PE </option>
+							<option>PI </option>
+							<option>RJ </option>
+							<option>RN </option>
+							<option>RS </option>
+							<option>RO </option>
+							<option>RR </option>
+							<option>SC </option>
+							<option>SP </option>
+							<option>SE </option>
+							<option>TO </option>
+						</select>
+					</div>
+					<div class="form-group">
+						<input value="Enviar" type="submit">
+					</div>
 				</div>
-				<div class="form-group">
-					<label for="username">CPF</label>
-					<input required="" name="cpf" id="cpf" type="text" maxlength="14">
-				</div>
-				<div class="form-group">
-					<label for="password">Data</label>
-					<input required="" name="data" id="data" type="text" maxlength="8">
-				</div>
-				<div class="form-group">
-					<label for="username">RG</label>
-					<input required="" name="username" id="rg" type="text" maxlength="7">
-				</div>
-				<div class="form-group">
-					<label for="username">Endereço</label>
-					<input required="" name="endereço" id="endereço" type="text" maxlength="50">
-				</div>
-				<div class="form-group">
-					<label for="username">CEP</label>
-					<input required="" name="cep" id="cep" type="text" maxlength="50">
-				</div>
-				<div class="form-group">
-					<label for="username">Estado</label>
-					<select name="estado" id="estado">
-						<option selected>Não Informado</option>
-						<option>AC </option>
-						<option>AL </option>
-						<option>AP </option>
-						<option>AM </options>
-						<option>BA </option>
-						<option>CE </option>
-						<option>DF </option>
-						<option>ES </option>
-						<option>GO </option>
-						<option>MA </option>
-						<option>MT </option>
-						<option>MS </option>
-						<option>MG </option>
-						<option>PA </option>
-						<option>PB </option>
-						<option>PR </option>
-						<option>PE </option>
-						<option>PI </option>
-						<option>RJ </option>
-						<option>RN </option>
-						<option>RS </option>
-						<option>RO </option>
-						<option>RR </option>
-						<option>SC </option>
-						<option>SP </option>
-						<option>SE </option>
-						<option>TO </option>
-					</select>
-				</div>
-				<div class="form-group">
-					<input value="Login" type="submit">
-				</div>
-			</div>
 			</form>
 		</div>
 	</main>
@@ -303,4 +310,5 @@
 	<script src="./js/script.js"></script>
 
 </body>
+
 </html>
