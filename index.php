@@ -85,7 +85,7 @@
 			<h3>Seja Bem Vindo ao VirtualEduc</h3>
 		</div>
 		<hr>
-		<div class="container" class="container01">
+		<div class="container container-paragrafo">
 			<div class="row">
 				<div class="col-md-6">
 					<img src="./img/paisagem01.jpg" alt="" class="img-fluid imagem01">
@@ -99,20 +99,18 @@
 		</div>
 		<hr>
 		<div class="container">
-			<div class="row">
-				<div class="col-md-6 p-2">
-					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi explicabo corrupti dolores quam et sapiente cumque doloremque sit dignissimos obcaecati consequatur, atque sint. Quibusdam, voluptate tempora assumenda iure distinctio pariatur?</p>
-					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur culpa quidem laborum reiciendis eum facere nobis dicta, architecto illum. Iusto a obcaecati repellat sequi, quaerat in quas et voluptas ad.</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, consequuntur expedita explicabo provident sunt accusantium. Et quibusdam consequatur ipsam vel doloremque beatae ducimus dolorem aliquid expedita quas, eaque aut impedit!</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ratione. Magni facilis nobis maxime quidem? Minus, quaerat! Maxime error possimus non. Perferendis perspiciatis, quis ex molestiae cum debitis libero rem.</p>
-				</div>
-				<div class="col-md-6">
-					<img src="./img/paisagem01.jpg" alt="" class="img-fluid imagem01">
-				</div>
+			<div class="container-paragrafo caixa">
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi explicabo corrupti dolores quam et sapiente cumque doloremque sit dignissimos obcaecati consequatur, atque sint. Quibusdam, voluptate tempora assumenda iure distinctio pariatur?</p>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur culpa quidem laborum reiciendis eum facere nobis dicta, architecto illum. Iusto a obcaecati repellat sequi, quaerat in quas et voluptas ad.</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, consequuntur expedita explicabo provident sunt accusantium. Et quibusdam consequatur ipsam vel doloremque beatae ducimus dolorem aliquid expedita quas, eaque aut impedit!</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ratione. Magni facilis nobis maxime quidem? Minus, quaerat! Maxime error possimus non. Perferendis perspiciatis, quis ex molestiae cum debitis libero rem.</p>
+			</div>
+			<div class="col-md-6 caixa-imagem">
+				<img src="./img/paisagem01.jpg" alt="" class="img-fluid imagem01">
 			</div>
 		</div>
 		<hr>
-		<div class="container p-4" class="container01">
+		<div class="container" class="container01">
 			<div class="row">
 				<div class="col-md-6">
 					<img src="./img/paisagem01.jpg" alt="" class="img-fluid imagem01">
@@ -125,17 +123,15 @@
 			</div>
 		</div>
 		<hr>
-		<div class="container p-4">
-			<div class="row">
-				<div class="col-md-6 p-2">
-					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi explicabo corrupti dolores quam et sapiente cumque doloremque sit dignissimos obcaecati consequatur, atque sint. Quibusdam, voluptate tempora assumenda iure distinctio pariatur?</p>
-					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur culpa quidem laborum reiciendis eum facere nobis dicta, architecto illum. Iusto a obcaecati repellat sequi, quaerat in quas et voluptas ad.</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, consequuntur expedita explicabo provident sunt accusantium. Et quibusdam consequatur ipsam vel doloremque beatae ducimus dolorem aliquid expedita quas, eaque aut impedit!</p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ratione. Magni facilis nobis maxime quidem? Minus, quaerat! Maxime error possimus non. Perferendis perspiciatis, quis ex molestiae cum debitis libero rem.</p>
-				</div>
-				<div class="col-md-6">
-					<img src="./img/paisagem01.jpg" alt="" class="img-fluid imagem01">
-				</div>
+		<div class="container p-4 caixa1">
+			<div class="container-fluid texto col-md-2 p-3 d-block ">
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi explicabo corrupti dolores quam et sapiente cumque doloremque sit dignissimos obcaecati consequatur, atque sint. Quibusdam, voluptate tempora assumenda iure distinctio pariatur?</p>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur culpa quidem laborum reiciendis eum facere nobis dicta, architecto illum. Iusto a obcaecati repellat sequi, quaerat in quas et voluptas ad.</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, consequuntur expedita explicabo provident sunt accusantium. Et quibusdam consequatur ipsam vel doloremque beatae ducimus dolorem aliquid expedita quas, eaque aut impedit!</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ratione. Magni facilis nobis maxime quidem? Minus, quaerat! Maxime error possimus non. Perferendis perspiciatis, quis ex molestiae cum debitis libero rem.</p>
+			</div>
+			<div class="col-md-6 caixa-imagem1">
+				<img src="./img/paisagem01.jpg" alt="" class="img-fluid imagem01">
 			</div>
 		</div>
 	</main>

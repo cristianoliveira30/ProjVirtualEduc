@@ -24,3 +24,60 @@ body {
 footer {
     height: 100%;
 }
+
+@media screen {
+
+    .imagem-slider {
+        width: 400px;
+        height: 200px;
+    }
+
+    .imagem01 {
+        width: 400px;
+        height: 200px;
+    }
+
+    .container-paragrafo {
+        font-size: 10pt;
+        margin-top: 10px;
+        text-align: justify;
+    }
+
+    .caixa {
+        position: relative;
+        top: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 80%;
+        margin-top: 30px;
+    }
+
+    .caixa-imagem img {
+        position: absolute;
+        top: 1045px;
+        width: 337px;
+        height: 200px;
+    }
+
+    .caixa1 {
+        position: relative;
+        margin-bottom: 80%;
+        margin-top: 100px;
+    }
+
+    .caixa-imagem1 img {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+        bottom: 20px;
+        width: 337px;
+        height: 200px;
+    }
+
+    .texto p{
+       margin-top: 70px;
+       font-size: 10pt;
+    }
+}
