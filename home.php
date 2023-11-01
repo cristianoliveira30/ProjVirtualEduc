@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>home</title>
-  <link rel="stylesheet" href="./css/home.css">
-  <link rel="stylesheet" href="./css/home.scss">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>home</title>
+	<link rel="stylesheet" href="./css/home.css">
+	<link rel="stylesheet" href="./css/home.scss">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+
 <body>
-  <header>
-  <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+	<header>
+		<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="#">VirtualEduc</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,24 +55,72 @@
 				</div>
 			</div>
 		</nav>
-  </header>
-  <main>
-    <div class="container-fluid p-5 mb-5 mt-5 d-inline justify-content-between " id="container">
-      <div class="container m-3 bg-dark" id="seu-cadastro">
-        <h3 class="text-center text-white ">Seu cadastro</h3>
-      </div>
-      <div class="container m-3 bg-dark" id="materias">
-        <h3 class="text-center text-white">Seus Matérias</h3>
-      </div>
-      <div class="container-fluid m-3 bg-dark" id="cursos">
-        <h3 class="text-center text-white">Cursos</h3>
-      </div>
-      <div class="container m-3 bg-dark" id="inscriçoes">
-        <h2 class="text-center text-white">Inscriçoes</h2>
-      </div>
-    </div>
-  </main>
-  <footer class="bg-dark text-white pt-5 pb-4">
+	</header>
+	<main>
+		<h2 class="text-center p-2 mt-5 ">Perfil</h2>
+		<strong>
+			<p class="text-center">Foto de Perfil</p>
+		</strong>
+		<div class="container-fluid d-flex" id="container-perfil">
+			<img src="./img/imagem-perfil.jpg" class="mx-auto mb-5" alt="imagem de perfil" title="imagem de perfil">
+		</div>
+
+		<h4 class="p-2 text-center mb-3">Selecione uma opção</h4>
+
+		<!-- <span class="material-symbols-outlined">
+			person
+		</span> -->
+
+		<!-- <span class="material-symbols-outlined">
+			lists
+		</span>
+
+		<span class="material-symbols-outlined">
+			menu_book
+		</span>
+
+		<span class="material-symbols-outlined">
+			description
+		</span> -->
+
+		<div class="container p-5 w-75 mb-5 bg-primary mx-auto d-flex justify-content-center nav-container">
+
+			<button type="button row btn-primary">
+				<span class="material-symbols-outlined">
+					person
+				</span>
+				<label for="">Meus dados</label>
+			</button>
+
+			<button type="button row btn-primary">
+				<span class="material-symbols-outlined">
+					lists
+				</span>
+				<label for="">Cursos</label>
+			</button>
+
+			<button type="button row btn-primary">
+				<span class="material-symbols-outlined">
+					menu_book
+				</span>
+				<label for="">Livros</label>
+			</button>
+
+			<button type="button row btn-primary">
+				<span class="material-symbols-outlined">
+					description
+				</span>
+				<label for="">Temas</label>
+			</button>
+
+		</div>
+		<div class="container-fluid mx-auto d-flex ">
+			<button type="button" class="nav-btn-sair mx-auto text-white" id="btnsair">
+				Sair
+			</button>
+		</div>
+	</main>
+	<footer class="bg-dark text-white pt-5 pb-4">
 		<div class="container text-center text-md-left">
 			<div class="row text-start text-md-left container">
 				<div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
@@ -154,7 +204,8 @@
 		</div>
 	</footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>
+
 </html>

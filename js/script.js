@@ -38,3 +38,15 @@ function isMobile() {
 // 		form.submit();
 // 	}
 // });
+
+const url = "login.php";
+const btn_sair = document.querySelector("#btn-sair");
+
+function openInNewTab(url) {
+	const win = window.open(url, "_blank");
+	win.focus();
+};
+
+btn_sair.addEventListener("click", () => {
+	openInNewTab(url);
+});
