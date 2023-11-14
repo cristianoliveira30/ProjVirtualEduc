@@ -44,14 +44,6 @@
 							<a class="nav-link" href="#">Sobre o Projeto</a>
 						</li>
 					</ul>
-					<ul class="d-flex justify-content-lg-end m-lg-3  navbar-nav me-auto mb-2 mb-lg-0">
-						<li class="nav-item">
-							<a class="nav-link text-white" href="cadastro.php">Cadastre-se</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-white" href="login.php">Entrar</a>
-						</li>
-					</ul>
 				</div>
 			</div>
 		</nav>
@@ -124,51 +116,48 @@
 		<div class="container text-center text-md-left">
 			<div class="row text-start text-md-left container">
 				<div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Company Name</h5>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae neque repellendus consequatur illo, id numquam facilis a quia officia</p>
+					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">VirtualEduc</h5>
+					<p>Ficamos gratos de poder ofertar aos estudantes um  ambiente organizado e 
+						com recursos para o estudo, com acesso a cursos gratuitos e sem restrições.
+					</p>
 				</div>
 				<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Products</h5>
+					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Categorias</h5>
 					<p>
-						<a href="#" class="text-white" style="text-decoration: none;"> TheProvders</a>
+						<a href="#" class="text-white" style="text-decoration: none;"> Livros</a>
 					</p>
 					<p>
-						<a href="#" class="text-white" style="text-decoration: none;"> Creativity</a>
+						<a href="#" class="text-white" style="text-decoration: none;"> Documentos</a>
 					</p>
 					<p>
-						<a href="#" class="text-white" style="text-decoration: none;"> SourcesFiles</a>
+						<a href="#" class="text-white" style="text-decoration: none;"> Cursos</a>
 					</p>
 					<p>
-						<a href="#" class="text-white" style="text-decoration: none;"> bootstrap 5 alpha</a>
+						<a href="#" class="text-white" style="text-decoration: none;"> Materiais</a>
 					</p>
 				</div>
 				<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Useful links</h5>
+					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Opções</h5>
 					<p>
-						<a href="#" class="text-white" style="text-decoration: none;"> Ypur Account</a>
+						<a href="#" class="text-white" style="text-decoration: none;">Meu perfil</a>
 					</p>
 					<p>
-						<a href="#" class="text-white" style="text-decoration: none;"> Become an Affliates</a>
+						<a href="#" class="text-white" style="text-decoration: none;"> Doações</a>
 					</p>
 					<p>
-						<a href="#" class="text-white" style="text-decoration: none;"> Shipping Rates</a>
+						<a href="#" class="text-white" style="text-decoration: none;"> Ajuda</a>
 					</p>
 					<p>
-						<a href="#" class="text-white" style="text-decoration: none;"> Help</a>
+						<a href="#" class="text-white" style="text-decoration: none;"> Sair</a>
 					</p>
 				</div>
 				<div class="col-mb-4 col-lg-3 col-xl-3 mx-auto mt-3">
-					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact </h5>
+					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contato </h5>
 					<p>
-						<i class="fas fa-home mr-3"></i> New York, NY, 2333, US
-					</p>
-					<p>
-						<i class="fas fa-envelope mr-3 "></i> theproviders98@gmail.com
+						<i class="fas fa-envelope mr-3 "></i> virtualeducatendimento@gmail.com
 					</p>
 					<p>
 						<i class="fas fa-phone mr-3 "></i> (99)99999-9999
-					<p>
-						<i class="fas fa-print mr-3 "></i> +01 335 633 77
 					</p>
 				</div>
 			</div>
@@ -176,7 +165,7 @@
 			<div class="row align-items-center">
 				<div class="col-md-7 col-lg-8">
 					<p> Copyright 2023 All rights reserved by: <a href="#" style="text-decoration: none;">
-							<strong class="text-warning">The Providers</strong>
+							<strong class="text-warning">VirtualEduc</strong>
 						</a></p>
 				</div>
 				<div class="col-md-5 col-lg-4">

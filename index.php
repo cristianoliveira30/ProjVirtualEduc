@@ -1,123 +1,202 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-	<link rel="stylesheet" href="./css/style.css">
-	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Início</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="./css/index.css">
+	<link rel="stylesheet" href="./css/index.scss">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
-<body class="bg-animated">
-	<div class="boxad" id="boxad">
-		<div class="content">
-			<svg id="loader" xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 -10 261 355">
-				<g>
-					<path d="M230.023 80.02l-.023.03v15.044l-11.96.006v20.75l-19.354 9.142V95.107l-9.93-.04v34.6l-19.417 9.254-.003-43.777-14.146-.016v50.414l-19.354 9.146.002-59.55-9.93.027v59.434l-19.508-9.212V95.15l-13.774-.13-.002 43.766-19.332-9.053V95.12l-9.97.045v29.893l-19.398-9.187V95.177l-11.983.006v15.03l-17.122-8.09 17.078-6.983V80.22L.286 95.257 0 95.12v188.953l123.418 58.308 7.543 3.56 7.542-3.56 123.42-58.306V95.12l-.233.11-31.667-15.06zm-.002 15.076l17.126 7.002-17.125 8.09zM15.083 118.93l108.336 51.177v155.59L15.082 274.52zm231.756 0v155.59l-108.336 51.177v-155.59z">
-					</path>
-					<path id="pen1" d="M68.26.058L31.934 51.22l.002 58.06H43.9V59.536h19.423v49.742h9.97V59.536H92.62v49.742h11.967V51.22l-1.105-1.554L68.262.058zm6.43 29.72l14.047 19.788H47.784L61.67 30.01l13.02-.23z">
-					</path>
-					<path id="pen2" d="M130.808 13.936L94.48 65.098l.002 58.058h11.964V73.414h19.424v49.742h9.97V73.414h19.327v49.742h11.967V65.098l-1.105-1.555-35.222-49.607zm6.427 29.72l14.05 19.787H110.33l13.886-19.556 13.02-.23z">
-					</path>
-					<path id="pen3" d="M193.684.083l-36.328 51.162.002 58.058h11.965V59.56h19.424v49.743h9.97V59.56h19.326v49.743h11.967V51.245l-1.105-1.555L193.685.083zm6.428 29.72l14.05 19.787h-40.955l13.885-19.556 13.02-.23z">
-					</path>
-				</g>
-			</svg>
-		</div>
-	</div>
+<body>
 	<header>
+		<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark h-75">
+			<div class="container-fluid">
+				<a class="navbar-brand text-warning" href="#"><b>VirtualEduc</b></a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" href="index.php">Início</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								Categoria
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<li><a class="dropdown-item" href="#">Livros</a></li>
+								<li><a class="dropdown-item" href="#">Documentos</a></li>
+								<li><a class="dropdown-item" href="#">Curso</a></li>
+								<li><a class="dropdown-item" href="#">Material</a></li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Novidades</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Sobre o Projeto</a>
+						</li>
+					</ul>
+					<div id="links" class="me-2">
+                        <a class="btn btn-primary" href="#" role="button">Cadastro</a>
+                        <a class="btn btn-primary" href="#" role="button">Login</a>
+                    </div>
+				</div>
+			</div>
+		</nav>
 	</header>
 	<main>
-		<section class="">
-			<div class="">
-				<h1 class="text-center">Imagine um lugar...</h1>
+		<div id="carouselExampleIndicators" class="carousel slide container" data-bs-ride="carousel">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
 			</div>
-			<div id="divtext" class="DivText bg-dark rounded-4 position-absolute top-50 start-50 translate-middle border border-warning p-1">
-				<p id="texto" class="fs-4 text-start ms-3 mt-2">
-					O texto...<span>|</span>
-				</p>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="./img/paisagem.jpg" class="imagem-slider img-fluid" alt="...">
+				</div>
+				<div class="carousel-item">
+					<img src="./img/paisagem01.jpg" class="imagem-slider img-fluid" alt="...">
+				</div>
+				<div class="carousel-item">
+					<img src="./img/pexels-luis-gomes-546819.jpg" class="imagem-slider img-fluid" alt="...">
+				</div>
 			</div>
-		</section>
-		<div class="stars">
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
-			<div class="star"></div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+		<div class="container p-5">
+			<h3>Seja Bem Vindo ao VirtualEduc</h3>
+		</div>
+		<hr>
+		<div class="container container-paragrafo">
+			<div class="row">
+				<div class="col-md-6">
+					<img src="./img/paisagem01.jpg" alt="" class="img-fluid imagem01">
+				</div>
+				<div class="col-md-6 p-2" style="text-align: justify;">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, sint eum, nihil voluptatibus voluptates odio sit vero reprehenderit earum, beatae dolor? Illo deleniti maiores ducimus, optio cupiditate consequuntur modi unde!</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, magni adipisci modi ab nemo quibusdam sequi aperiam. Illum, architecto eligendi voluptate repellat, molestiae non ipsam laudantium odio ea aut et.</p>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio cupiditate voluptates voluptas vel? Iusto eos odit ducimus! Provident eaque minus voluptatum, dicta, culpa rem distinctio consectetur, quae unde dolor nemo?</p>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="container">
+			<div class="container-paragrafo caixa">
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi explicabo corrupti dolores quam et sapiente cumque doloremque sit dignissimos obcaecati consequatur, atque sint. Quibusdam, voluptate tempora assumenda iure distinctio pariatur?</p>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur culpa quidem laborum reiciendis eum facere nobis dicta, architecto illum. Iusto a obcaecati repellat sequi, quaerat in quas et voluptas ad.</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, consequuntur expedita explicabo provident sunt accusantium. Et quibusdam consequatur ipsam vel doloremque beatae ducimus dolorem aliquid expedita quas, eaque aut impedit!</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ratione. Magni facilis nobis maxime quidem? Minus, quaerat! Maxime error possimus non. Perferendis perspiciatis, quis ex molestiae cum debitis libero rem.</p>
+			</div>
+			<div class="col-md-6 caixa-imagem">
+				<img src="./img/paisagem01.jpg" alt="" class="img-fluid imagem01">
+			</div>
+		</div>
+		<hr>
+		<div class="container" class="container01">
+			<div class="row">
+				<div class="col-md-6">
+					<img src="./img/paisagem01.jpg" alt="" class="img-fluid imagem01">
+				</div>
+				<div class="col-md-6 p-2" style="text-align: justify;">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, sint eum, nihil voluptatibus voluptates odio sit vero reprehenderit earum, beatae dolor? Illo deleniti maiores ducimus, optio cupiditate consequuntur modi unde!</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, magni adipisci modi ab nemo quibusdam sequi aperiam. Illum, architecto eligendi voluptate repellat, molestiae non ipsam laudantium odio ea aut et.</p>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio cupiditate voluptates voluptas vel? Iusto eos odit ducimus! Provident eaque minus voluptatum, dicta, culpa rem distinctio consectetur, quae unde dolor nemo?</p>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="container p-4 caixa1">
+			<div class="container-fluid texto col-md-2 p-3 d-block ">
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi explicabo corrupti dolores quam et sapiente cumque doloremque sit dignissimos obcaecati consequatur, atque sint. Quibusdam, voluptate tempora assumenda iure distinctio pariatur?</p>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur culpa quidem laborum reiciendis eum facere nobis dicta, architecto illum. Iusto a obcaecati repellat sequi, quaerat in quas et voluptas ad.</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, consequuntur expedita explicabo provident sunt accusantium. Et quibusdam consequatur ipsam vel doloremque beatae ducimus dolorem aliquid expedita quas, eaque aut impedit!</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ratione. Magni facilis nobis maxime quidem? Minus, quaerat! Maxime error possimus non. Perferendis perspiciatis, quis ex molestiae cum debitis libero rem.</p>
+			</div>
+			<div class="col-md-6 caixa-imagem1">
+				<img src="./img/paisagem01.jpg" alt="" class="img-fluid imagem01">
+			</div>
 		</div>
 	</main>
-	<footer>
+	<footer class="bg-dark text-white pt-5 pb-4">
+		<div class="container text-center text-md-left">
+			<div class="row text-start text-md-left container">
+				<div class="col-md-6 mx-0">
+					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">VirtualEduc</h5>
+					<p>Ficamos gratos de poder ofertar aos estudantes um  ambiente organizado e 
+						com recursos para o estudo, com acesso a cursos gratuitos e sem restrições.
+					</p>
+				</div>
+				<div class="col-md-2 mx-0 ps-0">
+					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Categorias</h5>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> Livros</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> Documentos</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> Cursos</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> Materiais</a>
+					</p>
+				</div>
+				<div class="col-md-4 mx-0">
+					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contato </h5>
+					<p>
+						<i class="fas fa-envelope mr-3 "></i> VEducatendimento@gmail.com
+					</p>
+					<p>
+						<i class="fas fa-phone mr-3 "></i> (99)99999-9999
+					</p>
+				</div>
+			</div>
+			<hr class="mb-4">
+			<div class="row align-items-center">
+				<div class="col-md-7 col-lg-8">
+					<p> Copyright 2023 All rights reserved by: <a href="#" style="text-decoration: none;">
+							<strong class="text-warning">VirtualEduc</strong>
+						</a></p>
+				</div>
+				<div class="col-md-5 col-lg-4">
+					<div class="text-center text-md-right">
+						<ul class="list-unstyled list-inline">
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-facebook"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-twitter"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-google-plus"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-linkedin-in"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-youtube"></i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 	</footer>
-
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-
-	<script>
-		if (isMobile()) {
-			$("#divtext").removeClass("DivText").addClass("DivTextMobile");
-		}
-	</script>
-
-	<script>
-		//
-		// Event listener para detectar quando o conteúdo da página foi carregado
-		window.addEventListener("load", function() {
-			var boxad = document.getElementById("boxad");
-			boxad.style.display = "none"; // Oculta o spinner
-		});
-
-		// Simula atraso para interromper o carregamento após um tempo
-		setTimeout(function() {
-			var boxad = document.getElementById("boxad");
-			boxad.style.display = "none"; // Oculta o spinner
-		}, 5000); // Interrompe o carregamento após 5 segundos (ajuste conforme necessário)
-	</script>
-
-	<script src="./js/script.js"></script>
-
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script src="/js/script.js"></script>
 </body>
 </html>

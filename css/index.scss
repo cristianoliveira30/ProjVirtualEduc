@@ -2,9 +2,16 @@ body {
     font: normal;
 }
 
+#carouselExampleIndicators {
+    width: 100%;
+    margin: 0!important;
+    padding: 0%!important;
+}
+
 .imagem-slider {
-    width: 800px;
-    height: 500px;
+    width: 100%;
+    height: 800px;
+    margin: 0!important;
 }
 
 .imagens {
@@ -15,11 +22,7 @@ body {
 .imagem01 {
     width: 500px;
     height: 350px;
-}
-
-.container01 {
-    padding: 20px
-}
+}   
 
 footer {
     height: 100%;
