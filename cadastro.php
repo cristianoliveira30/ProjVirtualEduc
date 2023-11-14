@@ -1,171 +1,191 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-br">
 <head>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-	<link rel="stylesheet" href="./css/cadastro.css">
-	<link rel="stylesheet" href="./css/cadastro.scss"><!-- Arquivo para ajustar o select-->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Cadastro</title>
+	<!-- link para o bootstrap 5 -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	<!-- Referente aos aquivos css -->
+	<link rel="stylesheet" href="./css/cadastro.css">
+	<link rel="stylesheet" href="./css/cadastro.scss">
+	<!-- link para a biblioteca Jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<!-- link Jquery mask plugin -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+	<!-- link Jquery validate plugin -->
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
-
-<body class="bg-light">
+<body>
 	<header>
-		<nav class="container01 navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark">
+		<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="#">VirtualEduc</a>
-				<div class="collapse navbar-collapse " id="navbarSupportedContent">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse m-3 mr-3" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="home.php">Home</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Quem somos</a>
+							<a class="nav-link" href="index.php">Início</a>
 						</li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-								Novidades
+								Categoria
 							</a>
 							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<li><a class="dropdown-item" href="#">Biblioteca</a></li>
-								<li><a class="dropdown-item" href="#">Categorias de Lvros</a></li>
+								<li><a class="dropdown-item" href="#">Livros</a></li>
 								<li><a class="dropdown-item" href="#">Documentos</a></li>
-								<li>
-									<hr class="dropdown-divider">
-								</li>
-								<li><a class="dropdown-item" href="#">Something else here</a></li>
+								<li><a class="dropdown-item" href="#">Curso</a></li>
+								<li><a class="dropdown-item" href="#">Material</a></li>
 							</ul>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Projeto</a>
+							<a class="nav-link" href="#">Novidades</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Sobre o Projeto</a>
 						</li>
 					</ul>
-					<div>
-						<a class="btn btn-primary" href="cadastro.php" role="button">Cadastre-se</a>
-						<a class="btn btn-primary" href="login.php" role="button">
-							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-								<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-								<path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
-							</svg>
-							Login
-						</a>
-					</div>
+					<ul class="d-flex justify-content-lg-end m-lg-3  navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link text-white" href="cadastro.php">Cadastre-se</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="login.php">Entrar</a>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</nav>
 	</header>
-	<main class="">
-		<div class="">
-			<form class="FormCadastro" action="./BEnd/valiusu.php" method="post" enctype="multipart/form">
-				<!-- Etapa1 -->
-				<div class="FromCadastro bg-dark-subtle rounded-4 border border-primary text-bg-dark-subtle position-absolute top-50 start-50 translate-middle p-0 row g-3" id="form1">
-					<div class="col-md-6">
-						<label for="inputEmail4" class="form-label">Email</label>
-						<input typgite="email" class="form-control" id="inputEmail4" name="email" placeholder="Seu E-mail">
+	<main>
+		<div class="container-fluid" id="form">
+			<form class="login-card mt-5 mb-5 p-5" action="./BEnd/valiusu.php" method="post" enctype="multipart/form" id="cadastro">
+				<div class="card-header">
+					<div class="log">Cadastro</div>
+				</div>
+				<div class="etapa01" id="etapa01">
+					<div class="form-group">
+						<label for="username">Email</label>
+						<input required="" name="username" id="username" type="text" maxlength="50">
 					</div>
-					<div class="col-md-6">
-						<label for="inputPassword4" class="form-label">Senha</label>
-						<input type="password" class="form-control" id="inputPassword4" name="senha" placeholder="Sua Senha" maxlength="8">
+					<div class="form-group">
+						<label for="password">Senha</label>
+						<input required="" name="password" id="password" type="password" maxlength="8">
 					</div>
-					<div class="col-12">
-						<label for="inputAddress" class="form-label">Nome de Usuário</label>
-						<input type="text" class="form-control" id="inputAddress" name="nomeusu" placeholder="Nome de Usuário">
+					<div class="form-group">
+						<label for="username">Nome de Usuário</label>
+						<input required="" name="username" id="username" type="text" maxlength="50">
 					</div>
-					<div class="col-12">
-						<label for="inputAddress2" class="form-label">Nome Completo</label>
-						<input type="text" class="form-control" id="inputAddress2" name="nomecomp" placeholder="Nome Completo">
+					<div class="form-group">
+						<label for="username">Nome Completo</label>
+						<input required="" name="username" id="username" type="text" maxlength="50">
 					</div>
-					<div class="col-md-6">
-						<label for="inputCity" class="form-label">Telefone</label>
-						<input type="text" class="form-control" id="telefone" name="tel" placeholder="+55 (99) 99999-9999" maxlength="17" oninput="mascararTelefone(this)">
+					<div class="form-group">
+						<label for="username">Telefone</label>
+						<input required="" name="username" id="telefone" type="text" maxlength="50">
 					</div>
-					<div class="col-md-4">
-						<label for="inputState" class="form-label">Escolaridade</label>
-						<select id="inputState" class="form-selecting bordder border-secundary" name="escolaridade">
-							<option selected>Não informado</option>
-							<option>Ensino fundamental incompleto </option>
-							<option>Ensino fundamental completo </option>
-							<option>Ensino médio incompleto </option>
-							<option>Ensino médio completo </option>
-							<option>Ensino superior incompleto </option>
-							<option>Ensino superior completo </option>
-							<option>Pós-Graduação incompleta </option>
-							<option>Pós-Graduação completa </option>
-							<option>Mestrado incompleto </option>
-							<option>Mestrado completo </option>
-							<option>Doutorado incompleto </option>
-							<option>Doutorado Completo </option>
+					<div class="form-group">
+						<label for="username">Serie</label>
+						<select name="username" id="username">
+							<option selected>Não Informado</option>
+							<option>1° ano </option>
+							<option>2° ano </option>
+							<option>3° ano </option>
+							<option>4° ano </option>
 						</select>
 					</div>
-					<div class="col-12">
-						<div class="form-check">
-							<input class="form-check-input" type="checkbox" id="gridCheck">
-							<label class="form-check-label" for="gridCheck">
-								Check me out
-							</label>
-						</div>
+					<div class="form-group">
+						<label for="username">Curso</label>
+						<select name="username" id="username">
+							<option selected>Não informado</option>
+							<option>Informática </option>
+							<option>Informática pra Internet </option>
+							<option>Meio Ambiênte </option>
+							<option>Administração </option>
+							<option>Logística</option>
+						</select>
 					</div>
-					<div class="col-12">
-						<button type="button" id="btn" class="btn btn-primary" data-bs-dismiss="modal">Sign in</button>
+					<div class="form-group">
+						<label class="container d-flex">
+							<input type="checkbox">
+							<a href="#" class=" m-2"><label for="">Li e concordo com os termos!</label></a>
+						</label>
+
+					</div>
+					<div class="form-group">
+						<input value="Enviar" type="button" id="btn">
 					</div>
 				</div>
-				<!-- Etapa2 -->
-				<div class="FromCadastro1 row g-3 bg-dark-subtle rounded-4 border border-primary text-bg-dark-subtle position-absolute top-50 start-50 translate-middle">
-					<div class="col-md-6">
-						<label for="inputEmail4" class="form-label">CPF</label>
-						<input type="email" class="form-control" id="inputCPF" name="email" placeholder="Seu CPF" maxlength="14">
-					</div>
-					<div class="col-md-6">
-						<label for="inputPassword4" class="form-label">Data</label>
-						<input type="text" class="form-control" id="data" name="data" placeholder="Data" maxlength="10">
-					</div>
 
-					<div class="col-md-6">
-						<label for="inputEmail4" class="form-label">RG</label>
-						<input type="email" class="form-control" id="inputCPF" name="email" placeholder="RG" maxlength="14">
-					</div>
+				<!-- Etapa02 -->
 
-					<div class="col-md-6">
-						<label for="inputCity" class="form-label">Telefone</label>
-						<input type="text" class="form-control" id="telefone" name="tel" placeholder="+55 (99) 99999-9999" maxlength="12">
+				<div class="etapa02">
+					<div class="form-group">
+						<label for="username">CPF</label>
+						<input required="" name="cpf" id="cpf" type="text" maxlength="14">
 					</div>
-					<div class="col-md-4">
-						<label for="inputState" class="form-label">Escolaridade</label>
-						<select id="inputState" class="form-selecting bordder border-secundary" name="escolaridade">
-							<option selected>Não informado</option>
-							<option>Ensino fundamental incompleto </option>
-							<option>Ensino fundamental completo </option>
-							<option>Ensino médio incompleto </option>
-							<option>Ensino médio completo </option>
-							<option>Ensino superior incompleto </option>
-							<option>Ensino superior completo </option>
-							<option>Pós-Graduação incompleta </option>
-							<option>Pós-Graduação completa </option>
-							<option>Mestrado incompleto </option>
-							<option>Mestrado completo </option>
-							<option>Doutorado incompleto </option>
-							<option>Doutorado Completo </option>
+					<div class="form-group">
+						<label for="password">Data</label>
+						<input required="" name="data" id="data" type="text" maxlength="8">
+					</div>
+					<div class="form-group">
+						<label for="username">RG</label>
+						<input required="" name="username" id="rg" type="text" maxlength="7">
+					</div>
+					<div class="form-group">
+						<label for="username">Endereço</label>
+						<input required="" name="endereço" id="endereço" type="text" maxlength="50">
+					</div>
+					<div class="form-group">
+						<label for="username">CEP</label>
+						<input required="" name="cep" id="cep" type="text" maxlength="50">
+					</div>
+					<div class="form-group">
+						<label for="username">Estado</label>
+						<select name="estado" id="estado">
+							<option selected>Não Informado</option>
+							<option>AC </option>
+							<option>AL </option>
+							<option>AP </option>
+							<option>AM </options>
+							<option>BA </option>
+							<option>CE </option>
+							<option>DF </option>
+							<option>ES </option>
+							<option>GO </option>
+							<option>MA </option>
+							<option>MT </option>
+							<option>MS </option>
+							<option>MG </option>
+							<option>PA </option>
+							<option>PB </option>
+							<option>PR </option>
+							<option>PE </option>
+							<option>PI </option>
+							<option>RJ </option>
+							<option>RN </option>
+							<option>RS </option>
+							<option>RO </option>
+							<option>RR </option>
+							<option>SC </option>
+							<option>SP </option>
+							<option>SE </option>
+							<option>TO </option>
 						</select>
 					</div>
-					<div class="col-12">
-						<div class="form-check">
-							<input class="form-check-input" type="checkbox" id="gridCheck">
-							<label class="form-check-label" for="gridCheck">
-								Check me out
-							</label>
-						</div>
-					</div>
-					<div class="col-12">
-						<button type="submit" id="btn-submit" class="btn btn-primary">Sign in</button>
+					<div class="form-group">
+						<input value="Enviar" type="submit">
 					</div>
 				</div>
 			</form>
 		</div>
-		</div>
 	</main>
-	<footer>
-		<div class="boxad" id="boxad">
+	<footer class="bg-dark text-white pt-5 pb-4">
+		<!-- <div class="boxad" id="boxad">
 			<div class="content">
 				<svg id="loader" xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 -10 261 355">
 					<g>
@@ -180,15 +200,115 @@
 					</g>
 				</svg>
 			</div>
+		</div> -->
+		<div class="container text-center text-md-left">
+			<div class="row text-start text-md-left container">
+				<div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Company Name</h5>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae neque repellendus consequatur illo, id numquam facilis a quia officia</p>
+				</div>
+				<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Products</h5>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> TheProvders</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> Creativity</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> SourcesFiles</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> bootstrap 5 alpha</a>
+					</p>
+				</div>
+				<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Useful links</h5>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> Ypur Account</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> Become an Affliates</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> Shipping Rates</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> Help</a>
+					</p>
+				</div>
+				<div class="col-mb-4 col-lg-3 col-xl-3 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact </h5>
+					<p>
+						<i class="fas fa-home mr-3"></i> New York, NY, 2333, US
+					</p>
+					<p>
+						<i class="fas fa-envelope mr-3 "></i> theproviders98@gmail.com
+					</p>
+					<p>
+						<i class="fas fa-phone mr-3 "></i> (99)99999-9999
+					<p>
+						<i class="fas fa-print mr-3 "></i> +01 335 633 77
+					</p>
+				</div>
+			</div>
+			<hr class="mb-4">
+			<div class="row align-items-center">
+				<div class="col-md-7 col-lg-8">
+					<p> Copyright 2023 All rights reserved by: <a href="#" style="text-decoration: none;">
+							<strong class="text-warning">The Providers</strong>
+						</a></p>
+				</div>
+				<div class="col-md-5 col-lg-4">
+					<div class="text-center text-md-right">
+						<ul class="list-unstyled list-inline">
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-facebook"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-twitter"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-google-plus"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-linkedin-in"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-youtube"></i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
 	</footer>
-	<!--bootstrap-->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-	<!-- link do arquivo js externo-->
-	<script src="./js/script.js"></script>
-	<script>
-		$("#telefone").mask("(99) 99999-9999")
-	</script>
-</body>
 
+	<script>
+		
+		// Mascaras de input com a biblioteca jQuery
+
+		$(document).ready(function() {
+
+			$("#telefone").mask("(00) 00000-0000");
+			$("#cpf").mask("000.000.000-00");
+			$("#data").mask("00/00/0000");
+			$("#cep").mask("00000-000");
+
+			// Função para aceitar apenas valores numericoss
+
+			const input = $('#rg');
+			input.on('input', function() {
+				input.val(input.val().replace(/[^0-9]/g, ''));
+			});
+
+		});
+
+	</script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+	<script src="./js/script.js"></script>
+
+</body>
 </html>

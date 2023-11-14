@@ -1,0 +1,49 @@
+body {
+    font: normal;
+}
+
+.imagem-slider {
+    width: 800px;
+    height: 500px;
+}
+
+.imagens {
+    width: 500px;
+    height: 350px;
+}
+
+.imagem01 {
+    width: 500px;
+    height: 350px;
+}
+
+.container01 {
+    padding: 20px
+}
+
+footer {
+    height: 100%;
+}
+
+@media screen and (max-width: 1020px) {
+
+    .imagem-slider {
+        width: 400px;
+        height: 200px;
+    }
+
+    .imagem01 {
+        width: 400px;
+        height: 200px;
+    }
+
+    .container-paragrafo {
+        font-size: 10pt;
+        margin-top: 10px;
+        text-align: justify;
+    }
+
+    .caixa {
+        position: absolute;
+    }
+}

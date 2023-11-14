@@ -4,190 +4,207 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Home</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<title>home</title>
 	<link rel="stylesheet" href="./css/home.css">
 	<link rel="stylesheet" href="./css/home.scss">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
-	<header class="m-0">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark">
+	<header>
+		<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="#">VirtualEduc</a>
-				<div class="collapse navbar-collapse " id="navbarSupportedContent">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse m-3 mr-3" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="#">Home</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Quem somos</a>
+							<a class="nav-link" href="index.php">Início</a>
 						</li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-								Novidades
+								Categoria
 							</a>
 							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<li><a class="dropdown-item" href="#">Biblioteca</a></li>
-								<li><a class="dropdown-item" href="#">Categorias de Lvros</a></li>
+								<li><a class="dropdown-item" href="#">Livros</a></li>
 								<li><a class="dropdown-item" href="#">Documentos</a></li>
-								<li>
-									<hr class="dropdown-divider">
-								</li>
-								<li><a class="dropdown-item" href="#">Something else here</a></li>
+								<li><a class="dropdown-item" href="#">Curso</a></li>
+								<li><a class="dropdown-item" href="#">Material</a></li>
 							</ul>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Projeto</a>
+							<a class="nav-link" href="#">Novidades</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Sobre o Projeto</a>
 						</li>
 					</ul>
-					<div>
-						<a class="btn btn-primary" href="cadastro.php" role="button">Cadastre-se</a>
-						<a class="btn btn-primary" href="login.php" role="button">
-							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-								<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-								<path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
-							</svg>
-							Login
-						</a>
-					</div>
+					<ul class="d-flex justify-content-lg-end m-lg-3  navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link text-white" href="cadastro.php">Cadastre-se</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="login.php">Entrar</a>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</nav>
 	</header>
 	<main>
-		<div class="slider">
-			<div class="slides">
-				<!-- Radio butto -->
-				<input type="radio" name="radio-btn" id="radio1">
-				<input type="radio" name="radio-btn" id="radio2">
-				<input type="radio" name="radio-btn" id="radio3">
-				<input type="radio" name="radio-btn" id="radio4">
-				<!-- Fim radio button -->
-				<!-- Slide images -->
-				<div class="slide first">
-					<img src="./img/pexels-cytonn-photography-955405.jpg" alt="imagem1">
-				</div>
-				<div class="slide">
-					<img src="./img/pexels-digital-buggu-374559.jpg" alt="imagem2">
-				</div>
-				<div class="slide">
-					<img src="./img/pexels-luis-gomes-546819.jpg" alt="imagem3">
-				</div>
-				<div class="slide">
-					<img src="./img/pexels-digital-buggu-374559.jpg" alt="imagem4">
-				</div>
-				<!-- Fim Slide images -->
-				<!-- Navigation auto -->
-				<div class="navigation-auto">
-					<div class="auto-btn1"></div>
-					<div class="auto-btn2"></div>
-					<div class="auto-btn3"></div>
-					<div class="auto-btn4"></div>
-				</div>
-			</div>
-			<div class="manual-navigation">
-				<label for="radio1" class="manual-btn"></label>
-				<label for="radio2" class="manual-btn"></label>
-				<label for="radio3" class="manual-btn"></label>
-				<label for="radio4" class="manual-btn"></label>
-			</div>
+		<h2 class="text-center p-2 mt-5 ">Perfil</h2>
+		<strong>
+			<p class="text-center">Foto de Perfil</p>
+		</strong>
+		<div class="container-fluid d-flex" id="container-perfil">
+			<img src="./img/imagem-perfil.jpg" class="mx-auto mb-5" alt="imagem de perfil" title="imagem de perfil">
 		</div>
-		<div class="boas-vidas">
-			<h2>Olá, Seja Bem Vindo ao</h2>
-			<h2>VirtualEduc</h2>
+
+		<h4 class="p-2 text-center mb-3">Selecione uma opção</h4>
+
+		<!-- <span class="material-symbols-outlined">
+			person
+		</span> -->
+
+		<!-- <span class="material-symbols-outlined">
+			lists
+		</span>
+
+		<span class="material-symbols-outlined">
+			menu_book
+		</span>
+
+		<span class="material-symbols-outlined">
+			description
+		</span> -->
+
+		<div class="container p-5 w-75 mb-5 bg-primary mx-auto d-flex justify-content-center nav-container">
+
+			<button type="button row btn-primary">
+				<span class="material-symbols-outlined">
+					person
+				</span>
+				<label for="">Meus dados</label>
+			</button>
+
+			<button type="button row btn-primary">
+				<span class="material-symbols-outlined">
+					lists
+				</span>
+				<label for="">Cursos</label>
+			</button>
+
+			<button type="button row btn-primary">
+				<span class="material-symbols-outlined">
+					menu_book
+				</span>
+				<label for="">Livros</label>
+			</button>
+
+			<button type="button row btn-primary">
+				<span class="material-symbols-outlined">
+					description
+				</span>
+				<label for="">Temas</label>
+			</button>
+
 		</div>
-		<div class="container-projeto">
-			<div class="sobre-o-projeto">
-				<h3 id="h3">O que é o Projeto VirtualEduc?</h3>
-				<p>É um projeto desenvolvido pelos alunos da escola Eetepa Dr Celso Malcher. A plataforma tem como objetivo o apoio as turmas, onde serão disponibilizados contéudos programaticos, livros, pdfs e eventos que ocorram entre as turmas.</p>
-			</div>
-		</div>
-		<hr>
-		<div class="slides1 row">
-			<img class="col" src="./img/paisagem01.jpg" alt="" id="img2">
-			<div class="col texto">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam adipisci modi, facilis aperiam voluptas magni? Laboriosam sunt expedita nulla nesciunt similique veritatis nihil aliquid inventore blanditiis quo! Hic, labore cumque!</p>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatibus a sint eveniet blanditiis mollitia eligendi amet laborum commodi doloremque? Tempora animi voluptate necessitatibus quia cum magni nobis repellat officia!</p>
-			</div>
-		</div>
-		<hr>
-		<div class="slides2">
-			<div class="texto2">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam adipisci modi, facilis aperiam voluptas magni? Laboriosam sunt expedita nulla nesciunt similique veritatis nihil aliquid inventore blanditiis quo! Hic, labore cumque!</p>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatibus a sint eveniet blanditiis mollitia eligendi amet laborum commodi doloremque? Tempora animi voluptate necessitatibus quia cum magni nobis repellat officia!</p>
-			</div>
-			<img src="./img/paisagem01.jpg" alt="" id="img2">
-		</div>
-		<hr>
-		<div class="slides1">
-			<img src="./img/paisagem01.jpg" alt="" id="img2">
-			<div class="texto">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam adipisci modi, facilis aperiam voluptas magni? Laboriosam sunt expedita nulla nesciunt similique veritatis nihil aliquid inventore blanditiis quo! Hic, labore cumque!</p>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatibus a sint eveniet blanditiis mollitia eligendi amet laborum commodi doloremque? Tempora animi voluptate necessitatibus quia cum magni nobis repellat officia!</p>
-			</div>
-		</div>
-		<hr>
-		<div class="slides2">
-			<div class="texto2">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam adipisci modi, facilis aperiam voluptas magni? Laboriosam sunt expedita nulla nesciunt similique veritatis nihil aliquid inventore blanditiis quo! Hic, labore cumque!</p>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatibus a sint eveniet blanditiis mollitia eligendi amet laborum commodi doloremque? Tempora animi voluptate necessitatibus quia cum magni nobis repellat officia!</p>
-			</div>
-			<img src="./img/paisagem01.jpg" alt="" id="img2">
+		<div class="container-fluid mx-auto d-flex ">
+			<button type="button" class="nav-btn-sair mx-auto text-white" id="btnsair">
+				Sair
+			</button>
 		</div>
 	</main>
-	<footer class="navbar navbar-dark bg-dark">
-		<h2 id="h2">VirtualEduc</h2>
-		<div class="menu-rodapé">
-			<ul>
-				<div class="a"><a href="#"><label for="">Quem somos</label></a></div>
-				<a href="#">
-					<li>Projeto</li>
-				</a>
-				<a href="#">
-					<li>Membros</li>
-				</a>
-				<a href="#">
-					<li>Novidades</li>
-				</a>
-				<a href="#">
-					<li>Mais</li>
-				</a>
-			</ul>
-			<ul>
-				<div class="a"><a href="#"><label for=""><label for="">Contatos</label></a></div>
-				<a href="#">
-					<li>E-mail</li>
-				</a>
-				<a href="#">
-					<li>Telefone</li>
-				</a>
-				<a href="#">
-					<li>Instagram</li>
-				</a>
-				<a href="#">
-					<li>Facebook</li>
-				</a>
-			</ul>
-			<ul>
-				<div class="a"><a href="#"><label for="">Parceiros</label></a></div>
-				<a href="#">
-					<li>Eetepa Dr Celso Malcher</li>
-				</a>
-				<a href="#">
-					<li>UFPA</li>
-				</a>
-				<a href="#">
-					<li>Parque de Guamã</li>
-				</a>
-				<a href="#">
-					<li>Alunos</li>
-				</a>
-			</ul>
+	<footer class="bg-dark text-white pt-5 pb-4">
+		<div class="container text-center text-md-left">
+			<div class="row text-start text-md-left container">
+				<div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Company Name</h5>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae neque repellendus consequatur illo, id numquam facilis a quia officia</p>
+				</div>
+				<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Products</h5>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> TheProvders</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> Creativity</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> SourcesFiles</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> bootstrap 5 alpha</a>
+					</p>
+				</div>
+				<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Useful links</h5>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> Ypur Account</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> Become an Affliates</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> Shipping Rates</a>
+					</p>
+					<p>
+						<a href="#" class="text-white" style="text-decoration: none;"> Help</a>
+					</p>
+				</div>
+				<div class="col-mb-4 col-lg-3 col-xl-3 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact </h5>
+					<p>
+						<i class="fas fa-home mr-3"></i> New York, NY, 2333, US
+					</p>
+					<p>
+						<i class="fas fa-envelope mr-3 "></i> theproviders98@gmail.com
+					</p>
+					<p>
+						<i class="fas fa-phone mr-3 "></i> (99)99999-9999
+					<p>
+						<i class="fas fa-print mr-3 "></i> +01 335 633 77
+					</p>
+				</div>
+			</div>
+			<hr class="mb-4">
+			<div class="row align-items-center">
+				<div class="col-md-7 col-lg-8">
+					<p> Copyright 2023 All rights reserved by: <a href="#" style="text-decoration: none;">
+							<strong class="text-warning">The Providers</strong>
+						</a></p>
+				</div>
+				<div class="col-md-5 col-lg-4">
+					<div class="text-center text-md-right">
+						<ul class="list-unstyled list-inline">
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-facebook"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-twitter"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-google-plus"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-linkedin-in"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-youtube"></i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
 	</footer>
 
-	<script src="./js/home.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>
 
