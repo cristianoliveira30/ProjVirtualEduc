@@ -1,0 +1,86 @@
+footer {
+  height: 100%;
+}
+
+#container-perfil img {
+  border-radius: 190px;
+  width: 200px;
+  height: 210px;
+}
+
+.nav-btn {
+  border: none;
+  border-radius: 20px;
+  width: 120px;
+  height: 50px;
+}
+
+.text-white label {
+  display: block;
+  position: relative;
+  left: 35px;
+}
+
+.curso label {
+  display: block;
+  position: relative;
+  left: 50px;
+}
+
+.livro label {
+  display: block;
+  position: relative;
+  left: 55px;
+}
+
+.temas label {
+  display: block;
+  position: relative;
+  left: 45px;
+}
+
+.nav-container {
+  border-radius: 20px;
+}
+
+.nav-container button, label {
+  width: 90px;
+  height: 70px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.nav-container label {
+  position: relative;
+  right: 15px;
+}
+
+button {
+  border: none;
+  border-radius: 15px;
+  background: none;
+  color: white;
+  margin: 10px;
+}
+
+.nav-btn-sair {
+  border: none;
+  border-radius: 20px;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  background-color: red;
+}
+
+#btnsair:hover {
+  background-color: rgb(234, 124, 124);
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.333);
+}/*# sourceMappingURL=home.css.map */

@@ -2,51 +2,20 @@ body {
     font: normal;
 }
 
-#carouselExampleIndicators {
-    width: 100%;
-    margin: 0!important;
-    padding: 0%!important;
+.carousel {
+    max-height: 950px;
 }
-
-.imagem-slider {
+.carousel-item {
     width: 100%;
-    height: 800px;
+    height: 950px;
     margin: 0!important;
 }
 
-.imagens {
-    width: 500px;
-    height: 350px;
+.images {
+    max-width: 400px!important;
+    max-height: 400px!important;
 }
-
-.imagem01 {
-    width: 500px;
-    height: 350px;
-}   
 
 footer {
     height: 100%;
-}
-
-@media screen and (max-width: 1020px) {
-
-    .imagem-slider {
-        width: 400px;
-        height: 200px;
-    }
-
-    .imagem01 {
-        width: 400px;
-        height: 200px;
-    }
-
-    .container-paragrafo {
-        font-size: 10pt;
-        margin-top: 10px;
-        text-align: justify;
-    }
-
-    .caixa {
-        position: absolute;
-    }
 }
