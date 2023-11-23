@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Início</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<link rel="stylesheet" href="./css/index.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/style.scss">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
-
 <body>
 	<header>
 		<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark h-75">
@@ -55,67 +54,48 @@
 		<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<img src="./img/paisagem.jpg" class="d-block w-100 h-100" alt="...">
+					<img src="./img/slider01.jpg" class="d-block w-100 h-50" alt="...">
 				</div>
 				<div class="carousel-item">
-					<img src="./img/paisagem01.jpg" class="d-block w-100 h-100" alt="...">
+					<img src="./img/paisagem01.jpg" class="d-block w-100 h-50" alt="...">
 				</div>
 				<div class="carousel-item">
-					<img src="./img/imagem02.jpeg" class="d-block w-100 h-100" alt="...">
+					<img src="./img/imagem02.jpeg" class="d-block w-100 h-50" alt="...">
 				</div>
 			</div>
 			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 				<span class="visually-hidden">Previous</span>
 			</button>
-			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+			<button class="carousel-control-next btn-icon" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
 				<span class="carousel-control-next-icon" aria-hidden="true"></span>
 				<span class="visually-hidden">Next</span>
 			</button>
 		</div>
-		<div id="containers">
-			<div class="container p-5">
-				<h3>Seja Bem Vindo ao VirtualEduc</h3>
-			</div>
-			<hr>
-
-			<div class="container container-paragrafo">
-				<div class="row">
-					<img src="./img/paisagem01.jpg" alt="" class="img-fluid images">
-					<div class="col-md-6 p-2" style="text-align: left;">
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, sint eum, nihil voluptatibus voluptates odio sit vero reprehenderit earum, beatae dolor? Illo deleniti maiores ducimus, optio cupiditate consequuntur modi unde!</p>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, magni adipisci modi ab nemo quibusdam sequi aperiam. Illum, architecto eligendi voluptate repellat, molestiae non ipsam laudantium odio ea aut et.</p>
-						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio cupiditate voluptates voluptas vel? Iusto eos odit ducimus! Provident eaque minus voluptatum, dicta, culpa rem distinctio consectetur, quae unde dolor nemo?</p>
-					</div>
+		<section class="sobre-projeto container-fluid">
+			<h2 class="text-center">Seja Bem Vindo ao VirtualEduc</h2>
+			<div class="container-projeto">
+				<div class="container-imagens">
+					<img src="./img/paisagem01.jpg" alt="imagem de paisagem" class="img-fluid ">
+				</div>
+				<div class="texto-projeto">
+					<h2>Sobre o Projeto</h2>
+					<p>O VirtualEduc é um projeto desenvolvido <br> pelos alunos da escola da capacitação <br> técnica Eetepa Dr. Celso Malcher. <br> Cujo objetivo era organizar os <br> conteúdo disciplinares e acesso remoto <br> ao acervo do livros da biblioteca escolar.</p>
 				</div>
 			</div>
-			<hr>
-
-			<div class="container">
-				<div class="container-paragrafo row">
-					<div class="col-md-6 p-2" style="text-align: right;">
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi explicabo corrupti dolores quam et sapiente cumque doloremque sit dignissimos obcaecati consequatur, atque sint. Quibusdam, voluptate tempora assumenda iure distinctio pariatur?</p>
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur culpa quidem laborum reiciendis eum facere nobis dicta, architecto illum. Iusto a obcaecati repellat sequi, quaerat in quas et voluptas ad.</p>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, consequuntur expedita explicabo provident sunt accusantium. Et quibusdam consequatur ipsam vel doloremque beatae ducimus dolorem aliquid expedita quas, eaque aut impedit!</p>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ratione. Magni facilis nobis maxime quidem? Minus, quaerat! Maxime error possimus non. Perferendis perspiciatis, quis ex molestiae cum debitis libero rem.</p>
-					</div>
-					<img src="./img/paisagem01.jpg" alt="" class="img-fluid images ms-3">
+		</section>
+		<hr>
+		<section class="funcionalidades">
+			<div class="container-funcionalidades">
+				<div class="texto-funcionalidades">
+					<h2>Funcionalidades</h2>
+					<p>A plataforma oferece acessibilidade para organizar, <br> matérias disciplinares, com base nas informações <br> obtidas no cadastro; exemplo: nome, idade, <br> escolaridade e etc. Possibilita e locação de livros, <br> e define o prazo de entregar e as categorias disponíveis.</p>
+				</div>
+				<div class="container-img-funcionalidades">
+					<img src="img/paisagem01.jpg" alt="" class="img-fluid img02">
 				</div>
 			</div>
-			<hr>
-			<div class="container" class="container01">
-				<div class="row">
-					<div class="col-md-6">
-						<img src="./img/paisagem01.jpg" alt="" class="img-fluid images">
-					</div>
-					<div class="col-md-6 p-2" style="text-align: justify;">
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, sint eum, nihil voluptatibus voluptates odio sit vero reprehenderit earum, beatae dolor? Illo deleniti maiores ducimus, optio cupiditate consequuntur modi unde!</p>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, magni adipisci modi ab nemo quibusdam sequi aperiam. Illum, architecto eligendi voluptate repellat, molestiae non ipsam laudantium odio ea aut et.</p>
-						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio cupiditate voluptates voluptas vel? Iusto eos odit ducimus! Provident eaque minus voluptatum, dicta, culpa rem distinctio consectetur, quae unde dolor nemo?</p>
-					</div>
-				</div>
-			</div>
-		</div>
+		</section>
 	</main>
 	<br>
 	<hr>
@@ -185,8 +165,10 @@
 			</div>
 		</div>
 	</footer>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-	<script src="/js/script.js"></script>
-</body>
 
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+	<script src="/js/script.js"></script>
+
+</body>
 </html>
