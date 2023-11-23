@@ -15,13 +15,13 @@
 
 <body>
 	<header>
-		<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+		<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark h-75">
 			<div class="container-fluid">
-				<a class="navbar-brand" href="#">VirtualEduc</a>
+				<a class="navbar-brand text-warning" href="#"><b>VirtualEduc</b></a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse m-3 mr-3" id="navbarSupportedContent">
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item">
 							<a class="nav-link" href="index.php">Início</a>
@@ -44,6 +44,10 @@
 							<a class="nav-link" href="#">Sobre o Projeto</a>
 						</li>
 					</ul>
+					<div id="links" class="me-2">
+						<a class="btn btn-primary" href="./cadastro.php" role="button">Cadastro</a>
+						<a class="btn btn-primary" href="./login.php" role="button">Login</a>
+					</div>
 				</div>
 			</div>
 		</nav>
@@ -107,21 +111,21 @@
 
 		</div>
 		<div class="container-fluid mx-auto d-flex ">
-			<button type="button" class="nav-btn-sair mx-auto text-white" id="btnsair">
+			<a class="nav-btn-sair mx-auto text-white" id="btnsair" href="./index.php">
 				Sair
-			</button>
+			</a>
 		</div>
 	</main>
 	<footer class="bg-dark text-white pt-5 pb-4">
 		<div class="container text-center text-md-left">
-			<div class="row text-start text-md-left container">
-				<div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+			<div class="row text-start text-md-left container p-0">
+				<div class="col-md-4 pe-3 me-3">
 					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">VirtualEduc</h5>
-					<p>Ficamos gratos de poder ofertar aos estudantes um  ambiente organizado e 
+					<p>Ficamos gratos de poder ofertar aos estudantes um ambiente organizado e
 						com recursos para o estudo, com acesso a cursos gratuitos e sem restrições.
 					</p>
 				</div>
-				<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+				<div class="col-md-2 p-0">
 					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Categorias</h5>
 					<p>
 						<a href="#" class="text-white" style="text-decoration: none;"> Livros</a>
@@ -136,7 +140,7 @@
 						<a href="#" class="text-white" style="text-decoration: none;"> Materiais</a>
 					</p>
 				</div>
-				<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+				<div class="col-md-2 p-0">
 					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Opções</h5>
 					<p>
 						<a href="#" class="text-white" style="text-decoration: none;">Meu perfil</a>
@@ -151,7 +155,7 @@
 						<a href="#" class="text-white" style="text-decoration: none;"> Sair</a>
 					</p>
 				</div>
-				<div class="col-mb-4 col-lg-3 col-xl-3 mx-auto mt-3">
+				<div class="col-md-3 p-0">
 					<h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contato </h5>
 					<p>
 						<i class="fas fa-envelope mr-3 "></i> virtualeducatendimento@gmail.com

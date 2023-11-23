@@ -16,14 +16,14 @@
 			<div class="card-header">
 				<div class="log">Login</div>
 			</div>
-			<form class="login">
+			<form class="login" action="./BEnd/valiusu.php" method="post" enctype="multipart/form" id="login">
 				<div class="form-group">
 					<label for="username">Nome:</label>
-					<input required="" name="username" id="username" type="text" maxlength="50">
+					<input required="" name="UsuLogin" id="UsuLogin" type="text" maxlength="50">
 				</div>
 				<div class="form-group">
 					<label for="password">Senha:</label>
-					<input required="" name="password" id="password" type="password" maxlength="8">
+					<input required="" name="SenhaLogin" id="SenhaLogin" type="password" maxlength="8">
 				</div>
 				<div class="form-group">
 					<input value="Login" type="submit">

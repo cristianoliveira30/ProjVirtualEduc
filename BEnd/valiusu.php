@@ -1,12 +1,12 @@
 <?php 
-require './BEnd/configBD.php';
-require './BEnd/DAO/usuaruosDAO.php';
+// require './BEnd/configBD.php';
+// require './BEnd/DAO/usuaruosDAO.php';
 
-$usuarioDao = new UsuarioDAOMysql($pdo);
+// $usuarioDao = new UsuarioDAOMysql($pdo);
 
 $method = strtolower($_SERVER['REQUEST_METHOD']);
 
-//VALIDANDO OS FORMULÁRIOS
+//VALIDANDO OS FORMULÁRIOS DO CADASTRO -----------------------------------------------------------
 if ($method === 'post') {
     $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
     $nomeUsu = filter_input(INPUT_POST, 'nomeusu', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -28,5 +28,16 @@ if ($method === 'post') {
     else { //CASO O METÓDO N SEJA POST
     header('location: ../cadastro.php');
     }
+}
+
+//VALIDANDO FORMULÁRIO DO LOGIN ------------------------------------------------------------------
+if ($method === 'post') {
+    $UsuLogin = filter_input(INPUT_POST, 'UsuLogin', FILTER_SANITIZE_SPECIAL_CHARS);
+    $SenhaLogin = filter_input(INPUT_POST, 'SenhaLogin', FILTER_SANITIZE_SPECIAL_CHARS);
+
+    header('location: ../home.php');
+}
+else {
+    header('location: ../login.php');
 }
 ?>
