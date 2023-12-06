@@ -50,55 +50,119 @@
 		</nav>
 	</header>
 	<main>
-		<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+		<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			</div>
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<img src="./img/slider01.jpg" class="d-block w-100 h-50" alt="...">
+					<img src="./img/svgs/carrosel03.svg" class="d-block w-100" alt="...">
 				</div>
 				<div class="carousel-item">
-					<img src="./img/paisagem01.jpg" class="d-block w-100 h-50" alt="...">
+					<img src="./img/svgs/carrosel03.svg" class="d-block w-100" alt="...">
 				</div>
 				<div class="carousel-item">
-					<img src="./img/imagem02.jpeg" class="d-block w-100 h-50" alt="...">
+					<img src="./img/svgs/carrosel03.svg" class="d-block w-100" alt="...">
 				</div>
 			</div>
-			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 				<span class="visually-hidden">Previous</span>
 			</button>
-			<button class="carousel-control-next btn-icon" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
 				<span class="carousel-control-next-icon" aria-hidden="true"></span>
 				<span class="visually-hidden">Next</span>
 			</button>
 		</div>
-		<section class="sobre-projeto container-fluid">
-			<h2 class="text-center">Seja Bem Vindo ao VirtualEduc</h2>
-			<div class="container-projeto">
-				<div class="container-imagens">
-					<img src="./img/paisagem01.jpg" alt="imagem de paisagem" class="img-fluid ">
+
+		<article>
+
+			<h1 class="text-center mt-0 mb-3">Olá Seja Bem Vindo ao VirtualEduc</h1>
+
+			<section class="container-fluid">
+
+				<div class="d-flex p-5">
+					<img src="./img/svgs/img01.svg" class="d-block w-50 h-25 img-fluid" alt="...">
+
+					<div class="d-block">
+						<h2 class="m-3 mb-0 ">Sobre o Projeto</h2>
+
+						<p class="m-lg-3">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nihil quaerat hic consequatur reiciendis sapiente molestiae quod impedit possimus! Natus excepturi necessitatibus obcaecati recusandae explicabo asperiores beatae atque facere mollitia?
+						</p>
+
+						<p class="m-lg-3">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos minima, recusandae nobis reiciendis ducimus eius numquam illum cumque iste nulla saepe commodi ratione animi officiis, cum necessitatibus quaerat natus temporibus.
+						</p>
+
+					</div>
 				</div>
-				<div class="texto-projeto">
-					<h2>Sobre o Projeto</h2>
-					<p>O VirtualEduc é um projeto desenvolvido <br> pelos alunos da escola da capacitação <br> técnica Eetepa Dr. Celso Malcher. <br> Cujo objetivo era organizar os <br> conteúdo disciplinares e acesso remoto <br> ao acervo do livros da biblioteca escolar.</p>
+
+			</section>
+
+			<section class="">
+				<div class="d-flex p-5">
+
+					<div class="d-block">
+						<h2 class="m-3 mb-0 ">Objetivo</h2>
+						<p class="m-lg-3">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nihil quaerat hic consequatur reiciendis sapiente molestiae quod impedit possimus! Natus excepturi necessitatibus obcaecati recusandae explicabo asperiores beatae atque facere mollitia?
+						</p>
+						<p class="m-lg-3">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos minima, recusandae nobis reiciendis ducimus eius numquam illum cumque iste nulla saepe commodi ratione animi officiis, cum necessitatibus quaerat natus temporibus.
+						</p>
+					</div>
+
+					<img src="./img/svgs/img02.svg" class="d-block w-50 h-25" alt="...">
+
 				</div>
-			</div>
-		</section>
-		<hr>
-		<section class="funcionalidades">
-			<div class="container-funcionalidades">
-				<div class="texto-funcionalidades">
-					<h2>Funcionalidades</h2>
-					<p>A plataforma oferece acessibilidade para organizar, <br> matérias disciplinares, com base nas informações <br> obtidas no cadastro; exemplo: nome, idade, <br> escolaridade e etc. Possibilita e locação de livros, <br> e define o prazo de entregar e as categorias disponíveis.</p>
+
+			</section>
+
+			<section class="">
+
+				<div class="d-flex p-5">
+					<img src="./img/svgs/img03.svg" class="d-block w-50 h-25" alt="...">
+
+					<div class="d-block">
+						<h2 class="m-3 mb-0 ">Principais Características:</h2>
+
+						<p class="m-lg-3">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nihil quaerat hic consequatur reiciendis sapiente molestiae quod impedit possimus! Natus excepturi necessitatibus obcaecati recusandae explicabo asperiores beatae atque facere mollitia?
+						</p>
+
+						<p class="m-lg-3">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos minima, recusandae nobis reiciendis ducimus eius numquam illum cumque iste nulla saepe commodi ratione animi officiis, cum necessitatibus quaerat natus temporibus.
+						</p>
+
+					</div>
 				</div>
-				<div class="container-img-funcionalidades">
-					<img src="img/paisagem01.jpg" alt="" class="img-fluid img02">
+
+			</section>
+
+			<section class="">
+				<div class="d-flex p-5">
+
+					<div class="d-block">
+						<h2 class="m-3 mb-0 ">Benefícios Esperados:</h2>
+						<p class="m-lg-3">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nihil quaerat hic consequatur reiciendis sapiente molestiae quod impedit possimus! Natus excepturi necessitatibus obcaecati recusandae explicabo asperiores beatae atque facere mollitia?
+						</p>
+						<p class="m-lg-3">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos minima, recusandae nobis reiciendis ducimus eius numquam illum cumque iste nulla saepe commodi ratione animi officiis, cum necessitatibus quaerat natus temporibus.
+						</p>
+					</div>
+
+					<img src="./img/svgs/img01.svg" class="d-block w-50 h-25" alt="...">
+					
 				</div>
-			</div>
-		</section>
+
+			</section>
+
+		</article>
 	</main>
-	<br>
-	<hr>
-	<br>
 	<footer class="bg-dark text-white pt-5 pb-4">
 		<div class="container text-center text-md-left">
 			<div class="row text-start text-md-left container">
