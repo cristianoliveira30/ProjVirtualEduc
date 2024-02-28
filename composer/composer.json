@@ -1,0 +1,9 @@
+{
+    "name": "carliane/proj-bibli-virtual",
+    "autoload": {
+        "psr-4": {
+            "Carliane\\ProjBibliVirtual\\": "src/"
+        }
+    },
+    "require": {}
+}
