@@ -72,7 +72,7 @@ class Usuario implements UsuarioDAO
             $senha          = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
             $cpf            = filter_input(INPUT_POST, 'cpf', FILTER_SANITIZE_FULL_SPECIAL_CHARS, FILTER_VALIDATE_INT);
             $tel            = filter_input(INPUT_POST, 'tel', FILTER_SANITIZE_NUMBER_INT);
-            $escolaridade   = filter_input(INPUT_POST, 'escolaridade');  
+            $escolaridade   = filter_input(INPUT_POST, 'escolaridade', FILTER_SANITIZE_SPECIAL_CHARS);  
             
             // Guardando as informacoes tratadas
             $this->setNomeComp(strtoupper($nomeComp));
