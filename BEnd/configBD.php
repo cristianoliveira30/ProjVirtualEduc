@@ -1,5 +1,5 @@
 <?php
-class UsuarioDAOMysql 
+class MyPostSql 
 {
     //Retornos
     private $lastId;
