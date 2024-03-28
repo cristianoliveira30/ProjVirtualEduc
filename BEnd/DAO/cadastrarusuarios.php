@@ -1,6 +1,6 @@
 <?php
 require_once 'interfaces.php';
-class Usuario implements UsuarioDAO 
+class Usuario 
 {
 
     //variaveis
@@ -24,31 +24,44 @@ class Usuario implements UsuarioDAO
     {
         switch ($obj) {
             case is_object($obj):
-                foreach ($obj as $key)
-                {
-                    $id             = $key->id;
-                    $nomeUsu        = $key->nomeusuario;
-                    $nomeComp       = $key->nomecompleo;
-                    $email          = $key->email;
-                    $senha          = $key->senha;
-                    $cpf            = $key->cpf;
-                    $tel            = $key->tel;
-                    $escolaridade   = $key->escolaridade;
-                }
+                // foreach ($obj as $key)
+                // {
+                //     $id             = $key->id;
+                //     $nomeUsu        = $key->nomeusuario;
+                //     $nomeComp       = $key->nomecompleo;
+                //     $email          = $key->email;
+                //     $senha          = $key->senha;
+                //     $cpf            = $key->cpf;
+                //     $tel            = $key->tel;
+                //     $escolaridade   = $key->escolaridade;
+                // }
+
+                $this->setCpf(isset($obj->cpf));
+                $this->setNomeUsu(isset($obj->nomeUsu));
                 break;
             
             case is_array($obj):
-                foreach ($obj as $key => $value)
-                {
-                    $id             = $key[0];
-                    $nomeUsu        = $key[1];
-                    $nomeComp       = $key[2];
-                    $email          = $key[3];
-                    $senha          = $key[4];
-                    $cpf            = $key[5];
-                    $tel            = $key[6];
-                    $escolaridade   = $key[7];
-                }
+                // foreach ($obj as $key => $value)
+                // {
+                //     $id             = $key[0];
+                //     $nomeUsu        = $key[1];
+                //     $nomeComp       = $key[2];
+                //     $email          = $key[3];
+                //     $senha          = $key[4];
+                //     $cpf            = $key[5];
+                //     $tel            = $key[6];
+                //     $escolaridade   = $key[7];
+                // }
+
+                $this->setId($obj[0]);
+                $this->setNomeUsu($obj[1]);
+                $this->setNomeComp($obj[2]);
+                $this->setEmail($obj[3]);
+                $this->setSenha($obj[4]);
+                $this->setCpf($obj[5]);
+                $this->setTel($obj[6]);
+                $this->setEscolaridade($obj[7]);
+                
             default:
                 $erro =  "Erro! Não é um objeto ou array!";
                 break;
@@ -85,6 +98,10 @@ class Usuario implements UsuarioDAO
             $this->findByNomeUsu($nomeUsu)  === false ?  $this->setNomeUsu($nomeUsu) : $erro = 'Nome de usuario cadastrado já existe';
             $this->findByEmail($email)      === false ?  $this->setEmail($email) : $erro = 'email cadastrado já existe';
             $this->findByCpf($cpf)          === false ?  $this->setCpf($cpf) : $erro = 'Cpf cadastrado já existe';
+            trim($this->senha);
+
+            //aqui, depois de você setar as informações do usuario, e validar corretamente para saber se já existe, iremos inserir o usuário no banco.
+            //(Opcional) -> Verificar o tipo de dado da propriedade do objeto do usuário, para saber se condiz com o tipo de variável da coluna da tabela.
         }
         else 
         { 
@@ -224,14 +241,19 @@ class Usuario implements UsuarioDAO
 
 
     //metodos abstratos da interface DAO
-    public static function inserirUsuario(Usuario $usuario) 
+    //aqui, você não precisa passar a classe, você JÁ está dentro da classe
+    public function inserirUsuario() 
     {
-        $sql = "INSERT INTO usuario (nome_usu, nome_comp, email, senha, cpf, tel, escolaridade) 
-                VALUES ('$usuario->nomeUsu', '$usuario->nomeComp', '$usuario->email', '$usuario->senha', '$usuario->cpf', '$usuario->tel', '$usuario->escolaridade')";
+        $comandosql = new MyPostSql();
+        $sql = sprintf("INSERT INTO usuario (nome_usu, nome_comp, email, senha, cpf, tel, escolaridade) 
+                VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s')", $this->nomeUsu, $this->nomeComp, $this->email, $this->senha, $this->cpf, $this->tel, $this->escolaridade);
+        $comandosql->executarSELECTArrayObjeto($sql, 'insercaousuario');
+        $resultadoinsert = $comandosql->getResultado() > 0 ? true : false;
+        return $resultadoinsert;
 
         // Execute a query $sql aqui
 
-        return $sql; // Pode retornar true/false ou alguma outra indicação de sucesso ou falha
+        //return $sql; // Pode retornar true/false ou alguma outra indicação de sucesso ou falha
     }
 
     public static function findById($id) 
