@@ -23,7 +23,6 @@ btn.addEventListener("click", function () {
 function isMobile() {
 	return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 	return true;
-
 }
 
 // const form = document.querySelector("#cadastro");

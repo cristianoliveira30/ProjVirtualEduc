@@ -87,14 +87,18 @@
 					<img src="./img/svgs/img01.svg" class="d-block w-50 h-25 img-fluid" alt="...">
 
 					<div class="d-block">
-						<h2 class="m-3 mb-0 ">Sobre o Projeto</h2>
+						<h2 class="m-3 mb-0">Sobre o Projeto</h2>
 
 						<p class="m-lg-3">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nihil quaerat hic consequatur reiciendis sapiente molestiae quod impedit possimus! Natus excepturi necessitatibus obcaecati recusandae explicabo asperiores beatae atque facere mollitia?
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nihil quaerat hic consequatur reiciendis 
+							sapiente molestiae quod impedit possimus! Natus excepturi necessitatibus obcaecati recusandae explicabo 
+							asperiores beatae atque facere mollitia?
 						</p>
 
 						<p class="m-lg-3">
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos minima, recusandae nobis reiciendis ducimus eius numquam illum cumque iste nulla saepe commodi ratione animi officiis, cum necessitatibus quaerat natus temporibus.
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos minima, recusandae nobis reiciendis 
+							ducimus eius numquam illum cumque iste nulla saepe commodi ratione animi officiis, cum necessitatibus quaerat 
+							natus temporibus.
 						</p>
 
 					</div>
@@ -130,11 +134,14 @@
 						<h2 class="m-3 mb-0 ">Principais Características:</h2>
 
 						<p class="m-lg-3">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nihil quaerat hic consequatur reiciendis sapiente molestiae quod impedit possimus! Natus excepturi necessitatibus obcaecati recusandae explicabo asperiores beatae atque facere mollitia?
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nihil quaerat hic consequatur reiciendis 
+							sapiente molestiae quod impedit possimus! Natus excepturi necessitatibus obcaecati recusandae explicabo asperiores
+							beatae atque facere mollitia?
 						</p>
 
 						<p class="m-lg-3">
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos minima, recusandae nobis reiciendis ducimus eius numquam illum cumque iste nulla saepe commodi ratione animi officiis, cum necessitatibus quaerat natus temporibus.
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos minima, recusandae nobis reiciendis ducimus 
+							eius numquam illum cumque iste nulla saepe commodi ratione animi officiis, cum necessitatibus quaerat natus temporibus.
 						</p>
 
 					</div>
@@ -148,10 +155,14 @@
 					<div class="d-block">
 						<h2 class="m-3 mb-0 ">Benefícios Esperados:</h2>
 						<p class="m-lg-3">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nihil quaerat hic consequatur reiciendis sapiente molestiae quod impedit possimus! Natus excepturi necessitatibus obcaecati recusandae explicabo asperiores beatae atque facere mollitia?
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nihil quaerat hic consequatur reiciendis 
+							sapiente molestiae quod impedit possimus! Natus excepturi necessitatibus obcaecati recusandae explicabo 
+							asperiores beatae atque facere mollitia?
 						</p>
 						<p class="m-lg-3">
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos minima, recusandae nobis reiciendis ducimus eius numquam illum cumque iste nulla saepe commodi ratione animi officiis, cum necessitatibus quaerat natus temporibus.
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos minima, recusandae nobis reiciendis 
+							ducimus eius numquam illum cumque iste nulla saepe commodi ratione animi officiis, cum necessitatibus quaerat 
+							natus temporibus.
 						</p>
 					</div>
 

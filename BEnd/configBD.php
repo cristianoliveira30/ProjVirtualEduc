@@ -17,7 +17,7 @@ class MyPostSql
 		$this->postgres = $this->Conectar();
     }
 
-    private function Conectar()
+    public function Conectar()
     {
         $strconect = "host=000.000.0.000 port=5432 dbname=virtual user=postgres password=virtual@educ";
 
