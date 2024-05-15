@@ -15,7 +15,7 @@ class Usuario
     private $escolaridade;
 
     /**
-     * Seta as informacoes do usuario sem lancar por banco
+     * Seta as informacoes do usuario nas variaveis sem lancar por banco
      * @param object|array $obj Recebe objeto ou array
      * @return string Retorna em variaveis
      */
@@ -275,7 +275,7 @@ class Usuario
 class inserirUsuario
     {
         // GUARDANDO INFORMACOES
-        public function setUsuario($json)
+        public function Usuario($json)
         {
             try 
             {
@@ -291,19 +291,13 @@ class inserirUsuario
                 $tel = $usuario['tel'] ?? '';
                 $escolaridade = $usuario['escolaridade'] ?? '';
 
-                $mypgsql = new MyPostSql();
-                $conexao = $mypgsql->conectar();
-            
-                // Prepare a declaração SQL
-                $sql = "INSERT INTO nome_da_tabela (nomeUsu, nomeComp, email, senha, cpf, tel, escolaridade) 
-                        VALUES ($1, $2, $3, $4, $5, $6, $7)";
-            
-                // Execute a declaração SQL
-                $returnarray = array($nomeUsu, $nomeComp, $email, $senha, $cpf, $tel, $escolaridade);
-                $result = pg_query_params($conexao, $sql, $returnarray);
-            
-                // Verifique se a consulta foi bem-sucedida
-                $result ? true : false;
+                $comandosql = new MyPostSql();
+                $sql = sprintf("INSERT INTO usuario (nome_usu, nome_comp, email, senha, cpf, tel, escolaridade) 
+                        VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s')", $nomeUsu, $nomeComp, $email, $senha, 
+                        $cpf, $tel, $escolaridade);
+                $comandosql->executarSELECTArrayObjeto($sql, 'insercaousuario');
+                $resultadoinsert = $comandosql->getResultado() > 0 ? true : false;
+                return $resultadoinsert;
             } 
             catch (Exception $e) 
             {
