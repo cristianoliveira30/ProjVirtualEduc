@@ -1,11 +1,10 @@
 <?php
-require_once '../firewall.php';
+require_once './firewall.php';
 require_once '../configBD.php';
 
 class Usuario 
 {
     //variaveis
-    private $id;
     private $nomeUsu;
     private $nomeComp;
     private $email;
@@ -14,119 +13,66 @@ class Usuario
     private $tel;
     private $escolaridade;
 
-    /**
-     * Seta as informacoes do usuario nas variaveis sem lancar por banco
-     * @param object|array $obj Recebe objeto ou array
-     * @return string Retorna em variaveis
-     */
-    private function setInfoUsu(object|array $obj)
-    {
-        try
-        {
-            switch (true) {
-                case is_object($obj):
-                    $id             = $obj->id;
-                    $nomeUsu        = $obj->nomeusuario;
-                    $nomeComp       = $obj->nomecompleo;
-                    $email          = $obj->email;
-                    $senha          = $obj->senha;
-                    $cpf            = $obj->cpf;
-                    $tel            = $obj->tel;
-                    $escolaridade   = $obj->escolaridade;
-                    break;
-                
-                case is_array($obj):
-                    $id             = $obj[0];
-                    $nomeUsu        = $obj[1];
-                    $nomeComp       = $obj[2];
-                    $email          = $obj[3];
-                    $senha          = $obj[4];
-                    $cpf            = $obj[5];
-                    $tel            = $obj[6];
-                    $escolaridade   = $obj[7];
-                    break;
-                default:
-                    throw new Exception("Erro! Não é um objeto ou array!");
-                    break;
-            }
-
-            // Retornar um array associativo com as informações
-            return [
-                'id' => $id,
-                'nomeUsu' => $nomeUsu,
-                'nomeComp' => $nomeComp,
-                'email' => $email,
-                'senha' => $senha,
-                'cpf' => $cpf,
-                'tel' => $tel,
-                'escolaridade' => $escolaridade
-            ];
-        }
-        catch (Exception $e) 
-        {
-            echo json_encode(['error' => $e->getMessage()]);
-            die();
-        }
-    }
-
-
-    public function ValidarUsu($obj)
+    public function ValidarUsu($json)
     {
         try 
         {
-            // VARIAVEIS
-            $method = strtolower($_SERVER['REQUEST_METHOD']);
             $arrayretorno = array();
-
-            // Seta as informações do usuário
-            $this->setInfoUsu($obj);
             $firewall = new Firewall();
 
-            // Valida as informacoes
-            if ($method === 'post') 
-            {
-                $nomeUsu        = filter_input(INPUT_POST, 'nomeusu', FILTER_SANITIZE_SPECIAL_CHARS);
-                $nomeComp       = filter_input(INPUT_POST, 'nomecomp', FILTER_SANITIZE_SPECIAL_CHARS);
-                $email          = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
-                $senha          = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
-                $cpf            = filter_input(INPUT_POST, 'cpf', FILTER_SANITIZE_FULL_SPECIAL_CHARS, FILTER_VALIDATE_INT);
-                $tel            = filter_input(INPUT_POST, 'tel', FILTER_SANITIZE_NUMBER_INT);
-                $escolaridade   = filter_input(INPUT_POST, 'escolaridade', FILTER_SANITIZE_SPECIAL_CHARS);  
-                $client_ip = $firewall->get_ip();
-                // Tratando as informacoes tratadas
-                strtoupper($firewall->getClean($nomeUsu));
-                strtoupper($firewall->getClean($nomeComp));
-                $firewall->getClean($email);
-                $this->hashSenha(($firewall->getClean($senha)));
-                $this->validaCPF($firewall->getClean($cpf));
-                $this->validarTel($firewall->getClean($tel));
-                $firewall->getClean($escolaridade);
+            // separando informaçõespra tratar
+            $nomeUsu        = $json['nomeusu'];
+            $nomeComp       = $json['nomecomp'];
+            $email          = $json['email'];
+            $senha          = $json['senha'];
+            $tel            = $json['telefone'];
+            $escolaridade   = $json['escolaridade'];
+            $cpf            = $json['cpf'];
+            $nascimento     = $json['nascimento'];
+            $rg             = $json['rg'];
+            $cep            = $json['cep'];
+            $estado         = $json['estado'];
+            
+            $client_ip = $firewall->get_ip();
+            
+            // Verificamdo sqlinjection e xss
+            strtoupper($firewall->getClean($nomeUsu));
+            strtoupper($firewall->getClean($nomeComp));
+            $firewall->getClean($email);
+            $this->hashSenha(($firewall->getClean(trim($senha))));
+            $this->validarTel($firewall->getClean($tel));
+            strtoupper($firewall->getClean($escolaridade));
+            strtoupper($this->validaCPF($firewall->getClean($cpf)));
+            $firewall->getClean($nascimento);
+            $firewall->getClean($rg);
+            $firewall->getClean($cep);
+            strtoupper($firewall->getClean($estado));
 
-                // Verifica se as informacoes especificas já existem no banco de dados
-                $this->findByNomeUsu($nomeUsu)  === false ?  $nomeUsu : throw new Exception('Nome de usuario cadastrado já existe');
-                $this->findByEmail($email)      === false ?  $email : throw new Exception('email cadastrado já existe');
-                $this->findByCpf($cpf)          === false ?  $cpf : throw new Exception('Cpf cadastrado já existe');
 
-                $arrayretorno = [
-                    'nomeUsu' => $nomeUsu,
-                    'nomeComp' => $nomeComp,
-                    'email' => $email,
-                    'senha' => $senha,
-                    'cpf' => $cpf,
-                    'tel' => $tel,
-                    'escolaridade' => $escolaridade
-                ];
-            }
-            else 
-            { 
-                throw new Exception("Método não suportado!");
-            }
+            // Verifica se as informacoes especificas já existem no banco de dados
+            $this->findByNomeUsu($nomeUsu)  === false ?  $nomeUsu   : throw new Exception('Nome de usuario cadastrado já existe');
+            $this->findByEmail($email)      === false ?  $email     : throw new Exception('Email cadastrado já existe');
+            $this->findByCpf($cpf)          === false ?  $cpf       : throw new Exception('Cpf cadastrado já existe');
+
+            $arrayretorno = [
+                'nomeUsu'       => $nomeUsu,
+                'nomeComp'      => $nomeComp,
+                'email'         => $email,
+                'senha'         => $senha,
+                'tel'           => $tel,
+                'escolaridade'  => $escolaridade,
+                'cpf'           => $cpf,
+                'nascimento'    => $nascimento,
+                'rg'            => $rg,
+                'cep'           => $cep,
+                'estado'        => $estado,
+            ];
             return $arrayretorno;
         }
         catch (Exception $e)
         {
-            echo json_encode(['error' => $e->getMessage()]);
-            die();
+            return ['error' => $e->getMessage()];
+            die;
         }
     }
 
@@ -275,35 +221,43 @@ class Usuario
 class inserirUsuario
     {
         // GUARDANDO INFORMACOES
-        public function Usuario($json)
+        public function inserirUsuario($json)
         {
             try 
             {
-                $usuarioAtual = json_decode($json, true);
-                $usuario = new Usuario();
-                $usuario->ValidarUsu($usuarioAtual);
+                $json = json_decode($json, true);
 
-                $nomeUsu = $usuario['nomeUsu'] ?? '';
-                $nomeComp = $usuario['nomeComp'] ?? '';
-                $email = $usuario['email'] ?? '';
-                $senha = $usuario['senha'] ?? '';
-                $cpf = $usuario['cpf'] ?? '';
-                $tel = $usuario['tel'] ?? '';
-                $escolaridade = $usuario['escolaridade'] ?? '';
+                if ($json === null && json_last_error() !== JSON_ERROR_NONE) {
+                    throw new Exception ("Erro ao decodificar JSON");
+                }
+
+                $usuario = new Usuario();
+                $usuValidado = $usuario->ValidarUsu($json);
+
+                $nomeUsu        = $usuValidado['nomeUsu'] ?? '';
+                $nomeComp       = $usuValidado['nomeComp'] ?? '';
+                $email          = $usuValidado['email'] ?? '';
+                $senha          = $usuValidado['senha'] ?? '';
+                $tel            = $usuValidado['tel'] ?? '';
+                $escolaridade   = $usuValidado['escolaridade'] ?? '';
+                $cpf            = $usuValidado['cpf'] ?? '';
+                $nascimento     = $usuValidado['nascimento'] ?? '';
+                $rg             = $usuValidado['rg'] ?? '';
+                $cep            = $usuValidado['cep'] ?? '';
+                $estado         = $usuValidado['estado'] ?? '';
 
                 $comandosql = new MyPostSql();
                 $sql = sprintf("INSERT INTO usuario (nome_usu, nome_comp, email, senha, cpf, tel, escolaridade) 
                         VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s')", $nomeUsu, $nomeComp, $email, $senha, 
-                        $cpf, $tel, $escolaridade);
+                        $tel, $escolaridade, $cpf, $nascimento, $rg, $cep, $estado);
                 $comandosql->executarSELECTArrayObjeto($sql, 'insercaousuario');
                 $resultadoinsert = $comandosql->getResultado() > 0 ? true : false;
                 return $resultadoinsert;
             } 
             catch (Exception $e) 
             {
-                // Se ocorrer uma exceção, capture-a e retorne uma mensagem de erro
-                echo json_encode(['error' => $e->getMessage()]);
-                return false;
+                return ['error' => $e->getMessage()];
+                die;
             }
         }
 

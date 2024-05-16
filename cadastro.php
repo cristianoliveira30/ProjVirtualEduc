@@ -22,46 +22,46 @@
 <body>
 	<main>
 		<div class="container-fluid" id="form">
-			<form class="login-card mt-5 mb-5 p-5" action="./BEnd/valiusu.php" method="post" enctype="multipart/form" id="cadastro">
+			<form class="login-card mt-5 mb-5 p-5" action="./BEnd/tratamentocadastro.php" method="post" enctype="multipart/form" id="cadastro">
 				<div class="card-header">
 					<div class="log">Cadastro</div>
 				</div>
 				<div class="etapa01" id="etapa01">
 					<div class="d-flex">
 						<div class="form-group">
-							<div class="d-block"><label for="username">Email</label></div>
-							<input required="" name="username" id="username" type="text" maxlength="50">
+							<div class="d-block"><label for="email">Email</label></div>
+							<input required="" name="email" id="email" type="text" maxlength="50">
 						</div>
 						<div class="form-group">
-							<div class="d-block"><label for="password">Senha</label></div>
-							<input required="" name="password" id="password" type="password" maxlength="8">
-						</div>
-					</div>
-					<div class="d-flex">
-						<div class="form-group">
-							<div class="d-block"><label for="username">Nome de Usuário</label></div>
-							<input required="" name="username" id="username" type="text" maxlength="50">
-						</div>
-						<div class="form-group">
-							<div class="d-block"><label for="username">Nome Completo</label></div>
-							<input required="" name="username" id="username" type="text" maxlength="50">
+							<div class="d-block"><label for="senha">Senha</label></div>
+							<input required="" name="senha" id="senha" type="password" maxlength="8">
 						</div>
 					</div>
 					<div class="d-flex">
 						<div class="form-group">
-							<div class="d-block"><label for="username">Telefone</label></div>
-							<input required="" name="username" id="telefone" type="text" maxlength="50">
+							<div class="d-block"><label for="nomeusu">Nome de Usuário</label></div>
+							<input required="" name="nomeusu" id="nomeusu" type="text" maxlength="50">
 						</div>
 						<div class="form-group">
-							<div class="d-block"><label for="username">Serie</label></div>
+							<div class="d-block"><label for="nomecomp">Nome Completo</label></div>
+							<input required="" name="nomecomp" id="nomecomp" type="text" maxlength="50">
+						</div>
+					</div>
+					<div class="d-flex">
+						<div class="form-group">
+							<div class="d-block"><label for="telefone">Telefone</label></div>
+							<input required="" name="telefone" id="telefone" type="text" maxlength="50">
+						</div>
+						<div class="form-group">
+							<div class="d-block"><label for="escolaridade">Escolaridade</label></div>
 							<input list="escolaridade" name="escolaridade">
 							<datalist id="escolaridade">
-								<option value="Ensino Fundamental Incompleto"></option>
-								<option value="Ensino Fundamental Completo"></option>
-								<option value="Ensino Médio Incompleto"></option>
-								<option value="Ensino Médio Completo"></option>
-								<option value="Ensino Superior Incompleto"></option>
-								<option value="Ensino Superior Completo"></option>
+								<option value="Fundamental"></option>
+								<option value="Médio"></option>
+								<option value="Superior"></option>
+								<option value="Pós-Graduação"></option>
+								<option value="Mestrado"></option>
+								<option value="Doutorado"></option>
 							</datalist>
 						</div>
 					</div>
@@ -85,27 +85,27 @@
 							<input required="" type="text" name="cpf" id="cpf" maxlength="14">
 						</div>
 						<div class="form-group">
-							<div class="d-block"><label for="password">Data</label></div>
-							<input required="" type="text" name="data" id="data" maxlength="8">
+							<div class="d-block"><label for="password">Data de Nascimento</label></div>
+							<input required="" type="text" name="nascimento" id="nascimento" maxlength="8">
 						</div>
 					</div>
 					<div class="d-flex">
 						<div class="form-group">
-							<label for="username">RG</label>
-							<input required="" type="text" name="username" id="rg" maxlength="7">
+							<label for="rg">RG</label>
+							<input required="" type="text" name="rg" id="rg" maxlength="7">
 						</div>
 						<div class="form-group">
-							<label for="username">Endereço</label>
-							<input required="" type="text" name="endereço" id="endereço" maxlength="50">
+							<label for="endereco">Endereço</label>
+							<input required="" type="text" name="endereco" id="endereco" maxlength="50">
 						</div>
 					</div>
 					<div class="d-flex">
 						<div class="form-group">
-							<label for="username">CEP</label>
+							<label for="cep">CEP</label>
 							<input required="" type="text" name="cep" id="cep" maxlength="50">
 						</div>
 						<div class="form-group">
-							<label for="username">Estado</label>
+							<label for="estado">Estado</label>
 							<input list="estado">
 							<datalist id="estado">
 								<option>AC </option>
@@ -146,31 +146,54 @@
 		</div>
 	</main>
 
-	<script>
-		
-		// Mascaras de input com a biblioteca jQuery
-
-		$(document).ready(function() {
-
-			$("#telefone").mask("(00) 00000-0000");
-			$("#cpf").mask("000.000.000-00");
-			$("#data").mask("00/00/0000");
-			$("#cep").mask("00000-000");
-
-			// Função para aceitar apenas valores numericoss
-
-			const input = $('#rg');
-			input.on('input', function() {
-				input.val(input.val().replace(/[^0-9]/g, ''));
-			});
-
-		});
-
-	</script>
-
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
 	<script src="./js/script.js"></script>
 
 </body>
 </html>
+
+<script>
+	$(document).ready(function() {
+
+		//enviando informações
+		$('#cadastro').on('submit', function(event) {
+            event.preventDefault();
+
+            // Serializa o formulário em um objeto
+            const formDataObject = {};
+            $(this).serializeArray().forEach(function(field) {
+                formDataObject[field.name] = field.value;
+            });
+
+            // Converte o objeto em JSON
+            const jsonData = JSON.stringify(formDataObject);
+
+            // Envia a requisição AJAX com os dados em JSON
+            $.ajax({
+                url: '/BEnd/tratamentocadastro.php',
+                type: 'POST',
+                contentType: 'application/json',
+                data: jsonData,
+                dataType: 'json',
+                success: function(response) {
+                    console.log(response);
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.error('Erro:', errorThrown);
+                }
+            });
+        });
+
+		//Máscaras de inputs
+		$("#telefone").mask("(00) 00000-0000");
+		$("#cpf").mask("000.000.000-00");
+		$("#data").mask("00/00/0000");
+		$("#cep").mask("00000-000");
+
+		// Função para aceitar apenas valores numericoss
+		const input = $('#rg');
+		input.on('input', function() {
+		input.val(input.val().replace(/[^0-9]/g, ''));
+		});
+	});
+</script>
