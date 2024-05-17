@@ -22,7 +22,7 @@
 <body>
 	<main>
 		<div class="container-fluid" id="form">
-			<form class="login-card mt-5 mb-5 p-5" action="./BEnd/tratamentocadastro.php" method="post" enctype="multipart/form" id="cadastro">
+			<form class="login-card mt-5 mb-5 p-5" method="post" enctype="multipart/form" id="cadastro">
 				<div class="card-header">
 					<div class="log">Cadastro</div>
 				</div>
@@ -105,41 +105,39 @@
 							<input required="" type="text" name="cep" id="cep" maxlength="50">
 						</div>
 						<div class="form-group">
-							<label for="estado">Estado</label>
-							<input list="estado">
-							<datalist id="estado">
-								<option>AC </option>
-								<option>AL </option>
-								<option>AP </option>
-								<option>AM </options>
-								<option>BA </option>
-								<option>CE </option>
-								<option>DF </option>
-								<option>ES </option>
-								<option>GO </option>
-								<option>MA </option>
-								<option>MT </option>
-								<option>MS </option>
-								<option>MG </option>
-								<option>PA </option>
-								<option>PB </option>
-								<option>PR </option>
-								<option>PE </option>
-								<option>PI </option>
-								<option>RJ </option>
-								<option>RN </option>
-								<option>RS </option>
-								<option>RO </option>
-								<option>RR </option>
-								<option>SC </option>
-								<option>SP </option>
-								<option>SE </option>
-								<option>TO </option>
-							</datalist>
+							<select id="estado" name="estado">
+								<option value="AC">AC </option>
+								<option value="AL">AL </option>
+								<option value="AP">AP </option>
+								<option value="AM">AM </options>
+								<option value="BA">BA </option>
+								<option value="CE">CE </option>
+								<option value="DF">DF </option>
+								<option value="ES">ES </option>
+								<option value="GO">GO </option>
+								<option value="MA">MA </option>
+								<option value="MT">MT </option>
+								<option value="MS">MS </option>
+								<option value="MG">MG </option>
+								<option value="PA">PA </option>
+								<option value="PB">PB </option>
+								<option value="PR">PR </option>
+								<option value="PE">PE </option>
+								<option value="PI">PI </option>
+								<option value="RJ">RJ </option>
+								<option value="RN">RN </option>
+								<option value="RS">RS </option>
+								<option value="RO">RO </option>
+								<option value="RR">RR </option>
+								<option value="SC">SC </option>
+								<option value="SP">SP </option>
+								<option value="SE">SE </option>
+								<option value="TO">TO </option>
+							</select>
 						</div>
 					</div>
 					<div class="form-group">
-						<input value="Enviar" type="submit">
+						<input id="enviarcadastro" value="Enviar" type="submit">
 					</div>
 				</div>
 			</form>
@@ -153,47 +151,48 @@
 </html>
 
 <script>
-	$(document).ready(function() {
+// Enviando informações
+$('#cadastro').on('submit', function(event) {
+	event.preventDefault();
 
-		//enviando informações
-		$('#cadastro').on('submit', function(event) {
-            event.preventDefault();
-
-            // Serializa o formulário em um objeto
-            const formDataObject = {};
-            $(this).serializeArray().forEach(function(field) {
-                formDataObject[field.name] = field.value;
-            });
-
-            // Converte o objeto em JSON
-            const jsonData = JSON.stringify(formDataObject);
-
-            // Envia a requisição AJAX com os dados em JSON
-            $.ajax({
-                url: '/BEnd/tratamentocadastro.php',
-                type: 'POST',
-                contentType: 'application/json',
-                data: jsonData,
-                dataType: 'json',
-                success: function(response) {
-                    console.log(response);
-                },
-                error: function(jqXHR, textStatus, errorThrown) {
-                    console.error('Erro:', errorThrown);
-                }
-            });
-        });
-
-		//Máscaras de inputs
-		$("#telefone").mask("(00) 00000-0000");
-		$("#cpf").mask("000.000.000-00");
-		$("#data").mask("00/00/0000");
-		$("#cep").mask("00000-000");
-
-		// Função para aceitar apenas valores numericoss
-		const input = $('#rg');
-		input.on('input', function() {
-		input.val(input.val().replace(/[^0-9]/g, ''));
-		});
+	// Serializa o formulário em um objeto
+	const formDataObject = {};
+	$(this).serializeArray().forEach(function(field) {
+		formDataObject[field.name] = field.value;
 	});
+
+	// Converte o objeto em JSON
+	const jsonData = JSON.stringify(formDataObject);
+
+	// Envia a requisição AJAX com os dados em JSON
+	$.ajax(
+	{
+		url: './BEnd/tratamentocadastro.php',
+		type: 'POST',
+		contentType: 'application/json',
+		data: jsonData,
+		dataType: 'json',
+		success: function(response) {
+			console.log(response);
+		},
+		error: function(jqXHR, textStatus, errorThrown) {
+			console.error('Erro:', textStatus, errorThrown);
+			console.error('Resposta do servidor:', jqXHR.responseText);
+		}
+	});
+});
+
+$(document).ready(function() {
+	//Máscaras de inputs
+	$("#telefone").mask("(00) 00000-0000");
+	$("#cpf").mask("000.000.000-00");
+	$("#data").mask("00/00/0000");
+	$("#cep").mask("00000-000");
+
+	// Função para aceitar apenas valores numericoss
+	const input = $('#rg');
+	input.on('input', function() {
+	input.val(input.val().replace(/[^0-9]/g, ''));
+	});
+});
 </script>

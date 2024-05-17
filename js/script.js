@@ -41,11 +41,11 @@ function isMobile() {
 const url = "login.php";
 const btn_sair = document.querySelector("#btn-sair");
 
-function openInNewTab(url) {
-	const win = window.open(url, "_blank");
-	win.focus();
-};
+// function openInNewTab(url) {
+// 	const win = window.open(url, "_blank");
+// 	win.focus();
+// };
 
-btn_sair.addEventListener("click", () => {
-	openInNewTab(url);
-});
+// btn_sair.addEventListener("click", () => {
+// 	openInNewTab(url);
+// });

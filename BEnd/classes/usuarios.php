@@ -1,17 +1,16 @@
 <?php
-require_once './firewall.php';
-require_once '../configBD.php';
+require_once 'firewall.php';
+require_once 'configBD.php';
 
 class Usuario 
 {
     //variaveis
-    private $nomeUsu;
     private $nomeComp;
     private $email;
     private $senha;
-    private $cpf;
     private $tel;
     private $escolaridade;
+    private $cpf;
 
     public function ValidarUsu($json)
     {
@@ -21,20 +20,21 @@ class Usuario
             $firewall = new Firewall();
 
             // separando informaçõespra tratar
-            $nomeUsu        = $json['nomeusu'];
-            $nomeComp       = $json['nomecomp'];
-            $email          = $json['email'];
-            $senha          = $json['senha'];
-            $tel            = $json['telefone'];
-            $escolaridade   = $json['escolaridade'];
-            $cpf            = $json['cpf'];
-            $nascimento     = $json['nascimento'];
-            $rg             = $json['rg'];
-            $cep            = $json['cep'];
-            $estado         = $json['estado'];
+            !empty($json['nomeusu'])      ? $nomeUsu       = $json['nomeUsu']      : throw new Exception("Nome de Usuário vazio");
+            !empty($json['nomecomp'])     ? $nomeComp      = $json['nomeComp']     : throw new Exception("Nome Completo vazio");
+            !empty($json['email'])        ? $email         = $json['email']        : throw new Exception("Email vazio");
+            !empty($json['senha'])        ? $senha         = $json['senha']        : throw new Exception("Senha vazia");
+            !empty($json['telefone'])     ? $tel           = $json['tel']          : throw new Exception("Telefone vazio");
+            !empty($json['escolaridade']) ? $escolaridade  = $json['escolaridade'] : throw new Exception("Escolaridade vazia");
+            !empty($json['cpf'])          ? $cpf           = $json['cpf']          : throw new Exception("CPF vazio");
+            !empty($json['nascimento'])   ? $nascimento    = $json['nascimento']   : throw new Exception("Data de nascimento vazia");
+            !empty($json['rg'])           ? $rg            = $json['rg']           : throw new Exception("RG vazio");
+            !empty($json['cep'])          ? $cep           = $json['cep']          : throw new Exception("CEP vazio");
+            !empty($json['estado'])       ? $estado        = $json['estado']       : throw new Exception("Estado vazio");
+            !empty($json['endereco'])     ? $estado        = $json['endereco']     : throw new Exception("Endereço vazio");
             
             $client_ip = $firewall->get_ip();
-            
+
             // Verificamdo sqlinjection e xss
             strtoupper($firewall->getClean($nomeUsu));
             strtoupper($firewall->getClean($nomeComp));
@@ -50,9 +50,15 @@ class Usuario
 
 
             // Verifica se as informacoes especificas já existem no banco de dados
-            $this->findByNomeUsu($nomeUsu)  === false ?  $nomeUsu   : throw new Exception('Nome de usuario cadastrado já existe');
-            $this->findByEmail($email)      === false ?  $email     : throw new Exception('Email cadastrado já existe');
-            $this->findByCpf($cpf)          === false ?  $cpf       : throw new Exception('Cpf cadastrado já existe');
+            // $temounao01 = $this->findByNomeUsu($nomeUsu);
+            // $temounao02 = $this->findByEmail($email);
+            // $temounao03 = $this->findByCpf($cpf);
+
+            // is_array($temounao01) ? throw new Exception('Nome de usuario cadastrado já existe') : $temounao01 = false;
+            // is_array($temounao02) ? throw new Exception('Email cadastrado já existe')           : $temounao02 = false;
+            // is_array($temounao03) ? throw new Exception('Cpf cadastrado já existe')             : $temounao03 = false;
+
+            
 
             $arrayretorno = [
                 'nomeUsu'       => $nomeUsu,
@@ -234,17 +240,18 @@ class inserirUsuario
                 $usuario = new Usuario();
                 $usuValidado = $usuario->ValidarUsu($json);
 
-                $nomeUsu        = $usuValidado['nomeUsu'] ?? '';
-                $nomeComp       = $usuValidado['nomeComp'] ?? '';
-                $email          = $usuValidado['email'] ?? '';
-                $senha          = $usuValidado['senha'] ?? '';
-                $tel            = $usuValidado['tel'] ?? '';
-                $escolaridade   = $usuValidado['escolaridade'] ?? '';
-                $cpf            = $usuValidado['cpf'] ?? '';
-                $nascimento     = $usuValidado['nascimento'] ?? '';
-                $rg             = $usuValidado['rg'] ?? '';
-                $cep            = $usuValidado['cep'] ?? '';
-                $estado         = $usuValidado['estado'] ?? '';
+                $nomeUsu        = $usuValidado['nomeusu'];
+                $nomeComp       = $usuValidado['nomecomp'];
+                $email          = $usuValidado['email'];
+                $senha          = $usuValidado['senha'];
+                $tel            = $usuValidado['tel'];
+                $escolaridade   = $usuValidado['escolaridade'];
+                $cpf            = $usuValidado['cpf'];
+                $nascimento     = $usuValidado['nascimento'];
+                $rg             = $usuValidado['rg'];
+                $cep            = $usuValidado['cep'];
+                $estado         = $usuValidado['estado'];
+                $estado         = $usuValidado['endereco'];
 
                 $comandosql = new MyPostSql();
                 $sql = sprintf("INSERT INTO usuario (nome_usu, nome_comp, email, senha, cpf, tel, escolaridade) 
