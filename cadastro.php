@@ -102,35 +102,35 @@
 						</div>
 						<div class="form-group">
 							<div class="d-block"><label for="estado">Estado</label></div>
-							<select name="unidades-federativas" id="estados">
-								<option selected>Selecionar Estado</option>
-								<option>AC </option>
-								<option>AL </option>
-								<option>AP </option>
-								<option>AM </option>
-								<option>BA </option>
-								<option>CE </option>
-								<option>DF </option>
-								<option>ES </option>
-								<option>GO </option>
-								<option>MA </option>
-								<option>MT </option>
-								<option>MS </option>
-								<option>MG </option>
-								<option>PA </option>
-								<option>PB </option>
-								<option>PR </option>
-								<option>PE </option>
-								<option>PI </option>
-								<option>RJ </option>
-								<option>RN </option>
-								<option>RS </option>
-								<option>RO </option>
-								<option>RR </option>
-								<option>SC </option>
-								<option>SP </option>
-								<option>SE </option>
-								<option>TO </option>
+							<select name="estado" id="estados">
+								<option selected disabled>Selecionar Estado</option>
+								<option value="AC">AC </option>
+								<option value="AL">AL </option>
+								<option value="AP">AP </option>
+								<option value="AM">AM </option>
+								<option value="BA">BA </option>
+								<option value="CE">CE </option>
+								<option value="DF">DF </option>
+								<option value="ES">ES </option>
+								<option value="GO">GO </option>
+								<option value="MA">MA </option>
+								<option value="MT">MT </option>
+								<option value="MS">MS </option>
+								<option value="MG">MG </option>
+								<option value="PA">PA </option>
+								<option value="PB">PB </option>
+								<option value="PR">PR </option>
+								<option value="PE">PE </option>
+								<option value="PI">PI </option>
+								<option value="RJ">RJ </option>
+								<option value="RN">RN </option>
+								<option value="RS">RS </option>
+								<option value="RO">RO </option>
+								<option value="RR">RR </option>
+								<option value="SC">SC </option>
+								<option value="SP">SP </option>
+								<option value="SE">SE </option>
+								<option value="TO">TO </option>
 							</select>
 						</div>
 					</div>
