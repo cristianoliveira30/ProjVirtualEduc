@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,15 +13,17 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<!-- link Jquery mask plugin -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-	<!-- link Jquery validate plugin -->
-	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+	<!-- Google fonts -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<!-- Ajax awesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	<!-- Jquery validate plugin -->
+	<script src="js/jquery.validate.min.js"></script>
 </head>
 <body>
 	<main>
 		<div class="container-fluid" id="form">
-			<form class="login-card mt-5 mb-5 p-5" action="./BEnd/tratamentocadastro.php" method="post" enctype="multipart/form" id="cadastro">
+			<form class="login-card mt-5 mb-5 p-5" action="./BEnd/tratamentocadastro.php" method="post" enctype="multipart/form" id="cadastro" onsubmit="return validate();">
 				<div class="card-header">
 					<div class="log">Cadastro</div>
 				</div>
@@ -53,31 +54,26 @@
 							<input required="" name="telefone" id="telefone" type="text" maxlength="50">
 						</div>
 						<div class="form-group">
-							<div class="d-block"><label for="escolaridade">Escolaridade</label></div>
-							<input list="escolaridade" name="escolaridade">
-							<datalist id="escolaridade">
-								<option value="Fundamental"></option>
-								<option value="Médio"></option>
-								<option value="Superior"></option>
-								<option value="Pós-Graduação"></option>
-								<option value="Mestrado"></option>
-								<option value="Doutorado"></option>
-							</datalist>
+							<div class="d-block">
+								<label for="escolaridade">Escolaridade</label>
+							</div>
+							<select name="escolaridade" id="escolaridade">
+								<option value="Escolaridade" selected></option>
+								<option value="Fundamental">Fundamental</option>
+								<option value="Médio">Médio</option>
+								<option value="Superior">Superior</option>
+							</select>
 						</div>
 					</div>
 					<div class="form-group">
-							<input type="checkbox">
-							<a href="#" class=" m-2"><label for="">Li e concordo com os termos!</label></a>
-						</label>
-
+						<input type="checkbox" id="checbox-termos">
+						<a href="#" class=" m-2"><label for="">Li e concordo com os termos!</label></a>
 					</div>
 					<div class="form-group">
 						<input value="Enviar" type="button" id="btn">
 					</div>
 				</div>
-
 				<!-- Etapa02 -->
-
 				<div class="etapa02">
 					<div class="d-flex">
 						<div class="form-group">
@@ -105,13 +101,13 @@
 							<input required="" type="text" name="cep" id="cep" maxlength="50">
 						</div>
 						<div class="form-group">
-							<label for="estado">Estado</label>
-							<input list="estado">
-							<datalist id="estado">
+							<div class="d-block"><label for="estado">Estado</label></div>
+							<select name="unidades-federativas" id="estados">
+								<option selected>Selecionar Estado</option>
 								<option>AC </option>
 								<option>AL </option>
 								<option>AP </option>
-								<option>AM </options>
+								<option>AM </option>
 								<option>BA </option>
 								<option>CE </option>
 								<option>DF </option>
@@ -135,65 +131,79 @@
 								<option>SP </option>
 								<option>SE </option>
 								<option>TO </option>
-							</datalist>
+							</select>
 						</div>
 					</div>
 					<div class="form-group">
 						<input value="Enviar" type="submit">
 					</div>
+					<div class="form-group text-center ">
+						<button type="button" class="btn btn-primary border-0 w-25 rounded-1 p-1 mt-2" id="voltar-para-o-form1">Voltar</button>
+					</div>
 				</div>
 			</form>
 		</div>
 	</main>
-
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<script src="./js/script.js"></script>
+	<script>
+		$(document).ready(function() {
 
+			//enviando informações
+			$('#cadastro').on('submit', function(event) {
+				event.preventDefault();
+
+				// Serializa o formulário em um objeto
+				const formDataObject = {};
+				$(this).serializeArray().forEach(function(field) {
+					formDataObject[field.name] = field.value;
+				});
+
+				// Converte o objeto em JSON
+				const jsonData = JSON.stringify(formDataObject);
+
+				// Envia a requisição AJAX com os dados em JSON
+				$.ajax({
+					url: '/BEnd/tratamentocadastro.php',
+					type: 'POST',
+					contentType: 'application/json',
+					data: jsonData,
+					dataType: 'json',
+					success: function(response) {
+						console.log(response);
+					},
+					error: function(jqXHR, textStatus, errorThrown) {
+						console.error('Erro:', errorThrown);
+					}
+				});
+			});
+
+			//Máscaras de inputs
+			$("#telefone").mask("(00) 00000-0000");
+			$("#cpf").mask("000.000.000-00");
+			$("#nascimento").mask("00/00/0000");
+			$("#cep").mask("00000-000");
+
+			// Função para aceitar apenas valores numericoss
+			const input = $('#rg');
+			input.on('input', function() {
+				input.val(input.val().replace(/[^0-9]/g, ''));
+			});
+
+		});
+
+		// Validação de campos
+		$(document).ready(function() {
+			$("#email").validate({
+				rules: {
+					email: {
+						required: true,
+						maxlength: 100,
+						minlegth: 10
+					}
+				}
+			});
+		});
+	</script>
 </body>
 </html>
-
-<script>
-	$(document).ready(function() {
-
-		//enviando informações
-		$('#cadastro').on('submit', function(event) {
-            event.preventDefault();
-
-            // Serializa o formulário em um objeto
-            const formDataObject = {};
-            $(this).serializeArray().forEach(function(field) {
-                formDataObject[field.name] = field.value;
-            });
-
-            // Converte o objeto em JSON
-            const jsonData = JSON.stringify(formDataObject);
-
-            // Envia a requisição AJAX com os dados em JSON
-            $.ajax({
-                url: '/BEnd/tratamentocadastro.php',
-                type: 'POST',
-                contentType: 'application/json',
-                data: jsonData,
-                dataType: 'json',
-                success: function(response) {
-                    console.log(response);
-                },
-                error: function(jqXHR, textStatus, errorThrown) {
-                    console.error('Erro:', errorThrown);
-                }
-            });
-        });
-
-		//Máscaras de inputs
-		$("#telefone").mask("(00) 00000-0000");
-		$("#cpf").mask("000.000.000-00");
-		$("#data").mask("00/00/0000");
-		$("#cep").mask("00000-000");
-
-		// Função para aceitar apenas valores numericoss
-		const input = $('#rg');
-		input.on('input', function() {
-		input.val(input.val().replace(/[^0-9]/g, ''));
-		});
-	});
-</script>
