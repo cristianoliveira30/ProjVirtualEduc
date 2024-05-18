@@ -20,18 +20,18 @@ class Usuario
             $firewall = new Firewall();
 
             // separando informaçõespra tratar
-            !empty($json['nomeusu'])      ? $nomeUsu       = $json['nomeUsu']      : throw new Exception("Nome de Usuário vazio");
-            !empty($json['nomecomp'])     ? $nomeComp      = $json['nomeComp']     : throw new Exception("Nome Completo vazio");
+            !empty($json['nomeusu'])      ? $nomeUsu       = $json['nomeusu']      : throw new Exception("Nome de Usuário vazio");
+            !empty($json['nomecomp'])     ? $nomeComp      = $json['nomecomp']     : throw new Exception("Nome Completo vazio");
             !empty($json['email'])        ? $email         = $json['email']        : throw new Exception("Email vazio");
             !empty($json['senha'])        ? $senha         = $json['senha']        : throw new Exception("Senha vazia");
-            !empty($json['telefone'])     ? $tel           = $json['tel']          : throw new Exception("Telefone vazio");
+            !empty($json['telefone'])     ? $tel           = $json['telefone']     : throw new Exception("Telefone vazio");
             !empty($json['escolaridade']) ? $escolaridade  = $json['escolaridade'] : throw new Exception("Escolaridade vazia");
             !empty($json['cpf'])          ? $cpf           = $json['cpf']          : throw new Exception("CPF vazio");
             !empty($json['nascimento'])   ? $nascimento    = $json['nascimento']   : throw new Exception("Data de nascimento vazia");
             !empty($json['rg'])           ? $rg            = $json['rg']           : throw new Exception("RG vazio");
             !empty($json['cep'])          ? $cep           = $json['cep']          : throw new Exception("CEP vazio");
             !empty($json['estado'])       ? $estado        = $json['estado']       : throw new Exception("Estado vazio");
-            !empty($json['endereco'])     ? $estado        = $json['endereco']     : throw new Exception("Endereço vazio");
+            !empty($json['endereco'])     ? $endereco      = $json['endereco']     : throw new Exception("Endereço vazio");
             
             $client_ip = $firewall->get_ip();
 
@@ -47,6 +47,7 @@ class Usuario
             $firewall->getClean($rg);
             $firewall->getClean($cep);
             strtoupper($firewall->getClean($estado));
+            strtoupper($firewall->getClean($endereco));
 
 
             // Verifica se as informacoes especificas já existem no banco de dados
@@ -72,6 +73,7 @@ class Usuario
                 'rg'            => $rg,
                 'cep'           => $cep,
                 'estado'        => $estado,
+                'endereco'      => $endereco
             ];
             return $arrayretorno;
         }
@@ -133,7 +135,7 @@ class Usuario
     //ENCONTRE O USUARIO
     public static function findById($search) 
     {
-        $sql = "SELECT * WHERE id = $search FROM public.virtualteste";
+        $sql = "SELECT * WHERE id = $search FROM public.virtualclientes";
         $mypgsql = new MyPostSql();
         $mypgsql->executarSELECTSimplesArrayNumerico($sql);
         $mypgsql->getResultado() > 0 ? $result = $mypgsql->getArrayResultado() : $result = "Erro de query!"; 
@@ -142,7 +144,7 @@ class Usuario
 
     public function findByNomeUsu($search) 
     {
-        $sql = "SELECT * where cpf = $search FROM public.vitualbase";
+        $sql = "SELECT * where nomeusu = $search FROM public.vitualclientes";
         $mypgsql = new MyPostSql();
         $mypgsql->executarSELECTSimplesArrayNumerico($sql);
         $mypgsql->getResultado() > 0 ? $result = $mypgsql->getArrayResultado() : $result = "Erro de query!"; 
@@ -151,7 +153,7 @@ class Usuario
 
     public static function findByNomeComp($search) 
     {
-        $sql = "SELECT * WHERE nome_comp = '$search' FROM public.virtualteste";
+        $sql = "SELECT * WHERE nomecomp = $search FROM public.virtualclientes";
 
         $mypgsql = new MyPostSql();
         $mypgsql->executarSELECTSimplesArrayNumerico($sql);
@@ -179,7 +181,7 @@ class Usuario
     //RETORNANDO INFORMACOES
     public function getId($nomeUsu, $email) 
     {
-        $sql = "SELECT id WHERE nomeUsu = $nomeUsu AND email = $email FROM public.virtualbase";
+        $sql = "SELECT id WHERE nomeusu = $nomeUsu AND email = $email FROM public.virtualbase";
         $mypgsql = new MyPostSql();
         $mypgsql->executarSELECTSimplesArrayNumerico($sql);
         $mypgsql->getResultado() > 0 ? $result = $mypgsql->getArrayResultado() : $result = "Erro de query";
@@ -238,27 +240,14 @@ class inserirUsuario
                 }
 
                 $usuario = new Usuario();
-                $usuValidado = $usuario->ValidarUsu($json);
+                $params = $usuario->ValidarUsu($json);
 
-                $nomeUsu        = $usuValidado['nomeusu'];
-                $nomeComp       = $usuValidado['nomecomp'];
-                $email          = $usuValidado['email'];
-                $senha          = $usuValidado['senha'];
-                $tel            = $usuValidado['tel'];
-                $escolaridade   = $usuValidado['escolaridade'];
-                $cpf            = $usuValidado['cpf'];
-                $nascimento     = $usuValidado['nascimento'];
-                $rg             = $usuValidado['rg'];
-                $cep            = $usuValidado['cep'];
-                $estado         = $usuValidado['estado'];
-                $estado         = $usuValidado['endereco'];
-
+                $nomecoluna = 'nomeusu, nomecomp, email, senha, tel, escolaridade, cpf, nascimento, rg, cep, estado, endereco';
+    
                 $comandosql = new MyPostSql();
-                $sql = sprintf("INSERT INTO usuario (nome_usu, nome_comp, email, senha, cpf, tel, escolaridade) 
-                        VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s')", $nomeUsu, $nomeComp, $email, $senha, 
-                        $tel, $escolaridade, $cpf, $nascimento, $rg, $cep, $estado);
-                $comandosql->executarSELECTArrayObjeto($sql, 'insercaousuario');
+                $comandosql->executarINSERT('public.virtualclientes', $params, 'inserirusu', $nomecoluna);
                 $resultadoinsert = $comandosql->getResultado() > 0 ? true : false;
+    
                 return $resultadoinsert;
             } 
             catch (Exception $e) 
@@ -275,7 +264,7 @@ class inserirUsuario
                 $conexao = $mypgsql->Conectar();
 
                 // Prepare a declaração SQL
-                $sql = "UPDATE public.virtualteste SET nomeUsu = $1 WHERE id = $2";
+                $sql = "UPDATE public.virtualclientes SET nomeUsu = $1 WHERE id = $2";
 
                 // Execute a declaração SQL
                 $result = pg_query_params($conexao, $sql, array($nomeUsu, $id));
@@ -296,7 +285,7 @@ class inserirUsuario
                 $conexao = $mypgsql->Conectar();
 
                 // Prepare a declaração SQL
-                $sql = "UPDATE public.virtualteste SET nomeComp = $1 WHERE id = $2";
+                $sql = "UPDATE public.virtualclientes SET nomeComp = $1 WHERE id = $2";
 
                 // Execute a declaração SQL
                 $result = pg_query_params($conexao, $sql, array($nomeComp, $id));
@@ -317,7 +306,7 @@ class inserirUsuario
                 $conexao = $mypgsql->Conectar();
 
                 // Prepare a declaração SQL
-                $sql = "UPDATE public.virtualteste SET email = $1 WHERE id = $2";
+                $sql = "UPDATE public.virtualclientes SET email = $1 WHERE id = $2";
 
                 // Execute a declaração SQL
                 $result = pg_query_params($conexao, $sql, array($email, $id));
@@ -338,7 +327,7 @@ class inserirUsuario
                 $conexao = $mypgsql->Conectar();
 
                 // Prepare a declaração SQL
-                $sql = "UPDATE public.virtualteste SET senha = $1 WHERE id = $2 or nomeUsu = $2";
+                $sql = "UPDATE public.virtualclientes SET senha = $1 WHERE id = $2 or nomeUsu = $2";
 
                 // Execute a declaração SQL
                 $result = pg_query_params($conexao, $sql, array($senha, $idOuNomeUsu));
@@ -359,7 +348,7 @@ class inserirUsuario
                 $conexao = $mypgsql->Conectar();
 
                 // Prepare a declaração SQL
-                $sql = "UPDATE public.virtualteste SET cpf = $1 WHERE id = $2";
+                $sql = "UPDATE public.virtualclientes SET cpf = $1 WHERE id = $2";
 
                 // Execute a declaração SQL
                 $result = pg_query_params($conexao, $sql, array($cpf, $id));
@@ -380,7 +369,7 @@ class inserirUsuario
                 $conexao = $mypgsql->Conectar();
 
                 // Prepare a declaração SQL
-                $sql = "UPDATE public.virtualteste SET tel = $1 WHERE id = $2";
+                $sql = "UPDATE public.virtualclientes SET tel = $1 WHERE id = $2";
 
                 // Execute a declaração SQL
                 $result = pg_query_params($conexao, $sql, array($tel, $id));
@@ -401,7 +390,7 @@ class inserirUsuario
                 $conexao = $mypgsql->Conectar();
 
                 // Prepare a declaração SQL
-                $sql = "UPDATE public.virtualteste SET escolaridade = $1 WHERE id = $2";
+                $sql = "UPDATE public.virtualclientes SET escolaridade = $1 WHERE id = $2";
 
                 // Execute a declaração SQL
                 $result = pg_query_params($conexao, $sql, array($escolaridade, $id));

@@ -31,7 +31,7 @@
 					<div class="d-flex">
 						<div class="form-group">
 							<div class="d-block"><label for="email">Email</label></div>
-							<input required="" name="email" id="email" type="text" maxlength="50">
+							<input required="" name="email" id="email" type="email" maxlength="50">
 						</div>
 						<div class="form-group">
 							<div class="d-block"><label for="senha">Senha</label></div>
@@ -136,9 +136,6 @@
 					</div>
 					<div class="form-group">
 						<input id="enviarcadastro" value="Enviar" type="submit">
-					</div>
-					<div class="form-group text-center ">
-						<button type="button" class="btn btn-primary border-0 w-25 rounded-1 p-1 mt-2" id="voltar-para-o-form1">Voltar</button>
 					</div>
 					<div class="form-group text-center ">
 						<button type="button" class="btn btn-primary border-0 w-25 rounded-1 p-1 mt-2" id="voltar-para-o-form1">Voltar</button>
