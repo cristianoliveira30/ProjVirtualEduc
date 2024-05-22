@@ -183,21 +183,25 @@ $('#cadastro').on('submit', function(event)
 		contentType: 'application/json',
 		data: jsonData,
 		dataType: 'json',
-		success: function(response) {
+		success: function(response) 
+		{
 			// Fecha o SweetAlert de carregamento
             Swal.close();
-			// Abre notificação de sucesso
-			Swal.fire({
-				icon: "success",
-				title: "Concluído",
-				text: "Cadastro bem sucedido!"
-			});
 
 			// Verifica se a resposta é verdadeira
-            if (response.success) {
+            if (response.success) 
+			{
+				// Abre notificação de sucesso
+				Swal.fire({
+					icon: "success",
+					title: "Concluído",
+					text: "Cadastro bem sucedido!"
+				});
                 // Redireciona para a nova página
                 window.location.href = 'login.php';
-            } else {
+            } 
+			else 
+			{
                 // Exibe um SweetAlert de erro se a resposta não for verdadeira
                 Swal.fire({
                     icon: 'error',

@@ -25,28 +25,43 @@ btn.addEventListener("click", (event) => {
 
 	// Verificar se o campo está vazio
 	if (email_input.value === "") {
-		alert("Por favor, Preencha o campo Email");
-		return;
+		Swal.fire({
+			icon: 'error',
+			title: 'Erro!',
+			text: 'Por favor, Preencha o campo Email'
+		});
 	}
 
 	if (senha_input.value === "") {
-		alert("Por favor, Preencha o senha");
-		return;
+		Swal.fire({
+			icon: 'error',
+			title: 'Erro!',
+			text: 'Por favor, Preencha o senha'
+		});
 	}
 
 	if (name_user_input.value === "") {
-		alert("Por favor, Preencha o campo Nome de usuário")
-		return;
+		Swal.fire({
+			icon: 'error',
+			title: 'Erro!',
+			text: 'Por favor, Preencha o campo Nome de usuário'
+		});
 	}
 
 	if (namecompleto_input.value === "") {
-		alert("Por favor, Preencha o campo Nome completo");
-		return;
+		Swal.fire({
+			icon: 'error',
+			title: 'Erro!',
+			text: 'Por favor, Preencha o campo Nome completo'
+		});
 	}
 
 	if (telefone_input.value === "") {
-		alert("Por favor, Preencha o campo Telefone");
-		return;
+		Swal.fire({
+			icon: 'error',
+			title: 'Erro!',
+			text: 'Por favor, Preencha o campo Telefone'
+		});
 	}
 
 	if (escolaridade.value === "Fundamental" || escolaridade.value === "Médio" || escolaridade.value === "Superior") {
@@ -59,12 +74,19 @@ btn.addEventListener("click", (event) => {
 			etapa01.style.display = "none";
 			etapa02.style.display = "block";
 		} else {
-			alert("Marque à caixa, Li e concordo com os termos");
+			Swal.fire({
+			icon: 'error',
+			title: 'Erro!',
+			text: 'Marque à caixa, Li e concordo com os termos'
+		});
 		}
 
 	} else {
-		alert("Por favor, Marque o campo Escolaridade");
-		return;
+		Swal.fire({
+			icon: 'error',
+			title: 'Erro!',
+			text: 'Por favor, Marque o campo Escolaridade'
+		});
 	}
 
 });
