@@ -17,7 +17,7 @@ const senha_input = document.querySelector("#senha");
 const name_user_input = document.querySelector("#nomeusu");
 const namecompleto_input = document.querySelector("#nomecomp");
 const telefone_input = document.querySelector("#telefone");
-constescolaridade = document.querySelector("#escolaridade");
+const escolaridade = document.querySelector("#escolaridade");
 
 btn.addEventListener("click", (event) => {
 
@@ -49,20 +49,22 @@ btn.addEventListener("click", (event) => {
 		return;
 	}
 
-	if (escolaridade.value === "") {
+	if (escolaridade.value === "Fundamental" || escolaridade.value === "Médio" || escolaridade.value === "Superior") {
+
+		valid = false
+		if (document.querySelector("#checbox-termos").checked) {
+			valid = true;
+		}
+		if (valid) {
+			etapa01.style.display = "none";
+			etapa02.style.display = "block";
+		} else {
+			alert("Marque à caixa, Li e concordo com os termos");
+		}
+
+	} else {
 		alert("Por favor, Marque o campo Escolaridade");
 		return;
-	}
-
-	valid = false
-	if (document.querySelector("#checbox-termos").checked) {
-		valid = true;
-	}
-	if (valid) {
-		etapa01.style.display = "none";
-		etapa02.style.display = "block";
-	} else {
-		alert("Marque à caixa, Li e concordo com os termos");
 	}
 
 });

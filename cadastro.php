@@ -23,7 +23,7 @@
 </head>
 <body>
 	<main>
-		<div class="container-fluid" id="form">
+		<div class="container-fluid position-absolute top-50 start-50 translate-middle" id="form">
 			<form class="login-card mt-5 mb-5 p-5" method="post" enctype="multipart/form" id="cadastro">
 				<div class="card-header">
 					<div class="log">Cadastro</div>

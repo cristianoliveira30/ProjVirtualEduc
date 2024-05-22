@@ -12,7 +12,7 @@
 </head>
 <body>
 	<main>
-		<div class="login-card mt-5 mb-5 p-5">
+		<div class="login-card mb-5 p-5 position-absolute top-50 start-50 translate-middle">
 			<div class="card-header">
 				<div class="log">Login</div>
 			</div>
