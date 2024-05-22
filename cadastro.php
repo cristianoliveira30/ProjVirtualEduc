@@ -22,7 +22,7 @@
 </head>
 <body>
 	<main>
-		<div class="container-fluid" id="form">
+		<div class="container-fluid position-absolute top-50 start-50 translate-middle" id="form">
 			<form class="login-card mt-5 mb-5 p-5" method="post" enctype="multipart/form" id="cadastro">
 				<div class="card-header">
 					<div class="log">Cadastro</div>
@@ -136,9 +136,6 @@
 					</div>
 					<div class="form-group">
 						<input id="enviarcadastro" value="Enviar" type="submit">
-					</div>
-					<div class="form-group text-center ">
-						<button type="button" class="btn btn-primary border-0 w-25 rounded-1 p-1 mt-2" id="voltar-para-o-form1">Voltar</button>
 					</div>
 					<div class="form-group text-center ">
 						<button type="button" class="btn btn-primary border-0 w-25 rounded-1 p-1 mt-2" id="voltar-para-o-form1">Voltar</button>
