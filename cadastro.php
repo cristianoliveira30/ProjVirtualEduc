@@ -31,7 +31,7 @@
 					<div class="d-flex">
 						<div class="form-group">
 							<div class="d-block"><label for="email">Email</label></div>
-							<input required="" name="email" id="email" type="text" maxlength="50">
+							<input required="" name="email" id="email" type="email" maxlength="50">
 						</div>
 						<div class="form-group">
 							<div class="d-block"><label for="senha">Senha</label></div>

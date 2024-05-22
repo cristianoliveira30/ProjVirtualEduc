@@ -19,7 +19,7 @@ class MyPostSql
 
     public function Conectar()
     {
-        $strconect = "host=000.000.0.000 port=5432 dbname=virtual user=postgres password=virtual@educ";
+        $strconect = "host=localhost port=5432 dbname=VirtualTest user=postgres password=Cenoura#8888";
 
         $postgres = pg_connect($strconect) or
         die ("Não foi possível conectar ao servidor PostGreSQL");
