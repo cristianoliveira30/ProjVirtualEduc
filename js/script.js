@@ -28,7 +28,7 @@ btn.addEventListener("click", (event) => {
 		Swal.fire({
 			icon: 'error',
 			title: 'Erro!',
-			text: 'Por favor, Preencha o campo Email'
+			text: 'Por favor preencha o campo Email'
 		});
 	}
 
@@ -36,7 +36,7 @@ btn.addEventListener("click", (event) => {
 		Swal.fire({
 			icon: 'error',
 			title: 'Erro!',
-			text: 'Por favor, Preencha o senha'
+			text: 'Por favor preencha o senha'
 		});
 	}
 
@@ -44,7 +44,7 @@ btn.addEventListener("click", (event) => {
 		Swal.fire({
 			icon: 'error',
 			title: 'Erro!',
-			text: 'Por favor, Preencha o campo Nome de usuário'
+			text: 'Por favor preencha o campo Nome de usuário'
 		});
 	}
 
@@ -52,7 +52,7 @@ btn.addEventListener("click", (event) => {
 		Swal.fire({
 			icon: 'error',
 			title: 'Erro!',
-			text: 'Por favor, Preencha o campo Nome completo'
+			text: 'Por favor preencha o campo Nome completo'
 		});
 	}
 
@@ -60,7 +60,7 @@ btn.addEventListener("click", (event) => {
 		Swal.fire({
 			icon: 'error',
 			title: 'Erro!',
-			text: 'Por favor, Preencha o campo Telefone'
+			text: 'Por favor preencha o campo Telefone'
 		});
 	}
 
@@ -77,7 +77,7 @@ btn.addEventListener("click", (event) => {
 			Swal.fire({
 			icon: 'error',
 			title: 'Erro!',
-			text: 'Marque à caixa, Li e concordo com os termos'
+			text: 'Por favor aceite os termos de serviços.'
 		});
 		}
 
@@ -85,7 +85,7 @@ btn.addEventListener("click", (event) => {
 		Swal.fire({
 			icon: 'error',
 			title: 'Erro!',
-			text: 'Por favor, Marque o campo Escolaridade'
+			text: 'Por favor marque o campo Escolaridade'
 		});
 	}
 
