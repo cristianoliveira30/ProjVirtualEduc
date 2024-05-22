@@ -19,6 +19,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 	<!-- Jquery validate plugin -->
 	<script src="js/jquery.validate.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 	<main>
@@ -144,6 +145,7 @@
 			</form>
 		</div>
 	</main>
+	
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<script src="./js/script.js"></script>
 
@@ -151,20 +153,28 @@
 </html>
 
 <script>
-	//enviando informações
-	$('#cadastro').on('submit', function(event) 
-	{
+//enviando informações
+$('#cadastro').on('submit', function(event) 
+{
 	event.preventDefault();
-
+	// Abre o SweetAlert de carregamento
+    Swal.fire(
+	{
+	title: 'Carregando...',
+	html: 'Por favor, aguarde.',
+	allowOutsideClick: false,
+	didOpen: () => {
+		Swal.showLoading();
+	}
+	});
 	// Serializa o formulário em um objeto
 	const formDataObject = {};
-	$(this).serializeArray().forEach(function(field) {
+	$(this).serializeArray().forEach(function(field) 
+	{
 		formDataObject[field.name] = field.value;
 	});
-
 	// Converte o objeto em JSON
 	const jsonData = JSON.stringify(formDataObject);
-
 	// Envia a requisição AJAX com os dados em JSON
 	$.ajax(
 	{
@@ -174,37 +184,65 @@
 		data: jsonData,
 		dataType: 'json',
 		success: function(response) {
-			console.log(response);
+			// Fecha o SweetAlert de carregamento
+            Swal.close();
+			// Abre notificação de sucesso
+			Swal.fire({
+				icon: "success",
+				title: "Concluído",
+				text: "Cadastro bem sucedido!"
+			});
+
+			// Verifica se a resposta é verdadeira
+            if (response.success) {
+                // Redireciona para a nova página
+                window.location.href = 'login.php';
+            } else {
+                // Exibe um SweetAlert de erro se a resposta não for verdadeira
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Cadastro maldoso ou inválido!',
+                    text: 'Algo deu errado com seu cadastro. Por favor, tente novamente.'
+                });
+            }
 		},
 		error: function(jqXHR, textStatus, errorThrown) {
+			// Fecha o SweetAlert de carregamento
+            Swal.close();
+			// Abre notificação de erro
+			Swal.fire({
+				icon: "error",
+				title: "Algo deu errado!",
+				text: "Tente novamente mais tarde."
+			});
 			console.error('Erro:', textStatus, errorThrown);
 			console.error('Resposta do servidor:', jqXHR.responseText);
 		}
 	});
-	});
-	$(document).ready(function() 
-	{
-	//Máscaras de inputs
-	$("#telefone").mask("(00) 00000-0000");
-	$("#cpf").mask("000.000.000-00");
-	$("#nascimento").mask("00/00/0000");
-	$("#cep").mask("00000-000");
+});
+$(document).ready(function() 
+{
+//Máscaras de inputs
+$("#telefone").mask("(00) 00000-0000");
+$("#cpf").mask("000.000.000-00");
+$("#nascimento").mask("00/00/0000");
+$("#cep").mask("00000-000");
 
-	$("#email").validate({
-		rules: {
-			email: {
-				required: true,
-				maxlength: 100,
-				minlegth: 10
-			}
+$("#email").validate({
+	rules: {
+		email: {
+			required: true,
+			maxlength: 100,
+			minlegth: 10
 		}
-	});
+	}
+});
 
-	// Função para aceitar apenas valores numericoss
-	const input = $('#rg');
-	input.on('input', function() {
-		input.val(input.val().replace(/[^0-9]/g, ''));
-	});
+// Função para aceitar apenas valores numericoss
+const input = $('#rg');
+input.on('input', function() {
+	input.val(input.val().replace(/[^0-9]/g, ''));
+});
 
-	});
+});
 </script>

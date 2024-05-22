@@ -179,6 +179,68 @@ class Usuario
     }
 
     //RETORNANDO INFORMACOES
+    public static function getByLoginPostudo($login)
+	{
+		$sqlComand = new MyPostSql();
+		$query = "SELECT * FROM public.tbusuario
+		where LOWER(login) = LOWER('$login')";
+		$sqlComand->executarSELECTSimplesObjeto($query, 'getbylogin');
+		$UserResult = $sqlComand->getArrayResultado();
+		if(count($UserResult) > 0)
+		{
+			// esses serão os parâmetros setados no cookie
+			$UserObject = new Usuario();
+			$UserObject->idusuario = $UserResult[0]['idusuario'];
+			$UserObject->iddepartamento = $UserResult[0]['iddepartamento'];
+			$UserObject->idfuncao = $UserResult[0]['idfuncao'];
+			$UserObject->status = $UserResult[0]['status'];
+			$UserObject->idloja = $UserResult[0]['idloja'];
+			$UserObject->login = $UserResult[0]['login'];
+			$UserObject->senha = $UserResult[0]['senha'];
+			$UserObject->fotoprofile = $UserResult[0]['fotoprofile'];
+
+			return $UserObject;
+		}
+		else
+		{
+			if(count($UserResult) < 0)
+			{
+				return false;
+			}
+			else
+			{
+				return false;
+			}
+		}
+	}
+
+	//função na qual irá funcionar caso o usuário estiver com o token no seu localstorage no navegador.
+	public function getByIdToken()
+	{
+		$sqlComand = new MyPostSql();
+		$query = sprintf("SELECT usu.idusuario, usu.iddepartamento, usu.idfuncao, usu.login, usu.senha, usu.fotoprofile,
+		usu.status, usu.idloja
+		FROM public.tbusuario usu
+		where usu.idusuario = %s", $this->idusuario);
+		$sqlComand->executarSELECTSimplesObjeto($query, 'getbyidusuario');
+		$UserResult = $sqlComand->getArrayResultado();
+		if(count($UserResult) > 0)
+		{
+			$this->atribuir($UserResult[0]);
+		}
+		else
+		{
+			if(count($UserResult) < 0)
+			{
+				return false;
+			}
+			else
+			{
+				return false;
+			}
+		}
+	}
+
     public function getId($nomeUsu, $email) 
     {
         $sql = "SELECT id WHERE nomeusu = $nomeUsu AND email = $email FROM public.virtualbase";
