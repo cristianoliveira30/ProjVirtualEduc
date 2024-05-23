@@ -8,23 +8,26 @@
  * uma div e ocultar outra div. Esse evento vai acontecer, quando o botão for * clicado
 */
 
-const btn = document.querySelector("#btn");
-const etapa01 = document.querySelector(".etapa01");
-const etapa02 = document.querySelector(".etapa02");
-const form = document.querySelector("#cadastro");
-const email_input = document.querySelector("#email");
-const senha_input = document.querySelector("#senha");
-const name_user_input = document.querySelector("#nomeusu");
-const namecompleto_input = document.querySelector("#nomecomp");
-const telefone_input = document.querySelector("#telefone");
-const escolaridade = document.querySelector("#escolaridade");
+const btn 			= $("#btn");
+const etapa01 		= $(".etapa01");
+const etapa02 		= $(".etapa02");
+const form 			= $("#cadastro");
+var valid			= false;
 
-btn.addEventListener("click", (event) => {
-
+btn.on("click", function(event)  
+{
+	
+	const email 		= $("#email").val();
+	const senha 		= $("#senha").val();
+	const nameUser 		= $("#nomeusu").val();
+	const namecompleto 	= $("#nomecomp").val();
+	const telefone 		= $("#telefone").val();
+	const escolaridade 	= $("#escolaridade").val();
+	
 	event.preventDefault();
 
 	// Verificar se o campo está vazio
-	if (email_input.value === "") {
+	if (!email) {
 		Swal.fire({
 			icon: 'error',
 			title: 'Erro!',
@@ -32,7 +35,7 @@ btn.addEventListener("click", (event) => {
 		});
 	}
 
-	if (senha_input.value === "") {
+	if (!senha) {
 		Swal.fire({
 			icon: 'error',
 			title: 'Erro!',
@@ -40,7 +43,7 @@ btn.addEventListener("click", (event) => {
 		});
 	}
 
-	if (name_user_input.value === "") {
+	if (!nameUser) {
 		Swal.fire({
 			icon: 'error',
 			title: 'Erro!',
@@ -48,7 +51,7 @@ btn.addEventListener("click", (event) => {
 		});
 	}
 
-	if (namecompleto_input.value === "") {
+	if (!namecompleto) {
 		Swal.fire({
 			icon: 'error',
 			title: 'Erro!',
@@ -56,7 +59,7 @@ btn.addEventListener("click", (event) => {
 		});
 	}
 
-	if (telefone_input.value === "") {
+	if (!telefone) {
 		Swal.fire({
 			icon: 'error',
 			title: 'Erro!',
@@ -64,24 +67,8 @@ btn.addEventListener("click", (event) => {
 		});
 	}
 
-	if (escolaridade.value === "Fundamental" || escolaridade.value === "Médio" || escolaridade.value === "Superior") {
-
-		valid = false
-		if (document.querySelector("#checbox-termos").checked) {
-			valid = true;
-		}
-		if (valid) {
-			etapa01.style.display = "none";
-			etapa02.style.display = "block";
-		} else {
-			Swal.fire({
-			icon: 'error',
-			title: 'Erro!',
-			text: 'Por favor aceite os termos de serviços.'
-		});
-		}
-
-	} else {
+	if (!escolaridade == "Fundamental" || !escolaridade == "Médio" || !escolaridade == "Superior") 
+	{
 		Swal.fire({
 			icon: 'error',
 			title: 'Erro!',
@@ -89,45 +76,45 @@ btn.addEventListener("click", (event) => {
 		});
 	}
 
-});
+	if (!$("#checbox-termos").is(':checked')) 
+		{
+		Swal.fire({
+			icon: 'error',
+			title: 'Erro!',
+			text: 'Por favor aceite os termos de serviços.'
+		})
+	}
 
-//se o useragente for mobile vai retornar true
+	validacoes = [
+		email,
+		senha,
+		nameUser,
+		namecompleto,
+		telefone,
+		escolaridade
+	]
+
+	valid = validacoes.every(element => element === true) ? true : false;
+
+	if (valid) 
+	{
+		etapa01.css("display", "none");
+		etapa02.css("display", "block");
+	}
+});
 
 function isMobile() {
 	return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 	return true;
 }
 
-// const form = document.querySelector("#cadastro");
-// const email = document.querySelector("#inputEmail");
-
-// form.addEventListener("submit", (event) => {
-// 	event.preventDefault();
-
-// 	if (email.value === "") {
-// 		alert("Preencha o campo Email");
-// 		return;
-// 		form.submit();
-// 	}
-// });
-
 const url = "login.php";
-const btn_sair = document.querySelector("#btn-sair");
+const btn_sair = $("#btn-sair");
 
-// function openInNewTab(url) {
-// 	const win = window.open(url, "_blank");
-// 	win.focus();
-// };
+const btn_voltar = $("#voltar-para-o-form1");
 
-// btn_sair.addEventListener("click", () => {
-// 	openInNewTab(url);
-// });
-
-// Script do botão, voltar para o formulario 01
-
-const btn_voltar = document.querySelector("#voltar-para-o-form1");
-
-btn_voltar.addEventListener("click", function () {
+btn_voltar.on("click", function () 
+{
 	etapa02.style.display = "none";
 	etapa01.style.display = "block";
 });
