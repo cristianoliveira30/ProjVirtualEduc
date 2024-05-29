@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Models\Clientes;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -21,6 +21,6 @@ class Permissoes extends Model
     ];
     
     public function user() {
-        return $this->belongsTo(Clientes::class);
+        return $this->belongsTo(User::class);
     }
 }

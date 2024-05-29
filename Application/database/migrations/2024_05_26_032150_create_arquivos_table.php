@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Clientes;
+use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -16,7 +16,7 @@ class CreateArquivosTable extends Migration
     {
         Schema::create('arquivos', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(Clientes::class)->references('id')->on('clientes')->onDelete('cascade');
+            $table->foreignIdFor(User::class)->references('id')->on('users')->onDelete('cascade');
             $table->string('disciplina');
             $table->integer('pdf');
             $table->integer('jpg');
@@ -80,7 +80,7 @@ class CreateArquivosTable extends Migration
     public function down()
     {
         Schema::table('arquivos'. function(Blueprint $table) {
-            $table->dropForeignIdFor(Clientes::class);
+            $table->dropForeignIdFor(User::class);
         });
         Schema::dropIfExists('arquivos');
     }

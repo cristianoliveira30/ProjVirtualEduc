@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Clientes;
+use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -16,7 +16,7 @@ class CreateDisciplinaTable extends Migration
     {
         Schema::create('disciplinas', function (Blueprint $table) {
             $table->id()->unique();
-            $table->foreignIdFor(Clientes::class)->references('id')->on('clientes')->onDelete('cascade');
+            $table->foreignIdFor(User::class)->references('id')->on('users')->onDelete('cascade');
             $table->boolean('matematica')->default(false);
             $table->boolean('portugues')->default(false);
             $table->boolean('ingles')->default(false);
@@ -43,7 +43,7 @@ class CreateDisciplinaTable extends Migration
     public function down()
     {
         Schema::table('disciplinas'. function(Blueprint $table) {
-            $table->dropForeignIdFor(Clientes::class);
+            $table->dropForeignIdFor(User::class);
         });
         Schema::dropIfExists('disciplina');
     }

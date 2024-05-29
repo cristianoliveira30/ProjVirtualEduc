@@ -57,7 +57,7 @@
 			<p class="text-center">Foto de Perfil</p>
 		</strong>
 		<div class="container-fluid d-flex" id="container-perfil">
-			<img src="./img/imagem-perfil.jpg" class="mx-auto mb-5" alt="imagem de perfil" title="imagem de perfil">
+			<img src="/assets/img/imagem-perfil.jpg" class="mx-auto mb-5" alt="imagem de perfil" title="imagem de perfil">
 		</div>
 
 		<h4 class="p-2 text-center mb-3">Selecione uma opção</h4>

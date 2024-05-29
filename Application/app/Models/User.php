@@ -18,11 +18,25 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'id',
-        'name',
+        'nomeusu',
+        'nomecomp',
         'email',
         'email_verified_at',
-        'password'
+        'password',
+        'telefone',
+        'escolaridade',
+        'cpf',
+        'nascimento',
+        'rg',
+        'cep',
+        'estado',
+        'endereco',
+        'content',
+        'premium'
+    ];
+
+    protected $attributes = [
+        'premium' => false,
     ];
 
     /**
@@ -42,5 +56,7 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'nascimento' => 'date', // Casting para 'date' para a coluna 'nascimento'
+        'premium' => 'boolean', // Casting para 'boolean' para a coluna 'premium'
     ];
 }

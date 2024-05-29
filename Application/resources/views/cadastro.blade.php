@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<title>Cadastro</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 	<link rel="stylesheet" href="/assets/css/cadastro.css">
@@ -28,8 +29,8 @@
 							<input required="email" name="email" id="email" type="email" maxlength="50">
 						</div>
 						<div class="form-group">
-							<div class="d-block"><label for="senha">Senha</label></div>
-							<input required="senha" name="senha" id="senha" type="password" maxlength="8">
+							<div class="d-block"><label for="password">Senha</label></div>
+							<input required="password" name="password" id="password" type="password" maxlength="8">
 						</div>
 					</div>
 					<div class="d-flex">
@@ -71,11 +72,11 @@
 				<div class="etapa02">
 					<div class="d-flex">
 						<div class="form-group">
-							<div class="d-block"><label for="username">CPF</label></div>
+							<div class="d-block"><label for="cpf">CPF</label></div>
 							<input required="cpf" type="text" name="cpf" id="cpf" maxlength="14">
 						</div>
 						<div class="form-group">
-							<div class="d-block"><label for="password">Data de Nascimento</label></div>
+							<div class="d-block"><label for="nascimento">Data de Nascimento</label></div>
 							<input required="nascimento" type="date" name="nascimento" id="nascimento" maxlength="15">
 						</div>
 					</div>

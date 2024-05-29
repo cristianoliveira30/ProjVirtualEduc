@@ -3,10 +3,10 @@
 namespace Database\Seeders;
 
 use App\Models\Arquivos;
-use App\Models\Clientes;
 use App\Models\Disciplina;
 use App\Models\Escolaridade;
 use App\Models\Permissoes;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Clientes::factory(50)->create();
+        User::factory(50)->create();
         Arquivos::factory(50)->create();
         Disciplina::factory(50)->create();
         Escolaridade::factory(50)->create();

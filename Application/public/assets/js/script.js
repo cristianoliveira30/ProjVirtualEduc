@@ -17,7 +17,7 @@ $('#proxform').on("click", function(event)
 {
 	
 	const email 		= $("#email").val();
-	const senha 		= $("#senha").val();
+	const senha 		= $("#password").val();
 	const nameUser 		= $("#nomeusu").val();
 	const namecompleto 	= $("#nomecomp").val();
 	const telefone 		= $("#telefone").val();

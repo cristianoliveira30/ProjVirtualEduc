@@ -31,7 +31,7 @@ class ArquivosFactory extends Factory
             'outras'
         ];
         return [
-            'clientes_id' => $this->faker->numberBetween(1, 50),
+            'user_id' => $this->faker->numberBetween(1, 50),
             'disciplina' => $this->faker->randomElement($disciplinas),
             'pdf' => $this->faker->numberBetween(1, 5),
             'jpg' => $this->faker->numberBetween(1, 5),

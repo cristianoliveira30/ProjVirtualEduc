@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Clientes;
+use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -11,7 +11,7 @@ class CreateEscolaridadeTable extends Migration
     {
         Schema::create('escolaridade', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(Clientes::class)->constrained()->onDelete('cascade');
+            $table->foreignIdFor(User::class)->constrained()->onDelete('cascade');
             $table->boolean('fundamental')->default(false);
             $table->boolean('medio')->default(false);
             $table->boolean('superior')->default(false);
@@ -26,7 +26,7 @@ class CreateEscolaridadeTable extends Migration
     public function down()
     {
         Schema::table('escolaridade'. function(Blueprint $table) {
-            $table->dropForeignIdFor(Clientes::class);
+            $table->dropForeignIdFor(User::class);
         });
         Schema::dropIfExists('escolaridade');
     }

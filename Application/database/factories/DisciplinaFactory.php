@@ -14,7 +14,7 @@ class DisciplinaFactory extends Factory
     public function definition()
     {
         return [
-            'clientes_id' => $this->faker->numberBetween(1, 50),
+            'user_id' => $this->faker->numberBetween(1, 50),
             'matematica' => $this->faker->boolean(),
             'portugues' => $this->faker->boolean(),
             'ingles' => $this->faker->boolean(),

@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Clientes;
+use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -16,7 +16,7 @@ class CreatePermissoesTable extends Migration
     {
         Schema::create('permissoes', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('clientes')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->string('cpf');
             $table->boolean('manyaccounts')->default(false);
             $table->boolean('manydisciplines')->default(false);
@@ -35,7 +35,7 @@ class CreatePermissoesTable extends Migration
     public function down()
     {
         Schema::table('escolaridade'. function(Blueprint $table) {
-            $table->dropForeignIdFor(Clientes::class);
+            $table->dropForeignIdFor(User::class);
         });
         Schema::dropIfExists('permissoes');
     }

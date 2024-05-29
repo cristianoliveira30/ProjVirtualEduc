@@ -232,4 +232,6 @@ return [
 
     ],
 
+    'Inertia' => \Inertia\Inertia::class,
+
 ];

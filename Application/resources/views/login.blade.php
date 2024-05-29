@@ -10,6 +10,8 @@
 	<link rel="stylesheet" href="/assets/css/login.scss">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </head>
 <body>
 	<main>
@@ -24,11 +26,11 @@
 					<input required="" name="email" id="email" type="email" maxlength="50">
 				</div>
 				<div class="form-group">
-					<label for="senha">Senha:</label>
-					<input required="" name="senha" id="senha" type="password" minlength="6">
+					<label for="password">Senha:</label>
+					<input required="" name="password" id="password" type="password" minlength="6">
 				</div>
 				<div class="form-group">
-					<button id="Login" type="submit">Entrar</button>
+					<button id="buttonLogin" type="submit">Entrar</button>
 				</div>
 			</form>
 		</div>
@@ -40,13 +42,13 @@
 </html>
 
 <script>
-	$.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    });
+	// $.ajaxSetup({
+    //     headers: {
+    //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    //     }
+    // });
 
-	$('#id').on('submit', function(event){
+	$('#login').on('submit', function(event){
 		event.preventDefault();
 
 		// Abre o SweetAlert de carregamento
@@ -85,7 +87,7 @@
 				Swal.close();
 
 				// Verifica se a resposta é verdadeira
-				if (response === 1) 
+				if (response) 
 				{
 					// Abre notificação de sucesso
 					Swal.fire({

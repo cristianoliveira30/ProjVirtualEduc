@@ -14,7 +14,7 @@ class EscolaridadeFactory extends Factory
     public function definition()
     {
         return [
-            'clientes_id' => $this->faker->numberBetween(1,50),
+            'user_id' => $this->faker->numberBetween(1,50),
             'fundamental' => $this->faker->boolean(),
             'medio' => $this->faker->boolean(),
             'superior' => $this->faker->boolean(),
