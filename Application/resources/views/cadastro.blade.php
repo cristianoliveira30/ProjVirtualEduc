@@ -184,7 +184,7 @@ $('#cadastro').on('submit', function(event) {
 		data: jsonData,
 		dataType: 'json',
 		success: function(response) {
-			console.log(response);
+			console.log(response.message);
 			Swal.close();
 			if (response) {
 				Swal.fire({
@@ -192,7 +192,7 @@ $('#cadastro').on('submit', function(event) {
 					title: "Concluído",
 					text: "Cadastro bem sucedido!"
 				});
-				window.location.href = "{{ route('login') }}"; // Use a rota Laravel para redirecionar
+				window.location.href = response.redirect;
 			} else {
 				Swal.fire({
 					icon: 'error',

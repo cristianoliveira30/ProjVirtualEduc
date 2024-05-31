@@ -66,7 +66,7 @@ class AuthController extends Controller
 
             $userCreated = User::create($data);
 
-            return response()->json($userCreated, 201);
+            return response()->json(['success' => true, 'redirect' => route('login'), 'message' => $userCreated]);
         }
     }
 

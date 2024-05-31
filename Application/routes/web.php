@@ -19,16 +19,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [VirtualController::class, 'index'])->name('index');
-
 Route::get('/cadastro', [VirtualController::class, 'cadastro'])->name('cadastro');
 Route::post('/cadastro', [AuthController::class, 'cadastroAction'])->name('cadastro.action');
-
 Route::get('/login', [VirtualController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'loginAction'])->name('login.action');
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/home', [VirtualController::class, 'home'])->name('home');
-Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
-// Route::get('/', function () {
-//     return 'ainda estou no router';
-//     // return view('welcome');
-// });

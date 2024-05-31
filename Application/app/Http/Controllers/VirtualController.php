@@ -17,7 +17,7 @@ class VirtualController extends Controller
             return view('home', ['authUser' => $authUser]);
         }
         else {
-            return redirect()->route('cadastro');
+            return view('cadastro');
         }
     }
     public function login(){
@@ -30,7 +30,7 @@ class VirtualController extends Controller
             return view('home', ['authUser' => $authUser]);
         }
         else {
-            return redirect()->route('login');
+            return view('login');
         }
     }
 }
