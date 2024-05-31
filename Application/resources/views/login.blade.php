@@ -94,9 +94,10 @@
 						icon: "success",
 						title: "Concluído",
 						text: "Login bem sucedido!"
+					}).then(() => {
+						// Redireciona para a nova página
+						window.location.href = response.redirect;
 					});
-					// Redireciona para a nova página
-					window.location.href = "{{ route('home') }}";
 				} 
 				else 
 				{

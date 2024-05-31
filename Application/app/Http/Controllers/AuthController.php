@@ -69,4 +69,9 @@ class AuthController extends Controller
             return response()->json($userCreated, 201);
         }
     }
+
+    public function logout() {
+        Auth::logout();
+        return redirect()->route('index');
+    }
 }

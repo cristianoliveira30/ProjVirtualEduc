@@ -27,6 +27,7 @@ Route::get('/login', [VirtualController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'loginAction'])->name('login.action');
 
 Route::get('/home', [VirtualController::class, 'home'])->name('home');
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 // Route::get('/', function () {
 //     return 'ainda estou no router';
 //     // return view('welcome');

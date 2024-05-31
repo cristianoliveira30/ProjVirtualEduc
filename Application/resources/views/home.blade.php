@@ -45,14 +45,14 @@
 						</li>
 					</ul>
 					<div id="links" class="me-2">
-						<a class="btn btn-primary" href="{{ route('index') }}" role="button">Logout</a>
+						<a class="btn btn-primary" href="{{ route('logout') }}" role="button">Logout</a>
 					</div>
 				</div>
 			</div>
 		</nav>
 	</header>
 	<main>
-		<h2 class="text-center p-2 mt-5 ">Perfil</h2>
+		<h2 class="text-center p-2 mt-5 ">Bem-vindo {{ $authUser->nomecomp }}</h2>
 		<strong>
 			<p class="text-center">Foto de Perfil</p>
 		</strong>

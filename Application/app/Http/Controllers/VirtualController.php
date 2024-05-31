@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class VirtualController extends Controller
 {
@@ -10,12 +12,25 @@ class VirtualController extends Controller
         return view('index');
     }
     public function cadastro(){
-        return view('cadastro');
+        if (Auth::check()) {
+            $authUser = Auth::user();
+            return view('home', ['authUser' => $authUser]);
+        }
+        else {
+            return redirect()->route('cadastro');
+        }
     }
     public function login(){
+        // dd(Auth::user());
         return view('login');
     }
     public function home(){
-        return view('home');
+        if (Auth::check()) {
+            $authUser = Auth::user();
+            return view('home', ['authUser' => $authUser]);
+        }
+        else {
+            return redirect()->route('login');
+        }
     }
 }
