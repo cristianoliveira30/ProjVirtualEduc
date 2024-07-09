@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Inertia\Inertia;
 
 class VirtualController extends Controller
 {
@@ -32,5 +33,9 @@ class VirtualController extends Controller
         else {
             return view('login');
         }
+    }
+
+    public function testevue() {
+        return Inertia::render('home');
     }
 }

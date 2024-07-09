@@ -22,7 +22,7 @@
 			<form class="login" method="post" enctype="multipart/form" id="login">
 			@csrf
 				<div class="form-group">
-					<label for="email">Nome:</label>
+					<label for="email">Email:</label>
 					<input required="" name="email" id="email" type="email" maxlength="50">
 				</div>
 				<div class="form-group">

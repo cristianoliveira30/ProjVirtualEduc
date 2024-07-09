@@ -15,6 +15,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
+
 	<main>
 		<div class="container-fluid position-absolute top-50 start-50 translate-middle" id="form">
 			<form class="login-card mt-5 mb-5 p-5" method="post" enctype="multipart/form" id="cadastro">
@@ -184,7 +185,7 @@ $('#cadastro').on('submit', function(event) {
 		data: jsonData,
 		dataType: 'json',
 		success: function(response) {
-			console.log(response.message);
+			console.log(response.message.json());
 			Swal.close();
 			if (response) {
 				Swal.fire({

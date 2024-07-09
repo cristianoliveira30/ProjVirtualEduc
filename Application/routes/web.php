@@ -26,3 +26,4 @@ Route::post('/login', [AuthController::class, 'loginAction'])->name('login.actio
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/home', [VirtualController::class, 'home'])->name('home');
+Route::get('/testevue', [VirtualController::class, 'testevue'])->name('testevue');
