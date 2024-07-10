@@ -10,5 +10,6 @@
 <body>
   <h1>hello word</h1>
   @inertia
+  <div id="home"></div>
 </body>
 </html>

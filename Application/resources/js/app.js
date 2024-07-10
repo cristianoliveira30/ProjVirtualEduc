@@ -1,36 +1,20 @@
-module.exports = {
-  chainWebpack: (config) => {
-    config.plugin('define').tap((args) => {
-      args[0]['__VUE_PROD_HYDRATION_MISMATCH_DETAILS__'] = true;
-      return args;
-    });
-  },
+// esse arquivo pega todos os arquivos vue e os carrega, analisem o código pra entender como ele carrega a página e atribui ao Blade 
+// pelo id
+
+import { createApp } from 'vue';
+
+// Função para criar um componente Vue
+const mountComponent = (component, selector) => {
+  const element = document.querySelector(selector);
+  if (element) {
+    createApp(component).mount(selector);
+  }
 };
 
-const mix = require('laravel-mix');
-const path = require('path');
+// Importar seus componentes
+import Home from './home.vue';
+// import About from './exemplo.vue';
 
-mix.js('resources/js/app.js', 'public/js')
-   .vue()
-   .postCss('resources/css/app.css', 'public/css', [
-       //
-   ])
-   .webpackConfig({
-       resolve: {
-           alias: {
-               '@': path.resolve('resources/js'),
-           },
-       },
-       module: {
-           rules: [
-               {
-                   test: /\.vue$/,
-                   loader: 'vue-loader'
-               }
-           ],
-       },
-   });
-
-if (mix.inProduction()) {
-    mix.version();
-}
+// Montar componentes específicos em elementos específicos
+mountComponent(Home, '#home');
+// mountComponent(Exemplo, '#exemplo');
