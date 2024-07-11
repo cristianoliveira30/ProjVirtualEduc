@@ -1,6 +1,3 @@
-// esse arquivo pega todos os arquivos vue e os carrega, analisem o código pra entender como ele carrega a página e atribui ao Blade 
-// pelo id
-
 import { createApp } from 'vue';
 
 // Função para criar um componente Vue
@@ -12,9 +9,11 @@ const mountComponent = (component, selector) => {
 };
 
 // Importar seus componentes
-import Home from './home.vue';
-// import About from './exemplo.vue';
+import headertest from './Pages/headertest.vue';
+import maintest from './Pages/maintest.vue';
+import footertest from './Pages/footertest.vue';
 
 // Montar componentes específicos em elementos específicos
-mountComponent(Home, '#home');
-// mountComponent(Exemplo, '#exemplo');
+mountComponent(headertest, '#header-test');
+mountComponent(maintest, '#main-test');
+mountComponent(footertest, '#footer-test');
