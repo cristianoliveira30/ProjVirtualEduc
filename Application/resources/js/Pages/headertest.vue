@@ -10,7 +10,3 @@
   };
   </script>
   
-  <style scoped>
-  /* Estilo específico para este componente */
-  </style>
-  

@@ -10,7 +10,3 @@ export default {
   name: 'MainTest',
 };
 </script>
-
-<style scoped>
-/* Estilo específico para este componente */
-</style>
