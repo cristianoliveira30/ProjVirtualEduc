@@ -25,22 +25,6 @@
 
 		<h4 class="p-2 text-center mb-3">Selecione uma opção</h4>
 
-		<!-- <span class="material-symbols-outlined">
-			person
-		</span> -->
-
-		<!-- <span class="material-symbols-outlined">
-			lists
-		</span>
-
-		<span class="material-symbols-outlined">
-			menu_book
-		</span>
-
-		<span class="material-symbols-outlined">
-			description
-		</span> -->
-
 		<div class="container p-5 w-75 mb-5 bg-primary mx-auto d-flex justify-content-center nav-container">
 
 			<button type="button row btn-primary">
