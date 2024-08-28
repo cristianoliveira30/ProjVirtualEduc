@@ -223,6 +223,12 @@ $("#cpf").mask("000.000.000-00");
 // $("#nascimento").mask("00/00/0000");
 $("#cep").mask("00000-000");
 
+// Função para não aceitar caractere espaço
+const username = $("#nomeusu");
+username.on('input', () => {        
+	username.val(username.val().replace(/\s+/g, ''));
+});
+
 $("#email").validate({
 	rules: {
 		email: {
