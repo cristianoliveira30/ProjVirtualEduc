@@ -223,6 +223,22 @@ $("#cpf").mask("000.000.000-00");
 // $("#nascimento").mask("00/00/0000");
 $("#cep").mask("00000-000");
 
+// Função para não aceitar caractere espaço
+function removerEspaços(id) {
+	const el = $(id);
+	el.on('input', () => {        
+		el.val(el.val().replace(/\s+/g, ''));
+	});
+}
+
+// Remover espaçõs do campo nome de usuário
+removerEspaços("#nomeusu");
+
+// Remover espaçõs do campo nome completo
+removerEspaços("#nomecomp");
+
+
+
 $("#email").validate({
 	rules: {
 		email: {

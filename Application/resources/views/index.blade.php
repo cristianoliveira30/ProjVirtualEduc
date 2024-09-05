@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Início</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
 	<link rel="stylesheet" href="/assets/css/style.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -79,12 +80,12 @@
 
 		<article>
 
-			<h1 class="text-center mt-0 mb-3">Olá Seja Bem Vindo ao VirtualEduc</h1>
+			<h1 class="text-center  mt-0 mb-3">Olá Seja Bem Vindo ao VirtualEduc</h1>
 
 			<section class="container-fluid">
 
-				<div class="d-flex p-5">
-					<img src="/assets/img/svgs/img01.svg" class="d-block w-50 h-25 img-fluid" alt="...">
+				<div class="d-flex flex-column flex-lg-row p-5">
+					<img src="/assets/img/svgs/img01.svg" class="d-block col-lg-6 img-fluid rounded" alt="...">
 
 					<div class="d-block">
 						<h2 class="m-3 mb-0">Sobre o Projeto</h2>
@@ -106,8 +107,8 @@
 
 			</section>
 
-			<section class="">
-				<div class="d-flex p-5">
+			<section class="container-fluid">
+				<div class="d-flex flex-column-reverse flex-lg-row p-5">
 
 					<div class="d-block">
 						<h2 class="m-3 mb-0 ">Objetivo</h2>
@@ -119,16 +120,16 @@
 						</p>
 					</div>
 
-					<img src="/assets/img/svgs/img02.svg" class="d-block w-50 h-25" alt="...">
+					<img src="/assets/img/svgs/img02.svg" class="d-block col-lg-6 img-fluid rounded" alt="...">
 
 				</div>
 
 			</section>
 
-			<section class="">
+			<section class="container-fluid">
 
-				<div class="d-flex p-5">
-					<img src="/assets/img/svgs/img03.svg" class="d-block w-50 h-25" alt="...">
+				<div class="d-flex flex-column flex-lg-row p-5">
+					<img src="/assets/img/svgs/img03.svg" class="d-block col-lg-6 img-fluid rounded" alt="...">
 
 					<div class="d-block">
 						<h2 class="m-3 mb-0 ">Principais Características:</h2>
@@ -149,8 +150,8 @@
 
 			</section>
 
-			<section class="">
-				<div class="d-flex p-5">
+			<section class="container-fluid">
+				<div class="d-flex flex-column-reverse flex-lg-row p-5">
 
 					<div class="d-block">
 						<h2 class="m-3 mb-0 ">Benefícios Esperados:</h2>
@@ -166,7 +167,7 @@
 						</p>
 					</div>
 
-					<img src="/assets/img/svgs/img01.svg" class="d-block w-50 h-25" alt="...">
+					<img src="/assets/img/svgs/img01.svg" class="d-block col-lg-6 img-fluid rounded" alt="...">
 					
 				</div>
 
