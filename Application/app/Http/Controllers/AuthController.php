@@ -46,7 +46,7 @@ class AuthController extends Controller
 
         $validator = Validator::make($data, [
             'nomeusu' => 'required|string',
-            'nomecomp' => 'required|alpha',
+            'nomecomp' => 'required|string',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|min:6', // Alterado para password
             'telefone' => 'required|min:10',
