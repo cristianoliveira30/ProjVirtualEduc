@@ -29,11 +29,11 @@
                     </li>
                 </ul>
                 <div id="links" class="me-2">
-                    <a class="btn btn-primary" href="{{ route('logout') }}" role="button">Logout</a>
+                    <a class="btn btn-primary" :href="route('logout')" role="button">Logout</a>
                 </div>
             </div>
         </div>
     </nav>
 </template>
 
-<script> export default { name: 'header'} </script>
+<script> export default { name: 'headercomponent'} </script>
