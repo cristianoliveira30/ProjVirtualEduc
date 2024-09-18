@@ -13,7 +13,11 @@
 	<script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 <body>
-	<header id="header"></header>
+	@routes
+	<header id="header">]
+		@verbatim
+		@endverbatim
+	</header>
 
 	<main>
 		<h2 class="text-center p-2 mt-5 ">Bem-vindo {{ $authUser->nomecomp }}</h2>

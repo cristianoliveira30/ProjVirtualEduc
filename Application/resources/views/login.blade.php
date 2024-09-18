@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +15,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </head>
+
 <body>
 	<main>
 		<div class="login-card mb-5 p-5 position-absolute top-50 start-50 translate-middle">
@@ -21,7 +23,10 @@
 				<div class="log">Login</div>
 			</div>
 			<form class="login" method="post" enctype="multipart/form" id="login">
-			@csrf
+				@csrf
+				@if(session()->has('status'))
+				<span class="text text-success">{{ session()->get('status') }}</span>
+				@endif
 				<div class="form-group">
 					<label for="email">Email:</label>
 					<input required="" name="email" id="email" type="email" maxlength="50">
@@ -33,6 +38,9 @@
 				<div class="form-group">
 					<button id="buttonLogin" type="submit">Entrar</button>
 				</div>
+				<div>
+					<a href="{{ route('password.request') }}">Esqueceu sua senha?</a>
+				</div>
 			</form>
 		</div>
 	</main>
@@ -40,21 +48,21 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 	<script src="/assets/js/script.js"></script>
 </body>
+
 </html>
 
 <script>
 	// $.ajaxSetup({
-    //     headers: {
-    //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    //     }
-    // });
+	//     headers: {
+	//         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+	//     }
+	// });
 
-	$('#login').on('submit', function(event){
+	$('#login').on('submit', function(event) {
 		event.preventDefault();
 
 		// Abre o SweetAlert de carregamento
-		Swal.fire(
-		{
+		Swal.fire({
 			title: 'Carregando...',
 			html: 'Por favor, aguarde.',
 			allowOutsideClick: false,
@@ -65,8 +73,7 @@
 
 		// Serializa o formulário em um objeto
 		const formDataObject = {};
-		$(this).serializeArray().forEach(function(field) 
-		{
+		$(this).serializeArray().forEach(function(field) {
 			formDataObject[field.name] = field.value;
 		});
 
@@ -75,21 +82,18 @@
 		// Converte o objeto em JSON
 		const jsonData = JSON.stringify(formDataObject);
 
-		$.ajax(
-		{
+		$.ajax({
 			url: link,
 			type: 'POST',
 			contentType: 'application/json',
 			data: jsonData,
 			dataType: 'json',
-			success: function(response) 
-			{
+			success: function(response) {
 				// Fecha o SweetAlert de carregamento
 				Swal.close();
 
 				// Verifica se a resposta é verdadeira
-				if (response) 
-				{
+				if (response) {
 					// Abre notificação de sucesso
 					Swal.fire({
 						icon: "success",
@@ -99,9 +103,7 @@
 						// Redireciona para a nova página
 						window.location.href = response.redirect;
 					});
-				} 
-				else 
-				{
+				} else {
 					// Exibe um SweetAlert de erro se a resposta não for verdadeira
 					Swal.fire({
 						icon: 'error',

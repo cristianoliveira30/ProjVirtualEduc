@@ -1,16 +1,20 @@
 import { createApp } from 'vue';
+import { Ziggy } from './ziggy.js'; // Importe o arquivo gerado pelo Ziggy
+import { useRoute, ZiggyVue } from 'ziggy-js';
 
 // Função para criar um componente Vue
 const mountComponent = (component, selector) => {
   const element = document.querySelector(selector);
   if (element) {
-    createApp(component).mount(selector);
+    const app = createApp(component);
+    app.use(ZiggyVue, Ziggy);  // Use ZiggyVue com Ziggy antes do mount
+    app.mount(selector);
   }
 };
 
 // Importar seus componentes
-import header from './Pages/header.vue';
-import footer from './Pages/footer.vue';
+import headercomponent from './Pages/header.vue';
+import footercomponent from './Pages/footer.vue';
 
 // componetes de teste 
 import headertest from './Pages/headertest.vue';
@@ -18,8 +22,8 @@ import maintest from './Pages/maintest.vue';
 import footertest from './Pages/footertest.vue';
 
 // Montar componentes específicos em elementos específicos
-mountComponent(header, '#header');
-mountComponent(footer, '#footer');
+mountComponent(headercomponent, '#header');
+mountComponent(footercomponent, '#footer');
 
 // componentes de teste
 mountComponent(headertest, '#header-test');

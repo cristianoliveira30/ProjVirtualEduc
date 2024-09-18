@@ -15,3 +15,20 @@ mix.js('resources/js/app.js', 'public/js')
 if (mix.inProduction()) {
     mix.version();
 }
+
+mix.webpackConfig({
+  resolve: {
+      alias: {
+          vue$: 'vue/dist/vue.runtime.esm-bundler.js'
+      }
+  }
+});
+module.exports = {
+    // Suas outras configurações...
+    resolve: {
+      fallback: {
+        "net": false,
+        "tls": false,
+      },
+    },
+  };
