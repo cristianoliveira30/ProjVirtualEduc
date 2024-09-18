@@ -1,16 +1,16 @@
 import { createApp } from 'vue';
-import { ZiggyVue } from 'ziggy';
-import { Ziggy } from './ziggy';
+import { Ziggy } from './ziggy.js'; // Importe o arquivo gerado pelo Ziggy
+import { useRoute, ZiggyVue } from 'ziggy-js';
 
 // Função para criar um componente Vue
 const mountComponent = (component, selector) => {
   const element = document.querySelector(selector);
   if (element) {
-    createApp(component).mount(selector);
+    const app = createApp(component);
+    app.use(ZiggyVue, Ziggy);  // Use ZiggyVue com Ziggy antes do mount
+    app.mount(selector);
   }
 };
-
-mountComponent.use(ZiggyVue, Ziggy);
 
 // Importar seus componentes
 import headercomponent from './Pages/header.vue';

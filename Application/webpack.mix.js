@@ -23,3 +23,12 @@ mix.webpackConfig({
       }
   }
 });
+module.exports = {
+    // Suas outras configurações...
+    resolve: {
+      fallback: {
+        "net": false,
+        "tls": false,
+      },
+    },
+  };

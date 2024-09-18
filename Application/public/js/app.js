@@ -1,4 +1,5 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js":
@@ -7,7 +8,6 @@
   \*********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   ARRAY_ITERATE_KEY: () => (/* binding */ ARRAY_ITERATE_KEY),
@@ -1980,7 +1980,6 @@ function traverse(value, depth = Infinity, seen) {
   \*************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   BaseTransition: () => (/* binding */ BaseTransition),
@@ -10426,7 +10425,6 @@ const DeprecationTypes = null;
   \***********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   BaseTransition: () => (/* reexport safe */ _vue_runtime_core__WEBPACK_IMPORTED_MODULE_0__.BaseTransition),
@@ -12461,7 +12459,6 @@ const initDirectivesForSSR = () => {
   \*************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   EMPTY_ARR: () => (/* binding */ EMPTY_ARR),
@@ -13060,7 +13057,6 @@ const stringifySymbol = (v, i = "") => {
   \*******************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -13077,7 +13073,6 @@ __webpack_require__.r(__webpack_exports__);
   \***********************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -13094,7 +13089,6 @@ __webpack_require__.r(__webpack_exports__);
   \*******************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -13111,7 +13105,6 @@ __webpack_require__.r(__webpack_exports__);
   \***********************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -13128,7 +13121,6 @@ __webpack_require__.r(__webpack_exports__);
   \*********************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -13145,7 +13137,6 @@ __webpack_require__.r(__webpack_exports__);
   \***********************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   render: () => (/* binding */ render)
@@ -13167,7 +13158,6 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   \***************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   render: () => (/* binding */ render)
@@ -13186,7 +13176,6 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   \***********************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   render: () => (/* binding */ render)
@@ -13278,7 +13267,6 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   \***************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   render: () => (/* binding */ render)
@@ -13297,7 +13285,6 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   \*************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   render: () => (/* binding */ render)
@@ -13320,29 +13307,28 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.runtime.esm-bundler.js");
-/* harmony import */ var ziggy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ziggy */ "./node_modules/ziggy/index.js");
-/* harmony import */ var ziggy__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(ziggy__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _ziggy__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ziggy */ "./resources/js/ziggy.js");
+/* harmony import */ var _ziggy_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ziggy.js */ "./resources/js/ziggy.js");
+/* harmony import */ var ziggy_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ziggy-js */ "./node_modules/ziggy-js/dist/index.js");
 /* harmony import */ var _Pages_header_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Pages/header.vue */ "./resources/js/Pages/header.vue");
 /* harmony import */ var _Pages_footer_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Pages/footer.vue */ "./resources/js/Pages/footer.vue");
 /* harmony import */ var _Pages_headertest_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Pages/headertest.vue */ "./resources/js/Pages/headertest.vue");
 /* harmony import */ var _Pages_maintest_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Pages/maintest.vue */ "./resources/js/Pages/maintest.vue");
 /* harmony import */ var _Pages_footertest_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Pages/footertest.vue */ "./resources/js/Pages/footertest.vue");
 
-
+ // Importe o arquivo gerado pelo Ziggy
 
 
 // Função para criar um componente Vue
 var mountComponent = function mountComponent(component, selector) {
   var element = document.querySelector(selector);
   if (element) {
-    (0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)(component).mount(selector);
+    var app = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)(component);
+    app.use(ziggy_js__WEBPACK_IMPORTED_MODULE_2__.ZiggyVue, _ziggy_js__WEBPACK_IMPORTED_MODULE_1__.Ziggy); // Use ZiggyVue com Ziggy antes do mount
+    app.mount(selector);
   }
 };
-mountComponent.use(ziggy__WEBPACK_IMPORTED_MODULE_1__.ZiggyVue, _ziggy__WEBPACK_IMPORTED_MODULE_2__.Ziggy);
 
 // Importar seus componentes
 
@@ -13370,7 +13356,6 @@ mountComponent(_Pages_footertest_vue__WEBPACK_IMPORTED_MODULE_7__["default"], '#
   \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   Ziggy: () => (/* binding */ Ziggy)
@@ -13442,3669 +13427,14 @@ if (typeof window !== 'undefined' && typeof window.Ziggy !== 'undefined') {
 
 /***/ }),
 
-/***/ "./node_modules/events/events.js":
-/*!***************************************!*\
-  !*** ./node_modules/events/events.js ***!
-  \***************************************/
-/***/ ((module) => {
-
-"use strict";
-// Copyright Joyent, Inc. and other Node contributors.
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the
-// "Software"), to deal in the Software without restriction, including
-// without limitation the rights to use, copy, modify, merge, publish,
-// distribute, sublicense, and/or sell copies of the Software, and to permit
-// persons to whom the Software is furnished to do so, subject to the
-// following conditions:
-//
-// The above copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-// USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-
-var R = typeof Reflect === 'object' ? Reflect : null
-var ReflectApply = R && typeof R.apply === 'function'
-  ? R.apply
-  : function ReflectApply(target, receiver, args) {
-    return Function.prototype.apply.call(target, receiver, args);
-  }
-
-var ReflectOwnKeys
-if (R && typeof R.ownKeys === 'function') {
-  ReflectOwnKeys = R.ownKeys
-} else if (Object.getOwnPropertySymbols) {
-  ReflectOwnKeys = function ReflectOwnKeys(target) {
-    return Object.getOwnPropertyNames(target)
-      .concat(Object.getOwnPropertySymbols(target));
-  };
-} else {
-  ReflectOwnKeys = function ReflectOwnKeys(target) {
-    return Object.getOwnPropertyNames(target);
-  };
-}
-
-function ProcessEmitWarning(warning) {
-  if (console && console.warn) console.warn(warning);
-}
-
-var NumberIsNaN = Number.isNaN || function NumberIsNaN(value) {
-  return value !== value;
-}
-
-function EventEmitter() {
-  EventEmitter.init.call(this);
-}
-module.exports = EventEmitter;
-module.exports.once = once;
-
-// Backwards-compat with node 0.10.x
-EventEmitter.EventEmitter = EventEmitter;
-
-EventEmitter.prototype._events = undefined;
-EventEmitter.prototype._eventsCount = 0;
-EventEmitter.prototype._maxListeners = undefined;
-
-// By default EventEmitters will print a warning if more than 10 listeners are
-// added to it. This is a useful default which helps finding memory leaks.
-var defaultMaxListeners = 10;
-
-function checkListener(listener) {
-  if (typeof listener !== 'function') {
-    throw new TypeError('The "listener" argument must be of type Function. Received type ' + typeof listener);
-  }
-}
-
-Object.defineProperty(EventEmitter, 'defaultMaxListeners', {
-  enumerable: true,
-  get: function() {
-    return defaultMaxListeners;
-  },
-  set: function(arg) {
-    if (typeof arg !== 'number' || arg < 0 || NumberIsNaN(arg)) {
-      throw new RangeError('The value of "defaultMaxListeners" is out of range. It must be a non-negative number. Received ' + arg + '.');
-    }
-    defaultMaxListeners = arg;
-  }
-});
-
-EventEmitter.init = function() {
-
-  if (this._events === undefined ||
-      this._events === Object.getPrototypeOf(this)._events) {
-    this._events = Object.create(null);
-    this._eventsCount = 0;
-  }
-
-  this._maxListeners = this._maxListeners || undefined;
-};
-
-// Obviously not all Emitters should be limited to 10. This function allows
-// that to be increased. Set to zero for unlimited.
-EventEmitter.prototype.setMaxListeners = function setMaxListeners(n) {
-  if (typeof n !== 'number' || n < 0 || NumberIsNaN(n)) {
-    throw new RangeError('The value of "n" is out of range. It must be a non-negative number. Received ' + n + '.');
-  }
-  this._maxListeners = n;
-  return this;
-};
-
-function _getMaxListeners(that) {
-  if (that._maxListeners === undefined)
-    return EventEmitter.defaultMaxListeners;
-  return that._maxListeners;
-}
-
-EventEmitter.prototype.getMaxListeners = function getMaxListeners() {
-  return _getMaxListeners(this);
-};
-
-EventEmitter.prototype.emit = function emit(type) {
-  var args = [];
-  for (var i = 1; i < arguments.length; i++) args.push(arguments[i]);
-  var doError = (type === 'error');
-
-  var events = this._events;
-  if (events !== undefined)
-    doError = (doError && events.error === undefined);
-  else if (!doError)
-    return false;
-
-  // If there is no 'error' event listener then throw.
-  if (doError) {
-    var er;
-    if (args.length > 0)
-      er = args[0];
-    if (er instanceof Error) {
-      // Note: The comments on the `throw` lines are intentional, they show
-      // up in Node's output if this results in an unhandled exception.
-      throw er; // Unhandled 'error' event
-    }
-    // At least give some kind of context to the user
-    var err = new Error('Unhandled error.' + (er ? ' (' + er.message + ')' : ''));
-    err.context = er;
-    throw err; // Unhandled 'error' event
-  }
-
-  var handler = events[type];
-
-  if (handler === undefined)
-    return false;
-
-  if (typeof handler === 'function') {
-    ReflectApply(handler, this, args);
-  } else {
-    var len = handler.length;
-    var listeners = arrayClone(handler, len);
-    for (var i = 0; i < len; ++i)
-      ReflectApply(listeners[i], this, args);
-  }
-
-  return true;
-};
-
-function _addListener(target, type, listener, prepend) {
-  var m;
-  var events;
-  var existing;
-
-  checkListener(listener);
-
-  events = target._events;
-  if (events === undefined) {
-    events = target._events = Object.create(null);
-    target._eventsCount = 0;
-  } else {
-    // To avoid recursion in the case that type === "newListener"! Before
-    // adding it to the listeners, first emit "newListener".
-    if (events.newListener !== undefined) {
-      target.emit('newListener', type,
-                  listener.listener ? listener.listener : listener);
-
-      // Re-assign `events` because a newListener handler could have caused the
-      // this._events to be assigned to a new object
-      events = target._events;
-    }
-    existing = events[type];
-  }
-
-  if (existing === undefined) {
-    // Optimize the case of one listener. Don't need the extra array object.
-    existing = events[type] = listener;
-    ++target._eventsCount;
-  } else {
-    if (typeof existing === 'function') {
-      // Adding the second element, need to change to array.
-      existing = events[type] =
-        prepend ? [listener, existing] : [existing, listener];
-      // If we've already got an array, just append.
-    } else if (prepend) {
-      existing.unshift(listener);
-    } else {
-      existing.push(listener);
-    }
-
-    // Check for listener leak
-    m = _getMaxListeners(target);
-    if (m > 0 && existing.length > m && !existing.warned) {
-      existing.warned = true;
-      // No error code for this since it is a Warning
-      // eslint-disable-next-line no-restricted-syntax
-      var w = new Error('Possible EventEmitter memory leak detected. ' +
-                          existing.length + ' ' + String(type) + ' listeners ' +
-                          'added. Use emitter.setMaxListeners() to ' +
-                          'increase limit');
-      w.name = 'MaxListenersExceededWarning';
-      w.emitter = target;
-      w.type = type;
-      w.count = existing.length;
-      ProcessEmitWarning(w);
-    }
-  }
-
-  return target;
-}
-
-EventEmitter.prototype.addListener = function addListener(type, listener) {
-  return _addListener(this, type, listener, false);
-};
-
-EventEmitter.prototype.on = EventEmitter.prototype.addListener;
-
-EventEmitter.prototype.prependListener =
-    function prependListener(type, listener) {
-      return _addListener(this, type, listener, true);
-    };
-
-function onceWrapper() {
-  if (!this.fired) {
-    this.target.removeListener(this.type, this.wrapFn);
-    this.fired = true;
-    if (arguments.length === 0)
-      return this.listener.call(this.target);
-    return this.listener.apply(this.target, arguments);
-  }
-}
-
-function _onceWrap(target, type, listener) {
-  var state = { fired: false, wrapFn: undefined, target: target, type: type, listener: listener };
-  var wrapped = onceWrapper.bind(state);
-  wrapped.listener = listener;
-  state.wrapFn = wrapped;
-  return wrapped;
-}
-
-EventEmitter.prototype.once = function once(type, listener) {
-  checkListener(listener);
-  this.on(type, _onceWrap(this, type, listener));
-  return this;
-};
-
-EventEmitter.prototype.prependOnceListener =
-    function prependOnceListener(type, listener) {
-      checkListener(listener);
-      this.prependListener(type, _onceWrap(this, type, listener));
-      return this;
-    };
-
-// Emits a 'removeListener' event if and only if the listener was removed.
-EventEmitter.prototype.removeListener =
-    function removeListener(type, listener) {
-      var list, events, position, i, originalListener;
-
-      checkListener(listener);
-
-      events = this._events;
-      if (events === undefined)
-        return this;
-
-      list = events[type];
-      if (list === undefined)
-        return this;
-
-      if (list === listener || list.listener === listener) {
-        if (--this._eventsCount === 0)
-          this._events = Object.create(null);
-        else {
-          delete events[type];
-          if (events.removeListener)
-            this.emit('removeListener', type, list.listener || listener);
-        }
-      } else if (typeof list !== 'function') {
-        position = -1;
-
-        for (i = list.length - 1; i >= 0; i--) {
-          if (list[i] === listener || list[i].listener === listener) {
-            originalListener = list[i].listener;
-            position = i;
-            break;
-          }
-        }
-
-        if (position < 0)
-          return this;
-
-        if (position === 0)
-          list.shift();
-        else {
-          spliceOne(list, position);
-        }
-
-        if (list.length === 1)
-          events[type] = list[0];
-
-        if (events.removeListener !== undefined)
-          this.emit('removeListener', type, originalListener || listener);
-      }
-
-      return this;
-    };
-
-EventEmitter.prototype.off = EventEmitter.prototype.removeListener;
-
-EventEmitter.prototype.removeAllListeners =
-    function removeAllListeners(type) {
-      var listeners, events, i;
-
-      events = this._events;
-      if (events === undefined)
-        return this;
-
-      // not listening for removeListener, no need to emit
-      if (events.removeListener === undefined) {
-        if (arguments.length === 0) {
-          this._events = Object.create(null);
-          this._eventsCount = 0;
-        } else if (events[type] !== undefined) {
-          if (--this._eventsCount === 0)
-            this._events = Object.create(null);
-          else
-            delete events[type];
-        }
-        return this;
-      }
-
-      // emit removeListener for all listeners on all events
-      if (arguments.length === 0) {
-        var keys = Object.keys(events);
-        var key;
-        for (i = 0; i < keys.length; ++i) {
-          key = keys[i];
-          if (key === 'removeListener') continue;
-          this.removeAllListeners(key);
-        }
-        this.removeAllListeners('removeListener');
-        this._events = Object.create(null);
-        this._eventsCount = 0;
-        return this;
-      }
-
-      listeners = events[type];
-
-      if (typeof listeners === 'function') {
-        this.removeListener(type, listeners);
-      } else if (listeners !== undefined) {
-        // LIFO order
-        for (i = listeners.length - 1; i >= 0; i--) {
-          this.removeListener(type, listeners[i]);
-        }
-      }
-
-      return this;
-    };
-
-function _listeners(target, type, unwrap) {
-  var events = target._events;
-
-  if (events === undefined)
-    return [];
-
-  var evlistener = events[type];
-  if (evlistener === undefined)
-    return [];
-
-  if (typeof evlistener === 'function')
-    return unwrap ? [evlistener.listener || evlistener] : [evlistener];
-
-  return unwrap ?
-    unwrapListeners(evlistener) : arrayClone(evlistener, evlistener.length);
-}
-
-EventEmitter.prototype.listeners = function listeners(type) {
-  return _listeners(this, type, true);
-};
-
-EventEmitter.prototype.rawListeners = function rawListeners(type) {
-  return _listeners(this, type, false);
-};
-
-EventEmitter.listenerCount = function(emitter, type) {
-  if (typeof emitter.listenerCount === 'function') {
-    return emitter.listenerCount(type);
-  } else {
-    return listenerCount.call(emitter, type);
-  }
-};
-
-EventEmitter.prototype.listenerCount = listenerCount;
-function listenerCount(type) {
-  var events = this._events;
-
-  if (events !== undefined) {
-    var evlistener = events[type];
-
-    if (typeof evlistener === 'function') {
-      return 1;
-    } else if (evlistener !== undefined) {
-      return evlistener.length;
-    }
-  }
-
-  return 0;
-}
-
-EventEmitter.prototype.eventNames = function eventNames() {
-  return this._eventsCount > 0 ? ReflectOwnKeys(this._events) : [];
-};
-
-function arrayClone(arr, n) {
-  var copy = new Array(n);
-  for (var i = 0; i < n; ++i)
-    copy[i] = arr[i];
-  return copy;
-}
-
-function spliceOne(list, index) {
-  for (; index + 1 < list.length; index++)
-    list[index] = list[index + 1];
-  list.pop();
-}
-
-function unwrapListeners(arr) {
-  var ret = new Array(arr.length);
-  for (var i = 0; i < ret.length; ++i) {
-    ret[i] = arr[i].listener || arr[i];
-  }
-  return ret;
-}
-
-function once(emitter, name) {
-  return new Promise(function (resolve, reject) {
-    function errorListener(err) {
-      emitter.removeListener(name, resolver);
-      reject(err);
-    }
-
-    function resolver() {
-      if (typeof emitter.removeListener === 'function') {
-        emitter.removeListener('error', errorListener);
-      }
-      resolve([].slice.call(arguments));
-    };
-
-    eventTargetAgnosticAddListener(emitter, name, resolver, { once: true });
-    if (name !== 'error') {
-      addErrorHandlerIfEventEmitter(emitter, errorListener, { once: true });
-    }
-  });
-}
-
-function addErrorHandlerIfEventEmitter(emitter, handler, flags) {
-  if (typeof emitter.on === 'function') {
-    eventTargetAgnosticAddListener(emitter, 'error', handler, flags);
-  }
-}
-
-function eventTargetAgnosticAddListener(emitter, name, listener, flags) {
-  if (typeof emitter.on === 'function') {
-    if (flags.once) {
-      emitter.once(name, listener);
-    } else {
-      emitter.on(name, listener);
-    }
-  } else if (typeof emitter.addEventListener === 'function') {
-    // EventTarget does not have `error` event semantics like Node
-    // EventEmitters, we do not listen for `error` events here.
-    emitter.addEventListener(name, function wrapListener(arg) {
-      // IE does not have builtin `{ once: true }` support so we
-      // have to do it manually.
-      if (flags.once) {
-        emitter.removeEventListener(name, wrapListener);
-      }
-      listener(arg);
-    });
-  } else {
-    throw new TypeError('The "emitter" argument must be of type EventEmitter. Received type ' + typeof emitter);
-  }
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/foreach/index.js":
-/*!***************************************!*\
-  !*** ./node_modules/foreach/index.js ***!
-  \***************************************/
-/***/ ((module) => {
-
-
-var hasOwn = Object.prototype.hasOwnProperty;
-var toString = Object.prototype.toString;
-
-module.exports = function forEach (obj, fn, ctx) {
-    if (toString.call(fn) !== '[object Function]') {
-        throw new TypeError('iterator must be a function');
-    }
-    var l = obj.length;
-    if (l === +l) {
-        for (var i = 0; i < l; i++) {
-            fn.call(ctx, obj[i], i, obj);
-        }
-    } else {
-        for (var k in obj) {
-            if (hasOwn.call(obj, k)) {
-                fn.call(ctx, obj[k], k, obj);
-            }
-        }
-    }
-};
-
-
-
-/***/ }),
-
-/***/ "./node_modules/irc/lib/codes.js":
-/*!***************************************!*\
-  !*** ./node_modules/irc/lib/codes.js ***!
-  \***************************************/
-/***/ ((module) => {
-
-module.exports = { // {{{
-   "004" : {
-      "name" : "rpl_myinfo",
-      "type" : "reply"
-   },
-   "005" : {
-      "name" : "rpl_isupport",
-      "type" : "reply"
-   },
-   "200" : {
-      "name" : "rpl_tracelink",
-      "type" : "reply"
-   },
-   "201" : {
-      "name" : "rpl_traceconnecting",
-      "type" : "reply"
-   },
-   "202" : {
-      "name" : "rpl_tracehandshake",
-      "type" : "reply"
-   },
-   "203" : {
-      "name" : "rpl_traceunknown",
-      "type" : "reply"
-   },
-   "204" : {
-      "name" : "rpl_traceoperator",
-      "type" : "reply"
-   },
-   "205" : {
-      "name" : "rpl_traceuser",
-      "type" : "reply"
-   },
-   "206" : {
-      "name" : "rpl_traceserver",
-      "type" : "reply"
-   },
-   "208" : {
-      "name" : "rpl_tracenewtype",
-      "type" : "reply"
-   },
-   "211" : {
-      "name" : "rpl_statslinkinfo",
-      "type" : "reply"
-   },
-   "212" : {
-      "name" : "rpl_statscommands",
-      "type" : "reply"
-   },
-   "213" : {
-      "name" : "rpl_statscline",
-      "type" : "reply"
-   },
-   "214" : {
-      "name" : "rpl_statsnline",
-      "type" : "reply"
-   },
-   "215" : {
-      "name" : "rpl_statsiline",
-      "type" : "reply"
-   },
-   "216" : {
-      "name" : "rpl_statskline",
-      "type" : "reply"
-   },
-   "218" : {
-      "name" : "rpl_statsyline",
-      "type" : "reply"
-   },
-   "219" : {
-      "name" : "rpl_endofstats",
-      "type" : "reply"
-   },
-   "221" : {
-      "name" : "rpl_umodeis",
-      "type" : "reply"
-   },
-   "241" : {
-      "name" : "rpl_statslline",
-      "type" : "reply"
-   },
-   "242" : {
-      "name" : "rpl_statsuptime",
-      "type" : "reply"
-   },
-   "243" : {
-      "name" : "rpl_statsoline",
-      "type" : "reply"
-   },
-   "244" : {
-      "name" : "rpl_statshline",
-      "type" : "reply"
-   },
-   "250" : {
-      "name" : "rpl_statsconn",
-      "type" : "reply"
-   },
-   "251" : {
-      "name" : "rpl_luserclient",
-      "type" : "reply"
-   },
-   "252" : {
-      "name" : "rpl_luserop",
-      "type" : "reply"
-   },
-   "253" : {
-      "name" : "rpl_luserunknown",
-      "type" : "reply"
-   },
-   "254" : {
-      "name" : "rpl_luserchannels",
-      "type" : "reply"
-   },
-   "255" : {
-      "name" : "rpl_luserme",
-      "type" : "reply"
-   },
-   "256" : {
-      "name" : "rpl_adminme",
-      "type" : "reply"
-   },
-   "257" : {
-      "name" : "rpl_adminloc1",
-      "type" : "reply"
-   },
-   "258" : {
-      "name" : "rpl_adminloc2",
-      "type" : "reply"
-   },
-   "259" : {
-      "name" : "rpl_adminemail",
-      "type" : "reply"
-   },
-   "261" : {
-      "name" : "rpl_tracelog",
-      "type" : "reply"
-   },
-   "265" : {
-      "name" : "rpl_localusers",
-      "type" : "reply"
-   },
-   "266" : {
-      "name" : "rpl_globalusers",
-      "type" : "reply"
-   },
-   "300" : {
-      "name" : "rpl_none",
-      "type" : "reply"
-   },
-   "301" : {
-      "name" : "rpl_away",
-      "type" : "reply"
-   },
-   "302" : {
-      "name" : "rpl_userhost",
-      "type" : "reply"
-   },
-   "303" : {
-      "name" : "rpl_ison",
-      "type" : "reply"
-   },
-   "305" : {
-      "name" : "rpl_unaway",
-      "type" : "reply"
-   },
-   "306" : {
-      "name" : "rpl_nowaway",
-      "type" : "reply"
-   },
-   "311" : {
-      "name" : "rpl_whoisuser",
-      "type" : "reply"
-   },
-   "312" : {
-      "name" : "rpl_whoisserver",
-      "type" : "reply"
-   },
-   "313" : {
-      "name" : "rpl_whoisoperator",
-      "type" : "reply"
-   },
-   "314" : {
-      "name" : "rpl_whowasuser",
-      "type" : "reply"
-   },
-   "315" : {
-      "name" : "rpl_endofwho",
-      "type" : "reply"
-   },
-   "317" : {
-      "name" : "rpl_whoisidle",
-      "type" : "reply"
-   },
-   "318" : {
-      "name" : "rpl_endofwhois",
-      "type" : "reply"
-   },
-   "319" : {
-      "name" : "rpl_whoischannels",
-      "type" : "reply"
-   },
-   "321" : {
-      "name" : "rpl_liststart",
-      "type" : "reply"
-   },
-   "322" : {
-      "name" : "rpl_list",
-      "type" : "reply"
-   },
-   "323" : {
-      "name" : "rpl_listend",
-      "type" : "reply"
-   },
-   "324" : {
-      "name" : "rpl_channelmodeis",
-      "type" : "reply"
-   },
-   "331" : {
-      "name" : "rpl_notopic",
-      "type" : "reply"
-   },
-   "332" : {
-      "name" : "rpl_topic",
-      "type" : "reply"
-   },
-   "341" : {
-      "name" : "rpl_inviting",
-      "type" : "reply"
-   },
-   "342" : {
-      "name" : "rpl_summoning",
-      "type" : "reply"
-   },
-   "351" : {
-      "name" : "rpl_version",
-      "type" : "reply"
-   },
-   "352" : {
-      "name" : "rpl_whoreply",
-      "type" : "reply"
-   },
-   "353" : {
-      "name" : "rpl_namreply",
-      "type" : "reply"
-   },
-   "364" : {
-      "name" : "rpl_links",
-      "type" : "reply"
-   },
-   "365" : {
-      "name" : "rpl_endoflinks",
-      "type" : "reply"
-   },
-   "366" : {
-      "name" : "rpl_endofnames",
-      "type" : "reply"
-   },
-   "367" : {
-      "name" : "rpl_banlist",
-      "type" : "reply"
-   },
-   "368" : {
-      "name" : "rpl_endofbanlist",
-      "type" : "reply"
-   },
-   "369" : {
-      "name" : "rpl_endofwhowas",
-      "type" : "reply"
-   },
-   "371" : {
-      "name" : "rpl_info",
-      "type" : "reply"
-   },
-   "372" : {
-      "name" : "rpl_motd",
-      "type" : "reply"
-   },
-   "374" : {
-      "name" : "rpl_endofinfo",
-      "type" : "reply"
-   },
-   "375" : {
-      "name" : "rpl_motdstart",
-      "type" : "reply"
-   },
-   "376" : {
-      "name" : "rpl_endofmotd",
-      "type" : "reply"
-   },
-   "381" : {
-      "name" : "rpl_youreoper",
-      "type" : "reply"
-   },
-   "382" : {
-      "name" : "rpl_rehashing",
-      "type" : "reply"
-   },
-   "391" : {
-      "name" : "rpl_time",
-      "type" : "reply"
-   },
-   "392" : {
-      "name" : "rpl_usersstart",
-      "type" : "reply"
-   },
-   "393" : {
-      "name" : "rpl_users",
-      "type" : "reply"
-   },
-   "394" : {
-      "name" : "rpl_endofusers",
-      "type" : "reply"
-   },
-   "395" : {
-      "name" : "rpl_nousers",
-      "type" : "reply"
-   },
-   "401" : {
-      "name" : "err_nosuchnick",
-      "type" : "error"
-   },
-   "402" : {
-      "name" : "err_nosuchserver",
-      "type" : "error"
-   },
-   "403" : {
-      "name" : "err_nosuchchannel",
-      "type" : "error"
-   },
-   "404" : {
-      "name" : "err_cannotsendtochan",
-      "type" : "error"
-   },
-   "405" : {
-      "name" : "err_toomanychannels",
-      "type" : "error"
-   },
-   "406" : {
-      "name" : "err_wasnosuchnick",
-      "type" : "error"
-   },
-   "407" : {
-      "name" : "err_toomanytargets",
-      "type" : "error"
-   },
-   "409" : {
-      "name" : "err_noorigin",
-      "type" : "error"
-   },
-   "411" : {
-      "name" : "err_norecipient",
-      "type" : "error"
-   },
-   "412" : {
-      "name" : "err_notexttosend",
-      "type" : "error"
-   },
-   "413" : {
-      "name" : "err_notoplevel",
-      "type" : "error"
-   },
-   "414" : {
-      "name" : "err_wildtoplevel",
-      "type" : "error"
-   },
-   "421" : {
-      "name" : "err_unknowncommand",
-      "type" : "error"
-   },
-   "422" : {
-      "name" : "err_nomotd",
-      "type" : "error"
-   },
-   "423" : {
-      "name" : "err_noadmininfo",
-      "type" : "error"
-   },
-   "424" : {
-      "name" : "err_fileerror",
-      "type" : "error"
-   },
-   "431" : {
-      "name" : "err_nonicknamegiven",
-      "type" : "error"
-   },
-   "432" : {
-      "name" : "err_erroneusnickname",
-      "type" : "error"
-   },
-   "433" : {
-      "name" : "err_nicknameinuse",
-      "type" : "error"
-   },
-   "436" : {
-      "name" : "err_nickcollision",
-      "type" : "error"
-   },
-   "441" : {
-      "name" : "err_usernotinchannel",
-      "type" : "error"
-   },
-   "442" : {
-      "name" : "err_notonchannel",
-      "type" : "error"
-   },
-   "443" : {
-      "name" : "err_useronchannel",
-      "type" : "error"
-   },
-   "444" : {
-      "name" : "err_nologin",
-      "type" : "error"
-   },
-   "445" : {
-      "name" : "err_summondisabled",
-      "type" : "error"
-   },
-   "446" : {
-      "name" : "err_usersdisabled",
-      "type" : "error"
-   },
-   "451" : {
-      "name" : "err_notregistered",
-      "type" : "error"
-   },
-   "461" : {
-      "name" : "err_needmoreparams",
-      "type" : "error"
-   },
-   "462" : {
-      "name" : "err_alreadyregistred",
-      "type" : "error"
-   },
-   "463" : {
-      "name" : "err_nopermforhost",
-      "type" : "error"
-   },
-   "464" : {
-      "name" : "err_passwdmismatch",
-      "type" : "error"
-   },
-   "465" : {
-      "name" : "err_yourebannedcreep",
-      "type" : "error"
-   },
-   "467" : {
-      "name" : "err_keyset",
-      "type" : "error"
-   },
-   "471" : {
-      "name" : "err_channelisfull",
-      "type" : "error"
-   },
-   "472" : {
-      "name" : "err_unknownmode",
-      "type" : "error"
-   },
-   "473" : {
-      "name" : "err_inviteonlychan",
-      "type" : "error"
-   },
-   "474" : {
-      "name" : "err_bannedfromchan",
-      "type" : "error"
-   },
-   "475" : {
-      "name" : "err_badchannelkey",
-      "type" : "error"
-   },
-   "481" : {
-      "name" : "err_noprivileges",
-      "type" : "error"
-   },
-   "482" : {
-      "name" : "err_chanoprivsneeded",
-      "type" : "error"
-   },
-   "483" : {
-      "name" : "err_cantkillserver",
-      "type" : "error"
-   },
-   "491" : {
-      "name" : "err_nooperhost",
-      "type" : "error"
-   },
-   "501" : {
-      "name" : "err_umodeunknownflag",
-      "type" : "error"
-   },
-   "502" : {
-      "name" : "err_usersdontmatch",
-      "type" : "error"
-   }
-}; // }}}
-
-
-/***/ }),
-
-/***/ "./node_modules/irc/lib/colors.js":
-/*!****************************************!*\
-  !*** ./node_modules/irc/lib/colors.js ***!
-  \****************************************/
-/***/ ((__unused_webpack_module, exports) => {
-
-codes = {
-    white: '\u000300',
-    black: '\u000301',
-    dark_blue: '\u000302',
-    dark_green: '\u000303',
-    light_red: '\u000304',
-    dark_red: '\u000305',
-    magenta: '\u000306',
-    orange: '\u000307',
-    yellow: '\u000308',
-    light_green: '\u000309',
-    cyan: '\u000310',
-    light_cyan: '\u000311',
-    light_blue: '\u000312',
-    light_magenta: '\u000313',
-    gray: '\u000314',
-    light_gray: '\u000315',
-    reset: '\u000f',
-};
-exports.codes = codes;
-
-function wrap(color, text, reset_color) {
-    reset_color = typeof(a) != 'undefined' ? a : 'reset';
-    return codes[color] + text + codes[reset_color];
-};
-exports.wrap = wrap;
-
-
-
-/***/ }),
-
-/***/ "./node_modules/irc/lib/irc.js":
-/*!*************************************!*\
-  !*** ./node_modules/irc/lib/irc.js ***!
-  \*************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-/* provided dependency */ var process = __webpack_require__(/*! process/browser.js */ "./node_modules/process/browser.js");
-/*
-    irc.js - Node JS IRC client library
-
-    (C) Copyright Martyn Smith 2010
-
-    This library is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This library is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this library.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
-exports.Client = Client;
-var net  = __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module 'net'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-var tls  = __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module 'tls'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-var util = __webpack_require__(/*! util */ "./node_modules/util/util.js");
-
-var colors = __webpack_require__(/*! ./colors */ "./node_modules/irc/lib/colors.js");
-exports.colors = colors;
-
-var replyFor = __webpack_require__(/*! ./codes */ "./node_modules/irc/lib/codes.js");
-
-function Client(server, nick, opt) {
-    var self = this;
-    self.opt = {
-        server: server,
-        nick: nick,
-        password: null,
-        userName: 'nodebot',
-        realName: 'nodeJS IRC client',
-        port: 6667,
-        debug: false,
-        showErrors: false,
-        autoRejoin: true,
-        autoConnect: true,
-        channels: [],
-        retryCount: null,
-        retryDelay: 2000,
-        secure: false,
-        selfSigned: false,
-        certExpired: false,
-        floodProtection: false,
-        floodProtectionDelay: 1000,
-        stripColors: false,
-        channelPrefixes: "&#",
-        messageSplit: 512
-    };
-    
-    // Features supported by the server
-    // (initial values are RFC 1459 defaults. Zeros signify
-    // no default or unlimited value)
-    self.supported = {
-        channel: {
-            idlength: [],
-            length: 200,
-            limit: [],
-            modes: { a: '', b: '', c: '', d: ''},
-            types: self.opt.channelPrefixes
-        },
-        kicklength: 0,
-        maxlist: [],
-        maxtargets: [],
-        modes: 3,
-        nicklength: 9,
-        topiclength: 0,
-        usermodes: ''
-    };
-
-    if (typeof arguments[2] == 'object') {
-        var keys = Object.keys(self.opt);
-        for (var i = 0; i < keys.length; i++) {
-            var k = keys[i];
-            if (arguments[2][k] !== undefined)
-                self.opt[k] = arguments[2][k];
-        }
-    }
-
-    if (self.opt.floodProtection) {
-        self.activateFloodProtection();
-    }
-
-    // TODO - fail if nick or server missing
-    // TODO - fail if username has a space in it
-    if (self.opt.autoConnect === true) {
-      self.connect();
-    }
-
-    self.addListener("raw", function (message) { // {{{
-        switch ( message.command ) {
-            case "001":
-                // Set nick to whatever the server decided it really is
-                // (normally this is because you chose something too long and
-                // the server has shortened it
-                self.nick = message.args[0];
-                self.emit('registered', message);
-                break;
-            case "002":
-            case "003":
-            case "rpl_myinfo":
-                self.supported.usermodes = message.args[3];
-                break;
-            case "rpl_isupport":
-                message.args.forEach(function(arg) {
-                    var match;
-                    if ( match = arg.match(/([A-Z]+)=(.*)/) ) {
-                        var param = match[1];
-                        var value = match[2];
-                        switch(param) {
-                            case 'CHANLIMIT':
-                                value.split(',').forEach(function(val) {
-                                    val = val.split(':');
-                                    self.supported.channel.limit[val[0]] = parseInt(val[1]);
-                                });
-                                break;
-                            case 'CHANMODES':
-                                value = value.split(',');
-                                var type = ['a','b','c','d']
-                                for (var i = 0; i < type.length; i++) {
-                                    
-                                    self.supported.channel.modes[type[i]] += value[i];
-                                }
-                                break;
-                            case 'CHANTYPES':
-                                self.supported.channel.types = value;
-                                break;
-                            case 'CHANNELLEN':
-                                self.supported.channel.length = parseInt(value);
-                                break;
-                            case 'IDCHAN':
-                                value.split(',').forEach(function(val) {
-                                    val = val.split(':');
-                                    self.supported.channel.idlength[val[0]] = val[1];
-                                });
-                                break;
-                            case 'KICKLEN':
-                                self.supported.kicklength = value;
-                                break;
-                            case 'MAXLIST':
-                                value.split(',').forEach(function(val) {
-                                    val = val.split(':');
-                                    self.supported.maxlist[val[0]] = parseInt(val[1]);
-                                });
-                                break;
-                            case 'NICKLEN':
-                                self.supported.nicklength = parseInt(value);
-                                break;
-                            case 'PREFIX':
-                                if (match = value.match(/\((.*?)\)(.*)/)) {
-                                    match[1] = match[1].split('');
-                                    match[2] = match[2].split('');
-                                    while ( match[1].length ) {
-                                        self.modeForPrefix[match[2][0]] = match[1][0];
-                                        self.supported.channel.modes.b += match[1][0];
-                                        self.prefixForMode[match[1].shift()] = match[2].shift();
-                                    }
-                                }
-                                break;
-                            case 'STATUSMSG':
-                                break;
-                            case 'TARGMAX':
-                                value.split(',').forEach(function(val) {
-                                    val = val.split(':');
-                                    val[1] = (!val[1]) ? 0 : parseInt(val[1]);
-                                    self.supported.maxtargets[val[0]] = val[1];
-                                });
-                                break;
-                            case 'TOPICLEN':
-                                self.supported.topiclength = parseInt(value);
-                                break;
-                        }
-                    }
-                });
-                break;
-            case "rpl_luserclient":
-            case "rpl_luserop":
-            case "rpl_luserchannels":
-            case "rpl_luserme":
-            case "rpl_localusers":
-            case "rpl_globalusers":
-            case "rpl_statsconn":
-                // Random welcome crap, ignoring
-                break;
-            case "err_nicknameinuse":
-                if ( typeof(self.opt.nickMod) == 'undefined' )
-                    self.opt.nickMod = 0;
-                self.opt.nickMod++;
-                self.send("NICK", self.opt.nick + self.opt.nickMod);
-                self.nick = self.opt.nick + self.opt.nickMod;
-                break;
-            case "PING":
-                self.send("PONG", message.args[0]);
-                self.emit('ping', message.args[0]);
-                break;
-            case "NOTICE":
-                var from = message.nick;
-                var to   = message.args[0];
-                if (!to) {
-                    to   = null;
-                }
-                var text = message.args[1];
-                if (text[0] === '\1' && text.lastIndexOf('\1') > 0) {
-                    self._handleCTCP(from, to, text, 'notice');
-                    break;
-                }
-                self.emit('notice', from, to, text, message);
-
-                if ( self.opt.debug && to == self.nick )
-                    util.log('GOT NOTICE from ' + (from?'"'+from+'"':'the server') + ': "' + text + '"');
-                break;
-            case "MODE":
-                if ( self.opt.debug )
-                    util.log("MODE:" + message.args[0] + " sets mode: " + message.args[1]);
-
-                var channel = self.chanData(message.args[0]);
-                if ( !channel ) break;
-                var modeList = message.args[1].split('');
-                var adding = true;
-                var modeArgs = message.args.slice(2);
-                modeList.forEach(function(mode) {
-                    if ( mode == '+' ) { adding = true; return; }
-                    if ( mode == '-' ) { adding = false; return; }
-                    if ( mode in self.prefixForMode ) {
-                        // channel user modes
-                        var user = modeArgs.shift();
-                        if ( adding ) {
-                            if ( channel.users[user].indexOf(self.prefixForMode[mode]) === -1 )
-                                channel.users[user] += self.prefixForMode[mode];
-
-                            self.emit('+mode', message.args[0], message.nick, mode, user, message);
-                        }
-                        else {
-                            channel.users[user] = channel.users[user].replace(self.prefixForMode[mode], '');
-                            self.emit('-mode', message.args[0], message.nick, mode, user, message);
-                        }
-                    }
-                    else {
-                        var modeArg;
-                        // channel modes
-                        if ( mode.match(/^[bkl]$/) ) {
-                            modeArg = modeArgs.shift();
-                            if ( modeArg.length === 0 )
-                                modeArg = undefined;
-                        }
-                        // TODO - deal nicely with channel modes that take args
-                        if ( adding ) {
-                            if ( channel.mode.indexOf(mode) === -1 )
-                                channel.mode += mode;
-
-                            self.emit('+mode', message.args[0], message.nick, mode, modeArg, message);
-                        }
-                        else {
-                            channel.mode = channel.mode.replace(mode, '');
-                            self.emit('-mode', message.args[0], message.nick, mode, modeArg, message);
-                        }
-                    }
-                });
-                break;
-            case "NICK":
-                if ( message.nick == self.nick )
-                    // the user just changed their own nick
-                    self.nick = message.args[0];
-
-                if ( self.opt.debug )
-                    util.log("NICK: " + message.nick + " changes nick to " + message.args[0]);
-
-                var channels = [];
-
-                // TODO better way of finding what channels a user is in?
-                for ( var channame in self.chans ) {
-                    var channel = self.chans[channame];
-                    if ( 'string' == typeof channel.users[message.nick] ) {
-                        channel.users[message.args[0]] = channel.users[message.nick];
-                        delete channel.users[message.nick];
-                        channels.push(channame);
-                    }
-                }
-
-                // old nick, new nick, channels
-                self.emit('nick', message.nick, message.args[0], channels, message);
-                break;
-            case "rpl_motdstart":
-                self.motd = message.args[1] + "\n";
-                break;
-            case "rpl_motd":
-                self.motd += message.args[1] + "\n";
-                break;
-            case "rpl_endofmotd":
-            case "err_nomotd":
-                self.motd += message.args[1] + "\n";
-                self.emit('motd', self.motd);
-                break;
-            case "rpl_namreply":
-                var channel = self.chanData(message.args[2]);
-                var users = message.args[3].trim().split(/ +/);
-                if ( channel ) {
-                    users.forEach(function (user) {
-                        var match = user.match(/^(.)(.*)$/);
-                        if ( match ) {
-                            if ( match[1] in self.modeForPrefix ) {
-                                channel.users[match[2]] = match[1];
-                            }
-                            else {
-                                channel.users[match[1] + match[2]] = '';
-                            }
-                        }
-                    });
-                }
-                break;
-            case "rpl_endofnames":
-                var channel = self.chanData(message.args[1]);
-                if ( channel ) {
-                    self.emit('names', message.args[1], channel.users);
-                    self.emit('names' + message.args[1], channel.users);
-                    self.send('MODE', message.args[1]);
-                }
-                break;
-            case "rpl_topic":
-                var channel = self.chanData(message.args[1]);
-                if ( channel ) {
-                    channel.topic = message.args[2];
-                }
-                break;
-            case "rpl_away":
-                self._addWhoisData(message.args[1], 'away', message.args[2], true);
-                break;
-            case "rpl_whoisuser":
-                self._addWhoisData(message.args[1], 'user', message.args[2]);
-                self._addWhoisData(message.args[1], 'host', message.args[3]);
-                self._addWhoisData(message.args[1], 'realname', message.args[5]);
-                break;
-            case "rpl_whoisidle":
-                self._addWhoisData(message.args[1], 'idle', message.args[2]);
-                break;
-            case "rpl_whoischannels":
-                self._addWhoisData(message.args[1], 'channels', message.args[2].trim().split(/\s+/)); // TODO - clean this up?
-                break;
-            case "rpl_whoisserver":
-                self._addWhoisData(message.args[1], 'server', message.args[2]);
-                self._addWhoisData(message.args[1], 'serverinfo', message.args[3]);
-                break;
-            case "rpl_whoisoperator":
-                self._addWhoisData(message.args[1], 'operator', message.args[2]);
-                break;
-            case "330": // rpl_whoisaccount?
-                self._addWhoisData(message.args[1], 'account', message.args[2]);
-                self._addWhoisData(message.args[1], 'accountinfo', message.args[3]);
-                break;
-            case "rpl_endofwhois":
-                self.emit('whois', self._clearWhoisData(message.args[1]));
-                break;
-            case "rpl_liststart":
-                self.channellist = [];
-                self.emit('channellist_start');
-                break;
-            case "rpl_list":
-                var channel = {
-                    name: message.args[1],
-                    users: message.args[2],
-                    topic: message.args[3],
-                };
-                self.emit('channellist_item', channel);
-                self.channellist.push(channel);
-                break;
-            case "rpl_listend":
-                self.emit('channellist', self.channellist);
-                break;
-            case "333":
-                // TODO emit?
-                var channel = self.chanData(message.args[1]);
-                if ( channel ) {
-                    channel.topicBy = message.args[2];
-                    // channel, topic, nick
-                    self.emit('topic', message.args[1], channel.topic, channel.topicBy, message);
-                }
-                break;
-            case "TOPIC":
-                // channel, topic, nick
-                self.emit('topic', message.args[0], message.args[1], message.nick, message);
-
-                var channel = self.chanData(message.args[0]);
-                if ( channel ) {
-                    channel.topic = message.args[1];
-                    channel.topicBy = message.nick;
-                }
-                break;
-            case "rpl_channelmodeis":
-                var channel = self.chanData(message.args[1]);
-                if ( channel ) {
-                    channel.mode = message.args[2];
-                }
-                break;
-            case "329":
-                var channel = self.chanData(message.args[1]);
-                if ( channel ) {
-                    channel.created = message.args[2];
-                }
-                break;
-            case "JOIN":
-                // channel, who
-                if ( self.nick == message.nick ) {
-                    self.chanData(message.args[0], true);
-                }
-                else {
-                    var channel = self.chanData(message.args[0]);
-                    channel.users[message.nick] = '';
-                }
-                self.emit('join', message.args[0], message.nick, message);
-                self.emit('join' + message.args[0], message.nick, message);
-                if ( message.args[0] != message.args[0].toLowerCase() ) {
-                    self.emit('join' + message.args[0].toLowerCase(), message.nick, message);
-                }
-                break;
-            case "PART":
-                // channel, who, reason
-                self.emit('part', message.args[0], message.nick, message.args[1], message);
-                self.emit('part' + message.args[0], message.nick, message.args[1], message);
-                if ( message.args[0] != message.args[0].toLowerCase() ) {
-                    self.emit('part' + message.args[0].toLowerCase(), message.nick, message.args[1], message);
-                }
-                if ( self.nick == message.nick ) {
-                    var channel = self.chanData(message.args[0]);
-                    delete self.chans[channel.key];
-                }
-                else {
-                    var channel = self.chanData(message.args[0]);
-                    delete channel.users[message.nick];
-                }
-                break;
-            case "KICK":
-                // channel, who, by, reason
-                self.emit('kick', message.args[0], message.args[1], message.nick, message.args[2], message);
-                self.emit('kick' + message.args[0], message.args[1], message.nick, message.args[2], message);
-                if ( message.args[0] != message.args[0].toLowerCase() ) {
-                    self.emit('kick' + message.args[0].toLowerCase(), message.args[1], message.nick, message.args[2], message);
-                }
-
-                if ( self.nick == message.args[1] ) {
-                    var channel = self.chanData(message.args[0]);
-                    delete self.chans[channel.key];
-                }
-                else {
-                    var channel = self.chanData(message.args[0]);
-                    delete channel.users[message.args[1]];
-                }
-                break;
-            case "KILL":
-                var nick = message.args[0];
-                var channels = [];
-                for ( var channel in self.chans ) {
-                    if ( self.chans[channel].users[nick])
-                        channels.push(channel);
-
-                    delete self.chans[channel].users[nick];
-                }
-                self.emit('kill', nick, message.args[1], channels, message);
-                break;
-            case "PRIVMSG":
-                var from = message.nick;
-                var to   = message.args[0];
-                var text = message.args[1];
-                if (text[0] === '\1' && text.lastIndexOf('\1') > 0) {
-                    self._handleCTCP(from, to, text, 'privmsg');
-                    break;
-                }
-                self.emit('message', from, to, text, message);
-                if ( self.supported.channel.types.indexOf(to.charAt(0)) !== -1 ) {
-                    self.emit('message#', from, to, text, message);
-                    self.emit('message' + to, from, text, message);
-                    if ( to != to.toLowerCase() ) {
-                        self.emit('message' + to.toLowerCase(), from, text, message);
-                    }
-                }
-                if ( to == self.nick ) self.emit('pm', from, text, message);
-
-                if ( self.opt.debug && to == self.nick )
-                    util.log('GOT MESSAGE from ' + from + ': ' + text);
-                break;
-            case "INVITE":
-                var from = message.nick;
-                var to   = message.args[0];
-                var channel = message.args[1];
-                self.emit('invite', channel, from, message);
-                break;
-            case "QUIT":
-                if ( self.opt.debug )
-                    util.log("QUIT: " + message.prefix + " " + message.args.join(" "));
-                if ( self.nick == message.nick ) {
-                    // TODO handle?
-                    break;
-                }
-                // handle other people quitting
-
-                var channels = [];
-
-                // TODO better way of finding what channels a user is in?
-                for ( var channame in self.chans ) {
-                    var channel = self.chans[channame];
-                    if ( 'string' == typeof channel.users[message.nick] ) {
-                        delete channel.users[message.nick];
-                        channels.push(channame);
-                    }
-                }
-
-                // who, reason, channels
-                self.emit('quit', message.nick, message.args[0], channels, message);
-                break;
-            case "err_umodeunknownflag":
-                if ( self.opt.showErrors )
-                    util.log("\033[01;31mERROR: " + util.inspect(message) + "\033[0m");
-                break;
-            default:
-                if ( message.commandType == 'error' ) {
-                    self.emit('error', message);
-                    if ( self.opt.showErrors )
-                        util.log("\033[01;31mERROR: " + util.inspect(message) + "\033[0m");
-                }
-                else {
-                    if ( self.opt.debug )
-                        util.log("\033[01;31mUnhandled message: " + util.inspect(message) + "\033[0m");
-                }
-                break;
-        }
-    }); // }}}
-
-    self.addListener('kick', function(channel, who, by, reason) {
-        if ( self.opt.autoRejoin )
-            self.send.apply(self, ['JOIN'].concat(channel.split(' ')));
-    });
-    self.addListener('motd', function (motd) {
-        self.opt.channels.forEach(function(channel) {
-            self.send.apply(self, ['JOIN'].concat(channel.split(' ')));
-        });
-    });
-
-    process.EventEmitter.call(this);
-}
-
-util.inherits(Client, process.EventEmitter);
-
-Client.prototype.conn = null;
-Client.prototype.prefixForMode = {};
-Client.prototype.modeForPrefix = {};
-Client.prototype.chans = {};
-Client.prototype._whoisData = {};
-Client.prototype.chanData = function( name, create ) { // {{{
-    var key = name.toLowerCase();
-    if ( create ) {
-        this.chans[key] = this.chans[key] || {
-            key: key,
-            serverName: name,
-            users: {},
-            mode: '',
-        };
-    }
-
-    return this.chans[key];
-} // }}}
-Client.prototype.connect = function ( retryCount, callback ) { // {{{
-    if ( typeof(retryCount) === 'function' ) {
-        callback = retryCount;
-        retryCount = undefined;
-    }
-    retryCount = retryCount || 0;
-    if (typeof(callback) === 'function') {
-      this.once('registered', callback);
-    }
-    var self = this;
-    self.chans = {};
-    // try to connect to the server
-    if (self.opt.secure) {
-        var creds = self.opt.secure;
-        if (typeof self.opt.secure !== 'object') {
-            creds = {};
-        }
-
-        self.conn = tls.connect(self.opt.port, self.opt.server, creds, function() {
-           // callback called only after successful socket connection
-           self.conn.connected = true;
-           if (self.conn.authorized ||
-                (self.opt.selfSigned &&
-                   (self.conn.authorizationError === 'DEPTH_ZERO_SELF_SIGNED_CERT' ||
-                      self.conn.authorizationError === 'UNABLE_TO_VERIFY_LEAF_SIGNATURE')) ||
-                (self.opt.certExpired &&
-                   self.conn.authorizationError === 'CERT_HAS_EXPIRED')) {
-              // authorization successful
-              self.conn.setEncoding('utf-8');
-                if ( self.opt.certExpired &&
-                   self.conn.authorizationError === 'CERT_HAS_EXPIRED' ) {
-                     util.log('Connecting to server with expired certificate');
-                }
-                if ( self.opt.password !==  null ) {
-                    self.send( "PASS", self.opt.password );
-                }
-                util.log('Sending irc NICK/USER');
-                self.send("NICK", self.opt.nick);
-                self.nick = self.opt.nick;
-                self.send("USER", self.opt.userName, 8, "*", self.opt.realName);
-                self.emit("connect");
-           } else {
-              // authorization failed
-             util.log(self.conn.authorizationError);
-           }
-        });
-    }else {
-        self.conn = net.createConnection(self.opt.port, self.opt.server);
-    }
-    self.conn.requestedDisconnect = false;
-    self.conn.setTimeout(0);
-    self.conn.setEncoding('utf8');
-    self.conn.addListener("connect", function () {
-        if ( self.opt.password !==  null ) {
-            self.send( "PASS", self.opt.password );
-        }
-        self.send("NICK", self.opt.nick);
-        self.nick = self.opt.nick;
-        self.send("USER", self.opt.userName, 8, "*", self.opt.realName);
-        self.emit("connect");
-    });
-    var buffer = '';
-    self.conn.addListener("data", function (chunk) {
-        buffer += chunk;
-        var lines = buffer.split("\r\n");
-        buffer = lines.pop();
-        lines.forEach(function (line) {
-            var message = parseMessage(line, self.opt.stripColors);
-            try {
-                self.emit('raw', message);
-            } catch ( err ) {
-                if ( !self.conn.requestedDisconnect ) {
-                    throw err;
-                }
-            }
-        });
-    });
-    self.conn.addListener("end", function() {
-        if ( self.opt.debug )
-            util.log('Connection got "end" event');
-    });
-    self.conn.addListener("close", function() {
-        if ( self.opt.debug )
-            util.log('Connection got "close" event');
-        if ( self.conn.requestedDisconnect )
-            return;
-        if ( self.opt.debug )
-            util.log('Disconnected: reconnecting');
-        if ( self.opt.retryCount !== null && retryCount >= self.opt.retryCount ) {
-            if ( self.opt.debug ) {
-                util.log( 'Maximum retry count (' + self.opt.retryCount + ') reached. Aborting' );
-            }
-            self.emit( 'abort', self.opt.retryCount );
-            return;
-        }
-
-        if ( self.opt.debug ) {
-            util.log( 'Waiting ' + self.opt.retryDelay + 'ms before retrying' );
-        }
-        setTimeout( function() {
-            self.connect( retryCount + 1 );
-        }, self.opt.retryDelay );
-    });
-    self.conn.addListener("error", function(exception) {
-        self.emit("netError", exception);
-    });
-}; // }}}
-Client.prototype.disconnect = function ( message, callback ) { // {{{
-    if ( typeof(message) === 'function' ) {
-        callback = message;
-        message = undefined;
-    }
-    message = message || "node-irc says goodbye";
-    var self = this;
-    if ( self.conn.readyState == 'open' ) {
-        self.send( "QUIT", message );
-    }
-    self.conn.requestedDisconnect = true;
-    if (typeof(callback) === 'function') {
-      self.conn.once('end', callback);
-    }
-    self.conn.end();
-}; // }}}
-Client.prototype.send = function(command) { // {{{
-    var args = Array.prototype.slice.call(arguments);
-
-    // Note that the command arg is included in the args array as the first element
-
-    if ( args[args.length-1].match(/\s/) || args[args.length-1].match(/^:/) || args[args.length-1] === "" ) {
-        args[args.length-1] = ":" + args[args.length-1];
-    }
-
-    if ( this.opt.debug )
-        util.log('SEND: ' + args.join(" "));
-
-    if ( ! this.conn.requestedDisconnect ) {
-        this.conn.write(args.join(" ") + "\r\n");
-    }
-}; // }}}
-Client.prototype.activateFloodProtection = function(interval) { // {{{
-
-    var cmdQueue = [],
-        safeInterval = interval || this.opt.floodProtectionDelay,
-        self = this,
-        origSend = this.send,
-        dequeue;
-
-    // Wrapper for the original function. Just put everything to on central
-    // queue.
-    this.send = function() {
-        cmdQueue.push(arguments);
-    };
-
-    dequeue = function() {
-        var args = cmdQueue.shift();
-        if (args) {
-            origSend.apply(self, args);
-        }
-    };
-
-    // Slowly unpack the queue without flooding.
-    setInterval(dequeue, safeInterval);
-    dequeue();
-
-
-}; // }}}
-Client.prototype.join = function(channel, callback) { // {{{
-    this.once('join' + channel, function () {
-        // if join is successful, add this channel to opts.channels
-        // so that it will be re-joined upon reconnect (as channels
-        // specified in options are)
-        if (this.opt.channels.indexOf(channel) == -1) {
-            this.opt.channels.push(channel);
-        }
-
-        if ( typeof(callback) == 'function' ) {
-            return callback.apply(this, arguments);
-        }
-    });
-    this.send.apply(this, ['JOIN'].concat(channel.split(' ')));
-} // }}}
-Client.prototype.part = function(channel, callback) { // {{{
-    if ( typeof(callback) == 'function' ) {
-        this.once('part' + channel, callback);
-    }
-
-    // remove this channel from this.opt.channels so we won't rejoin
-    // upon reconnect
-    if (this.opt.channels.indexOf(channel) != -1) {
-        this.opt.channels.splice(this.opt.channels.indexOf(channel), 1);
-    }
-
-    this.send('PART', channel);
-} // }}}
-Client.prototype.say = function(target, text) { // {{{
-    var self = this;
-    if (typeof text !== 'undefined') {
-        text.toString().split(/\r?\n/).filter(function(line) {
-            return line.length > 0;
-        }).forEach(function(line) {
-            var r = new RegExp(".{1," + self.opt.messageSplit + "}", "g");
-            while ((messagePart = r.exec(line)) != null) {
-                self.send('PRIVMSG', target, messagePart[0]);
-                self.emit('selfMessage', target, messagePart[0]);
-            }
-        });
-    }
-} // }}}
-Client.prototype.action = function(channel, text) { // {{{
-    var self = this;
-    if (typeof text !== 'undefined') {
-        text.toString().split(/\r?\n/).filter(function(line) {
-            return line.length > 0;
-        }).forEach(function(line) {
-            self.say(channel, '\u0001ACTION ' + line + '\u0001');
-        });
-    }
-} // }}}
-Client.prototype.notice = function(target, text) { // {{{
-    this.send('NOTICE', target, text);
-} // }}}
-Client.prototype.whois = function(nick, callback) { // {{{
-    if ( typeof callback === 'function' ) {
-        var callbackWrapper = function(info) {
-            if ( info.nick == nick ) {
-                this.removeListener('whois', callbackWrapper);
-                return callback.apply(this, arguments);
-            }
-        };
-        this.addListener('whois', callbackWrapper);
-    }
-    this.send('WHOIS', nick);
-} // }}}
-Client.prototype.list = function() { // {{{
-    var args = Array.prototype.slice.call(arguments, 0);
-    args.unshift('LIST');
-    this.send.apply(this, args);
-} // }}}
-Client.prototype._addWhoisData = function(nick, key, value, onlyIfExists) { // {{{
-    if ( onlyIfExists && !this._whoisData[nick] ) return;
-    this._whoisData[nick] = this._whoisData[nick] || {nick: nick};
-    this._whoisData[nick][key] = value;
-} // }}}
-Client.prototype._clearWhoisData = function(nick) { // {{{
-    // Ensure that at least the nick exists before trying to return
-    this._addWhoisData(nick, 'nick', nick);
-    var data = this._whoisData[nick];
-    delete this._whoisData[nick];
-    return data;
-} // }}}
-Client.prototype._handleCTCP = function(from, to, text, type) {
-    text = text.slice(1)
-    text = text.slice(0, text.indexOf('\1'))
-    var parts = text.split(' ')
-    this.emit('ctcp', from, to, text, type)
-    this.emit('ctcp-'+type, from, to, text)
-    if (type === 'privmsg' && text === 'VERSION')
-        this.emit('ctcp-version', from, to)
-    if (parts[0] === 'ACTION' && parts.length > 1)
-        this.emit('action', from, to, parts.slice(1).join(' '))
-    if (parts[0] === 'PING' && type === 'privmsg' && parts.length > 1)
-        this.ctcp(from, 'notice', text)
-}
-Client.prototype.ctcp = function(to, type, text) {
-    return this[type === 'privmsg' ? 'say' : 'notice'](to, '\1'+text+'\1');
-}
-
-/*
- * parseMessage(line, stripColors)
- *
- * takes a raw "line" from the IRC server and turns it into an object with
- * useful keys
- */
-function parseMessage(line, stripColors) { // {{{
-    var message = {};
-    var match;
-
-    if (stripColors) {
-        line = line.replace(/[\x02\x1f\x16\x0f]|\x03\d{0,2}(?:,\d{0,2})?/g, "");
-    }
-
-    // Parse prefix
-    if ( match = line.match(/^:([^ ]+) +/) ) {
-        message.prefix = match[1];
-        line = line.replace(/^:[^ ]+ +/, '');
-        if ( match = message.prefix.match(/^([_a-zA-Z0-9\[\]\\`^{}|-]*)(!([^@]+)@(.*))?$/) ) {
-            message.nick = match[1];
-            message.user = match[3];
-            message.host = match[4];
-        }
-        else {
-            message.server = message.prefix;
-        }
-    }
-
-    // Parse command
-    match = line.match(/^([^ ]+) */);
-    message.command = match[1];
-    message.rawCommand = match[1];
-    message.commandType = 'normal';
-    line = line.replace(/^[^ ]+ +/, '');
-
-    if ( replyFor[message.rawCommand] ) {
-        message.command     = replyFor[message.rawCommand].name;
-        message.commandType = replyFor[message.rawCommand].type;
-    }
-
-    message.args = [];
-    var middle, trailing;
-
-    // Parse parameters
-    if ( line.search(/^:|\s+:/) != -1 ) {
-        match = line.match(/(.*?)(?:^:|\s+:)(.*)/);
-        middle = match[1].trimRight();
-        trailing = match[2];
-    }
-    else {
-        middle = line;
-    }
-
-    if ( middle.length )
-        message.args = middle.split(/ +/);
-
-    if ( typeof(trailing) != 'undefined' && trailing.length )
-        message.args.push(trailing);
-
-    return message;
-} // }}}
-
-exports.parseMessage = parseMessage;
-
-
-/***/ }),
-
-/***/ "./node_modules/is/index.js":
-/*!**********************************!*\
-  !*** ./node_modules/is/index.js ***!
-  \**********************************/
-/***/ ((module) => {
-
-
-/**!
- * is
- * the definitive JavaScript type testing library
- * 
- * @copyright 2013 Enrico Marino
- * @license MIT
- */
-
-var objProto = Object.prototype;
-var owns = objProto.hasOwnProperty;
-var toString = objProto.toString;
-var isActualNaN = function (value) {
-  return value !== value;
-};
-var NON_HOST_TYPES = {
-  "boolean": 1,
-  "number": 1,
-  "string": 1,
-  "undefined": 1
-};
-
-/**
- * Expose `is`
- */
-
-var is = module.exports = {};
-
-/**
- * Test general.
- */
-
-/**
- * is.type
- * Test if `value` is a type of `type`.
- *
- * @param {Mixed} value value to test
- * @param {String} type type
- * @return {Boolean} true if `value` is a type of `type`, false otherwise
- * @api public
- */
-
-is.a =
-is.type = function (value, type) {
-  return typeof value === type;
-};
-
-/**
- * is.defined
- * Test if `value` is defined.
- *
- * @param {Mixed} value value to test
- * @return {Boolean} true if 'value' is defined, false otherwise
- * @api public
- */
-
-is.defined = function (value) {
-  return value !== undefined;
-};
-
-/**
- * is.empty
- * Test if `value` is empty.
- *
- * @param {Mixed} value value to test
- * @return {Boolean} true if `value` is empty, false otherwise
- * @api public
- */
-
-is.empty = function (value) {
-  var type = toString.call(value);
-  var key;
-
-  if ('[object Array]' === type || '[object Arguments]' === type) {
-    return value.length === 0;
-  }
-
-  if ('[object Object]' === type) {
-    for (key in value) if (owns.call(value, key)) return false;
-    return true;
-  }
-
-  if ('[object String]' === type) {
-    return '' === value;
-  }
-
-  return false;
-};
-
-/**
- * is.equal
- * Test if `value` is equal to `other`.
- *
- * @param {Mixed} value value to test
- * @param {Mixed} other value to compare with
- * @return {Boolean} true if `value` is equal to `other`, false otherwise
- */
-
-is.equal = function (value, other) {
-  var type = toString.call(value)
-  var key;
-
-  if (type !== toString.call(other)) {
-    return false;
-  }
-
-  if ('[object Object]' === type) {
-    for (key in value) {
-      if (!is.equal(value[key], other[key])) {
-        return false;
-      }
-    }
-    return true;
-  }
-
-  if ('[object Array]' === type) {
-    key = value.length;
-    if (key !== other.length) {
-      return false;
-    }
-    while (--key) {
-      if (!is.equal(value[key], other[key])) {
-        return false;
-      }
-    }
-    return true;
-  }
-
-  if ('[object Function]' === type) {
-    return value.prototype === other.prototype;
-  }
-
-  if ('[object Date]' === type) {
-    return value.getTime() === other.getTime();
-  }
-
-  return value === other;
-};
-
-/**
- * is.hosted
- * Test if `value` is hosted by `host`.
- *
- * @param {Mixed} value to test
- * @param {Mixed} host host to test with
- * @return {Boolean} true if `value` is hosted by `host`, false otherwise
- * @api public
- */
-
-is.hosted = function (value, host) {
-  var type = typeof host[value];
-  return type === 'object' ? !!host[value] : !NON_HOST_TYPES[type];
-};
-
-/**
- * is.instance
- * Test if `value` is an instance of `constructor`.
- *
- * @param {Mixed} value value to test
- * @return {Boolean} true if `value` is an instance of `constructor`
- * @api public
- */
-
-is.instance = is['instanceof'] = function (value, constructor) {
-  return value instanceof constructor;
-};
-
-/**
- * is.null
- * Test if `value` is null.
- *
- * @param {Mixed} value value to test
- * @return {Boolean} true if `value` is null, false otherwise
- * @api public
- */
-
-is['null'] = function (value) {
-  return value === null;
-};
-
-/**
- * is.undefined
- * Test if `value` is undefined.
- *
- * @param {Mixed} value value to test
- * @return {Boolean} true if `value` is undefined, false otherwise
- * @api public
- */
-
-is.undefined = function (value) {
-  return value === undefined;
-};
-
-/**
- * Test arguments.
- */
-
-/**
- * is.arguments
- * Test if `value` is an arguments object.
- *
- * @param {Mixed} value value to test
- * @return {Boolean} true if `value` is an arguments object, false otherwise
- * @api public
- */
-
-is.arguments = function (value) {
-  var isStandardArguments = '[object Arguments]' === toString.call(value);
-  var isOldArguments = !is.array(value) && is.arraylike(value) && is.object(value) && is.fn(value.callee);
-  return isStandardArguments || isOldArguments;
-};
-
-/**
- * Test array.
- */
-
-/**
- * is.array
- * Test if 'value' is an array.
- *
- * @param {Mixed} value value to test
- * @return {Boolean} true if `value` is an array, false otherwise
- * @api public
- */
-
-is.array = function (value) {
-  return '[object Array]' === toString.call(value);
-};
-
-/**
- * is.arguments.empty
- * Test if `value` is an empty arguments object.
- *
- * @param {Mixed} value value to test
- * @return {Boolean} true if `value` is an empty arguments object, false otherwise
- * @api public
- */
-is.arguments.empty = function (value) {
-  return is.arguments(value) && value.length === 0;
-};
-
-/**
- * is.array.empty
- * Test if `value` is an empty array.
- *
- * @param {Mixed} value value to test
- * @return {Boolean} true if `value` is an empty array, false otherwise
- * @api public
- */
-is.array.empty = function (value) {
-  return is.array(value) && value.length === 0;
-};
-
-/**
- * is.arraylike
- * Test if `value` is an arraylike object.
- *
- * @param {Mixed} value value to test
- * @return {Boolean} true if `value` is an arguments object, false otherwise
- * @api public
- */
-
-is.arraylike = function (value) {
-  return !!value && !is.boolean(value)
-    && owns.call(value, 'length')
-    && isFinite(value.length)
-    && is.number(value.length)
-    && value.length >= 0;
-};
-
-/**
- * Test boolean.
- */
-
-/**
- * is.boolean
- * Test if `value` is a boolean.
- *
- * @param {Mixed} value value to test
- * @return {Boolean} true if `value` is a boolean, false otherwise
- * @api public
- */
-
-is.boolean = function (value) {
-  return '[object Boolean]' === toString.call(value);
-};
-
-/**
- * is.false
- * Test if `value` is false.
- *
- * @param {Mixed} value value to test
- * @return {Boolean} true if `value` is false, false otherwise
- * @api public
- */
-
-is['false'] = function (value) {
-  return is.boolean(value) && (value === false || value.valueOf() === false);
-};
-
-/**
- * is.true
- * Test if `value` is true.
- *
- * @param {Mixed} value value to test
- * @return {Boolean} true if `value` is true, false otherwise
- * @api public
- */
-
-is['true'] = function (value) {
-  return is.boolean(value) && (value === true || value.valueOf() === true);
-};
-
-/**
- * Test date.
- */
-
-/**
- * is.date
- * Test if `value` is a date.
- *
- * @param {Mixed} value value to test
- * @return {Boolean} true if `value` is a date, false otherwise
- * @api public
- */
-
-is.date = function (value) {
-  return '[object Date]' === toString.call(value);
-};
-
-/**
- * Test element.
- */
-
-/**
- * is.element
- * Test if `value` is an html element.
- *
- * @param {Mixed} value value to test
- * @return {Boolean} true if `value` is an HTML Element, false otherwise
- * @api public
- */
-
-is.element = function (value) {
-  return value !== undefined
-    && typeof HTMLElement !== 'undefined'
-    && value instanceof HTMLElement
-    && value.nodeType === 1;
-};
-
-/**
- * Test error.
- */
-
-/**
- * is.error
- * Test if `value` is an error object.
- *
- * @param {Mixed} value value to test
- * @return {Boolean} true if `value` is an error object, false otherwise
- * @api public
- */
-
-is.error = function (value) {
-  return '[object Error]' === toString.call(value);
-};
-
-/**
- * Test function.
- */
-
-/**
- * is.fn / is.function (deprecated)
- * Test if `value` is a function.
- *
- * @param {Mixed} value value to test
- * @return {Boolean} true if `value` is a function, false otherwise
- * @api public
- */
-
-is.fn = is['function'] = function (value) {
-  var isAlert = typeof window !== 'undefined' && value === window.alert;
-  return isAlert || '[object Function]' === toString.call(value);
-};
-
-/**
- * Test number.
- */
-
-/**
- * is.number
- * Test if `value` is a number.
- *
- * @param {Mixed} value value to test
- * @return {Boolean} true if `value` is a number, false otherwise
- * @api public
- */
-
-is.number = function (value) {
-  return '[object Number]' === toString.call(value);
-};
-
-/**
- * is.infinite
- * Test if `value` is positive or negative infinity.
- *
- * @param {Mixed} value value to test
- * @return {Boolean} true if `value` is positive or negative Infinity, false otherwise
- * @api public
- */
-is.infinite = function (value) {
-  return value === Infinity || value === -Infinity;
-};
-
-/**
- * is.decimal
- * Test if `value` is a decimal number.
- *
- * @param {Mixed} value value to test
- * @return {Boolean} true if `value` is a decimal number, false otherwise
- * @api public
- */
-
-is.decimal = function (value) {
-  return is.number(value) && !isActualNaN(value) && !is.infinite(value) && value % 1 !== 0;
-};
-
-/**
- * is.divisibleBy
- * Test if `value` is divisible by `n`.
- *
- * @param {Number} value value to test
- * @param {Number} n dividend
- * @return {Boolean} true if `value` is divisible by `n`, false otherwise
- * @api public
- */
-
-is.divisibleBy = function (value, n) {
-  var isDividendInfinite = is.infinite(value);
-  var isDivisorInfinite = is.infinite(n);
-  var isNonZeroNumber = is.number(value) && !isActualNaN(value) && is.number(n) && !isActualNaN(n) && n !== 0;
-  return isDividendInfinite || isDivisorInfinite || (isNonZeroNumber && value % n === 0);
-};
-
-/**
- * is.int
- * Test if `value` is an integer.
- *
- * @param value to test
- * @return {Boolean} true if `value` is an integer, false otherwise
- * @api public
- */
-
-is.int = function (value) {
-  return is.number(value) && !isActualNaN(value) && value % 1 === 0;
-};
-
-/**
- * is.maximum
- * Test if `value` is greater than 'others' values.
- *
- * @param {Number} value value to test
- * @param {Array} others values to compare with
- * @return {Boolean} true if `value` is greater than `others` values
- * @api public
- */
-
-is.maximum = function (value, others) {
-  if (isActualNaN(value)) {
-    throw new TypeError('NaN is not a valid value');
-  } else if (!is.arraylike(others)) {
-    throw new TypeError('second argument must be array-like');
-  }
-  var len = others.length;
-
-  while (--len >= 0) {
-    if (value < others[len]) {
-      return false;
-    }
-  }
-
-  return true;
-};
-
-/**
- * is.minimum
- * Test if `value` is less than `others` values.
- *
- * @param {Number} value value to test
- * @param {Array} others values to compare with
- * @return {Boolean} true if `value` is less than `others` values
- * @api public
- */
-
-is.minimum = function (value, others) {
-  if (isActualNaN(value)) {
-    throw new TypeError('NaN is not a valid value');
-  } else if (!is.arraylike(others)) {
-    throw new TypeError('second argument must be array-like');
-  }
-  var len = others.length;
-
-  while (--len >= 0) {
-    if (value > others[len]) {
-      return false;
-    }
-  }
-
-  return true;
-};
-
-/**
- * is.nan
- * Test if `value` is not a number.
- *
- * @param {Mixed} value value to test
- * @return {Boolean} true if `value` is not a number, false otherwise
- * @api public
- */
-
-is.nan = function (value) {
-  return !is.number(value) || value !== value;
-};
-
-/**
- * is.even
- * Test if `value` is an even number.
- *
- * @param {Number} value value to test
- * @return {Boolean} true if `value` is an even number, false otherwise
- * @api public
- */
-
-is.even = function (value) {
-  return is.infinite(value) || (is.number(value) && value === value && value % 2 === 0);
-};
-
-/**
- * is.odd
- * Test if `value` is an odd number.
- *
- * @param {Number} value value to test
- * @return {Boolean} true if `value` is an odd number, false otherwise
- * @api public
- */
-
-is.odd = function (value) {
-  return is.infinite(value) || (is.number(value) && value === value && value % 2 !== 0);
-};
-
-/**
- * is.ge
- * Test if `value` is greater than or equal to `other`.
- *
- * @param {Number} value value to test
- * @param {Number} other value to compare with
- * @return {Boolean}
- * @api public
- */
-
-is.ge = function (value, other) {
-  if (isActualNaN(value) || isActualNaN(other)) {
-    throw new TypeError('NaN is not a valid value');
-  }
-  return !is.infinite(value) && !is.infinite(other) && value >= other;
-};
-
-/**
- * is.gt
- * Test if `value` is greater than `other`.
- *
- * @param {Number} value value to test
- * @param {Number} other value to compare with
- * @return {Boolean}
- * @api public
- */
-
-is.gt = function (value, other) {
-  if (isActualNaN(value) || isActualNaN(other)) {
-    throw new TypeError('NaN is not a valid value');
-  }
-  return !is.infinite(value) && !is.infinite(other) && value > other;
-};
-
-/**
- * is.le
- * Test if `value` is less than or equal to `other`.
- *
- * @param {Number} value value to test
- * @param {Number} other value to compare with
- * @return {Boolean} if 'value' is less than or equal to 'other'
- * @api public
- */
-
-is.le = function (value, other) {
-  if (isActualNaN(value) || isActualNaN(other)) {
-    throw new TypeError('NaN is not a valid value');
-  }
-  return !is.infinite(value) && !is.infinite(other) && value <= other;
-};
-
-/**
- * is.lt
- * Test if `value` is less than `other`.
- *
- * @param {Number} value value to test
- * @param {Number} other value to compare with
- * @return {Boolean} if `value` is less than `other`
- * @api public
- */
-
-is.lt = function (value, other) {
-  if (isActualNaN(value) || isActualNaN(other)) {
-    throw new TypeError('NaN is not a valid value');
-  }
-  return !is.infinite(value) && !is.infinite(other) && value < other;
-};
-
-/**
- * is.within
- * Test if `value` is within `start` and `finish`.
- *
- * @param {Number} value value to test
- * @param {Number} start lower bound
- * @param {Number} finish upper bound
- * @return {Boolean} true if 'value' is is within 'start' and 'finish'
- * @api public
- */
-is.within = function (value, start, finish) {
-  if (isActualNaN(value) || isActualNaN(start) || isActualNaN(finish)) {
-    throw new TypeError('NaN is not a valid value');
-  } else if (!is.number(value) || !is.number(start) || !is.number(finish)) {
-    throw new TypeError('all arguments must be numbers');
-  }
-  var isAnyInfinite = is.infinite(value) || is.infinite(start) || is.infinite(finish);
-  return isAnyInfinite || (value >= start && value <= finish);
-};
-
-/**
- * Test object.
- */
-
-/**
- * is.object
- * Test if `value` is an object.
- *
- * @param {Mixed} value value to test
- * @return {Boolean} true if `value` is an object, false otherwise
- * @api public
- */
-
-is.object = function (value) {
-  return value && '[object Object]' === toString.call(value);
-};
-
-/**
- * is.hash
- * Test if `value` is a hash - a plain object literal.
- *
- * @param {Mixed} value value to test
- * @return {Boolean} true if `value` is a hash, false otherwise
- * @api public
- */
-
-is.hash = function (value) {
-  return is.object(value) && value.constructor === Object && !value.nodeType && !value.setInterval;
-};
-
-/**
- * Test regexp.
- */
-
-/**
- * is.regexp
- * Test if `value` is a regular expression.
- *
- * @param {Mixed} value value to test
- * @return {Boolean} true if `value` is a regexp, false otherwise
- * @api public
- */
-
-is.regexp = function (value) {
-  return '[object RegExp]' === toString.call(value);
-};
-
-/**
- * Test string.
- */
-
-/**
- * is.string
- * Test if `value` is a string.
- *
- * @param {Mixed} value value to test
- * @return {Boolean} true if 'value' is a string, false otherwise
- * @api public
- */
-
-is.string = function (value) {
-  return '[object String]' === toString.call(value);
-};
-
-
-
-/***/ }),
-
 /***/ "./resources/css/app.css":
 /*!*******************************!*\
   !*** ./resources/css/app.css ***!
   \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./node_modules/process/browser.js":
-/*!*****************************************!*\
-  !*** ./node_modules/process/browser.js ***!
-  \*****************************************/
-/***/ ((module) => {
-
-// shim for using process in browser
-var process = module.exports = {};
-
-// cached from whatever global is present so that test runners that stub it
-// don't break things.  But we need to wrap it in a try catch in case it is
-// wrapped in strict mode code which doesn't define any globals.  It's inside a
-// function because try/catches deoptimize in certain engines.
-
-var cachedSetTimeout;
-var cachedClearTimeout;
-
-function defaultSetTimout() {
-    throw new Error('setTimeout has not been defined');
-}
-function defaultClearTimeout () {
-    throw new Error('clearTimeout has not been defined');
-}
-(function () {
-    try {
-        if (typeof setTimeout === 'function') {
-            cachedSetTimeout = setTimeout;
-        } else {
-            cachedSetTimeout = defaultSetTimout;
-        }
-    } catch (e) {
-        cachedSetTimeout = defaultSetTimout;
-    }
-    try {
-        if (typeof clearTimeout === 'function') {
-            cachedClearTimeout = clearTimeout;
-        } else {
-            cachedClearTimeout = defaultClearTimeout;
-        }
-    } catch (e) {
-        cachedClearTimeout = defaultClearTimeout;
-    }
-} ())
-function runTimeout(fun) {
-    if (cachedSetTimeout === setTimeout) {
-        //normal enviroments in sane situations
-        return setTimeout(fun, 0);
-    }
-    // if setTimeout wasn't available but was latter defined
-    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
-        cachedSetTimeout = setTimeout;
-        return setTimeout(fun, 0);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedSetTimeout(fun, 0);
-    } catch(e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
-            return cachedSetTimeout.call(null, fun, 0);
-        } catch(e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
-            return cachedSetTimeout.call(this, fun, 0);
-        }
-    }
-
-
-}
-function runClearTimeout(marker) {
-    if (cachedClearTimeout === clearTimeout) {
-        //normal enviroments in sane situations
-        return clearTimeout(marker);
-    }
-    // if clearTimeout wasn't available but was latter defined
-    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
-        cachedClearTimeout = clearTimeout;
-        return clearTimeout(marker);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedClearTimeout(marker);
-    } catch (e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
-            return cachedClearTimeout.call(null, marker);
-        } catch (e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
-            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
-            return cachedClearTimeout.call(this, marker);
-        }
-    }
-
-
-
-}
-var queue = [];
-var draining = false;
-var currentQueue;
-var queueIndex = -1;
-
-function cleanUpNextTick() {
-    if (!draining || !currentQueue) {
-        return;
-    }
-    draining = false;
-    if (currentQueue.length) {
-        queue = currentQueue.concat(queue);
-    } else {
-        queueIndex = -1;
-    }
-    if (queue.length) {
-        drainQueue();
-    }
-}
-
-function drainQueue() {
-    if (draining) {
-        return;
-    }
-    var timeout = runTimeout(cleanUpNextTick);
-    draining = true;
-
-    var len = queue.length;
-    while(len) {
-        currentQueue = queue;
-        queue = [];
-        while (++queueIndex < len) {
-            if (currentQueue) {
-                currentQueue[queueIndex].run();
-            }
-        }
-        queueIndex = -1;
-        len = queue.length;
-    }
-    currentQueue = null;
-    draining = false;
-    runClearTimeout(timeout);
-}
-
-process.nextTick = function (fun) {
-    var args = new Array(arguments.length - 1);
-    if (arguments.length > 1) {
-        for (var i = 1; i < arguments.length; i++) {
-            args[i - 1] = arguments[i];
-        }
-    }
-    queue.push(new Item(fun, args));
-    if (queue.length === 1 && !draining) {
-        runTimeout(drainQueue);
-    }
-};
-
-// v8 likes predictible objects
-function Item(fun, array) {
-    this.fun = fun;
-    this.array = array;
-}
-Item.prototype.run = function () {
-    this.fun.apply(null, this.array);
-};
-process.title = 'browser';
-process.browser = true;
-process.env = {};
-process.argv = [];
-process.version = ''; // empty string to avoid regexp issues
-process.versions = {};
-
-function noop() {}
-
-process.on = noop;
-process.addListener = noop;
-process.once = noop;
-process.off = noop;
-process.removeListener = noop;
-process.removeAllListeners = noop;
-process.emit = noop;
-process.prependListener = noop;
-process.prependOnceListener = noop;
-
-process.listeners = function (name) { return [] }
-
-process.binding = function (name) {
-    throw new Error('process.binding is not supported');
-};
-
-process.cwd = function () { return '/' };
-process.chdir = function (dir) {
-    throw new Error('process.chdir is not supported');
-};
-process.umask = function() { return 0; };
-
-
-/***/ }),
-
-/***/ "./node_modules/util/node_modules/inherits/inherits_browser.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/util/node_modules/inherits/inherits_browser.js ***!
-  \*********************************************************************/
-/***/ ((module) => {
-
-if (typeof Object.create === 'function') {
-  // implementation from standard node.js 'util' module
-  module.exports = function inherits(ctor, superCtor) {
-    ctor.super_ = superCtor
-    ctor.prototype = Object.create(superCtor.prototype, {
-      constructor: {
-        value: ctor,
-        enumerable: false,
-        writable: true,
-        configurable: true
-      }
-    });
-  };
-} else {
-  // old school shim for old browsers
-  module.exports = function inherits(ctor, superCtor) {
-    ctor.super_ = superCtor
-    var TempCtor = function () {}
-    TempCtor.prototype = superCtor.prototype
-    ctor.prototype = new TempCtor()
-    ctor.prototype.constructor = ctor
-  }
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/util/support/isBufferBrowser.js":
-/*!******************************************************!*\
-  !*** ./node_modules/util/support/isBufferBrowser.js ***!
-  \******************************************************/
-/***/ ((module) => {
-
-module.exports = function isBuffer(arg) {
-  return arg && typeof arg === 'object'
-    && typeof arg.copy === 'function'
-    && typeof arg.fill === 'function'
-    && typeof arg.readUInt8 === 'function';
-}
-
-/***/ }),
-
-/***/ "./node_modules/util/util.js":
-/*!***********************************!*\
-  !*** ./node_modules/util/util.js ***!
-  \***********************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-/* provided dependency */ var process = __webpack_require__(/*! process/browser.js */ "./node_modules/process/browser.js");
-// Copyright Joyent, Inc. and other Node contributors.
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the
-// "Software"), to deal in the Software without restriction, including
-// without limitation the rights to use, copy, modify, merge, publish,
-// distribute, sublicense, and/or sell copies of the Software, and to permit
-// persons to whom the Software is furnished to do so, subject to the
-// following conditions:
-//
-// The above copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-// USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-var getOwnPropertyDescriptors = Object.getOwnPropertyDescriptors ||
-  function getOwnPropertyDescriptors(obj) {
-    var keys = Object.keys(obj);
-    var descriptors = {};
-    for (var i = 0; i < keys.length; i++) {
-      descriptors[keys[i]] = Object.getOwnPropertyDescriptor(obj, keys[i]);
-    }
-    return descriptors;
-  };
-
-var formatRegExp = /%[sdj%]/g;
-exports.format = function(f) {
-  if (!isString(f)) {
-    var objects = [];
-    for (var i = 0; i < arguments.length; i++) {
-      objects.push(inspect(arguments[i]));
-    }
-    return objects.join(' ');
-  }
-
-  var i = 1;
-  var args = arguments;
-  var len = args.length;
-  var str = String(f).replace(formatRegExp, function(x) {
-    if (x === '%%') return '%';
-    if (i >= len) return x;
-    switch (x) {
-      case '%s': return String(args[i++]);
-      case '%d': return Number(args[i++]);
-      case '%j':
-        try {
-          return JSON.stringify(args[i++]);
-        } catch (_) {
-          return '[Circular]';
-        }
-      default:
-        return x;
-    }
-  });
-  for (var x = args[i]; i < len; x = args[++i]) {
-    if (isNull(x) || !isObject(x)) {
-      str += ' ' + x;
-    } else {
-      str += ' ' + inspect(x);
-    }
-  }
-  return str;
-};
-
-
-// Mark that a method should not be used.
-// Returns a modified function which warns once by default.
-// If --no-deprecation is set, then it is a no-op.
-exports.deprecate = function(fn, msg) {
-  if (typeof process !== 'undefined' && process.noDeprecation === true) {
-    return fn;
-  }
-
-  // Allow for deprecating things in the process of starting up.
-  if (typeof process === 'undefined') {
-    return function() {
-      return exports.deprecate(fn, msg).apply(this, arguments);
-    };
-  }
-
-  var warned = false;
-  function deprecated() {
-    if (!warned) {
-      if (process.throwDeprecation) {
-        throw new Error(msg);
-      } else if (process.traceDeprecation) {
-        console.trace(msg);
-      } else {
-        console.error(msg);
-      }
-      warned = true;
-    }
-    return fn.apply(this, arguments);
-  }
-
-  return deprecated;
-};
-
-
-var debugs = {};
-var debugEnviron;
-exports.debuglog = function(set) {
-  if (isUndefined(debugEnviron))
-    debugEnviron = process.env.NODE_DEBUG || '';
-  set = set.toUpperCase();
-  if (!debugs[set]) {
-    if (new RegExp('\\b' + set + '\\b', 'i').test(debugEnviron)) {
-      var pid = process.pid;
-      debugs[set] = function() {
-        var msg = exports.format.apply(exports, arguments);
-        console.error('%s %d: %s', set, pid, msg);
-      };
-    } else {
-      debugs[set] = function() {};
-    }
-  }
-  return debugs[set];
-};
-
-
-/**
- * Echos the value of a value. Trys to print the value out
- * in the best way possible given the different types.
- *
- * @param {Object} obj The object to print out.
- * @param {Object} opts Optional options object that alters the output.
- */
-/* legacy: obj, showHidden, depth, colors*/
-function inspect(obj, opts) {
-  // default options
-  var ctx = {
-    seen: [],
-    stylize: stylizeNoColor
-  };
-  // legacy...
-  if (arguments.length >= 3) ctx.depth = arguments[2];
-  if (arguments.length >= 4) ctx.colors = arguments[3];
-  if (isBoolean(opts)) {
-    // legacy...
-    ctx.showHidden = opts;
-  } else if (opts) {
-    // got an "options" object
-    exports._extend(ctx, opts);
-  }
-  // set default options
-  if (isUndefined(ctx.showHidden)) ctx.showHidden = false;
-  if (isUndefined(ctx.depth)) ctx.depth = 2;
-  if (isUndefined(ctx.colors)) ctx.colors = false;
-  if (isUndefined(ctx.customInspect)) ctx.customInspect = true;
-  if (ctx.colors) ctx.stylize = stylizeWithColor;
-  return formatValue(ctx, obj, ctx.depth);
-}
-exports.inspect = inspect;
-
-
-// http://en.wikipedia.org/wiki/ANSI_escape_code#graphics
-inspect.colors = {
-  'bold' : [1, 22],
-  'italic' : [3, 23],
-  'underline' : [4, 24],
-  'inverse' : [7, 27],
-  'white' : [37, 39],
-  'grey' : [90, 39],
-  'black' : [30, 39],
-  'blue' : [34, 39],
-  'cyan' : [36, 39],
-  'green' : [32, 39],
-  'magenta' : [35, 39],
-  'red' : [31, 39],
-  'yellow' : [33, 39]
-};
-
-// Don't use 'blue' not visible on cmd.exe
-inspect.styles = {
-  'special': 'cyan',
-  'number': 'yellow',
-  'boolean': 'yellow',
-  'undefined': 'grey',
-  'null': 'bold',
-  'string': 'green',
-  'date': 'magenta',
-  // "name": intentionally not styling
-  'regexp': 'red'
-};
-
-
-function stylizeWithColor(str, styleType) {
-  var style = inspect.styles[styleType];
-
-  if (style) {
-    return '\u001b[' + inspect.colors[style][0] + 'm' + str +
-           '\u001b[' + inspect.colors[style][1] + 'm';
-  } else {
-    return str;
-  }
-}
-
-
-function stylizeNoColor(str, styleType) {
-  return str;
-}
-
-
-function arrayToHash(array) {
-  var hash = {};
-
-  array.forEach(function(val, idx) {
-    hash[val] = true;
-  });
-
-  return hash;
-}
-
-
-function formatValue(ctx, value, recurseTimes) {
-  // Provide a hook for user-specified inspect functions.
-  // Check that value is an object with an inspect function on it
-  if (ctx.customInspect &&
-      value &&
-      isFunction(value.inspect) &&
-      // Filter out the util module, it's inspect function is special
-      value.inspect !== exports.inspect &&
-      // Also filter out any prototype objects using the circular check.
-      !(value.constructor && value.constructor.prototype === value)) {
-    var ret = value.inspect(recurseTimes, ctx);
-    if (!isString(ret)) {
-      ret = formatValue(ctx, ret, recurseTimes);
-    }
-    return ret;
-  }
-
-  // Primitive types cannot have properties
-  var primitive = formatPrimitive(ctx, value);
-  if (primitive) {
-    return primitive;
-  }
-
-  // Look up the keys of the object.
-  var keys = Object.keys(value);
-  var visibleKeys = arrayToHash(keys);
-
-  if (ctx.showHidden) {
-    keys = Object.getOwnPropertyNames(value);
-  }
-
-  // IE doesn't make error fields non-enumerable
-  // http://msdn.microsoft.com/en-us/library/ie/dww52sbt(v=vs.94).aspx
-  if (isError(value)
-      && (keys.indexOf('message') >= 0 || keys.indexOf('description') >= 0)) {
-    return formatError(value);
-  }
-
-  // Some type of object without properties can be shortcutted.
-  if (keys.length === 0) {
-    if (isFunction(value)) {
-      var name = value.name ? ': ' + value.name : '';
-      return ctx.stylize('[Function' + name + ']', 'special');
-    }
-    if (isRegExp(value)) {
-      return ctx.stylize(RegExp.prototype.toString.call(value), 'regexp');
-    }
-    if (isDate(value)) {
-      return ctx.stylize(Date.prototype.toString.call(value), 'date');
-    }
-    if (isError(value)) {
-      return formatError(value);
-    }
-  }
-
-  var base = '', array = false, braces = ['{', '}'];
-
-  // Make Array say that they are Array
-  if (isArray(value)) {
-    array = true;
-    braces = ['[', ']'];
-  }
-
-  // Make functions say that they are functions
-  if (isFunction(value)) {
-    var n = value.name ? ': ' + value.name : '';
-    base = ' [Function' + n + ']';
-  }
-
-  // Make RegExps say that they are RegExps
-  if (isRegExp(value)) {
-    base = ' ' + RegExp.prototype.toString.call(value);
-  }
-
-  // Make dates with properties first say the date
-  if (isDate(value)) {
-    base = ' ' + Date.prototype.toUTCString.call(value);
-  }
-
-  // Make error with message first say the error
-  if (isError(value)) {
-    base = ' ' + formatError(value);
-  }
-
-  if (keys.length === 0 && (!array || value.length == 0)) {
-    return braces[0] + base + braces[1];
-  }
-
-  if (recurseTimes < 0) {
-    if (isRegExp(value)) {
-      return ctx.stylize(RegExp.prototype.toString.call(value), 'regexp');
-    } else {
-      return ctx.stylize('[Object]', 'special');
-    }
-  }
-
-  ctx.seen.push(value);
-
-  var output;
-  if (array) {
-    output = formatArray(ctx, value, recurseTimes, visibleKeys, keys);
-  } else {
-    output = keys.map(function(key) {
-      return formatProperty(ctx, value, recurseTimes, visibleKeys, key, array);
-    });
-  }
-
-  ctx.seen.pop();
-
-  return reduceToSingleString(output, base, braces);
-}
-
-
-function formatPrimitive(ctx, value) {
-  if (isUndefined(value))
-    return ctx.stylize('undefined', 'undefined');
-  if (isString(value)) {
-    var simple = '\'' + JSON.stringify(value).replace(/^"|"$/g, '')
-                                             .replace(/'/g, "\\'")
-                                             .replace(/\\"/g, '"') + '\'';
-    return ctx.stylize(simple, 'string');
-  }
-  if (isNumber(value))
-    return ctx.stylize('' + value, 'number');
-  if (isBoolean(value))
-    return ctx.stylize('' + value, 'boolean');
-  // For some reason typeof null is "object", so special case here.
-  if (isNull(value))
-    return ctx.stylize('null', 'null');
-}
-
-
-function formatError(value) {
-  return '[' + Error.prototype.toString.call(value) + ']';
-}
-
-
-function formatArray(ctx, value, recurseTimes, visibleKeys, keys) {
-  var output = [];
-  for (var i = 0, l = value.length; i < l; ++i) {
-    if (hasOwnProperty(value, String(i))) {
-      output.push(formatProperty(ctx, value, recurseTimes, visibleKeys,
-          String(i), true));
-    } else {
-      output.push('');
-    }
-  }
-  keys.forEach(function(key) {
-    if (!key.match(/^\d+$/)) {
-      output.push(formatProperty(ctx, value, recurseTimes, visibleKeys,
-          key, true));
-    }
-  });
-  return output;
-}
-
-
-function formatProperty(ctx, value, recurseTimes, visibleKeys, key, array) {
-  var name, str, desc;
-  desc = Object.getOwnPropertyDescriptor(value, key) || { value: value[key] };
-  if (desc.get) {
-    if (desc.set) {
-      str = ctx.stylize('[Getter/Setter]', 'special');
-    } else {
-      str = ctx.stylize('[Getter]', 'special');
-    }
-  } else {
-    if (desc.set) {
-      str = ctx.stylize('[Setter]', 'special');
-    }
-  }
-  if (!hasOwnProperty(visibleKeys, key)) {
-    name = '[' + key + ']';
-  }
-  if (!str) {
-    if (ctx.seen.indexOf(desc.value) < 0) {
-      if (isNull(recurseTimes)) {
-        str = formatValue(ctx, desc.value, null);
-      } else {
-        str = formatValue(ctx, desc.value, recurseTimes - 1);
-      }
-      if (str.indexOf('\n') > -1) {
-        if (array) {
-          str = str.split('\n').map(function(line) {
-            return '  ' + line;
-          }).join('\n').substr(2);
-        } else {
-          str = '\n' + str.split('\n').map(function(line) {
-            return '   ' + line;
-          }).join('\n');
-        }
-      }
-    } else {
-      str = ctx.stylize('[Circular]', 'special');
-    }
-  }
-  if (isUndefined(name)) {
-    if (array && key.match(/^\d+$/)) {
-      return str;
-    }
-    name = JSON.stringify('' + key);
-    if (name.match(/^"([a-zA-Z_][a-zA-Z_0-9]*)"$/)) {
-      name = name.substr(1, name.length - 2);
-      name = ctx.stylize(name, 'name');
-    } else {
-      name = name.replace(/'/g, "\\'")
-                 .replace(/\\"/g, '"')
-                 .replace(/(^"|"$)/g, "'");
-      name = ctx.stylize(name, 'string');
-    }
-  }
-
-  return name + ': ' + str;
-}
-
-
-function reduceToSingleString(output, base, braces) {
-  var numLinesEst = 0;
-  var length = output.reduce(function(prev, cur) {
-    numLinesEst++;
-    if (cur.indexOf('\n') >= 0) numLinesEst++;
-    return prev + cur.replace(/\u001b\[\d\d?m/g, '').length + 1;
-  }, 0);
-
-  if (length > 60) {
-    return braces[0] +
-           (base === '' ? '' : base + '\n ') +
-           ' ' +
-           output.join(',\n  ') +
-           ' ' +
-           braces[1];
-  }
-
-  return braces[0] + base + ' ' + output.join(', ') + ' ' + braces[1];
-}
-
-
-// NOTE: These type checking functions intentionally don't use `instanceof`
-// because it is fragile and can be easily faked with `Object.create()`.
-function isArray(ar) {
-  return Array.isArray(ar);
-}
-exports.isArray = isArray;
-
-function isBoolean(arg) {
-  return typeof arg === 'boolean';
-}
-exports.isBoolean = isBoolean;
-
-function isNull(arg) {
-  return arg === null;
-}
-exports.isNull = isNull;
-
-function isNullOrUndefined(arg) {
-  return arg == null;
-}
-exports.isNullOrUndefined = isNullOrUndefined;
-
-function isNumber(arg) {
-  return typeof arg === 'number';
-}
-exports.isNumber = isNumber;
-
-function isString(arg) {
-  return typeof arg === 'string';
-}
-exports.isString = isString;
-
-function isSymbol(arg) {
-  return typeof arg === 'symbol';
-}
-exports.isSymbol = isSymbol;
-
-function isUndefined(arg) {
-  return arg === void 0;
-}
-exports.isUndefined = isUndefined;
-
-function isRegExp(re) {
-  return isObject(re) && objectToString(re) === '[object RegExp]';
-}
-exports.isRegExp = isRegExp;
-
-function isObject(arg) {
-  return typeof arg === 'object' && arg !== null;
-}
-exports.isObject = isObject;
-
-function isDate(d) {
-  return isObject(d) && objectToString(d) === '[object Date]';
-}
-exports.isDate = isDate;
-
-function isError(e) {
-  return isObject(e) &&
-      (objectToString(e) === '[object Error]' || e instanceof Error);
-}
-exports.isError = isError;
-
-function isFunction(arg) {
-  return typeof arg === 'function';
-}
-exports.isFunction = isFunction;
-
-function isPrimitive(arg) {
-  return arg === null ||
-         typeof arg === 'boolean' ||
-         typeof arg === 'number' ||
-         typeof arg === 'string' ||
-         typeof arg === 'symbol' ||  // ES6 symbol
-         typeof arg === 'undefined';
-}
-exports.isPrimitive = isPrimitive;
-
-exports.isBuffer = __webpack_require__(/*! ./support/isBuffer */ "./node_modules/util/support/isBufferBrowser.js");
-
-function objectToString(o) {
-  return Object.prototype.toString.call(o);
-}
-
-
-function pad(n) {
-  return n < 10 ? '0' + n.toString(10) : n.toString(10);
-}
-
-
-var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep',
-              'Oct', 'Nov', 'Dec'];
-
-// 26 Feb 16:19:34
-function timestamp() {
-  var d = new Date();
-  var time = [pad(d.getHours()),
-              pad(d.getMinutes()),
-              pad(d.getSeconds())].join(':');
-  return [d.getDate(), months[d.getMonth()], time].join(' ');
-}
-
-
-// log is just a thin wrapper to console.log that prepends a timestamp
-exports.log = function() {
-  console.log('%s - %s', timestamp(), exports.format.apply(exports, arguments));
-};
-
-
-/**
- * Inherit the prototype methods from one constructor into another.
- *
- * The Function.prototype.inherits from lang.js rewritten as a standalone
- * function (not on Function.prototype). NOTE: If this file is to be loaded
- * during bootstrapping this function needs to be rewritten using some native
- * functions as prototype setup using normal JavaScript does not work as
- * expected during bootstrapping (see mirror.js in r114903).
- *
- * @param {function} ctor Constructor function which needs to inherit the
- *     prototype.
- * @param {function} superCtor Constructor function to inherit prototype from.
- */
-exports.inherits = __webpack_require__(/*! inherits */ "./node_modules/util/node_modules/inherits/inherits_browser.js");
-
-exports._extend = function(origin, add) {
-  // Don't do anything if add isn't an object
-  if (!add || !isObject(add)) return origin;
-
-  var keys = Object.keys(add);
-  var i = keys.length;
-  while (i--) {
-    origin[keys[i]] = add[keys[i]];
-  }
-  return origin;
-};
-
-function hasOwnProperty(obj, prop) {
-  return Object.prototype.hasOwnProperty.call(obj, prop);
-}
-
-var kCustomPromisifiedSymbol = typeof Symbol !== 'undefined' ? Symbol('util.promisify.custom') : undefined;
-
-exports.promisify = function promisify(original) {
-  if (typeof original !== 'function')
-    throw new TypeError('The "original" argument must be of type Function');
-
-  if (kCustomPromisifiedSymbol && original[kCustomPromisifiedSymbol]) {
-    var fn = original[kCustomPromisifiedSymbol];
-    if (typeof fn !== 'function') {
-      throw new TypeError('The "util.promisify.custom" argument must be of type Function');
-    }
-    Object.defineProperty(fn, kCustomPromisifiedSymbol, {
-      value: fn, enumerable: false, writable: false, configurable: true
-    });
-    return fn;
-  }
-
-  function fn() {
-    var promiseResolve, promiseReject;
-    var promise = new Promise(function (resolve, reject) {
-      promiseResolve = resolve;
-      promiseReject = reject;
-    });
-
-    var args = [];
-    for (var i = 0; i < arguments.length; i++) {
-      args.push(arguments[i]);
-    }
-    args.push(function (err, value) {
-      if (err) {
-        promiseReject(err);
-      } else {
-        promiseResolve(value);
-      }
-    });
-
-    try {
-      original.apply(this, args);
-    } catch (err) {
-      promiseReject(err);
-    }
-
-    return promise;
-  }
-
-  Object.setPrototypeOf(fn, Object.getPrototypeOf(original));
-
-  if (kCustomPromisifiedSymbol) Object.defineProperty(fn, kCustomPromisifiedSymbol, {
-    value: fn, enumerable: false, writable: false, configurable: true
-  });
-  return Object.defineProperties(
-    fn,
-    getOwnPropertyDescriptors(original)
-  );
-}
-
-exports.promisify.custom = kCustomPromisifiedSymbol
-
-function callbackifyOnRejected(reason, cb) {
-  // `!reason` guard inspired by bluebird (Ref: https://goo.gl/t5IS6M).
-  // Because `null` is a special error value in callbacks which means "no error
-  // occurred", we error-wrap so the callback consumer can distinguish between
-  // "the promise rejected with null" or "the promise fulfilled with undefined".
-  if (!reason) {
-    var newReason = new Error('Promise was rejected with a falsy value');
-    newReason.reason = reason;
-    reason = newReason;
-  }
-  return cb(reason);
-}
-
-function callbackify(original) {
-  if (typeof original !== 'function') {
-    throw new TypeError('The "original" argument must be of type Function');
-  }
-
-  // We DO NOT return the promise as it gives the user a false sense that
-  // the promise is actually somehow related to the callback's execution
-  // and that the callback throwing will reject the promise.
-  function callbackified() {
-    var args = [];
-    for (var i = 0; i < arguments.length; i++) {
-      args.push(arguments[i]);
-    }
-
-    var maybeCb = args.pop();
-    if (typeof maybeCb !== 'function') {
-      throw new TypeError('The last argument must be of type Function');
-    }
-    var self = this;
-    var cb = function() {
-      return maybeCb.apply(self, arguments);
-    };
-    // In true node style we process the callback on `nextTick` with all the
-    // implications (stack, `uncaughtException`, `async_hooks`)
-    original.apply(this, args)
-      .then(function(ret) { process.nextTick(cb, null, ret) },
-            function(rej) { process.nextTick(callbackifyOnRejected, rej, cb) });
-  }
-
-  Object.setPrototypeOf(callbackified, Object.getPrototypeOf(original));
-  Object.defineProperties(callbackified,
-                          getOwnPropertyDescriptors(original));
-  return callbackified;
-}
-exports.callbackify = callbackify;
 
 
 /***/ }),
@@ -17115,7 +13445,6 @@ exports.callbackify = callbackify;
   \******************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
-"use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 // runtime helper for setting properties on components
@@ -17137,7 +13466,6 @@ exports["default"] = (sfc, props) => {
   \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -17165,7 +13493,6 @@ if (false) {}
   \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -17193,7 +13520,6 @@ if (false) {}
   \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -17221,7 +13547,6 @@ if (false) {}
   \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -17249,7 +13574,6 @@ if (false) {}
   \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -17277,7 +13601,6 @@ if (false) {}
   \***************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_footer_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
@@ -17293,7 +13616,6 @@ __webpack_require__.r(__webpack_exports__);
   \*******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_footertest_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
@@ -17309,7 +13631,6 @@ __webpack_require__.r(__webpack_exports__);
   \***************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_header_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
@@ -17325,7 +13646,6 @@ __webpack_require__.r(__webpack_exports__);
   \*******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_headertest_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
@@ -17341,7 +13661,6 @@ __webpack_require__.r(__webpack_exports__);
   \*****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_maintest_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
@@ -17357,7 +13676,6 @@ __webpack_require__.r(__webpack_exports__);
   \*********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   render: () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_footer_vue_vue_type_template_id_485a2ae4__WEBPACK_IMPORTED_MODULE_0__.render)
@@ -17373,7 +13691,6 @@ __webpack_require__.r(__webpack_exports__);
   \*************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   render: () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_footertest_vue_vue_type_template_id_6cea5f14__WEBPACK_IMPORTED_MODULE_0__.render)
@@ -17389,7 +13706,6 @@ __webpack_require__.r(__webpack_exports__);
   \*********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   render: () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_header_vue_vue_type_template_id_698c8ed6__WEBPACK_IMPORTED_MODULE_0__.render)
@@ -17405,7 +13721,6 @@ __webpack_require__.r(__webpack_exports__);
   \*************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   render: () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_headertest_vue_vue_type_template_id_fbb42930__WEBPACK_IMPORTED_MODULE_0__.render)
@@ -17421,7 +13736,6 @@ __webpack_require__.r(__webpack_exports__);
   \***********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   render: () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_maintest_vue_vue_type_template_id_54845ad4__WEBPACK_IMPORTED_MODULE_0__.render)
@@ -17437,7 +13751,6 @@ __webpack_require__.r(__webpack_exports__);
   \**********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   BaseTransition: () => (/* reexport safe */ _vue_runtime_dom__WEBPACK_IMPORTED_MODULE_0__.BaseTransition),
@@ -17642,645 +13955,900 @@ const compile = () => {
 
 /***/ }),
 
-/***/ "./node_modules/ziggy/index.js":
-/*!*************************************!*\
-  !*** ./node_modules/ziggy/index.js ***!
-  \*************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var EE = (__webpack_require__(/*! events */ "./node_modules/events/events.js").EventEmitter)
-
-var extend = __webpack_require__(/*! xtend */ "./node_modules/ziggy/node_modules/xtend/index.js")
-  , irc = __webpack_require__(/*! irc */ "./node_modules/irc/lib/irc.js")
-
-var attachListeners = __webpack_require__(/*! ./lib/attach-listeners */ "./node_modules/ziggy/lib/attach-listeners.js")
-  , populateUsers = __webpack_require__(/*! ./lib/populate-users */ "./node_modules/ziggy/lib/populate-users.js")
-
-module.exports = createZiggy
-
-function Ziggy(settings) {
-  EE.call(this)
-
-  this.setMaxListeners(0)
-
-  this.settings = {}
-
-  this.settings.server = settings.server || 'irc.freenode.net'
-  this.settings.port = settings.port || 6667
-  this.settings.channels = settings.channels || []
-  this.settings.nickname = settings.nickname || 'Ziggy'
-  this.settings.username = settings.username || 'ziggy'
-  this.settings.realName = settings.realName || 'Ziggy'
-  this.settings.plugins = settings.plugins || []
-  this.settings.password = settings.password
-  this.settings.secure = !!settings.secure
-  this.settings.client = settings.client
-
-  this.settings.users = populateUsers(settings.users)
-
-  this.started = Date.now()
-
-  return this
-}
-
-Ziggy.prototype = Object.create(EE.prototype)
-
-Ziggy.prototype.activatePlugins = function Ziggy$activatePlugins() {
-  var plugin
-
-  for(var i = 0, l = this.settings.plugins.length; i < l; ++i) {
-    plugin = this.settings.plugins[i]
-
-    plugin.setup(this, plugin.settings)
-  }
-}
-
-Ziggy.prototype.deactivatePlugins = function Ziggy$deactivatePlugins() {
-  this.removeAllListeners()
-  __webpack_require__.c = {}
-}
-
-Ziggy.prototype.start = function Ziggy$start() {
-  this.activatePlugins()
-
-  var options = {
-      channels: this.settings.channels
-    , userName: this.settings.username
-    , realName: this.settings.realName
-    , password: this.settings.password
-    , thisSigned: true
-    , certExpired: true
-    , port: this.settings.port
-    , secure: this.settings.secure
-  }
-
-  this.client = this.settings.client || new irc.Client(
-      this.settings.server
-    , this.settings.nickname
-    , options
-  )
-
-  attachListeners(this)
-}
-
-Ziggy.prototype.say = function Ziggy$say(target, text) {
-  return this.client.say(target, text)
-}
-
-Ziggy.prototype.action = function Ziggy$action(channel, message) {
-  return this.client.action(channel, message)
-}
-
-Ziggy.prototype.notice = function Ziggy$notice(target, message) {
-  return this.client.notice(target, message)
-}
-
-Ziggy.prototype.invite = function Ziggy$invite(nickname, channel) {
-  this.client.send('INVITE', nickname, channel)
-}
-
-Ziggy.prototype.topic = function Ziggy$topic(channel, topic) {
-  this.client.send('TOPIC', channel, topic)
-}
-
-Ziggy.prototype.part = function Ziggy$part(channels, callback) {
-  var self = this
-
-  callback = callback || noop
-
-  if(Array.isArray(channels)) {
-    channels.forEach(function(channel) {
-      self.part(channel)
-    })
-
-    return callback()
-  }
-
-  self.client.part(channels, function () {
-    if(self.settings.channels[channels]) {
-      delete self.settings.channels[channels]
-    }
-
-    callback()
-  })
-}
-
-Ziggy.prototype.join = function Ziggy$join(channels, callback) {
-  var self = this
-
-  callback = callback || noop
-
-  if(Array.isArray(channels)) {
-    channels.forEach(function(channel) {
-      self.join(channel)
-    })
-
-    return callback()
-  }
-
-  self.client.join(channels, function () {
-    if(!self.settings.channels[channels]) {
-      self.settings.channels[channels] = {}
-      callback()
-    }
-  })
-}
-
-Ziggy.prototype.whois = function Ziggy$whois(nick, callback) {
-  var self = this
-
-  self.client.whois(nick, function (info) {
-    if(!self.settings.users[nick]) self.settings.users[nick] = { shared: {} }
-    self.settings.users[nick].shared.whois = info
-
-    if(callback) callback(self.user(nick))
-  })
-}
-
-Ziggy.prototype.colorize = function Ziggy$colorize(text, color) {
-  return irc.colors.wrap(color, text)
-}
-
-Ziggy.prototype.disconnect = function Ziggy$disconnect(message, callback) {
-  this.client.disconnect(message, callback)
-}
-
-Ziggy.prototype.channels = function Ziggy$channels() {
-  return this.settings.channels
-}
-
-Ziggy.prototype.channel = function Ziggy$channel(channel) {
-  return this.settings.channels[channel]
-}
-
-Ziggy.prototype.users = function Ziggy$users(callback) {
-  var users = Object.keys(this.settings.users)
-    , userList = {}
-    , user
-
-  for(var i = 0, l = users.length; i < l; ++i) {
-    user = users[i]
-
-    userList[user] = this.settings.users[user].shared
-  }
-
-  return userList
-}
-
-Ziggy.prototype.user = function Ziggy$user(nickname) {
-  var defaultUserInfo = {userLevel: 0, authenticated: false}
-    , userInfo = this.settings.users[nickname] ?
-      this.settings.users[nickname].shared : defaultUserInfo
-
-  return {
-      nick: nickname
-    , info: userInfo
-  }
-}
-
-Ziggy.prototype.nick = function Ziggy$nick(nickname) {
-  this.client.send('NICK', nickname)
-}
-
-Ziggy.prototype.level = function Ziggy$level(channel) {
-  return this.settings.channels[channel].users[this.settings.nickname].level
-}
-
-Ziggy.prototype.mode = function Ziggy$mode(channel, mode, nick) {
-  if(nick) return this.client.send('MODE', channel, mode, nick)
-
-  this.client.send('MODE', channel, mode)
-}
-
-Ziggy.prototype.op = function Ziggy$op(channel, nick) {
-  this.mode(channel, '+o', nick)
-}
-
-Ziggy.prototype.deop = function Ziggy$deop(channel, nick) {
-  this.mode(channel, '-o', nick)
-}
-
-Ziggy.prototype.register = function Ziggy$register(users) {
-  this.settings.users =  extend(
-      this.settings.users
-    , populateUsers(this, users)
-  )
-}
-
-Ziggy.prototype.update = function Ziggy$update(userObjects) {
-  var users = Object.keys(userObjects)
-    , user
-
-  for(i = 0, l = users.length; i < l; ++i) {
-    user = users[i]
-
-    if(!this.settings.users[user]) {
-      this.settings.users[user] = userObjects[user]
-    }
-
-    this.settings.users[user] = extend(
-        this.settings.users[user]
-      , userObjects[user]
-    )
-  }
-}
-
-Ziggy.prototype.unregister = function Ziggy$unregister(users) {
-  if(!Array.isArray(users)) users = [users]
-
-  for(var i = 0, l = users.length; i < l; ++i) {
-    delete this.settings.users[users[i]]
-  }
-}
-
-function createZiggy(options) {
-  return new Ziggy(options)
-}
-
-function noop() {}
-
-
-/***/ }),
-
-/***/ "./node_modules/ziggy/lib/attach-listeners.js":
-/*!****************************************************!*\
-  !*** ./node_modules/ziggy/lib/attach-listeners.js ***!
-  \****************************************************/
-/***/ ((module) => {
-
-module.exports = attach
-
-function attach(ziggy) {
-  ziggy.client.on('registered', function() {
-    ziggy.emit('ready')
-  })
-
-  ziggy.client.on('message#', function(nick, to, text) {
-    var user = ziggy.user(nick)
-
-    ziggy.emit('message', user, to, text)
-  })
-
-  ziggy.client.on('action', function(nick, to, text) {
-    var user = ziggy.user(nick)
-
-    ziggy.emit('action', user, to, text)
-  })
-
-  ziggy.client.on('notice', function(nick, to, text) {
-    if(!nick) {
-      return ziggy.emit('server', text)
-    }
-
-    var user = ziggy.user(nick)
-
-    ziggy.emit('notice', user, to, text)
-  })
-
-  ziggy.client.on('pm', function(nick, text) {
-    var user = ziggy.user(nick)
-
-    if(ziggy.settings.users[nick] && !user.info.authenticated) {
-      var bits = text.split(' ')
-        , command = bits[0]
-        , args = bits[1]
-
-      if(command === 'auth' && ziggy.settings.users[nick].password === args) {
-        ziggy.settings.users[nick].shared.authenticated = true
-
-        ziggy.emit('authed', ziggy.user(nick))
-      }
-    }
-
-    ziggy.emit('pm', user, text)
-  })
-
-  ziggy.client.on('nick', function (oldnick, newnick, channels) {
-    var channel
-      , user
-
-    if(oldnick === ziggy.settings.nickname) ziggy.settings.nickname = newnick
-
-    if(ziggy.settings.users[oldnick]) {
-      ziggy.settings.users[newnick] =
-          Object.create(ziggy.settings.users[oldnick])
-
-      delete ziggy.settings.users[oldnick]
-    }
-
-    for(var i = 0, l = channels.length; i < l; ++i) {
-      channel = channels[i]
-      user = ziggy.settings.channels[channel].users[oldnick]
-
-      if(!user) continue
-      user.nick = newnick
-
-      ziggy.settings.channels[channel].users[newnick] = user
-
-      delete ziggy.settings.channels[channels[i]].users[oldnick]
-    }
-
-    ziggy.emit('nick', oldnick, ziggy.user(newnick), channels)
-  })
-
-  ziggy.client.on('+mode', function (channel, by, mode, argument) { 
-    var set_by = ziggy.user(by)
-      , current_level
-      , user_mode
-
-    if(mode !== 'o' && mode !== 'v') {
-      return ziggy.emit('mode', channel, set_by, '+' + mode, argument)
-    }
-
-    current_level = ziggy.settings.channels[channel].users[argument].level
-
-    if(current_level === '@') return
-
-    ziggy.emit(
-        mode === 'o' ? 'op' : 'voice'
-      , channel
-      , set_by
-      , ziggy.user(argument)
-    )
-
-    user_mode = mode === 'o' ? '@' : '+'
-    
-    ziggy.settings.channels[channel].users[argument].level = user_mode
-  })
-
-  ziggy.client.on('-mode', function (channel, by, mode, argument) { 
-    var set_by = ziggy.user(by)
-      , current_level
-
-    if(mode !== 'o' && mode !== 'v') {
-      return ziggy.emit('mode', channel, set_by, '-' + mode, argument)
-    }
-
-    current_level = ziggy.settings.channels[channel].users[argument].level
-
-    if(current_level.length) {
-      var user_mode = ''
-
-      if(mode === 'o') {
-        ziggy.emit('deop', channel, set_by, ziggy.user(argument))
-      } else {
-        user_mode = current_level == '@' ? '@' : ''
-        ziggy.emit('devoice', channel, set_by, ziggy.user(argument))
-      }
-
-      ziggy.settings.channels[channel].users[argument].level = user_mode
-    }
-  })
-
-  ziggy.client.on('topic', function (channel, topic, nick, message) {
-    if(!ziggy.settings.channels[channel]) ziggy.settings.channels[channel] = {}
-
-    ziggy.settings.channels[channel].topic = {
-        text: topic
-      , setBy: ziggy.user(nick)
-    }
-
-    ziggy.emit('topic', channel, topic, nick, message)
-  })
-
-  ziggy.client.on('names', function (channel, nicks) {
-    var nicknames = Object.keys(nicks)
-      , nickname
-
-    if(!ziggy.settings.channels[channel]) ziggy.settings.channels[channel] = {}
-    if(!ziggy.settings.channels[channel].users) {
-      ziggy.settings.channels[channel].users = {}
-    }
-
-    for(var i = 0, l = nicknames.length; i < l; ++i) {
-      nickname = nicknames[i]
-
-      ziggy.settings.channels[channel].users[nickname] = ziggy.user(
-          nickname
-      )
-
-      ziggy.settings.channels[channel].users[nickname].level = nicks[nickname]
-    }
-  })
-
-  ziggy.client.on('part', function (channel, nick, reason, message) {
-    if(nick === ziggy.settings.nickname) {
-      return ziggy.emit('ziggypart', channel)
-    }
-
-    user = ziggy.user(nick)
-
-    if(ziggy.settings.channels[channel].users[nick]) {
-      delete ziggy.settings.channels[channel].users[nick]
-    }
-
-    ziggy.emit('part', user, channel, reason)
-  })
-
-  ziggy.client.on('quit', function (nick, reason, channels, message) {
-    var user = ziggy.user(nick)
-      , channel
-
-    for(var i = 0, l = channels.length; i < l; ++i) {
-      channel = channels[i]
-
-      if(ziggy.settings.channels[channel] &&
-          ziggy.settings.channels[channel][nick]) {
-
-        delete ziggy.settings.channels[channel][nick]
-      }
-    }
-
-    ziggy.emit('quit', user, reason, channels)
-  })
-
-  ziggy.client.on('kick', function (channel, nick, by, reason) {
-    var kicked = ziggy.user(nick)
-      , kicker = ziggy.user(by)
-
-    if(ziggy.settings.channels[channel][nick]) {
-      delete ziggy.settings.channels[channel][nick]
-    }
-
-    ziggy.emit('kick', kicked, kicker, channel, reason)
-  })
-
-  ziggy.client.on('invite', function (channel, from) {
-    var user = ziggy.user(from)
-
-    ziggy.emit('invite', channel, user)
-  })
-
-  ziggy.client.on('join', function (channel, nick, message) {
-    if(nick === ziggy.settings.nickname) {
-      return ziggy.emit('ziggyjoin', channel, message)
-    }
-
-    user = ziggy.user(nick)
-    if(!ziggy.settings.channels[channel]) {
-      ziggy.settings.channels[channel] = {users: {}}
-    }
-
-    ziggy.settings.channels[channel].users[nick] = user
-    ziggy.settings.channels[channel].users[nick].level = ''
-
-    ziggy.emit('join', channel, user, message)
-  })
-
-  ziggy.client.addListener('error', function (message) {
-    console.log('error: ', message)
-  })
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/ziggy/lib/populate-users.js":
-/*!**************************************************!*\
-  !*** ./node_modules/ziggy/lib/populate-users.js ***!
-  \**************************************************/
-/***/ ((module) => {
-
-module.exports = populate_users
-
-function populate_users(users) {
-  var user_names = Object.keys(users || {})
-    , result = {}
-    , user
-
-  for(var i = 0, l = user_names.length; i < l; ++i) {
-    user = user_names[i]
-
-    result[user] = users[user]
-    result[user].shared = {
-        userLevel: users[user].userLevel || 1
-      , authenticated: !users[user].password
-      , whois: null
-    }
-
-    if(result[user].userLevel) delete result[user].userLevel
-  }
-
-  return result
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/ziggy/node_modules/object-keys/index.js":
+/***/ "./node_modules/ziggy-js/node_modules/qs/lib/formats.js":
 /*!**************************************************************!*\
-  !*** ./node_modules/ziggy/node_modules/object-keys/index.js ***!
+  !*** ./node_modules/ziggy-js/node_modules/qs/lib/formats.js ***!
   \**************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((module) => {
 
-module.exports = Object.keys || __webpack_require__(/*! ./shim */ "./node_modules/ziggy/node_modules/object-keys/shim.js");
 
+
+var replace = String.prototype.replace;
+var percentTwenties = /%20/g;
+
+var Format = {
+    RFC1738: 'RFC1738',
+    RFC3986: 'RFC3986'
+};
+
+module.exports = {
+    'default': Format.RFC3986,
+    formatters: {
+        RFC1738: function (value) {
+            return replace.call(value, percentTwenties, '+');
+        },
+        RFC3986: function (value) {
+            return String(value);
+        }
+    },
+    RFC1738: Format.RFC1738,
+    RFC3986: Format.RFC3986
+};
 
 
 /***/ }),
 
-/***/ "./node_modules/ziggy/node_modules/object-keys/shim.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/ziggy/node_modules/object-keys/shim.js ***!
-  \*************************************************************/
+/***/ "./node_modules/ziggy-js/node_modules/qs/lib/index.js":
+/*!************************************************************!*\
+  !*** ./node_modules/ziggy-js/node_modules/qs/lib/index.js ***!
+  \************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-(function () {
-	"use strict";
 
-	// modified from https://github.com/kriskowal/es5-shim
-	var has = Object.prototype.hasOwnProperty,
-		is = __webpack_require__(/*! is */ "./node_modules/is/index.js"),
-		forEach = __webpack_require__(/*! foreach */ "./node_modules/foreach/index.js"),
-		hasDontEnumBug = !({'toString': null}).propertyIsEnumerable('toString'),
-		dontEnums = [
-			"toString",
-			"toLocaleString",
-			"valueOf",
-			"hasOwnProperty",
-			"isPrototypeOf",
-			"propertyIsEnumerable",
-			"constructor"
-		],
-		keysShim;
 
-	keysShim = function keys(object) {
-		if (!is.object(object) && !is.array(object)) {
-			throw new TypeError("Object.keys called on a non-object");
-		}
+var stringify = __webpack_require__(/*! ./stringify */ "./node_modules/ziggy-js/node_modules/qs/lib/stringify.js");
+var parse = __webpack_require__(/*! ./parse */ "./node_modules/ziggy-js/node_modules/qs/lib/parse.js");
+var formats = __webpack_require__(/*! ./formats */ "./node_modules/ziggy-js/node_modules/qs/lib/formats.js");
 
-		var name, theKeys = [];
-		for (name in object) {
-			if (has.call(object, name)) {
-				theKeys.push(name);
-			}
-		}
+module.exports = {
+    formats: formats,
+    parse: parse,
+    stringify: stringify
+};
 
-		if (hasDontEnumBug) {
-			forEach(dontEnums, function (dontEnum) {
-				if (has.call(object, dontEnum)) {
-					theKeys.push(dontEnum);
-				}
-			});
-		}
-		return theKeys;
-	};
 
-	module.exports = keysShim;
+/***/ }),
+
+/***/ "./node_modules/ziggy-js/node_modules/qs/lib/parse.js":
+/*!************************************************************!*\
+  !*** ./node_modules/ziggy-js/node_modules/qs/lib/parse.js ***!
+  \************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+
+
+var utils = __webpack_require__(/*! ./utils */ "./node_modules/ziggy-js/node_modules/qs/lib/utils.js");
+
+var has = Object.prototype.hasOwnProperty;
+var isArray = Array.isArray;
+
+var defaults = {
+    allowDots: false,
+    allowPrototypes: false,
+    arrayLimit: 20,
+    charset: 'utf-8',
+    charsetSentinel: false,
+    comma: false,
+    decoder: utils.decode,
+    delimiter: '&',
+    depth: 5,
+    ignoreQueryPrefix: false,
+    interpretNumericEntities: false,
+    parameterLimit: 1000,
+    parseArrays: true,
+    plainObjects: false,
+    strictNullHandling: false
+};
+
+var interpretNumericEntities = function (str) {
+    return str.replace(/&#(\d+);/g, function ($0, numberStr) {
+        return String.fromCharCode(parseInt(numberStr, 10));
+    });
+};
+
+var parseArrayValue = function (val, options) {
+    if (val && typeof val === 'string' && options.comma && val.indexOf(',') > -1) {
+        return val.split(',');
+    }
+
+    return val;
+};
+
+// This is what browsers will submit when the ✓ character occurs in an
+// application/x-www-form-urlencoded body and the encoding of the page containing
+// the form is iso-8859-1, or when the submitted form has an accept-charset
+// attribute of iso-8859-1. Presumably also with other charsets that do not contain
+// the ✓ character, such as us-ascii.
+var isoSentinel = 'utf8=%26%2310003%3B'; // encodeURIComponent('&#10003;')
+
+// These are the percent-encoded utf-8 octets representing a checkmark, indicating that the request actually is utf-8 encoded.
+var charsetSentinel = 'utf8=%E2%9C%93'; // encodeURIComponent('✓')
+
+var parseValues = function parseQueryStringValues(str, options) {
+    var obj = {};
+    var cleanStr = options.ignoreQueryPrefix ? str.replace(/^\?/, '') : str;
+    var limit = options.parameterLimit === Infinity ? undefined : options.parameterLimit;
+    var parts = cleanStr.split(options.delimiter, limit);
+    var skipIndex = -1; // Keep track of where the utf8 sentinel was found
+    var i;
+
+    var charset = options.charset;
+    if (options.charsetSentinel) {
+        for (i = 0; i < parts.length; ++i) {
+            if (parts[i].indexOf('utf8=') === 0) {
+                if (parts[i] === charsetSentinel) {
+                    charset = 'utf-8';
+                } else if (parts[i] === isoSentinel) {
+                    charset = 'iso-8859-1';
+                }
+                skipIndex = i;
+                i = parts.length; // The eslint settings do not allow break;
+            }
+        }
+    }
+
+    for (i = 0; i < parts.length; ++i) {
+        if (i === skipIndex) {
+            continue;
+        }
+        var part = parts[i];
+
+        var bracketEqualsPos = part.indexOf(']=');
+        var pos = bracketEqualsPos === -1 ? part.indexOf('=') : bracketEqualsPos + 1;
+
+        var key, val;
+        if (pos === -1) {
+            key = options.decoder(part, defaults.decoder, charset, 'key');
+            val = options.strictNullHandling ? null : '';
+        } else {
+            key = options.decoder(part.slice(0, pos), defaults.decoder, charset, 'key');
+            val = utils.maybeMap(
+                parseArrayValue(part.slice(pos + 1), options),
+                function (encodedVal) {
+                    return options.decoder(encodedVal, defaults.decoder, charset, 'value');
+                }
+            );
+        }
+
+        if (val && options.interpretNumericEntities && charset === 'iso-8859-1') {
+            val = interpretNumericEntities(val);
+        }
+
+        if (part.indexOf('[]=') > -1) {
+            val = isArray(val) ? [val] : val;
+        }
+
+        if (has.call(obj, key)) {
+            obj[key] = utils.combine(obj[key], val);
+        } else {
+            obj[key] = val;
+        }
+    }
+
+    return obj;
+};
+
+var parseObject = function (chain, val, options, valuesParsed) {
+    var leaf = valuesParsed ? val : parseArrayValue(val, options);
+
+    for (var i = chain.length - 1; i >= 0; --i) {
+        var obj;
+        var root = chain[i];
+
+        if (root === '[]' && options.parseArrays) {
+            obj = [].concat(leaf);
+        } else {
+            obj = options.plainObjects ? Object.create(null) : {};
+            var cleanRoot = root.charAt(0) === '[' && root.charAt(root.length - 1) === ']' ? root.slice(1, -1) : root;
+            var index = parseInt(cleanRoot, 10);
+            if (!options.parseArrays && cleanRoot === '') {
+                obj = { 0: leaf };
+            } else if (
+                !isNaN(index)
+                && root !== cleanRoot
+                && String(index) === cleanRoot
+                && index >= 0
+                && (options.parseArrays && index <= options.arrayLimit)
+            ) {
+                obj = [];
+                obj[index] = leaf;
+            } else if (cleanRoot !== '__proto__') {
+                obj[cleanRoot] = leaf;
+            }
+        }
+
+        leaf = obj;
+    }
+
+    return leaf;
+};
+
+var parseKeys = function parseQueryStringKeys(givenKey, val, options, valuesParsed) {
+    if (!givenKey) {
+        return;
+    }
+
+    // Transform dot notation to bracket notation
+    var key = options.allowDots ? givenKey.replace(/\.([^.[]+)/g, '[$1]') : givenKey;
+
+    // The regex chunks
+
+    var brackets = /(\[[^[\]]*])/;
+    var child = /(\[[^[\]]*])/g;
+
+    // Get the parent
+
+    var segment = options.depth > 0 && brackets.exec(key);
+    var parent = segment ? key.slice(0, segment.index) : key;
+
+    // Stash the parent if it exists
+
+    var keys = [];
+    if (parent) {
+        // If we aren't using plain objects, optionally prefix keys that would overwrite object prototype properties
+        if (!options.plainObjects && has.call(Object.prototype, parent)) {
+            if (!options.allowPrototypes) {
+                return;
+            }
+        }
+
+        keys.push(parent);
+    }
+
+    // Loop through children appending to the array until we hit depth
+
+    var i = 0;
+    while (options.depth > 0 && (segment = child.exec(key)) !== null && i < options.depth) {
+        i += 1;
+        if (!options.plainObjects && has.call(Object.prototype, segment[1].slice(1, -1))) {
+            if (!options.allowPrototypes) {
+                return;
+            }
+        }
+        keys.push(segment[1]);
+    }
+
+    // If there's a remainder, just add whatever is left
+
+    if (segment) {
+        keys.push('[' + key.slice(segment.index) + ']');
+    }
+
+    return parseObject(keys, val, options, valuesParsed);
+};
+
+var normalizeParseOptions = function normalizeParseOptions(opts) {
+    if (!opts) {
+        return defaults;
+    }
+
+    if (opts.decoder !== null && opts.decoder !== undefined && typeof opts.decoder !== 'function') {
+        throw new TypeError('Decoder has to be a function.');
+    }
+
+    if (typeof opts.charset !== 'undefined' && opts.charset !== 'utf-8' && opts.charset !== 'iso-8859-1') {
+        throw new TypeError('The charset option must be either utf-8, iso-8859-1, or undefined');
+    }
+    var charset = typeof opts.charset === 'undefined' ? defaults.charset : opts.charset;
+
+    return {
+        allowDots: typeof opts.allowDots === 'undefined' ? defaults.allowDots : !!opts.allowDots,
+        allowPrototypes: typeof opts.allowPrototypes === 'boolean' ? opts.allowPrototypes : defaults.allowPrototypes,
+        arrayLimit: typeof opts.arrayLimit === 'number' ? opts.arrayLimit : defaults.arrayLimit,
+        charset: charset,
+        charsetSentinel: typeof opts.charsetSentinel === 'boolean' ? opts.charsetSentinel : defaults.charsetSentinel,
+        comma: typeof opts.comma === 'boolean' ? opts.comma : defaults.comma,
+        decoder: typeof opts.decoder === 'function' ? opts.decoder : defaults.decoder,
+        delimiter: typeof opts.delimiter === 'string' || utils.isRegExp(opts.delimiter) ? opts.delimiter : defaults.delimiter,
+        // eslint-disable-next-line no-implicit-coercion, no-extra-parens
+        depth: (typeof opts.depth === 'number' || opts.depth === false) ? +opts.depth : defaults.depth,
+        ignoreQueryPrefix: opts.ignoreQueryPrefix === true,
+        interpretNumericEntities: typeof opts.interpretNumericEntities === 'boolean' ? opts.interpretNumericEntities : defaults.interpretNumericEntities,
+        parameterLimit: typeof opts.parameterLimit === 'number' ? opts.parameterLimit : defaults.parameterLimit,
+        parseArrays: opts.parseArrays !== false,
+        plainObjects: typeof opts.plainObjects === 'boolean' ? opts.plainObjects : defaults.plainObjects,
+        strictNullHandling: typeof opts.strictNullHandling === 'boolean' ? opts.strictNullHandling : defaults.strictNullHandling
+    };
+};
+
+module.exports = function (str, opts) {
+    var options = normalizeParseOptions(opts);
+
+    if (str === '' || str === null || typeof str === 'undefined') {
+        return options.plainObjects ? Object.create(null) : {};
+    }
+
+    var tempObj = typeof str === 'string' ? parseValues(str, options) : str;
+    var obj = options.plainObjects ? Object.create(null) : {};
+
+    // Iterate over the keys and setup the new object
+
+    var keys = Object.keys(tempObj);
+    for (var i = 0; i < keys.length; ++i) {
+        var key = keys[i];
+        var newObj = parseKeys(key, tempObj[key], options, typeof str === 'string');
+        obj = utils.merge(obj, newObj, options);
+    }
+
+    return utils.compact(obj);
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/ziggy-js/node_modules/qs/lib/stringify.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/ziggy-js/node_modules/qs/lib/stringify.js ***!
+  \****************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+
+
+var utils = __webpack_require__(/*! ./utils */ "./node_modules/ziggy-js/node_modules/qs/lib/utils.js");
+var formats = __webpack_require__(/*! ./formats */ "./node_modules/ziggy-js/node_modules/qs/lib/formats.js");
+var has = Object.prototype.hasOwnProperty;
+
+var arrayPrefixGenerators = {
+    brackets: function brackets(prefix) {
+        return prefix + '[]';
+    },
+    comma: 'comma',
+    indices: function indices(prefix, key) {
+        return prefix + '[' + key + ']';
+    },
+    repeat: function repeat(prefix) {
+        return prefix;
+    }
+};
+
+var isArray = Array.isArray;
+var split = String.prototype.split;
+var push = Array.prototype.push;
+var pushToArray = function (arr, valueOrArray) {
+    push.apply(arr, isArray(valueOrArray) ? valueOrArray : [valueOrArray]);
+};
+
+var toISO = Date.prototype.toISOString;
+
+var defaultFormat = formats['default'];
+var defaults = {
+    addQueryPrefix: false,
+    allowDots: false,
+    charset: 'utf-8',
+    charsetSentinel: false,
+    delimiter: '&',
+    encode: true,
+    encoder: utils.encode,
+    encodeValuesOnly: false,
+    format: defaultFormat,
+    formatter: formats.formatters[defaultFormat],
+    // deprecated
+    indices: false,
+    serializeDate: function serializeDate(date) {
+        return toISO.call(date);
+    },
+    skipNulls: false,
+    strictNullHandling: false
+};
+
+var isNonNullishPrimitive = function isNonNullishPrimitive(v) {
+    return typeof v === 'string'
+        || typeof v === 'number'
+        || typeof v === 'boolean'
+        || typeof v === 'symbol'
+        || typeof v === 'bigint';
+};
+
+var stringify = function stringify(
+    object,
+    prefix,
+    generateArrayPrefix,
+    strictNullHandling,
+    skipNulls,
+    encoder,
+    filter,
+    sort,
+    allowDots,
+    serializeDate,
+    format,
+    formatter,
+    encodeValuesOnly,
+    charset
+) {
+    var obj = object;
+    if (typeof filter === 'function') {
+        obj = filter(prefix, obj);
+    } else if (obj instanceof Date) {
+        obj = serializeDate(obj);
+    } else if (generateArrayPrefix === 'comma' && isArray(obj)) {
+        obj = utils.maybeMap(obj, function (value) {
+            if (value instanceof Date) {
+                return serializeDate(value);
+            }
+            return value;
+        });
+    }
+
+    if (obj === null) {
+        if (strictNullHandling) {
+            return encoder && !encodeValuesOnly ? encoder(prefix, defaults.encoder, charset, 'key', format) : prefix;
+        }
+
+        obj = '';
+    }
+
+    if (isNonNullishPrimitive(obj) || utils.isBuffer(obj)) {
+        if (encoder) {
+            var keyValue = encodeValuesOnly ? prefix : encoder(prefix, defaults.encoder, charset, 'key', format);
+            if (generateArrayPrefix === 'comma' && encodeValuesOnly) {
+                var valuesArray = split.call(String(obj), ',');
+                var valuesJoined = '';
+                for (var i = 0; i < valuesArray.length; ++i) {
+                    valuesJoined += (i === 0 ? '' : ',') + formatter(encoder(valuesArray[i], defaults.encoder, charset, 'value', format));
+                }
+                return [formatter(keyValue) + '=' + valuesJoined];
+            }
+            return [formatter(keyValue) + '=' + formatter(encoder(obj, defaults.encoder, charset, 'value', format))];
+        }
+        return [formatter(prefix) + '=' + formatter(String(obj))];
+    }
+
+    var values = [];
+
+    if (typeof obj === 'undefined') {
+        return values;
+    }
+
+    var objKeys;
+    if (generateArrayPrefix === 'comma' && isArray(obj)) {
+        // we need to join elements in
+        objKeys = [{ value: obj.length > 0 ? obj.join(',') || null : void undefined }];
+    } else if (isArray(filter)) {
+        objKeys = filter;
+    } else {
+        var keys = Object.keys(obj);
+        objKeys = sort ? keys.sort(sort) : keys;
+    }
+
+    for (var j = 0; j < objKeys.length; ++j) {
+        var key = objKeys[j];
+        var value = typeof key === 'object' && typeof key.value !== 'undefined' ? key.value : obj[key];
+
+        if (skipNulls && value === null) {
+            continue;
+        }
+
+        var keyPrefix = isArray(obj)
+            ? typeof generateArrayPrefix === 'function' ? generateArrayPrefix(prefix, key) : prefix
+            : prefix + (allowDots ? '.' + key : '[' + key + ']');
+
+        pushToArray(values, stringify(
+            value,
+            keyPrefix,
+            generateArrayPrefix,
+            strictNullHandling,
+            skipNulls,
+            encoder,
+            filter,
+            sort,
+            allowDots,
+            serializeDate,
+            format,
+            formatter,
+            encodeValuesOnly,
+            charset
+        ));
+    }
+
+    return values;
+};
+
+var normalizeStringifyOptions = function normalizeStringifyOptions(opts) {
+    if (!opts) {
+        return defaults;
+    }
+
+    if (opts.encoder !== null && typeof opts.encoder !== 'undefined' && typeof opts.encoder !== 'function') {
+        throw new TypeError('Encoder has to be a function.');
+    }
+
+    var charset = opts.charset || defaults.charset;
+    if (typeof opts.charset !== 'undefined' && opts.charset !== 'utf-8' && opts.charset !== 'iso-8859-1') {
+        throw new TypeError('The charset option must be either utf-8, iso-8859-1, or undefined');
+    }
+
+    var format = formats['default'];
+    if (typeof opts.format !== 'undefined') {
+        if (!has.call(formats.formatters, opts.format)) {
+            throw new TypeError('Unknown format option provided.');
+        }
+        format = opts.format;
+    }
+    var formatter = formats.formatters[format];
+
+    var filter = defaults.filter;
+    if (typeof opts.filter === 'function' || isArray(opts.filter)) {
+        filter = opts.filter;
+    }
+
+    return {
+        addQueryPrefix: typeof opts.addQueryPrefix === 'boolean' ? opts.addQueryPrefix : defaults.addQueryPrefix,
+        allowDots: typeof opts.allowDots === 'undefined' ? defaults.allowDots : !!opts.allowDots,
+        charset: charset,
+        charsetSentinel: typeof opts.charsetSentinel === 'boolean' ? opts.charsetSentinel : defaults.charsetSentinel,
+        delimiter: typeof opts.delimiter === 'undefined' ? defaults.delimiter : opts.delimiter,
+        encode: typeof opts.encode === 'boolean' ? opts.encode : defaults.encode,
+        encoder: typeof opts.encoder === 'function' ? opts.encoder : defaults.encoder,
+        encodeValuesOnly: typeof opts.encodeValuesOnly === 'boolean' ? opts.encodeValuesOnly : defaults.encodeValuesOnly,
+        filter: filter,
+        format: format,
+        formatter: formatter,
+        serializeDate: typeof opts.serializeDate === 'function' ? opts.serializeDate : defaults.serializeDate,
+        skipNulls: typeof opts.skipNulls === 'boolean' ? opts.skipNulls : defaults.skipNulls,
+        sort: typeof opts.sort === 'function' ? opts.sort : null,
+        strictNullHandling: typeof opts.strictNullHandling === 'boolean' ? opts.strictNullHandling : defaults.strictNullHandling
+    };
+};
+
+module.exports = function (object, opts) {
+    var obj = object;
+    var options = normalizeStringifyOptions(opts);
+
+    var objKeys;
+    var filter;
+
+    if (typeof options.filter === 'function') {
+        filter = options.filter;
+        obj = filter('', obj);
+    } else if (isArray(options.filter)) {
+        filter = options.filter;
+        objKeys = filter;
+    }
+
+    var keys = [];
+
+    if (typeof obj !== 'object' || obj === null) {
+        return '';
+    }
+
+    var arrayFormat;
+    if (opts && opts.arrayFormat in arrayPrefixGenerators) {
+        arrayFormat = opts.arrayFormat;
+    } else if (opts && 'indices' in opts) {
+        arrayFormat = opts.indices ? 'indices' : 'repeat';
+    } else {
+        arrayFormat = 'indices';
+    }
+
+    var generateArrayPrefix = arrayPrefixGenerators[arrayFormat];
+
+    if (!objKeys) {
+        objKeys = Object.keys(obj);
+    }
+
+    if (options.sort) {
+        objKeys.sort(options.sort);
+    }
+
+    for (var i = 0; i < objKeys.length; ++i) {
+        var key = objKeys[i];
+
+        if (options.skipNulls && obj[key] === null) {
+            continue;
+        }
+        pushToArray(keys, stringify(
+            obj[key],
+            key,
+            generateArrayPrefix,
+            options.strictNullHandling,
+            options.skipNulls,
+            options.encode ? options.encoder : null,
+            options.filter,
+            options.sort,
+            options.allowDots,
+            options.serializeDate,
+            options.format,
+            options.formatter,
+            options.encodeValuesOnly,
+            options.charset
+        ));
+    }
+
+    var joined = keys.join(options.delimiter);
+    var prefix = options.addQueryPrefix === true ? '?' : '';
+
+    if (options.charsetSentinel) {
+        if (options.charset === 'iso-8859-1') {
+            // encodeURIComponent('&#10003;'), the "numeric entity" representation of a checkmark
+            prefix += 'utf8=%26%2310003%3B&';
+        } else {
+            // encodeURIComponent('✓')
+            prefix += 'utf8=%E2%9C%93&';
+        }
+    }
+
+    return joined.length > 0 ? prefix + joined : '';
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/ziggy-js/node_modules/qs/lib/utils.js":
+/*!************************************************************!*\
+  !*** ./node_modules/ziggy-js/node_modules/qs/lib/utils.js ***!
+  \************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+
+
+var formats = __webpack_require__(/*! ./formats */ "./node_modules/ziggy-js/node_modules/qs/lib/formats.js");
+
+var has = Object.prototype.hasOwnProperty;
+var isArray = Array.isArray;
+
+var hexTable = (function () {
+    var array = [];
+    for (var i = 0; i < 256; ++i) {
+        array.push('%' + ((i < 16 ? '0' : '') + i.toString(16)).toUpperCase());
+    }
+
+    return array;
 }());
 
+var compactQueue = function compactQueue(queue) {
+    while (queue.length > 1) {
+        var item = queue.pop();
+        var obj = item.obj[item.prop];
 
+        if (isArray(obj)) {
+            var compacted = [];
 
-/***/ }),
+            for (var j = 0; j < obj.length; ++j) {
+                if (typeof obj[j] !== 'undefined') {
+                    compacted.push(obj[j]);
+                }
+            }
 
-/***/ "./node_modules/ziggy/node_modules/xtend/has-keys.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/ziggy/node_modules/xtend/has-keys.js ***!
-  \***********************************************************/
-/***/ ((module) => {
-
-module.exports = hasKeys
-
-function hasKeys(source) {
-    return source !== null &&
-        (typeof source === "object" ||
-        typeof source === "function")
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/ziggy/node_modules/xtend/index.js":
-/*!********************************************************!*\
-  !*** ./node_modules/ziggy/node_modules/xtend/index.js ***!
-  \********************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var Keys = __webpack_require__(/*! object-keys */ "./node_modules/ziggy/node_modules/object-keys/index.js")
-var hasKeys = __webpack_require__(/*! ./has-keys */ "./node_modules/ziggy/node_modules/xtend/has-keys.js")
-
-module.exports = extend
-
-function extend() {
-    var target = {}
-
-    for (var i = 0; i < arguments.length; i++) {
-        var source = arguments[i]
-
-        if (!hasKeys(source)) {
-            continue
+            item.obj[item.prop] = compacted;
         }
+    }
+};
 
-        var keys = Keys(source)
-
-        for (var j = 0; j < keys.length; j++) {
-            var name = keys[j]
-            target[name] = source[name]
+var arrayToObject = function arrayToObject(source, options) {
+    var obj = options && options.plainObjects ? Object.create(null) : {};
+    for (var i = 0; i < source.length; ++i) {
+        if (typeof source[i] !== 'undefined') {
+            obj[i] = source[i];
         }
     }
 
-    return target
-}
+    return obj;
+};
+
+var merge = function merge(target, source, options) {
+    /* eslint no-param-reassign: 0 */
+    if (!source) {
+        return target;
+    }
+
+    if (typeof source !== 'object') {
+        if (isArray(target)) {
+            target.push(source);
+        } else if (target && typeof target === 'object') {
+            if ((options && (options.plainObjects || options.allowPrototypes)) || !has.call(Object.prototype, source)) {
+                target[source] = true;
+            }
+        } else {
+            return [target, source];
+        }
+
+        return target;
+    }
+
+    if (!target || typeof target !== 'object') {
+        return [target].concat(source);
+    }
+
+    var mergeTarget = target;
+    if (isArray(target) && !isArray(source)) {
+        mergeTarget = arrayToObject(target, options);
+    }
+
+    if (isArray(target) && isArray(source)) {
+        source.forEach(function (item, i) {
+            if (has.call(target, i)) {
+                var targetItem = target[i];
+                if (targetItem && typeof targetItem === 'object' && item && typeof item === 'object') {
+                    target[i] = merge(targetItem, item, options);
+                } else {
+                    target.push(item);
+                }
+            } else {
+                target[i] = item;
+            }
+        });
+        return target;
+    }
+
+    return Object.keys(source).reduce(function (acc, key) {
+        var value = source[key];
+
+        if (has.call(acc, key)) {
+            acc[key] = merge(acc[key], value, options);
+        } else {
+            acc[key] = value;
+        }
+        return acc;
+    }, mergeTarget);
+};
+
+var assign = function assignSingleSource(target, source) {
+    return Object.keys(source).reduce(function (acc, key) {
+        acc[key] = source[key];
+        return acc;
+    }, target);
+};
+
+var decode = function (str, decoder, charset) {
+    var strWithoutPlus = str.replace(/\+/g, ' ');
+    if (charset === 'iso-8859-1') {
+        // unescape never throws, no try...catch needed:
+        return strWithoutPlus.replace(/%[0-9a-f]{2}/gi, unescape);
+    }
+    // utf-8
+    try {
+        return decodeURIComponent(strWithoutPlus);
+    } catch (e) {
+        return strWithoutPlus;
+    }
+};
+
+var encode = function encode(str, defaultEncoder, charset, kind, format) {
+    // This code was originally written by Brian White (mscdex) for the io.js core querystring library.
+    // It has been adapted here for stricter adherence to RFC 3986
+    if (str.length === 0) {
+        return str;
+    }
+
+    var string = str;
+    if (typeof str === 'symbol') {
+        string = Symbol.prototype.toString.call(str);
+    } else if (typeof str !== 'string') {
+        string = String(str);
+    }
+
+    if (charset === 'iso-8859-1') {
+        return escape(string).replace(/%u[0-9a-f]{4}/gi, function ($0) {
+            return '%26%23' + parseInt($0.slice(2), 16) + '%3B';
+        });
+    }
+
+    var out = '';
+    for (var i = 0; i < string.length; ++i) {
+        var c = string.charCodeAt(i);
+
+        if (
+            c === 0x2D // -
+            || c === 0x2E // .
+            || c === 0x5F // _
+            || c === 0x7E // ~
+            || (c >= 0x30 && c <= 0x39) // 0-9
+            || (c >= 0x41 && c <= 0x5A) // a-z
+            || (c >= 0x61 && c <= 0x7A) // A-Z
+            || (format === formats.RFC1738 && (c === 0x28 || c === 0x29)) // ( )
+        ) {
+            out += string.charAt(i);
+            continue;
+        }
+
+        if (c < 0x80) {
+            out = out + hexTable[c];
+            continue;
+        }
+
+        if (c < 0x800) {
+            out = out + (hexTable[0xC0 | (c >> 6)] + hexTable[0x80 | (c & 0x3F)]);
+            continue;
+        }
+
+        if (c < 0xD800 || c >= 0xE000) {
+            out = out + (hexTable[0xE0 | (c >> 12)] + hexTable[0x80 | ((c >> 6) & 0x3F)] + hexTable[0x80 | (c & 0x3F)]);
+            continue;
+        }
+
+        i += 1;
+        c = 0x10000 + (((c & 0x3FF) << 10) | (string.charCodeAt(i) & 0x3FF));
+        /* eslint operator-linebreak: [2, "before"] */
+        out += hexTable[0xF0 | (c >> 18)]
+            + hexTable[0x80 | ((c >> 12) & 0x3F)]
+            + hexTable[0x80 | ((c >> 6) & 0x3F)]
+            + hexTable[0x80 | (c & 0x3F)];
+    }
+
+    return out;
+};
+
+var compact = function compact(value) {
+    var queue = [{ obj: { o: value }, prop: 'o' }];
+    var refs = [];
+
+    for (var i = 0; i < queue.length; ++i) {
+        var item = queue[i];
+        var obj = item.obj[item.prop];
+
+        var keys = Object.keys(obj);
+        for (var j = 0; j < keys.length; ++j) {
+            var key = keys[j];
+            var val = obj[key];
+            if (typeof val === 'object' && val !== null && refs.indexOf(val) === -1) {
+                queue.push({ obj: obj, prop: key });
+                refs.push(val);
+            }
+        }
+    }
+
+    compactQueue(queue);
+
+    return value;
+};
+
+var isRegExp = function isRegExp(obj) {
+    return Object.prototype.toString.call(obj) === '[object RegExp]';
+};
+
+var isBuffer = function isBuffer(obj) {
+    if (!obj || typeof obj !== 'object') {
+        return false;
+    }
+
+    return !!(obj.constructor && obj.constructor.isBuffer && obj.constructor.isBuffer(obj));
+};
+
+var combine = function combine(a, b) {
+    return [].concat(a, b);
+};
+
+var maybeMap = function maybeMap(val, fn) {
+    if (isArray(val)) {
+        var mapped = [];
+        for (var i = 0; i < val.length; i += 1) {
+            mapped.push(fn(val[i]));
+        }
+        return mapped;
+    }
+    return fn(val);
+};
+
+module.exports = {
+    arrayToObject: arrayToObject,
+    assign: assign,
+    combine: combine,
+    compact: compact,
+    decode: decode,
+    encode: encode,
+    isBuffer: isBuffer,
+    isRegExp: isRegExp,
+    maybeMap: maybeMap,
+    merge: merge
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/ziggy-js/dist/index.js":
+/*!*********************************************!*\
+  !*** ./node_modules/ziggy-js/dist/index.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ZiggyVue: () => (/* binding */ o),
+/* harmony export */   route: () => (/* binding */ s),
+/* harmony export */   useRoute: () => (/* binding */ u)
+/* harmony export */ });
+/* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! qs */ "./node_modules/ziggy-js/node_modules/qs/lib/index.js");
+function e(){return e=Object.assign?Object.assign.bind():function(t){for(var r=1;r<arguments.length;r++){var e=arguments[r];for(var i in e)Object.prototype.hasOwnProperty.call(e,i)&&(t[i]=e[i])}return t},e.apply(this,arguments)}class i{constructor(t,r,e){var i,n;this.name=t,this.definition=r,this.bindings=null!=(i=r.bindings)?i:{},this.wheres=null!=(n=r.wheres)?n:{},this.config=e}get template(){const t=`${this.origin}/${this.definition.uri}`.replace(/\/+$/,"");return""===t?"/":t}get origin(){return this.config.absolute?this.definition.domain?`${this.config.url.match(/^\w+:\/\//)[0]}${this.definition.domain}${this.config.port?`:${this.config.port}`:""}`:this.config.url:""}get parameterSegments(){var t,r;return null!=(t=null==(r=this.template.match(/{[^}?]+\??}/g))?void 0:r.map(t=>({name:t.replace(/{|\??}/g,""),required:!/\?}$/.test(t)})))?t:[]}matchesUrl(r){if(!this.definition.methods.includes("GET"))return!1;const e=this.template.replace(/(\/?){([^}?]*)(\??)}/g,(t,r,e,i)=>{var n;const s=`(?<${e}>${(null==(n=this.wheres[e])?void 0:n.replace(/(^\^)|(\$$)/g,""))||"[^/?]+"})`;return i?`(${r}${s})?`:`${r}${s}`}).replace(/^\w+:\/\//,""),[i,n]=r.replace(/^\w+:\/\//,"").split("?"),s=new RegExp(`^${e}/?$`).exec(decodeURI(i));if(s){for(const t in s.groups)s.groups[t]="string"==typeof s.groups[t]?decodeURIComponent(s.groups[t]):s.groups[t];return{params:s.groups,query:(0,qs__WEBPACK_IMPORTED_MODULE_0__.parse)(n)}}return!1}compile(t){return this.parameterSegments.length?this.template.replace(/{([^}?]+)(\??)}/g,(r,e,i)=>{var n,s;if(!i&&[null,void 0].includes(t[e]))throw new Error(`Ziggy error: '${e}' parameter is required for route '${this.name}'.`);if(this.wheres[e]&&!new RegExp(`^${i?`(${this.wheres[e]})?`:this.wheres[e]}$`).test(null!=(s=t[e])?s:""))throw new Error(`Ziggy error: '${e}' parameter '${t[e]}' does not match required format '${this.wheres[e]}' for route '${this.name}'.`);return encodeURI(null!=(n=t[e])?n:"").replace(/%7C/g,"|").replace(/%25/g,"%").replace(/\$/g,"%24")}).replace(this.config.absolute?/(\.[^/]+?)(\/\/)/:/(^)(\/\/)/,"$1/").replace(/\/+$/,""):this.template}}class n extends String{constructor(t,r,n=!0,s){if(super(),this.t=null!=s?s:"undefined"!=typeof Ziggy?Ziggy:null==globalThis?void 0:globalThis.Ziggy,this.t=e({},this.t,{absolute:n}),t){if(!this.t.routes[t])throw new Error(`Ziggy error: route '${t}' is not in the route list.`);this.i=new i(t,this.t.routes[t],this.t),this.o=this.u(r)}}toString(){const t=Object.keys(this.o).filter(t=>!this.i.parameterSegments.some(({name:r})=>r===t)).filter(t=>"_query"!==t).reduce((t,r)=>e({},t,{[r]:this.o[r]}),{});return this.i.compile(this.o)+(0,qs__WEBPACK_IMPORTED_MODULE_0__.stringify)(e({},t,this.o._query),{addQueryPrefix:!0,arrayFormat:"indices",encodeValuesOnly:!0,skipNulls:!0,encoder:(t,r)=>"boolean"==typeof t?Number(t):r(t)})}h(t){t?this.t.absolute&&t.startsWith("/")&&(t=this.l().host+t):t=this.m();let r={};const[n,s]=Object.entries(this.t.routes).find(([e,n])=>r=new i(e,n,this.t).matchesUrl(t))||[void 0,void 0];return e({name:n},r,{route:s})}m(){const{host:t,pathname:r,search:e}=this.l();return(this.t.absolute?t+r:r.replace(this.t.url.replace(/^\w*:\/\/[^/]+/,""),"").replace(/^\/+/,"/"))+e}current(t,r){const{name:n,params:s,query:o,route:u}=this.h();if(!t)return n;const h=new RegExp(`^${t.replace(/\./g,"\\.").replace(/\*/g,".*")}$`).test(n);if([null,void 0].includes(r)||!h)return h;const a=new i(n,u,this.t);r=this.u(r,a);const l=e({},s,o);if(Object.values(r).every(t=>!t)&&!Object.values(l).some(t=>void 0!==t))return!0;const c=(t,r)=>Object.entries(t).every(([t,e])=>Array.isArray(e)&&Array.isArray(r[t])?e.every(e=>r[t].includes(e)):"object"==typeof e&&"object"==typeof r[t]&&null!==e&&null!==r[t]?c(e,r[t]):r[t]==e);return c(r,l)}l(){var t,r,e,i,n,s;const{host:o="",pathname:u="",search:h=""}="undefined"!=typeof window?window.location:{};return{host:null!=(t=null==(r=this.t.location)?void 0:r.host)?t:o,pathname:null!=(e=null==(i=this.t.location)?void 0:i.pathname)?e:u,search:null!=(n=null==(s=this.t.location)?void 0:s.search)?n:h}}get params(){const{params:t,query:r}=this.h();return e({},t,r)}get routeParams(){return this.h().params}get queryParams(){return this.h().query}has(t){return Object.keys(this.t.routes).includes(t)}u(t={},r=this.i){null!=t||(t={}),t=["string","number"].includes(typeof t)?[t]:t;const i=r.parameterSegments.filter(({name:t})=>!this.t.defaults[t]);return Array.isArray(t)?t=t.reduce((t,r,n)=>e({},t,i[n]?{[i[n].name]:r}:"object"==typeof r?r:{[r]:""}),{}):1!==i.length||t[i[0].name]||!t.hasOwnProperty(Object.values(r.bindings)[0])&&!t.hasOwnProperty("id")||(t={[i[0].name]:t}),e({},this.p(r),this.$(t,r))}p(t){return t.parameterSegments.filter(({name:t})=>this.t.defaults[t]).reduce((t,{name:r},i)=>e({},t,{[r]:this.t.defaults[r]}),{})}$(t,{bindings:r,parameterSegments:i}){return Object.entries(t).reduce((t,[n,s])=>{if(!s||"object"!=typeof s||Array.isArray(s)||!i.some(({name:t})=>t===n))return e({},t,{[n]:s});if(!s.hasOwnProperty(r[n])){if(!s.hasOwnProperty("id"))throw new Error(`Ziggy error: object passed as '${n}' parameter is missing route model binding key '${r[n]}'.`);r[n]="id"}return e({},t,{[n]:s[r[n]]})},{})}valueOf(){return this.toString()}}function s(t,r,e,i){const s=new n(t,r,e,i);return t?s.toString():s}const o={install(t,r){const e=(t,e,i,n=r)=>s(t,e,i,n);parseInt(t.version)>2?(t.config.globalProperties.route=e,t.provide("route",e)):t.mixin({methods:{route:e}})}};function u(t){if(!t&&!globalThis.Ziggy&&"undefined"==typeof Ziggy)throw new Error("Ziggy error: missing configuration. Ensure that a `Ziggy` variable is defined globally or pass a config object into the useRoute hook.");return(r,e,i,n=t)=>s(r,e,i,n)}
 
 
 /***/ })
@@ -18299,16 +14867,13 @@ function extend() {
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			id: moduleId,
-/******/ 			loaded: false,
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
-/******/ 		// Flag the module as loaded
-/******/ 		module.loaded = true;
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
@@ -18316,9 +14881,6 @@ function extend() {
 /******/ 	
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = __webpack_modules__;
-/******/ 	
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = __webpack_module_cache__;
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/chunk loaded */
@@ -18350,18 +14912,6 @@ function extend() {
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -18461,9 +15011,9 @@ function extend() {
 /******/ 	
 /************************************************************************/
 /******/ 	
-/******/ 	// module cache are used so entry inlining is disabled
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
 /******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/css/app.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
