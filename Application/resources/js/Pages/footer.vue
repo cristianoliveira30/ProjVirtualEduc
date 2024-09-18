@@ -78,4 +78,4 @@
         </div>
     </div>
 </template>
-<script> export default { name: 'footer'};</script>
+<script> export default { name: 'footercomponent'};</script>
