@@ -232,12 +232,7 @@ function removerEspaços(id) {
 }
 
 // Remover espaçõs do campo nome de usuário
-removerEspaços("#nomeusu");
-
-// Remover espaçõs do campo nome completo
-removerEspaços("#nomecomp");
-
-
+removerEspaços("#nomeusu"); //removi essa função do nomecomp pois já ajustei no back, vai ficar só no username agr
 
 $("#email").validate({
 	rules: {

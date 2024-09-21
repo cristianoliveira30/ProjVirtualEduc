@@ -18,17 +18,29 @@ class VirtualController extends Controller
             return view('home', ['authUser' => $authUser]);
         }
         else {
-            return view('cadastro');
+            return view('auth.cadastro');
         }
     }
     public function login(){
-        // dd(Auth::user());
-        return view('login');
+        if (Auth::check()) {
+            $authUser = Auth::user();
+            return view('home', ['authUser' => $authUser]);
+        }
+        return view('auth.login');
     }
     public function home(){
         if (Auth::check()) {
             $authUser = Auth::user();
             return view('home', ['authUser' => $authUser]);
+        }
+        else {
+            return view('login');
+        }
+    }
+    public function confinfo(){
+        if (Auth::check()) {
+            $authUser = Auth::user();
+            return view('confinfo', ['authUser' => $authUser]);
         }
         else {
             return view('login');

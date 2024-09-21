@@ -26,16 +26,20 @@ use App\Models\User;
 |
 */
 
+// páginas disponíveis sem login
 Route::get('/', [VirtualController::class, 'index'])->name('index');
 Route::get('/cadastro', [VirtualController::class, 'cadastro'])->name('cadastro');
 Route::post('/cadastro', [AuthController::class, 'cadastroAction'])->name('cadastro.action');
 Route::get('/login', [VirtualController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'loginAction'])->name('login.action');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
-
-Route::get('/home', [VirtualController::class, 'home'])->name('home');
 Route::get('/testevue', [VirtualController::class, 'testevue'])->name('testevue');
 
+// páginas disponíveis somente com login
+Route::get('/home', [VirtualController::class, 'home'])->name('home');
+
+// páginas em testes
+Route::get('/confinfo', [VirtualController::class, 'confinfo'])->name('confinfo')->name('confinfo');
 Route::get('/Mail/sendmail', [AuthMailController::class,  'SendMail'])->name('ReSenderMail');
 
 // daqui para baixo são as rotas de recuperação de senha

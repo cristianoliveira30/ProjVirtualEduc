@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Clientes;
 use App\Models\User;
+use Dotenv\Validator as DotenvValidator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -48,7 +49,7 @@ class AuthController extends Controller
             'nomeusu' => 'required|string',
             'nomecomp' => 'required|string',
             'email' => 'required|email|unique:users,email',
-            'password' => 'required|min:6', // Alterado para password
+            'password' => 'required|min:6',
             'telefone' => 'required|min:10',
             'escolaridade' => 'required|alpha',
             'cpf' => 'required|string',
@@ -62,7 +63,10 @@ class AuthController extends Controller
         if ($validator->fails()) {
             return response()->json($validator->errors(), 422);
         } else {
-            $data['password'] = Hash::make($data['password']); // Certifique-se de que a senha está sendo hashada
+            $data['password'] = Hash::make($data['password']);
+            $data['email'] = Hash::make($data['email']);
+            $data['cpf'] = Hash::make($data['cpf']);
+            $data['rg'] = Hash::make($data['rg']);
 
             $userCreated = User::create($data);
 
@@ -75,5 +79,22 @@ class AuthController extends Controller
         return redirect()->route('index');
     }
 
+    public function confInfo(Request $request) {
+        $jsonData = $request->getContent();
+        $data = json_decode($jsonData, true);
+
+        $validator = Validator::make($data, [
+            'segemail' => 'segemail',
+            'fotodocumento' => 'fotodocumento',
+            'fotorosto' => 'fotorosto',
+            'interesses' => 'ineresses'
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json($validator->errors(), 422);
+        } else {
+            return response()->json(['success' => true, 'redirect' => route('home'), 'message' => $data]);
+        }
+    }
     
 }
