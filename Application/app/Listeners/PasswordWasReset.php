@@ -2,6 +2,7 @@
 
 namespace App\Listeners;
 
+use Illuminate\Auth\Events\Login;
 use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
@@ -26,6 +27,6 @@ class PasswordWasReset
      */
     public function handle(PasswordReset $event)
     {
-        dd($event->user->email);
+        redirect(route('login'));
     }
 }
