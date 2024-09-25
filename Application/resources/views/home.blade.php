@@ -14,7 +14,7 @@
 </head>
 <body>
 	@routes
-	<header id="header">]
+	<header id="header">
 		@verbatim
 		@endverbatim
 	</header>

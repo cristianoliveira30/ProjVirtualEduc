@@ -45,12 +45,9 @@ class PasswordResetNotification extends Notification
             ->markdown('vendor.notifications.email')
             ->subject('Notificação de Redefinição de Senha')
             ->greeting('Olá!')
-            ->line('Você está recebendo este e-mail porque recebemos uma solicitação de redefinição de senha para sua conta.')
-            ->action('Redefinir Senha', $this->url)
+            ->action('Redefinir Senha', url($this->url))
             ->line('Este link de redefinição de senha expirará em 60 minutos.')
             ->line('Se você não solicitou a redefinição de senha, nenhuma ação adicional é necessária.')
-            ->line('Se você estiver com problemas para clicar no botão "Redefinir Senha", copie e cole a URL abaixo no seu navegador:')
-            ->line(url($this->url))
             ->salutation('Atenciosamente, ProjVirtualEduc')
             ->from('VEducProjectSuporte@gmail.com', 'ProjVirtualEduc Suporte');
     }
