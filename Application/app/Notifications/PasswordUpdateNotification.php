@@ -2,24 +2,32 @@
 
 namespace App\Notifications;
 
+use App\Models\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class PasswordResetNotification extends Notification
+class PasswordUpdateNotification extends Notification
 {
     use Queueable;
 
-    public $url;
+    protected User $user;
+    protected $lines = [
+        'Estamos entrando em contato para informar que sua senha foi alterada com sucesso.',
+        'Caso você não tenha alterado sua senha sugerimos que faça uma verificação de vírus',
+        'e que entre em contato com o suporte.',
+
+    ];
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct($url)
+    public function __construct($user)
     {
-        $this->url = $url;
+        $this->user = $user;
     }
 
     /**
@@ -42,16 +50,13 @@ class PasswordResetNotification extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->markdown('vendor.notifications.email')
-            ->subject('Notificação de Redefinição de Senha')
-            ->greeting('Olá estudante!')
-            ->action('Redefinir Senha', url($this->url))
-            ->line('Este link de redefinição de senha expirará em 60 minutos.')
-            ->line('Se você não solicitou a redefinição de senha, nenhuma ação adicional é necessária.')
-            ->salutation('Atenciosamente, ProjVirtualEduc')
-            ->from('VEducProjectSuporte@gmail.com', 'ProjVirtualEduc Suporte');
+                    ->subject('Alteração de Senha')
+                    ->greeting('Olá, ' . $this->user->nomeusu)
+                    ->line('Acabamos de redefinir a usa senha, e para todo o caso devemos avisar:')
+                    ->lines($this->lines)
+                    ->action('Fazer Login', url(route('login')))
+                    ->salutation('Muito obrigado por sua confiança a equipe VirtualEduc agradece o apoio! :)');
     }
-
 
     /**
      * Get the array representation of the notification.

@@ -19,14 +19,14 @@
 <body>
     <div class="login-card mb-5 p-5 position-absolute top-50 start-50 translate-middle">
         @php dump(session()->all()); @endphp
-        @if(session()->has('status'))
-            <span class="text text-success">{{ session()->get('status') }}</span>
-        @endif    
         <div class="card-header">
             <div class="log">Recuperar Senha</div>
         </div>
         <form class="recsenha" method="post" action="{{ route('password.email') }}" enctype="multipart/form" id="login">
             @csrf
+            @if(session()->has('status'))
+                <span class="text text-success">{{ session()->get('status') }}</span>
+            @endif    
             @error('email')
                 <div class="text text-danger">{{ $message }}</div>
             @enderror

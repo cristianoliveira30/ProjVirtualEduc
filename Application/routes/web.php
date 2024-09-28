@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Models\User;
+use App\Notifications\PasswordUpdateNotification;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,7 +41,6 @@ Route::get('/home', [VirtualController::class, 'home'])->name('home');
 
 // páginas em testes
 Route::get('/confinfo', [VirtualController::class, 'confinfo'])->name('confinfo')->name('confinfo');
-Route::get('/Mail/sendmail', [AuthMailController::class,  'SendMail'])->name('ReSenderMail');
 
 // daqui para baixo são as rotas de recuperação de senha
 
@@ -80,12 +80,14 @@ Route::post('/reset-password', function (Request $request) {
         function (User $user, string $password) {
             $user->password = Hash::make($password);
             $user->save();
- 
+            
             event(new PasswordReset($user));
+            
+            $user->notify(new PasswordUpdateNotification($user));
         }
     );
- 
+    
     return $status === Password::PASSWORD_RESET
-                ? redirect()->route('login')->with('status', __($status))
-                : back()->withErrors(['email' => [__($status)]]);
+        ? redirect()->route('login')->with('status', __($status))
+        : back()->withErrors(['email' => [__($status)]]);
 })->middleware('guest')->name('password.update');
