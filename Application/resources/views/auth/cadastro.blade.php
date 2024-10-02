@@ -185,15 +185,17 @@ $('#cadastro').on('submit', function(event) {
 		data: jsonData,
 		dataType: 'json',
 		success: function(response) {
-			console.log(response.message.json());
+			console.log((response.message));
 			Swal.close();
 			if (response) {
 				Swal.fire({
 					icon: "success",
 					title: "Concluído",
 					text: "Cadastro bem sucedido!"
-				});
-				window.location.href = response.redirect;
+				}).then(() => {
+						// Redireciona para a nova página
+						window.location.href = response.redirect;
+					});
 			} else {
 				Swal.fire({
 					icon: 'error',

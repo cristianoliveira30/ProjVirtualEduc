@@ -93,7 +93,15 @@
 				Swal.close();
 
 				// Verifica se a resposta é verdadeira
-				if (response) {
+				if (response.message == 'Senha ou Email incorretos') {
+					// Exibe um SweetAlert de erro se a resposta não for verdadeira
+					Swal.fire({
+						icon: 'error',
+						title: 'Login maldoso ou inválido!',
+						text: 'Senha ou Email incorretos'
+					});
+				}
+				else if (response.redirect) {
 					// Abre notificação de sucesso
 					Swal.fire({
 						icon: "success",
