@@ -1,18 +1,13 @@
 <?php
 
-use App\Http\Controllers\Mails\AuthMailController;
 use App\Http\Controllers\VirtualController;
 use Illuminate\Auth\Events\PasswordReset;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DataController;
-use App\Http\Controllers\PostController;
-use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
 use App\Models\User;
 use App\Notifications\PasswordUpdateNotification;
 
@@ -40,15 +35,15 @@ Route::get('/testevue', [VirtualController::class, 'testevue'])->name('testevue'
 Route::get('/home', [VirtualController::class, 'home'])->name('home');
 
 // páginas em testes
-Route::get('/confinfo', [VirtualController::class, 'confinfo'])->name('confinfo')->name('confinfo');
+Route::get('/testeblades', [VirtualController::class, 'testeblades'])->name('testeblades');
+Route::get('/disciplinas', [DataController::class, 'getListaDisciplinas'])->name('getListaDisciplinas');
+
 
 // daqui para baixo são as rotas de recuperação de senha
-
 // rota pro blade
 Route::get('/forgot-password', function () {
     return view('auth.forgot-password');
 })->middleware('guest')->name('password.request');
-
 // verifica o email e envia
 Route::post('/forgot-password', function (Request $request) {
     $request->validate(['email' => 'required|email']);
@@ -61,12 +56,10 @@ Route::post('/forgot-password', function (Request $request) {
         ? back()->with(['status' => __($status)])
         : back()->withErrors(['email' => __($status)]);
 })->middleware('guest')->name('password.email');
-
 // manda o token pra resetar a password
 Route::get('/reset-password/{token}', function (string $token) {
     return view('auth.reset-password', ['token' => $token]);
 })->middleware('guest')->name('password.reset');
-
 // por fim atualiza a senha
 Route::post('/reset-password', function (Request $request) {
     $request->validate([
