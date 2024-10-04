@@ -11,7 +11,13 @@ use Inertia\Inertia;
 class VirtualController extends Controller
 {
     public function index(){
-        return view('index');
+        if (Auth::check()) {
+            $authUser = Auth::user();
+            return view('home', ['authUser' => $authUser]);
+        }
+        else {
+            return view('index');
+        }
     }
     public function cadastro(){
         if (Auth::check()) {
@@ -40,13 +46,6 @@ class VirtualController extends Controller
     }
 
     // controllers em teste
-    public function getListaDisciplinas() {
-
-        $columns = Schema::getColumnListing('disciplinas');
-        $disciplinasNoId = array_diff($columns, ['user_id']);
-        return response()->json(['disciplinas' => $disciplinasNoId]);
-
-    }
     public function testeblades(){
         if (Auth::check()) {
             $authUser = Auth::user();

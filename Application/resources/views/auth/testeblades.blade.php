@@ -4,6 +4,7 @@
 <head>
     @component('components.head')
     @endcomponent
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Teste de Blades</title>
     <link rel="stylesheet" href="/assets/css/testeblades.css">
     <link rel="stylesheet" href="/assets/css/testeblades.scss">

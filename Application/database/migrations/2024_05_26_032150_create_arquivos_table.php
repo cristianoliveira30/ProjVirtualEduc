@@ -79,9 +79,6 @@ class CreateArquivosTable extends Migration
      */
     public function down()
     {
-        Schema::table('arquivos'. function(Blueprint $table) {
-            $table->dropForeignIdFor(User::class);
-        });
         Schema::dropIfExists('arquivos');
     }
 }

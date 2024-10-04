@@ -15,21 +15,23 @@ class DisciplinaFactory extends Factory
     {
         return [
             'user_id' => $this->faker->numberBetween(1, 50),
-            'matematica' => $this->faker->boolean(),
-            'portugues' => $this->faker->boolean(),
-            'ingles' => $this->faker->boolean(),
-            'espanhol' => $this->faker->boolean(),
-            'historia' => $this->faker->boolean(),
-            'geografia' => $this->faker->boolean(),
-            'ciencias' => $this->faker->boolean(),
-            'fisica' => $this->faker->boolean(),
-            'quimica' => $this->faker->boolean(),
-            'biologia' => $this->faker->boolean(),
-            'artes' => $this->faker->boolean(),
-            'educacaofisica' => $this->faker->boolean(),
-            'informatica' => $this->faker->boolean(),
-            'leiturainterpretacao' => $this->faker->boolean(),
-            'outras' => $this->faker->numberBetween(0, 5)
+            'Matematica' => $this->faker->boolean(),
+            'Portugues' => $this->faker->boolean(),
+            'Ingles' => $this->faker->boolean(),
+            'Espanhol' => $this->faker->boolean(),
+            'Historia' => $this->faker->boolean(),
+            'Geografia' => $this->faker->boolean(),
+            'Ciencias' => $this->faker->boolean(),
+            'Fisica' => $this->faker->boolean(),
+            'Quimica' => $this->faker->boolean(),
+            'Biologia' => $this->faker->boolean(),
+            'Artes' => $this->faker->boolean(),
+            'Educacao-Fisica' => $this->faker->boolean(),
+            'Informatica' => $this->faker->boolean(),
+            'Leitura' => $this->faker->boolean(),
+            'Interpretacao' => $this->faker->boolean(),
+            'Outras' => $this->faker->boolean(),
         ];
     }
 }
+            

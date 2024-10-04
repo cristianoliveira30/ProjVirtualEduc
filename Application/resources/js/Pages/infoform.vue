@@ -1,13 +1,13 @@
 <template>
     <div class="container-fluid d-flex justify-content-center">
-        <form class="form-info rounded-4 m-3">
+        <form class="form-info rounded-4 m-3" method="POST" enctype="multipart/form-data">
             <div v-if="currentStep === 1">
                 <p class="title-info border-bottom p-2">Informações Adicionais</p>
                 <div class="d-grid justify-content-cente flex-column col">
                     <div class="row mb-3" style="justify-self: center;">
                         <!--  From Uiverse.io by AbanoubMagdy1  -->
                         <div class="wave-group">
-                            <input required="" type="email" class="input">
+                            <input id="emailsecundario"required="email" type="email" class="input">
                             <span class="bar"></span>
                             <label class="label-email">
                                 <span class="label-char" style="--index: 0">E</span>
@@ -53,7 +53,7 @@
                             <div class="text">
                                 <span>CPF, CNH ou Passaporte</span>
                             </div>
-                            <input type="file" id="file">
+                            <input required="file" type="file" id="documento">
                         </label>
 
                         <!-- From Uiverse.io by Yaya12085  -->
@@ -73,7 +73,7 @@
                             <div class="text">
                                 <span>Imagem do seu rosto</span>
                             </div>
-                            <input type="file" id="file">
+                            <input required="file" type="file" id="foto">
                         </label>
                     </div>
 
@@ -84,39 +84,76 @@
             <div v-if="currentStep === 2">
                 <p class="title-info border-bottom p-2">Selecione os tópicos que você tem interesse</p>
                 <div class="d-grid justify-content-cente flex-column col">
-                    <div class="row mb-3 border-bottom" style="justify-self: center;">
+                    <div class="mb-3 border-bottom" style="justify-self: center;">
                         <h4>Tópicos selecionados:</h4>
-
+                        <selDisciplinas 
+                            v-for="disciplina in disciplinasSelecionadas" 
+                            :disciplina="disciplina" 
+                            :key="disciplina"
+                            :disciplinasSelecionadas="disciplinasSelecionadas"
+                            @mostrar="mostrarDisciplina">
+                        </selDisciplinas>
                     </div>
 
                     <div class="">
-                        <cadaDisciplina v-for="disciplina in disciplinas" v-bind:disciplina="disciplina"v-bind:key="disciplina">
-                        <!-- conteúdo que será gerado -->
+                        <cadaDisciplina 
+                            v-for="disciplina in disciplinas" 
+                            :disciplina="disciplina" 
+                            :key="disciplina"
+                            :disciplinasSelecionadas="disciplinasSelecionadas"
+                            @ocultar="ocultarDisciplina">
                         </cadaDisciplina>
                     </div>
 
                 </div>
                 <button type="button" @click="prevStep" class="btn btn-secondary">Voltar</button>
-                <button type="submit" class="btn btn-success">Enviar</button>
+                <button type="submit" @click="addInteresses" class="btn btn-success">Enviar</button>
             </div>
         </form>
     </div>
 </template>
 <script>
 import { route } from 'ziggy-js';
+import axios from 'axios';
+
+
+$.ajaxSetup({
+	headers: {
+		'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+		'Accept': 'application/json',
+	}
+});
 
 const cadaDisciplina = {
-    props: ['disciplina'],
-    template: `<button class="badge rounded-pill text-light bg-primary m-1" type="button"> {{ disciplina }} <i class="bi bi-x"></i></button>`
+    props: ['disciplina', 'disciplinasSelecionadas'],
+    template: `<button 
+                  class="badge rounded-pill text-light bg-primary m-1" 
+                  v-show="!disciplinasSelecionadas.includes(disciplina)" 
+                  @click="$emit('ocultar', disciplina)" 
+                  type="button">
+                  {{ disciplina }}
+               </button>`
 }
 
-var clickedDisciplinas = [];
+const selDisciplinas = {
+    props: ['disciplina', 'disciplinasSelecionadas'],
+    template: `<button 
+                  class="badge rounded-pill text-light bg-info m-1"
+                  v-show="disciplinasSelecionadas.includes(disciplina)" 
+                  @click="$emit('mostrar', disciplina)" 
+                  type="button">
+                  {{ disciplina }} 
+                  <i class="bi bi-x"></i>
+               </button>`
+}
 
 export default {
     name: 'infoform',
     data() {
         return {
             currentStep: 1, // Controla qual parte do formulário é exibida
+            disciplinas: [],  // Array de disciplinas que será preenchido via AJAX
+            disciplinasSelecionadas: []  // Disciplinas que serão ocultadas
         };
     },
     mounted() {
@@ -150,13 +187,78 @@ export default {
                 console.error('Erro ao buscar disciplinas:', error);
             }
         },
-        addDisciplina(disciplina) {
-            this.clickedDisciplinas.push(disciplina);
-            return console.log(clickedDisciplinas);
+        ocultarDisciplina(disciplina) {
+            // Move a disciplina para o array de ocultas e adiciona a selecionadas
+            this.disciplinasSelecionadas.push(disciplina);
+        },
+        mostrarDisciplina(disciplina) {
+            // Remove a disciplina do array de ocultas e de selecionadas
+            this.disciplinasSelecionadas = this.disciplinasSelecionadas.filter(d => d !== disciplina);
+        },
+        addInteresses() {
+            Swal.fire({
+                title: 'Carregando...',
+                html: 'Por favor, aguarde.',
+                allowOutsideClick: false,
+                didOpen: () => {
+                    Swal.showLoading();
+                }
+            });
+            try {
+                const form1 = {};
+                const form2 = this.disciplinasSelecionadas;
+                const link = route('addDisciplinas');
+
+                // Serializa os dados do formulário
+                $(this).serializeArray().forEach(function(field) {
+                    form1[field.name] = field.value;
+                });
+
+                // Prepara o objeto final a ser enviado
+                const form = {
+                    dados: form1,
+                    disciplinas: form2
+                }
+
+                // Converte para JSON
+                const json = JSON.stringify(form);
+
+                // Faz a requisição AJAX
+                $.ajax({
+                    url: link,
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: json,
+                    dataType: 'json',
+                    headers: {
+                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+                        'Accept': 'application/json'
+                    },
+                    success: (response) => {
+                        console.log(response);
+                        Swal.fire({
+                            icon: "success",
+                            title: "Concluído",
+                            text: "Cadastro bem sucedido!"
+                        })
+                        .then(() => {
+                            window.location.href = response.redirect;
+                        });
+
+                    },
+                    error: (xhr, status, error) => {
+                        console.log(xhr, status, error);
+                    }
+                });
+            }
+            catch {
+                console.log('Erro ao adicionar interesses');
+            }
         }
     },
     components: {
-        cadaDisciplina
+        cadaDisciplina,
+        selDisciplinas
     }
 };
 </script>

@@ -8,7 +8,6 @@ use Dotenv\Validator as DotenvValidator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator as FacadesValidator;
 use Illuminate\Support\Facades\Validator;
 
 class AuthController extends Controller
@@ -64,9 +63,6 @@ class AuthController extends Controller
             return response()->json($validator->errors(), 422);
         } else {
             $data['password'] = Hash::make($data['password']);
-            $data['email'] = Hash::make($data['email']);
-            $data['cpf'] = Hash::make($data['cpf']);
-            $data['rg'] = Hash::make($data['rg']);
 
             $userCreated = User::create($data);
 

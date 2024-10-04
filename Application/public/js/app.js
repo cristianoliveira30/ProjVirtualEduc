@@ -19890,16 +19890,30 @@ function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyri
 function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
 function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
 
+
+$.ajaxSetup({
+  headers: {
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+    'Accept': 'application/json'
+  }
+});
 var cadaDisciplina = {
-  props: ['disciplina'],
-  template: "<button class=\"badge rounded-pill text-light bg-primary m-1\" type=\"button\"> {{ disciplina }} <i class=\"bi bi-x\"></i></button>"
+  props: ['disciplina', 'disciplinasSelecionadas'],
+  template: "<button \n                  class=\"badge rounded-pill text-light bg-primary m-1\" \n                  v-show=\"!disciplinasSelecionadas.includes(disciplina)\" \n                  @click=\"$emit('ocultar', disciplina)\" \n                  type=\"button\">\n                  {{ disciplina }}\n               </button>"
 };
-var clickedDisciplinas = [];
+var selDisciplinas = {
+  props: ['disciplina', 'disciplinasSelecionadas'],
+  template: "<button \n                  class=\"badge rounded-pill text-light bg-info m-1\"\n                  v-show=\"disciplinasSelecionadas.includes(disciplina)\" \n                  @click=\"$emit('mostrar', disciplina)\" \n                  type=\"button\">\n                  {{ disciplina }} \n                  <i class=\"bi bi-x\"></i>\n               </button>"
+};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'infoform',
   data: function data() {
     return {
-      currentStep: 1 // Controla qual parte do formulário é exibida
+      currentStep: 1,
+      // Controla qual parte do formulário é exibida
+      disciplinas: [],
+      // Array de disciplinas que será preenchido via AJAX
+      disciplinasSelecionadas: [] // Disciplinas que serão ocultadas
     };
   },
   mounted: function mounted() {
@@ -19949,13 +19963,77 @@ var clickedDisciplinas = [];
         }, _callee, null, [[0, 5]]);
       }))();
     },
-    addDisciplina: function addDisciplina(disciplina) {
-      this.clickedDisciplinas.push(disciplina);
-      return console.log(clickedDisciplinas);
+    ocultarDisciplina: function ocultarDisciplina(disciplina) {
+      // Move a disciplina para o array de ocultas e adiciona a selecionadas
+      this.disciplinasSelecionadas.push(disciplina);
+    },
+    mostrarDisciplina: function mostrarDisciplina(disciplina) {
+      // Remove a disciplina do array de ocultas e de selecionadas
+      this.disciplinasSelecionadas = this.disciplinasSelecionadas.filter(function (d) {
+        return d !== disciplina;
+      });
+    },
+    addInteresses: function addInteresses() {
+      Swal.fire({
+        title: 'Carregando...',
+        html: 'Por favor, aguarde.',
+        allowOutsideClick: false,
+        didOpen: function didOpen() {
+          Swal.showLoading();
+        }
+      });
+      try {
+        var form1 = {};
+        var form2 = this.disciplinasSelecionadas;
+        var link = (0,ziggy_js__WEBPACK_IMPORTED_MODULE_0__.route)('addDisciplinas');
+
+        // Serializa os dados do formulário
+        $(this).serializeArray().forEach(function (field) {
+          form1[field.name] = field.value;
+        });
+
+        // Prepara o objeto final a ser enviado
+        var form = {
+          dados: form1,
+          disciplinas: form2
+        };
+
+        // Converte para JSON
+        var json = JSON.stringify(form);
+
+        // Faz a requisição AJAX
+        $.ajax({
+          url: link,
+          method: 'POST',
+          contentType: 'application/json',
+          data: json,
+          dataType: 'json',
+          headers: {
+            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+            'Accept': 'application/json'
+          },
+          success: function success(response) {
+            console.log(response);
+            Swal.fire({
+              icon: "success",
+              title: "Concluído",
+              text: "Cadastro bem sucedido!"
+            }).then(function () {
+              window.location.href = response.redirect;
+            });
+          },
+          error: function error(xhr, status, _error2) {
+            console.log(xhr, status, _error2);
+          }
+        });
+      } catch (_unused) {
+        console.log('Erro ao adicionar interesses');
+      }
     }
   },
   components: {
-    cadaDisciplina: cadaDisciplina
+    cadaDisciplina: cadaDisciplina,
+    selDisciplinas: selDisciplinas
   }
 });
 
@@ -20089,7 +20167,9 @@ var _hoisted_1 = {
   "class": "container-fluid d-flex justify-content-center"
 };
 var _hoisted_2 = {
-  "class": "form-info rounded-4 m-3"
+  "class": "form-info rounded-4 m-3",
+  method: "POST",
+  enctype: "multipart/form-data"
 };
 var _hoisted_3 = {
   key: 0
@@ -20101,43 +20181,52 @@ var _hoisted_5 = {
   "class": "d-grid justify-content-cente flex-column col"
 };
 var _hoisted_6 = {
+  "class": "mb-3 border-bottom",
+  style: {
+    "justify-self": "center"
+  }
+};
+var _hoisted_7 = {
   "class": ""
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
+  var _component_selDisciplinas = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("selDisciplinas");
   var _component_cadaDisciplina = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("cadaDisciplina");
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", _hoisted_2, [$data.currentStep === 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_3, [_cache[2] || (_cache[2] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<p class=\"title-info border-bottom p-2\">Informações Adicionais</p><div class=\"d-grid justify-content-cente flex-column col\"><div class=\"row mb-3\" style=\"justify-self:center;\"><!--  From Uiverse.io by AbanoubMagdy1  --><div class=\"wave-group\"><input required=\"\" type=\"email\" class=\"input\"><span class=\"bar\"></span><label class=\"label-email\"><span class=\"label-char\" style=\"--index:0;\">E</span><span class=\"label-char\" style=\"--index:1;\">m</span><span class=\"label-char\" style=\"--index:2;\">a</span><span class=\"label-char\" style=\"--index:3;\">i</span><span class=\"label-char\" style=\"--index:4;\">l</span><span class=\"label-char ms-1\" style=\"--index:5;\"></span><span class=\"label-char\" style=\"--index:6;\">D</span><span class=\"label-char\" style=\"--index:7;\">e</span><span class=\"label-char ms-1\" style=\"--index:8;\"></span><span class=\"label-char\" style=\"--index:9;\">R</span><span class=\"label-char\" style=\"--index:10;\">e</span><span class=\"label-char\" style=\"--index:11;\">c</span><span class=\"label-char\" style=\"--index:12;\">u</span><span class=\"label-char\" style=\"--index:13;\">p</span><span class=\"label-char\" style=\"--index:14;\">e</span><span class=\"label-char\" style=\"--index:15;\">r</span><span class=\"label-char\" style=\"--index:16;\">a</span><span class=\"label-char\" style=\"--index:17;\">ç</span><span class=\"label-char\" style=\"--index:18;\">ã</span><span class=\"label-char\" style=\"--index:19;\">o</span></label></div></div><div class=\"row p-4\"><!-- From Uiverse.io by Yaya12085 --><label class=\"custum-file-upload col\" for=\"file\"><div class=\"icon\"><svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"\" viewBox=\"0 0 24 24\"><g stroke-width=\"0\" id=\"SVGRepo_bgCarrier\"></g><g stroke-linejoin=\"round\" stroke-linecap=\"round\" id=\"SVGRepo_tracerCarrier\"></g><g id=\"SVGRepo_iconCarrier\"><path fill=\"\" d=\"M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 7.48043 3 7.73478 3 8V20C3 21.6569 4.34315 23 6 23H7C7.55228 23 8 22.5523 8 22C8 21.4477 7.55228 21 7 21H6C5.44772 21 5 20.5523 5 20V9H10C10.5523 9 11 8.55228 11 8V3H18C18.5523 3 19 3.44772 19 4V9C19 9.55228 19.4477 10 20 10C20.5523 10 21 9.55228 21 9V4C21 2.34315 19.6569 1 18 1H10ZM9 7H6.41421L9 4.41421V7ZM14 15.5C14 14.1193 15.1193 13 16.5 13C17.8807 13 19 14.1193 19 15.5V16V17H20C21.1046 17 22 17.8954 22 19C22 20.1046 21.1046 21 20 21H13C11.8954 21 11 20.1046 11 19C11 17.8954 11.8954 17 13 17H14V16V15.5ZM16.5 11C14.142 11 12.2076 12.8136 12.0156 15.122C10.2825 15.5606 9 17.1305 9 19C9 21.2091 10.7909 23 13 23H20C22.2091 23 24 21.2091 24 19C24 17.1305 22.7175 15.5606 20.9844 15.122C20.7924 12.8136 18.858 11 16.5 11Z\" clip-rule=\"evenodd\" fill-rule=\"evenodd\"></path></g></svg></div><div class=\"text\"><span>CPF, CNH ou Passaporte</span></div><input type=\"file\" id=\"file\"></label><!-- From Uiverse.io by Yaya12085  --><label class=\"custum-file-upload col\" for=\"file\"><div class=\"icon\"><svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"\" viewBox=\"0 0 24 24\"><g stroke-width=\"0\" id=\"SVGRepo_bgCarrier\"></g><g stroke-linejoin=\"round\" stroke-linecap=\"round\" id=\"SVGRepo_tracerCarrier\"></g><g id=\"SVGRepo_iconCarrier\"><path fill=\"\" d=\"M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 7.48043 3 7.73478 3 8V20C3 21.6569 4.34315 23 6 23H7C7.55228 23 8 22.5523 8 22C8 21.4477 7.55228 21 7 21H6C5.44772 21 5 20.5523 5 20V9H10C10.5523 9 11 8.55228 11 8V3H18C18.5523 3 19 3.44772 19 4V9C19 9.55228 19.4477 10 20 10C20.5523 10 21 9.55228 21 9V4C21 2.34315 19.6569 1 18 1H10ZM9 7H6.41421L9 4.41421V7ZM14 15.5C14 14.1193 15.1193 13 16.5 13C17.8807 13 19 14.1193 19 15.5V16V17H20C21.1046 17 22 17.8954 22 19C22 20.1046 21.1046 21 20 21H13C11.8954 21 11 20.1046 11 19C11 17.8954 11.8954 17 13 17H14V16V15.5ZM16.5 11C14.142 11 12.2076 12.8136 12.0156 15.122C10.2825 15.5606 9 17.1305 9 19C9 21.2091 10.7909 23 13 23H20C22.2091 23 24 21.2091 24 19C24 17.1305 22.7175 15.5606 20.9844 15.122C20.7924 12.8136 18.858 11 16.5 11Z\" clip-rule=\"evenodd\" fill-rule=\"evenodd\"></path></g></svg></div><div class=\"text\"><span>Imagem do seu rosto</span></div><input type=\"file\" id=\"file\"></label></div></div>", 2)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", _hoisted_2, [$data.currentStep === 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_3, [_cache[3] || (_cache[3] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<p class=\"title-info border-bottom p-2\">Informações Adicionais</p><div class=\"d-grid justify-content-cente flex-column col\"><div class=\"row mb-3\" style=\"justify-self:center;\"><!--  From Uiverse.io by AbanoubMagdy1  --><div class=\"wave-group\"><input id=\"emailsecundario\" required=\"email\" type=\"email\" class=\"input\"><span class=\"bar\"></span><label class=\"label-email\"><span class=\"label-char\" style=\"--index:0;\">E</span><span class=\"label-char\" style=\"--index:1;\">m</span><span class=\"label-char\" style=\"--index:2;\">a</span><span class=\"label-char\" style=\"--index:3;\">i</span><span class=\"label-char\" style=\"--index:4;\">l</span><span class=\"label-char ms-1\" style=\"--index:5;\"></span><span class=\"label-char\" style=\"--index:6;\">D</span><span class=\"label-char\" style=\"--index:7;\">e</span><span class=\"label-char ms-1\" style=\"--index:8;\"></span><span class=\"label-char\" style=\"--index:9;\">R</span><span class=\"label-char\" style=\"--index:10;\">e</span><span class=\"label-char\" style=\"--index:11;\">c</span><span class=\"label-char\" style=\"--index:12;\">u</span><span class=\"label-char\" style=\"--index:13;\">p</span><span class=\"label-char\" style=\"--index:14;\">e</span><span class=\"label-char\" style=\"--index:15;\">r</span><span class=\"label-char\" style=\"--index:16;\">a</span><span class=\"label-char\" style=\"--index:17;\">ç</span><span class=\"label-char\" style=\"--index:18;\">ã</span><span class=\"label-char\" style=\"--index:19;\">o</span></label></div></div><div class=\"row p-4\"><!-- From Uiverse.io by Yaya12085 --><label class=\"custum-file-upload col\" for=\"file\"><div class=\"icon\"><svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"\" viewBox=\"0 0 24 24\"><g stroke-width=\"0\" id=\"SVGRepo_bgCarrier\"></g><g stroke-linejoin=\"round\" stroke-linecap=\"round\" id=\"SVGRepo_tracerCarrier\"></g><g id=\"SVGRepo_iconCarrier\"><path fill=\"\" d=\"M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 7.48043 3 7.73478 3 8V20C3 21.6569 4.34315 23 6 23H7C7.55228 23 8 22.5523 8 22C8 21.4477 7.55228 21 7 21H6C5.44772 21 5 20.5523 5 20V9H10C10.5523 9 11 8.55228 11 8V3H18C18.5523 3 19 3.44772 19 4V9C19 9.55228 19.4477 10 20 10C20.5523 10 21 9.55228 21 9V4C21 2.34315 19.6569 1 18 1H10ZM9 7H6.41421L9 4.41421V7ZM14 15.5C14 14.1193 15.1193 13 16.5 13C17.8807 13 19 14.1193 19 15.5V16V17H20C21.1046 17 22 17.8954 22 19C22 20.1046 21.1046 21 20 21H13C11.8954 21 11 20.1046 11 19C11 17.8954 11.8954 17 13 17H14V16V15.5ZM16.5 11C14.142 11 12.2076 12.8136 12.0156 15.122C10.2825 15.5606 9 17.1305 9 19C9 21.2091 10.7909 23 13 23H20C22.2091 23 24 21.2091 24 19C24 17.1305 22.7175 15.5606 20.9844 15.122C20.7924 12.8136 18.858 11 16.5 11Z\" clip-rule=\"evenodd\" fill-rule=\"evenodd\"></path></g></svg></div><div class=\"text\"><span>CPF, CNH ou Passaporte</span></div><input required=\"file\" type=\"file\" id=\"documento\"></label><!-- From Uiverse.io by Yaya12085  --><label class=\"custum-file-upload col\" for=\"file\"><div class=\"icon\"><svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"\" viewBox=\"0 0 24 24\"><g stroke-width=\"0\" id=\"SVGRepo_bgCarrier\"></g><g stroke-linejoin=\"round\" stroke-linecap=\"round\" id=\"SVGRepo_tracerCarrier\"></g><g id=\"SVGRepo_iconCarrier\"><path fill=\"\" d=\"M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 7.48043 3 7.73478 3 8V20C3 21.6569 4.34315 23 6 23H7C7.55228 23 8 22.5523 8 22C8 21.4477 7.55228 21 7 21H6C5.44772 21 5 20.5523 5 20V9H10C10.5523 9 11 8.55228 11 8V3H18C18.5523 3 19 3.44772 19 4V9C19 9.55228 19.4477 10 20 10C20.5523 10 21 9.55228 21 9V4C21 2.34315 19.6569 1 18 1H10ZM9 7H6.41421L9 4.41421V7ZM14 15.5C14 14.1193 15.1193 13 16.5 13C17.8807 13 19 14.1193 19 15.5V16V17H20C21.1046 17 22 17.8954 22 19C22 20.1046 21.1046 21 20 21H13C11.8954 21 11 20.1046 11 19C11 17.8954 11.8954 17 13 17H14V16V15.5ZM16.5 11C14.142 11 12.2076 12.8136 12.0156 15.122C10.2825 15.5606 9 17.1305 9 19C9 21.2091 10.7909 23 13 23H20C22.2091 23 24 21.2091 24 19C24 17.1305 22.7175 15.5606 20.9844 15.122C20.7924 12.8136 18.858 11 16.5 11Z\" clip-rule=\"evenodd\" fill-rule=\"evenodd\"></path></g></svg></div><div class=\"text\"><span>Imagem do seu rosto</span></div><input required=\"file\" type=\"file\" id=\"foto\"></label></div></div>", 2)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     "class": "nextStep",
     type: "button",
     onClick: _cache[0] || (_cache[0] = function () {
       return $options.nextStep && $options.nextStep.apply($options, arguments);
     })
-  }, "Próximo")])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.currentStep === 2 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_4, [_cache[4] || (_cache[4] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  }, "Próximo")])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.currentStep === 2 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_4, [_cache[5] || (_cache[5] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
     "class": "title-info border-bottom p-2"
-  }, "Selecione os tópicos que você tem interesse", -1 /* HOISTED */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [_cache[3] || (_cache[3] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "row mb-3 border-bottom",
-    style: {
-      "justify-self": "center"
-    }
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", null, "Tópicos selecionados:")], -1 /* HOISTED */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.disciplinas, function (disciplina) {
+  }, "Selecione os tópicos que você tem interesse", -1 /* HOISTED */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [_cache[4] || (_cache[4] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", null, "Tópicos selecionados:", -1 /* HOISTED */)), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.disciplinasSelecionadas, function (disciplina) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_selDisciplinas, {
+      disciplina: disciplina,
+      key: disciplina,
+      disciplinasSelecionadas: $data.disciplinasSelecionadas,
+      onMostrar: $options.mostrarDisciplina
+    }, null, 8 /* PROPS */, ["disciplina", "disciplinasSelecionadas", "onMostrar"]);
+  }), 128 /* KEYED_FRAGMENT */))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.disciplinas, function (disciplina) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_cadaDisciplina, {
       disciplina: disciplina,
-      key: disciplina
-    }, {
-      "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-        return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" conteúdo que será gerado ")];
-      }),
-      _: 2 /* DYNAMIC */
-    }, 1032 /* PROPS, DYNAMIC_SLOTS */, ["disciplina"]);
+      key: disciplina,
+      disciplinasSelecionadas: $data.disciplinasSelecionadas,
+      onOcultar: $options.ocultarDisciplina
+    }, null, 8 /* PROPS */, ["disciplina", "disciplinasSelecionadas", "onOcultar"]);
   }), 128 /* KEYED_FRAGMENT */))])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     type: "button",
     onClick: _cache[1] || (_cache[1] = function () {
       return $options.prevStep && $options.prevStep.apply($options, arguments);
     }),
     "class": "btn btn-secondary"
-  }, "Voltar"), _cache[5] || (_cache[5] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  }, "Voltar"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     type: "submit",
+    onClick: _cache[2] || (_cache[2] = function () {
+      return $options.addInteresses && $options.addInteresses.apply($options, arguments);
+    }),
     "class": "btn btn-success"
-  }, "Enviar", -1 /* HOISTED */))])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])]);
+  }, "Enviar")])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])]);
 }
 
 /***/ }),
@@ -20214,66 +20303,70 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   Ziggy: () => (/* binding */ Ziggy)
 /* harmony export */ });
 var Ziggy = {
-  url: "http://localhost:8000",
-  port: 8000,
-  defaults: {},
-  routes: {
-    index: {
-      uri: "/",
-      methods: ["GET", "HEAD"]
+  "url": "http:\/\/localhost:8000",
+  "port": 8000,
+  "defaults": {},
+  "routes": {
+    "index": {
+      "uri": "\/",
+      "methods": ["GET", "HEAD"]
     },
-    cadastro: {
-      uri: "cadastro",
-      methods: ["GET", "HEAD"]
+    "cadastro": {
+      "uri": "cadastro",
+      "methods": ["GET", "HEAD"]
     },
     "cadastro.action": {
-      uri: "cadastro",
-      methods: ["POST"]
+      "uri": "cadastro",
+      "methods": ["POST"]
     },
-    login: {
-      uri: "login",
-      methods: ["GET", "HEAD"]
+    "login": {
+      "uri": "login",
+      "methods": ["GET", "HEAD"]
     },
     "login.action": {
-      uri: "login",
-      methods: ["POST"]
+      "uri": "login",
+      "methods": ["POST"]
     },
-    logout: {
-      uri: "logout",
-      methods: ["GET", "HEAD"]
+    "logout": {
+      "uri": "logout",
+      "methods": ["GET", "HEAD"]
     },
-    testevue: {
-      uri: "testevue",
-      methods: ["GET", "HEAD"]
+    "home": {
+      "uri": "home",
+      "methods": ["GET", "HEAD"]
     },
-    home: {
-      uri: "home",
-      methods: ["GET", "HEAD"]
+    "testeblades": {
+      "uri": "testeblades",
+      "methods": ["GET", "HEAD"]
     },
-    testeblades: {
-      uri: "testeblades",
-      methods: ["GET", "HEAD"]
+    "testevue": {
+      "uri": "testevue",
+      "methods": ["GET", "HEAD"]
     },
-    getListaDisciplinas: {
-      uri: "disciplinas",
-      methods: ["GET", "HEAD"]
+    "getListaDisciplinas": {
+      "uri": "disciplinas",
+      "methods": ["GET", "HEAD"]
+    },
+    "addDisciplinas": {
+      "uri": "addDisciplinas",
+      "methods": ["POST"]
     },
     "password.request": {
-      uri: "forgot-password",
-      methods: ["GET", "HEAD"]
+      "uri": "forgot-password",
+      "methods": ["GET", "HEAD"]
     },
     "password.email": {
-      uri: "forgot-password",
-      methods: ["POST"]
+      "uri": "forgot-password",
+      "methods": ["POST"]
     },
     "password.reset": {
-      uri: "reset-password/{token}",
-      methods: ["GET", "HEAD"],
-      parameters: ["token"]
+      "uri": "reset-password\/{token}",
+      "methods": ["GET", "HEAD"],
+      "parameters": ["token"]
     },
     "password.update": {
-      uri: "reset-password",
-      methods: ["POST"]
+      "uri": "reset-password",
+      "methods": ["POST"]
     }
   }
 };

@@ -29,14 +29,15 @@ Route::post('/cadastro', [AuthController::class, 'cadastroAction'])->name('cadas
 Route::get('/login', [VirtualController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'loginAction'])->name('login.action');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
-Route::get('/testevue', [VirtualController::class, 'testevue'])->name('testevue');
 
 // páginas disponíveis somente com login
 Route::get('/home', [VirtualController::class, 'home'])->name('home');
 
 // páginas em testes
 Route::get('/testeblades', [VirtualController::class, 'testeblades'])->name('testeblades');
+Route::get('/testevue', [VirtualController::class, 'testevue'])->name('testevue');
 Route::get('/disciplinas', [DataController::class, 'getListaDisciplinas'])->name('getListaDisciplinas');
+Route::post('/addDisciplinas', [DataController::class, 'addDisciplinas'])->name('addDisciplinas')->withoutMiddleware('auth');
 
 
 // daqui para baixo são as rotas de recuperação de senha

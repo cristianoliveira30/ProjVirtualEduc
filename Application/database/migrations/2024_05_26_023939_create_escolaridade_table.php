@@ -25,9 +25,6 @@ class CreateEscolaridadeTable extends Migration
 
     public function down()
     {
-        Schema::table('escolaridade'. function(Blueprint $table) {
-            $table->dropForeignIdFor(User::class);
-        });
         Schema::dropIfExists('escolaridade');
     }
 }

@@ -17,21 +17,22 @@ class CreateDisciplinaTable extends Migration
         Schema::create('disciplinas', function (Blueprint $table) {
             $table->id()->unique();
             $table->foreignIdFor(User::class)->references('id')->on('users')->onDelete('cascade');
-            $table->boolean('matematica')->default(false);
-            $table->boolean('portugues')->default(false);
-            $table->boolean('ingles')->default(false);
-            $table->boolean('espanhol')->default(false);
-            $table->boolean('historia')->default(false);
-            $table->boolean('geografia')->default(false);
-            $table->boolean('ciencias')->default(false);
-            $table->boolean('fisica')->default(false);
-            $table->boolean('quimica')->default(false);
-            $table->boolean('biologia')->default(false);
-            $table->boolean('artes')->default(false);
-            $table->boolean('educacaofisica')->default(false);
-            $table->boolean('informatica')->default(false);
-            $table->boolean('leiturainterpretacao')->default(false);
-            $table->integer('outras')->default(0);
+            $table->boolean('Matematica')->default(false);
+            $table->boolean('Portugues')->default(false);
+            $table->boolean('Ingles')->default(false);
+            $table->boolean('Espanhol')->default(false);
+            $table->boolean('Historia')->default(false);
+            $table->boolean('Geografia')->default(false);
+            $table->boolean('Ciencias')->default(false);
+            $table->boolean('Fisica')->default(false);
+            $table->boolean('Quimica')->default(false);
+            $table->boolean('Biologia')->default(false);
+            $table->boolean('Artes')->default(false);
+            $table->boolean('Educacao-Fisica')->default(false);
+            $table->boolean('Informatica')->default(false);
+            $table->boolean('Leitura')->default(false);
+            $table->boolean('Interpretacao')->default(false);
+            $table->integer('Outras')->default(0);
         });
     }
 
@@ -42,9 +43,7 @@ class CreateDisciplinaTable extends Migration
      */
     public function down()
     {
-        Schema::table('disciplinas'. function(Blueprint $table) {
-            $table->dropForeignIdFor(User::class);
-        });
-        Schema::dropIfExists('disciplina');
+        Schema::drop('disciplinas');
     }
+    
 }
