@@ -79,7 +79,7 @@
 
 .wave-group .input {
   font-size: 16px;
-  padding: 10px 10px 10px 5px;
+  padding: 5px 10px 10px 5px;
   display: block;
   width: 230px;
   border: none;
@@ -98,7 +98,7 @@
   position: absolute;
   pointer-events: none;
   left: 85px;
-  top: 10px;
+  top: 2px;
   display: flex;
 }
 
@@ -176,7 +176,6 @@
 
 .custum-file-upload .icon svg {
   height: 40px;
-  fill: rgb(75, 85, 99);
 }
 
 .custum-file-upload .text {
@@ -194,4 +193,16 @@
 
 .custum-file-upload input {
   display: none;
+}
+
+.fade-enter-active {
+  transition: opacity 1s;
+}
+
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }/*# sourceMappingURL=testeblades.css.map */
