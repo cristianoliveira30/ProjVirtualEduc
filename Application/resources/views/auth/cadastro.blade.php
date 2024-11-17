@@ -1,64 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @component('components.head')
+	@slot('defer')
+		''
+	@endslot
+	@endcomponent
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<title>Cadastro</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 	<link rel="stylesheet" href="/assets/css/cadastro.css">
-	<link rel="stylesheet" href="/assets/css/cadastro.scss">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	
 </head>
 <body>
 
 	<main>
-		<div class="container-fluid position-absolute top-50 start-50 translate-middle" id="form">
-			<form class="login-card mt-5 mb-5 p-5" method="post" enctype="multipart/form" id="cadastro">
+		<div class="mb-5 p-5 position-absolute top-50 start-50 translate-middle" id="form">
+			<form class="backgroundForm" method="post" enctype="multipart/form" id="cadastro">
 			@csrf
-				<div class="card-header">
-					<div class="log">Cadastro</div>
+				<div>
+					<img src="/assets/img/titulo02.png" alt="titulo" style="width: 100%">
 				</div>
 				<div class="etapa01" id="etapa01">
-					<div class="d-flex">
-						<div class="form-group">
-							<div class="d-block"><label for="email">Email</label></div>
-							<input required="email" name="email" id="email" type="email" maxlength="50">
+					<div class="input-box">
+						<div class="form-group inputForm">
+							<input class="inputForm02" required="email" name="email" id="email" type="email" placeholder="Email" maxlength="50">
 						</div>
-						<div class="form-group">
-							<div class="d-block"><label for="password">Senha</label></div>
-							<input required="password" name="password" id="password" type="password" maxlength="8">
+						<div class="form-group inputForm">							
+							<input class="inputForm02" required="password" name="password" id="password" type="password" placeholder="Senha" minlength="8">
 						</div>
 					</div>
-					<div class="d-flex">
-						<div class="form-group">
-							<div class="d-block"><label for="nomeusu">Nome de Usuário</label></div>
-							<input required="nomeusu" name="nomeusu" id="nomeusu" type="text" maxlength="50">
+					<div class="input-box">
+						<div class="form-group inputForm">							
+							<input class="inputForm02" required="nomeusu" name="nomeusu" id="nomeusu" type="text" placeholder="Nome de Usuário" maxlength="50">
 						</div>
-						<div class="form-group">
-							<div class="d-block"><label for="nomecomp">Nome Completo</label></div>
-							<input required="nomeusu" name="nomecomp" id="nomecomp" type="text" maxlength="50">
+						<div class="form-group inputForm">							
+							<input class="inputForm02" required="nomeusu" name="nomecomp" id="nomecomp" type="text" placeholder="Nome Completo" maxlength="50">
 						</div>
 					</div>
-					<div class="d-flex">
-						<div class="form-group">
-							<div class="d-block"><label for="telefone">Telefone</label></div>
-							<input required="telefone" name="telefone" id="telefone" type="text" maxlength="50">
+					<div class="input-box">
+						<div class="form-group inputForm">							
+							<input class="inputForm02" required="telefone" name="telefone" id="telefone" type="text" placeholder="Telefone" maxlength="50">
 						</div>
-						<div class="form-group">
-							<div class="d-block">
-								<label for="escolaridade">Escolaridade</label>
-							</div>
-							<select required="escolaridade" name="escolaridade" id="escolaridade">
-								<option value="Escolaridade" selected></option>
+						<div class="form-group inputForm">
+							<select class="inputForm02" required="escolaridade" name="escolaridade" id="escolaridade">
+								<option value="" disabled selected>Escolaridade</option>
 								<option value="Fundamental">Fundamental</option>
 								<option value="Médio">Médio</option>
 								<option value="Superior">Superior</option>
-							</select>
+							</select>							
 						</div>
 					</div>
 					<div class="form-group">
@@ -66,39 +56,33 @@
 						<a href="#" class=" m-2"><label for="">Li e concordo com os termos!</label></a>
 					</div>
 					<div class="form-group">
-						<button id="proxform" type="button">Próximo</button>
+						<button id="proxform" class="btn-virtual" type="button">Próximo</button>
 					</div>
 				</div>
 				<!-- Etapa02 -->
 				<div class="etapa02">
 					<div class="d-flex">
-						<div class="form-group">
-							<div class="d-block"><label for="cpf">CPF</label></div>
-							<input required="cpf" type="text" name="cpf" id="cpf" maxlength="14">
+						<div class="form-group inputForm">							
+							<input class="inputForm02" required="cpf" type="text" name="cpf" id="cpf" maxlength="14" placeholder="CPF">
 						</div>
-						<div class="form-group">
-							<div class="d-block"><label for="nascimento">Data de Nascimento</label></div>
-							<input required="nascimento" type="date" name="nascimento" id="nascimento" maxlength="15">
+						<div class="form-group inputForm" style="width: 50%">							
+							<input class="inputForm02" required="nascimento" type="date" name="nascimento" id="nascimento" maxlength="15">
 						</div>
 					</div>
 					<div class="d-flex">
-						<div class="form-group">
-							<label for="rg">RG</label>
-							<input required="rg" type="text" name="rg" id="rg" maxlength="7">
+						<div class="form-group inputForm">							
+							<input class="inputForm02" required="rg" type="text" name="rg" id="rg" maxlength="7" placeholder="Registro Geral">
 						</div>
-						<div class="form-group">
-							<label for="endereco">Endereço</label>
-							<input required="endereco" type="text" name="endereco" id="endereco" maxlength="50">
+						<div class="form-group inputForm" style="width: 50%">							
+							<input class="inputForm02" required="endereco" type="text" name="endereco" id="endereco" maxlength="50" placeholder="Endereço">
 						</div>
 					</div>
 					<div class="d-flex">
-						<div class="form-group">
-							<label for="cep">CEP</label>
-							<input required="cep" type="text" name="cep" id="cep" maxlength="50">
+						<div class="form-group inputForm">							
+							<input class="inputForm02" required="cep" type="text" name="cep" id="cep" maxlength="50" placeholder="CEP">
 						</div>
-						<div class="form-group">
-							<div class="d-block"><label for="estado">Estado</label></div>
-							<select required="estado" name="estado" id="estados">
+						<div class="form-group inputForm" style="width: 50%">
+							<select class="inputForm02" required="estado" name="estado" id="estados">
 								<option selected disabled>Selecionar Estado</option>
 								<option value="AC">AC </option>
 								<option value="AL">AL </option>
@@ -130,11 +114,11 @@
 							</select>
 						</div>
 					</div>
-					<div class="form-group">
-						<button id="enviarcadastro" type="submit">Enviar</button>
-					</div>
 					<div class="form-group text-center ">
-						<button type="button" class="btn btn-primary border-0 w-25 rounded-1 p-1 mt-2" id="voltar-para-o-form1">Voltar</button>
+						<button type="button" class="btn btn-primary border-0 w-25 rounded-1 p-1 mt-2" id="voltar">Voltar</button>
+					</div>
+					<div class="form-group">
+						<button id="enviarcadastro" type="submit" style="background:#0d6efd;">Enviar</button>
 					</div>
 				</div>
 			</form>

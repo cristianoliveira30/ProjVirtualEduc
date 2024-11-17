@@ -11,9 +11,12 @@
     },
     "devDependencies": {
         "@vue/compiler-sfc": "^3.4.27",
-        "laravel-mix": "^6.0.6",
+        "laravel-mix": "^6.0.3",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",
+        "resolve-url-loader": "^5.0.0",
+        "sass": "^1.80.4",
+        "sass-loader": "^12.1.0",
         "vite-plugin-vue-devtools": "^7.4.6",
         "vue-loader": "^17.3.1",
         "webpack": "^5.91.0"
@@ -22,7 +25,14 @@
         "@inertiajs/inertia": "^0.11.1",
         "@inertiajs/inertia-vue3": "^0.6.0",
         "@inertiajs/progress": "^0.1.2",
+        "@sweetalert2/theme-borderless": "^5.0.18",
+        "@sweetalert2/theme-dark": "^5.0.18",
+        "@sweetalert2/themes": "^5.0.18",
         "axios": "^1.7.7",
+        "bootstrap": "^5.3.1",
+        "bootstrap-icons": "^1.11.3",
+        "jquery": "^3.7.1",
+        "sweetalert2": "^11.6.13",
         "vue": "^3.4.27",
         "ziggy": "^2.4.0",
         "ziggy-js": "^2.3.0"

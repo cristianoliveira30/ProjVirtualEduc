@@ -1,0 +1,66 @@
+/* b47eb3 3d5a6c 5aa9e6 3bceac f8f7ff */
+.btn-virtual {
+  color: #0dcaf0;
+  background: transparent;
+  border-color: #0dcaf0;
+  border-radius: 2px;
+}
+
+.btn-virtual:hover {
+  color: #fff;
+  background: #fa0081;
+  border-color: #fff;
+  border-radius: 2px;
+}
+
+.btn-virtual:active {
+  color: #fd7e14;
+  background-color: #0a58ca;
+  border-color: #0a53be;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.btn-virtual:focus {
+  box-shadow: 49, 132, 253;
+}
+
+.swal2-popup {
+  border: 2px solid #716add; /* Espessura e cor da borda */
+  border-radius: 8px; /* Arredondamento da borda */
+}
+
+#sidebar {
+  background-color: #1c1352;
+  width: 10vh;
+  height: 100vh;
+  position: fixed;
+  top: 8.3;
+  left: 0;
+  overflow-y: auto;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+#sidebar:hover {
+  animation: deslize ease-in-out forwards 0.5s;
+}
+
+@keyframes deslize {
+  100% {
+    width: 35vh;
+  }
+}
+.sidebarimg {
+  width: 8vh !important;
+}
+
+.siderow {
+  text-decoration: none;
+}
+
+.siderow:hover {
+  width: 120%;
+  border: solid 1px #fa0081;
+  cursor: pointer;
+  background: linear-gradient(144deg, #010023, #1c1352 80%);
+}/*# sourceMappingURL=sidebar.css.map */

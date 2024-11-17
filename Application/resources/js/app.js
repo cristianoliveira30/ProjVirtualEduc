@@ -1,6 +1,20 @@
 import { createApp } from 'vue';
+
+import $ from 'jquery/src/jquery.js';
+
 import { Ziggy } from './ziggy.js'; // Importe o arquivo gerado pelo Ziggy
 import { useRoute, ZiggyVue } from 'ziggy-js';
+
+import Swal from 'sweetalert2/dist/sweetalert2.js';
+import 'sweetalert2/src/sweetalert2.scss'
+
+import 'bootstrap/dist/js/bootstrap.js';
+import 'bootstrap/dist/css/bootstrap.css';
+
+window.onload = function() {
+  window.$ = window.jQuery = $;
+  window.Swal = Swal;
+};
 
 // Função para criar um componente Vue
 const mountComponent = (component, selector) => {
@@ -35,7 +49,11 @@ $(document).ready(function () {
           `,
           showCloseButton: true,
           showConfirmButton: false,
-      });
+          customClass: {
+            popup: 'swal2-borderless' // Aplicando o tema
+          }
+      },
+    );
           mountComponent(infoform, '#testBlades');
       ;
   });

@@ -70,12 +70,14 @@ class AuthController extends Controller
         }
     }
 
-    public function logout() {
+    public function logout() 
+    {
         Auth::logout();
         return redirect()->route('index');
     }
 
-    public function confInfo(Request $request) {
+    public function confInfo(Request $request) 
+    {
         $jsonData = $request->getContent();
         $data = json_decode($jsonData, true);
 

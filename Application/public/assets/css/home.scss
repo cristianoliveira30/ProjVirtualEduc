@@ -1,86 +1,28 @@
-footer {
-  height: 100%;
+@use "./bootstrap/coresbootstrap.scss" as *;
+
+html, body, main {
+  background-color: $v02;
+  overflow-x: hidden;
 }
 
-#container-perfil img {
-  border-radius: 190px;
-  width: 200px;
-  height: 210px;
-}
-
-.nav-btn {
-  border: none;
-  border-radius: 20px;
-  width: 120px;
-  height: 50px;
-}
-
-.text-white label {
-  display: block;
-  position: relative;
-  left: 35px;
-}
-
-.curso label {
-  display: block;
-  position: relative;
-  left: 50px;
-}
-
-.livro label {
-  display: block;
-  position: relative;
-  left: 55px;
-}
-
-.temas label {
-  display: block;
-  position: relative;
-  left: 45px;
-}
-
-.nav-container {
-  border-radius: 20px;
-}
-
-.nav-container button, label {
-  width: 90px;
-  height: 70px;
-  display: block;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-}
-
-.nav-container label{
-  position: relative;
-  right: 15px;
-}
-
-button{
-  border: none;
-  border-radius: 15px;
-  background: none;
-  color: white;
-  margin: 10px;
-}
-
-.nav-btn-sair {
-  border: none;
-  border-radius: 20px;
-  width: 200px;
-  height: 50px;
+#divheader {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
-  background-color: red;
+  flex-direction: row;
+  border-bottom: solid 1px $v05;
+  padding: 1em;
 }
 
-#btnsair:hover {
-  background-color: rgb(234, 124, 124);
+#addcard {
+  width: 20vh;
+  height: 20vh;
+  border: dotted 2px $v05;
+  color: $v05;
 }
 
-.modal {
-  background-color: rgba(0, 0, 0, 0.333);
+#addcard:hover {
+  scale: 1.05;
+  cursor: pointer;
 }

@@ -3,68 +3,34 @@
 <head>
 	<title>Home</title>
 	@component('components.head')
+		@slot('defer')
+			defer
+		@endslot
 	@endcomponent
 	<link rel="icon" type="image/x-icon" href="/favicon.ico">
 	<link rel="stylesheet" href="/assets/css/home.css">
-	<link rel="stylesheet" href="/assets/css/home.scss">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
 	@routes
-	<header id="header">
-		@verbatim
-		@endverbatim
+	<header id="">
+		@component('components.header')
+		@endcomponent
 	</header>
 
 	<main>
-		<h2 class="text-center p-2 mt-5 ">Bem-vindo {{ $authUser->nomecomp }}</h2>
-		<strong>
-			<p class="text-center">Foto de Perfil</p>
-		</strong>
-		<div class="container-fluid d-flex" id="container-perfil">
-			<img src="{{ asset(Auth::user()->informacoes->foto ?? '/assets/img/imagem-perfil.jpg') }}" class="mx-auto mb-5" alt="imagem de perfil" title="imagem de perfil">
-		</div>
+		@component('components.sidebar')
+		@endcomponent
 
-		<h4 class="p-2 text-center mb-3">Selecione uma opção</h4>
+		{{-- tenho que criar uma div com seguidos e seguidores --}}
+		
+		{{-- <div id="divheader">
+			<div id="addcard" class="col-md-6 rounded-4 d-flex align-items-center justify-content-center flex-column">
+				<img class="m-2" src="/assets/img/svgs/plus-square.svg" style="width: 4vh">
+				<h6 style="font-size: 0.9em; text-align:center;">Adicionar Conteúdo</h6>
+			</div>
+		</div> --}}
 
-		<div class="container p-5 w-75 mb-5 bg-primary mx-auto d-flex justify-content-center nav-container">
 
-			<button type="button row btn-primary">
-				<span class="material-symbols-outlined">
-					person
-				</span>
-				<label for="">Meus dados</label>
-			</button>
-
-			<button type="button row btn-primary">
-				<span class="material-symbols-outlined">
-					lists
-				</span>
-				<label for="">Cursos</label>
-			</button>
-
-			<button type="button row btn-primary">
-				<span class="material-symbols-outlined">
-					menu_book
-				</span>
-				<label for="">Livros</label>
-			</button>
-
-			<button type="button row btn-primary">
-				<span class="material-symbols-outlined">
-					description
-				</span>
-				<label for="">Temas</label>
-			</button>
-
-		</div>
-		<div class="container-fluid mx-auto d-flex ">
-			<a class="nav-btn-sair mx-auto text-white" id="btnsair" href="./index.php">
-				Sair
-			</a>
-		</div>
 	</main>
-
-	<footer id="footer" class="bg-dark text-white pt-5 pb-4"></footer>
 </body>
 </html>

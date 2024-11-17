@@ -106,6 +106,11 @@ $('#proxform').on("click", function(event)
 	}
 });
 
+// $('#voltar').on("click", function(event)  {
+// 	etapa02.css('display', 'none');
+// 	etapa01.css('display', 'block');
+// });
+
 function isMobile() {
 	return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 	return true;

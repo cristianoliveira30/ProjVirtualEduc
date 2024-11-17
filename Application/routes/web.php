@@ -22,7 +22,7 @@ use App\Notifications\PasswordUpdateNotification;
 |
 */
 
-// páginas disponíveis sem login
+// controllers de autenticacao
 Route::get('/', [VirtualController::class, 'index'])->name('index');
 Route::get('/cadastro', [VirtualController::class, 'cadastro'])->name('cadastro');
 Route::post('/cadastro', [AuthController::class, 'cadastroAction'])->name('cadastro.action');
@@ -32,12 +32,17 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // páginas disponíveis somente com login
 Route::get('/home', [VirtualController::class, 'home'])->name('home');
+Route::get('/profile', [VirtualController::class, 'profile'])->name('profile');
+
+// métodos do bd
+Route::get('/disciplinas', [DataController::class, 'getListaDisciplinas'])->name('getListaDisciplinas');
+Route::post('/addDisciplinas', [DataController::class, 'addDisciplinas'])->name('addDisciplinas')->withoutMiddleware('auth');
+Route::get('/getQtdSeguidores', [DataController::class, 'getQtdSeguidores'])->name('getQtdSeguidores');
 
 // páginas em testes
 Route::get('/testeblades', [VirtualController::class, 'testeblades'])->name('testeblades');
 Route::get('/testevue', [VirtualController::class, 'testevue'])->name('testevue');
-Route::get('/disciplinas', [DataController::class, 'getListaDisciplinas'])->name('getListaDisciplinas');
-Route::post('/addDisciplinas', [DataController::class, 'addDisciplinas'])->name('addDisciplinas')->withoutMiddleware('auth');
+Route::get('/testegeral', [VirtualController::class, 'testegeral'])->name('testegeral');
 
 
 // daqui para baixo são as rotas de recuperação de senha

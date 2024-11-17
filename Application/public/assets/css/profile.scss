@@ -1,0 +1,11 @@
+@use './bootstrap/coresbootstrap.scss' as *;
+
+#divprofile {
+    position: relative;
+    left: 10vh;
+    background-color: $gray-600;
+    border: solid 2px $v05;
+    h1 {
+        color: $white;
+    }
+}

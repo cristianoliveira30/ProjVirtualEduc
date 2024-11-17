@@ -1,0 +1,38 @@
+@use './bootstrap/coresbootstrap.scss' as *;
+
+#sidebar {
+    background-color: $v06;
+    width: 10vh;
+    height: 100vh;
+    position: fixed;
+    top: 8.3;
+    left: 0;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+#sidebar:hover {
+    animation: deslize ease-in-out forwards 0.5s;
+}
+
+@keyframes deslize {
+    100% {
+        width: 35vh;
+    }
+}
+
+.sidebarimg {
+    width: 8vh!important;
+}
+
+.siderow {
+    text-decoration: none;
+}
+
+.siderow:hover {
+    width: 120%;
+    border: solid 1px $v01;
+    cursor: pointer;
+    background: linear-gradient(144deg , $v02, $v06 80%);
+}

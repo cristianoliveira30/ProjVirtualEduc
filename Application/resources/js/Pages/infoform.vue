@@ -47,8 +47,7 @@
                                         <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier">
                                         </g>
                                         <g id="SVGRepo_iconCarrier">
-                                            <path fill=""
-                                                d="M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 
+                                            <path fill="" d="M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 
                                                 7.48043 3 7.73478 3 8V20C3 21.6569 4.34315 23 6 23H7C7.55228 23 8 22.5523 
                                                 8 22C8 21.4477 7.55228 21 7 21H6C5.44772 21 5 20.5523 5 20V9H10C10.5523 9 
                                                 11 8.55228 11 8V3H18C18.5523 3 19 3.44772 19 4V9C19 9.55228 19.4477 10 20 
@@ -58,8 +57,8 @@
                                                 21 11 20.1046 11 19C11 17.8954 11.8954 17 13 17H14V16V15.5ZM16.5 11C14.142 11 
                                                 12.2076 12.8136 12.0156 15.122C10.2825 15.5606 9 17.1305 9 19C9 21.2091 10.7909 
                                                 23 13 23H20C22.2091 23 24 21.2091 24 19C24 17.1305 22.7175 15.5606 20.9844 
-                                                15.122C20.7924 12.8136 18.858 11 16.5 11Z"
-                                                clip-rule="evenodd" fill-rule="evenodd">
+                                                15.122C20.7924 12.8136 18.858 11 16.5 11Z" clip-rule="evenodd"
+                                                fill-rule="evenodd">
                                             </path>
                                         </g>
                                     </svg>
@@ -72,8 +71,7 @@
                                 <div class="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="green"
                                         class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477
                                              9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 
                                              1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
                                     </svg>
@@ -83,8 +81,7 @@
                                 </div>
                             </div>
 
-                            <input type="file" id="filedocumento"
-                                @change="handleFileUpload('documento', $event)">
+                            <input type="file" id="filedocumento" @change="handleFileUpload('documento', $event)">
                         </label>
 
                         <!-- From Uiverse.io by Yaya12085  -->
@@ -96,8 +93,7 @@
                                         <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier">
                                         </g>
                                         <g id="SVGRepo_iconCarrier">
-                                            <path fill=""
-                                                d="M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 
+                                            <path fill="" d="M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 
                                                 7.48043 3 7.73478 3 8V20C3 21.6569 4.34315 23 6 23H7C7.55228 23 8 22.5523 
                                                 8 22C8 21.4477 7.55228 21 7 21H6C5.44772 21 5 20.5523 5 20V9H10C10.5523 9 
                                                 11 8.55228 11 8V3H18C18.5523 3 19 3.44772 19 4V9C19 9.55228 19.4477 10 20 
@@ -107,8 +103,8 @@
                                                 21 11 20.1046 11 19C11 17.8954 11.8954 17 13 17H14V16V15.5ZM16.5 11C14.142 
                                                 11 12.2076 12.8136 12.0156 15.122C10.2825 15.5606 9 17.1305 9 19C9 21.2091 
                                                 10.7909 23 13 23H20C22.2091 23 24 21.2091 24 19C24 17.1305 22.7175 15.5606 
-                                                20.9844 15.122C20.7924 12.8136 18.858 11 16.5 11Z"
-                                                clip-rule="evenodd" fill-rule="evenodd">
+                                                20.9844 15.122C20.7924 12.8136 18.858 11 16.5 11Z" clip-rule="evenodd"
+                                                fill-rule="evenodd">
                                             </path>
                                         </g>
                                     </svg>
@@ -121,8 +117,7 @@
                                 <div class="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="green"
                                         class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 
                                             9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 
                                             1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
                                     </svg>
@@ -131,8 +126,7 @@
                                     <span>{{ form1.foto.name }}</span>
                                 </div>
                             </div>
-                            <input type="file" id="filefoto"
-                                @change="handleFileUpload('foto', $event)">
+                            <input type="file" id="filefoto" @change="handleFileUpload('foto', $event)">
                         </label>
                     </div>
 
@@ -250,17 +244,28 @@ export default {
         },
         async getDisciplinas() {
             try {
-                await $.ajax({
-                    url: route('getListaDisciplinas'),
-                    method: 'GET',
-                    success: (response) => {
-                        this.disciplinas = response.disciplinas;
-                        console.log(this.disciplinas);
-                    },
-                    error: (xhr, status, error) => {
-                        console.error('Erro ao buscar disciplinas:', (error || xhr || status));
-                    }
-                });
+                // await $.ajax({
+                //     url: route('getListaDisciplinas'),
+                //     method: 'GET',
+                //     success: (response) => {
+                //         this.disciplinas = response.disciplinas;
+                //         console.log(this.disciplinas);
+                //     },
+                //     error: (xhr, status, error) => {
+                //         console.error('Erro ao buscar disciplinas:', (error || xhr || status));
+                //     }
+                // });
+
+                await axios.get(route('getListaDisciplinas'))
+                    .then(
+                        response => {
+                            this.disciplinas = response.data.disciplinas;
+                            console.log(this.disciplinas);
+                        }).catch(
+                            error => {
+                                console.error('Erro ao buscar disciplinas:', (error || xhr || status));
+                            }
+                        );
             } catch (error) {
                 console.error('Erro ao buscar disciplinas:', error);
             }
@@ -290,32 +295,6 @@ export default {
                 form.append('documento', this.form1['documento']);
                 form.append('foto', this.form1['foto']);
                 form.append('disciplinas', JSON.stringify(this.disciplinasSelecionadas));
-
-                // Faz a requisição AJAX
-                // $.ajax({
-                //     url: link,
-                //     method: 'POST',
-                //     processData: false, // Impede que o jQuery processe os dados (necessário para enviar arquivos)
-                //     contentType: false, // Desabilita o tipo de conteúdo padrão para o envio de arquivos
-                //     data: form, // Envia o formData
-                //     headers: {
-                //         'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
-                //         'Accept': 'application/json'
-                //     },
-                //     success: (response) => {
-                //         console.log(response);
-                //         Swal.fire({
-                //             icon: "success",
-                //             title: "Concluído",
-                //             text: "Informações Atualizadas!"
-                //         }).then(() => {
-                //             window.location.href = response.redirect;
-                //         });
-                //     },
-                //     error: (xhr, status, error) => {
-                //         console.log(xhr, status, error);
-                //     }
-                // });
 
                 // Abandone o ajax via jquery, abrace o axios via vue
                 axios.post(link, form, {
