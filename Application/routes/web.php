@@ -4,6 +4,7 @@ use App\Http\Controllers\VirtualController;
 use Illuminate\Auth\Events\PasswordReset;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DataController;
+use App\Http\Controllers\RelacionamentosController;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Hash;
@@ -22,7 +23,7 @@ use App\Notifications\PasswordUpdateNotification;
 |
 */
 
-// controllers de autenticacao
+// Rotas públicas (sem autenticação)
 Route::get('/', [VirtualController::class, 'index'])->name('index');
 Route::get('/cadastro', [VirtualController::class, 'cadastro'])->name('cadastro');
 Route::post('/cadastro', [AuthController::class, 'cadastroAction'])->name('cadastro.action');
@@ -30,19 +31,23 @@ Route::get('/login', [VirtualController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'loginAction'])->name('login.action');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
-// páginas disponíveis somente com login
-Route::get('/home', [VirtualController::class, 'home'])->name('home');
-Route::get('/profile', [VirtualController::class, 'profile'])->name('profile');
+// Rotas protegidas (somente autenticados)
+Route::middleware('auth')->group(function () {
+    Route::get('/home', [VirtualController::class, 'home'])->name('home');
+    Route::get('/profile', [VirtualController::class, 'profile'])->name('profile');
 
-// métodos do bd
-Route::get('/disciplinas', [DataController::class, 'getListaDisciplinas'])->name('getListaDisciplinas');
-Route::post('/addDisciplinas', [DataController::class, 'addDisciplinas'])->name('addDisciplinas')->withoutMiddleware('auth');
-Route::get('/getQtdSeguidores', [DataController::class, 'getQtdSeguidores'])->name('getQtdSeguidores');
+    // Métodos do banco de dados
+    Route::get('/disciplinas', [DataController::class, 'getListaDisciplinas'])->name('getListaDisciplinas');
+    Route::post('/addDisciplinas', [DataController::class, 'addDisciplinas'])->name('addDisciplinas');
+    Route::get('/getQtdSeg/{escolha}/{id}', [RelacionamentosController::class, 'getQtdSeg'])->name('getQtdSeg')->middleware('auth');
+    Route::get('/getSugestaoSeguir/{qtd}', [RelacionamentosController::class, 'getSugestaoSeguir'])->name('getSugestaoSeguir')->middleware('auth');
 
-// páginas em testes
-Route::get('/testeblades', [VirtualController::class, 'testeblades'])->name('testeblades');
-Route::get('/testevue', [VirtualController::class, 'testevue'])->name('testevue');
-Route::get('/testegeral', [VirtualController::class, 'testegeral'])->name('testegeral');
+    // Páginas de teste
+    Route::get('/testeblades', [VirtualController::class, 'testeblades'])->name('testeblades');
+    Route::get('/testevue', [VirtualController::class, 'testevue'])->name('testevue');
+    Route::get('/testegeral', [VirtualController::class, 'testegeral'])->name('testegeral');
+});
+
 
 
 // daqui para baixo são as rotas de recuperação de senha

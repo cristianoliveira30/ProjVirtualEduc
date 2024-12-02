@@ -38,11 +38,17 @@ class AuthController extends Controller
             return response()->json(['success' => false, 'message' => 'Senha ou Email incorretos']);
         }
     }
-    
+
     public function cadastroAction(Request $request)
     {
         $jsonData = $request->getContent();
         $data = json_decode($jsonData, true);
+
+        $emailExiste = User::table('users')->where('email', $data['email'])->exist();
+
+        if ($emailExiste != true) {
+            return response()->json(['success' => false, 'message' => 'Email já cadastrado']);
+        }
 
         $validator = Validator::make($data, [
             'nomeusu' => 'required|string',
@@ -66,17 +72,21 @@ class AuthController extends Controller
 
             $userCreated = User::create($data);
 
-            return response()->json(['success' => true, 'redirect' => route('login'), 'message' => $userCreated]);
+            return response()->json([
+                'success' => true, 
+                'redirect' => route('login'), 
+                'message' => $userCreated
+            ]);
         }
     }
 
-    public function logout() 
+    public function logout()
     {
         Auth::logout();
         return redirect()->route('index');
     }
 
-    public function confInfo(Request $request) 
+    public function confInfo(Request $request)
     {
         $jsonData = $request->getContent();
         $data = json_decode($jsonData, true);
@@ -94,5 +104,4 @@ class AuthController extends Controller
             return response()->json(['success' => true, 'redirect' => route('home'), 'message' => $data]);
         }
     }
-    
 }

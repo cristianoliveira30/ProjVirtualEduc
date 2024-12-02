@@ -16,21 +16,31 @@ class CreateRelacionamentosTable extends Migration
     {
         Schema::create('relacionamentos', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constant()->onDelete('cascade');
-            $table->string('user_choosen');
-            $table->boolean('seguindo');
-            $table->boolean('seguido');
-            $table->boolean('amizade');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('user_choosen')->constrained('users')->onDelete('cascade');
+            $table->boolean('seguindo')->default(false); // estou seguindo?
+            $table->boolean('seguido')->default(false); // estou sendo seguido?
+            $table->boolean('amizade')->default(false);
+            $table->timestamps();
+
+            // Índices
+            $table->index('user_id');
+            $table->index('user_choosen');
+        });
+
+        // Adicionar colunas agregadas para contagem em "users"
+        Schema::table('users', function (Blueprint $table) {
+            $table->integer('seguidores_count')->default(0);
+            $table->integer('seguindo_count')->default(0);
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('relacionamentos');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('seguidores_count');
+            $table->dropColumn('seguindo_count');
+        });
     }
 }

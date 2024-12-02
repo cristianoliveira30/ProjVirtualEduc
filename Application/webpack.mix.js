@@ -3,6 +3,7 @@ const path = require("path");
 
 mix.js("resources/js/app.js", "public/js")
     .vue()
+    .ziggy()
     .postCss("resources/css/app.css", "public/css", [])
     .webpackConfig({
         resolve: {

@@ -47,7 +47,7 @@ class VirtualController extends Controller
     }
     public function profile() {
         return Auth::user() ?
-        view('profile', ['authUser' => $this->user, 'dados' => route('getQtdSeguidores')]) :
+        view('profile', ['authUser' => $this->user]) :
         redirect(route('login'));
     }
 

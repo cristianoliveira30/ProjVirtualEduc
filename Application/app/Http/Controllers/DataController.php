@@ -8,7 +8,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Log as Log;
-
+use App\Repositories\RelacionamentosRepository;
+use App\Http\Requests\Relacionamentos;
 use Illuminate\Support\Facades\Validator;
 
 class DataController extends Controller
@@ -114,49 +115,5 @@ class DataController extends Controller
             return 'Caiu no catch';
         }
         return $retorno;
-    }
-
-    public function setQtdSeguidores($var = '') {}
-
-    public function getQtdSeguidores($var = '')
-    {
-        $user = Auth::user();
-        $qtdSeguidores = DB::table('relacionamentos')
-            ->where('seguindo', true)
-            ->where(['user_id' => $user->id])
-            ->count();
-
-        return $var ?
-            $var = $qtdSeguidores :
-            $qtdSeguidores;
-    }
-
-    public function getQtsSeguindo($var = '')
-    {
-        $user = Auth::user();
-        $qtdSeguindo = DB::table('relacionamentos')
-            ->where('seguido', true)
-            ->where(['user_id' => $user->id])
-            ->count();
-
-        return $var ?
-            $var = $qtdSeguindo :
-            $qtdSeguindo;
-    }
-
-    public function getSugestaoSeguir(int $var)
-    {
-        $user = Auth::user();
-        
-        if (!$user) { 
-            return [];
-        }
-
-        // Consulta os usuários para sugestão
-        return DB::table('users')
-            ->select('nomeusu')
-            ->where('id', '!=', $user->id)
-            ->limit($var)
-            ->get();
     }
 }
