@@ -12,7 +12,6 @@ import 'bootstrap/dist/js/bootstrap.js';
 import 'bootstrap/dist/css/bootstrap.css';
 
 // Importar seus componentes
-import footercomponent from './Pages/footer.vue';
 import infoform from './Pages/infoform.vue';
 import profile from './Pages/profile.vue';
 
@@ -33,7 +32,6 @@ window.onload = function() {
   window.Swal = Swal;
 
   mountComponent(profile, '#divprofile');
-  mountComponent(footercomponent, '#footer');
 };
 
 // montando uma modal com sweet alert
