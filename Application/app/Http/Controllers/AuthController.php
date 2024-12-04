@@ -43,15 +43,13 @@ class AuthController extends Controller
     {
         $jsonData = $request->getContent();
         $data = json_decode($jsonData, true);
-    
-        // Verifica se o e-mail já existe
+
         $emailExiste = User::where('email', $data['email'])->exists();
-    
-        if ($emailExiste) {
+
+        if ($emailExiste != true) {
             return response()->json(['success' => false, 'message' => 'Email já cadastrado']);
         }
-    
-        // Validação dos dados
+
         $validator = Validator::make($data, [
             'nomeusu' => 'required|string',
             'nomecomp' => 'required|string',
@@ -66,23 +64,21 @@ class AuthController extends Controller
             'estado' => 'required|alpha',
             'endereco' => 'required|string'
         ]);
-    
+
         if ($validator->fails()) {
             return response()->json($validator->errors(), 422);
+        } else {
+            $data['password'] = Hash::make($data['password']);
+
+            $userCreated = User::create($data);
+
+            return response()->json([
+                'success' => true, 
+                'redirect' => route('login'), 
+                'message' => $userCreated
+            ]);
         }
-    
-        // Criação do usuário
-        $data['password'] = Hash::make($data['password']);
-    
-        $userCreated = User::create($data);
-    
-        return response()->json([
-            'success' => true,
-            'redirect' => redirect(route('login')),
-            'message' => $userCreated
-        ]);
     }
-    
 
     public function logout()
     {
