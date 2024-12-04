@@ -12,14 +12,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/cadastro.css">
-	{{-- esse script é o validador de mascara --}}
+    {{-- esse script é o validador de mascara --}}
     <script src="https://cdn.jsdelivr.net/npm/jquery-mask-plugin@1.14.16/dist/jquery.mask.min.js"
-        integrity="sha256-Kg2zTcFO9LXOc7IwcBx1YeUBJmekycsnTsq2RuFHSZU=" crossorigin="anonymous">
-	</script>
-	{{-- e esse é o validador de objetos --}}
+        integrity="sha256-Kg2zTcFO9LXOc7IwcBx1YeUBJmekycsnTsq2RuFHSZU=" crossorigin="anonymous"></script>
+    {{-- e esse é o validador de objetos --}}
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.21.0/dist/jquery.validate.min.js"
-        integrity="sha256-umbTaFxP31Fv6O1itpLS/3+v5fOAWDLOUzlmvOGaKV4=" crossorigin="anonymous">
-	</script>
+        integrity="sha256-umbTaFxP31Fv6O1itpLS/3+v5fOAWDLOUzlmvOGaKV4=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -172,7 +170,10 @@
             allowOutsideClick: false,
             didOpen: () => {
                 Swal.showLoading();
-            }
+            },
+            background: '#203cc1',
+            color: "#f8f7ff",
+            confirmButtonColor: '#fa0081'
         });
 
         const formDataObject = {};
@@ -194,20 +195,35 @@
             success: function(response) {
                 console.log((response.message));
                 Swal.close();
-                if (response) {
+                if (response.success === true) {
                     Swal.fire({
                         icon: "success",
                         title: "Concluído",
-                        text: "Cadastro bem sucedido!"
+                        text: "Cadastro bem sucedido!",
+                        background: '#203cc1',
+                        color: "#f8f7ff",
+                        confirmButtonColor: '#fa0081'
                     }).then(() => {
                         // Redireciona para a nova página
                         window.location.href = response.redirect;
+                    });
+                } else if (response.success === false) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Erro',
+                        text: response.message,
+                        background: '#203cc1',
+                        color: "#f8f7ff",
+                        confirmButtonColor: '#fa0081'
                     });
                 } else {
                     Swal.fire({
                         icon: 'error',
                         title: 'Cadastro maldoso ou inválido!',
-                        text: 'Algo deu errado com seu cadastro. Por favor, tente novamente.'
+                        text: 'Algo deu errado com seu cadastro. Por favor, tente novamente.',
+                        background: '#203cc1',
+                        color: "#f8f7ff",
+                        confirmButtonColor: '#fa0081'
                     });
                 }
             },

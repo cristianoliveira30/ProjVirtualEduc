@@ -44,9 +44,14 @@ class AuthController extends Controller
         $jsonData = $request->getContent();
         $data = json_decode($jsonData, true);
 
+        // Verifica se o e-mail já existe
         $emailExiste = User::where('email', $data['email'])->exists();
+        $cpfExiste = User::where('cpf', $data['cpf'])->exists();
 
-        if ($emailExiste != true) {
+        if ($cpfExiste) {
+            return response()->json(['success' => false, 'message' => 'CPF já cadastrado']);
+        }
+        if ($emailExiste) {
             return response()->json(['success' => false, 'message' => 'Email já cadastrado']);
         }
 
@@ -73,8 +78,8 @@ class AuthController extends Controller
             $userCreated = User::create($data);
 
             return response()->json([
-                'success' => true, 
-                'redirect' => route('login'), 
+                'success' => true,
+                'redirect' => route('login'),
                 'message' => $userCreated
             ]);
         }
