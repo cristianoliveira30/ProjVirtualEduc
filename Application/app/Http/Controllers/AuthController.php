@@ -47,7 +47,11 @@ class AuthController extends Controller
         // Verifica se o e-mail já existe
         $emailExiste = User::where('email', $data['email'])->exists();
         $cpfExiste = User::where('cpf', $data['cpf'])->exists();
+        $nomeusuExiste = User::where('nomeusu', $data['nomeusu'])->exists();
 
+        if ($nomeusuExiste) {
+            return response()->json(['success' => false, 'message' => 'Nome de usuário já cadstrado']);
+        }
         if ($cpfExiste) {
             return response()->json(['success' => false, 'message' => 'CPF já cadastrado']);
         }
