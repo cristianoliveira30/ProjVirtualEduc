@@ -1,0 +1,146 @@
+Como rodar o projeto no Linux Server
+
+# 1 - atualize o Linux, instale as dependência e ferramentas
+
+# rode no terminal
+sudo apt-get update && sudo apt-get upgrade
+
+sudo apt install net-tools
+# caso esse comando não funcione coloque no terminal ifconfig e então ele dirá o comando correto
+
+# pode escolher outra interface se preferir, não use esse comando se estiver usando wsl
+sudo apt-get install ubuntu-desktop 
+# após isso reinicie o sistema caso esteja usando uma VM ou no Host
+
+# 2 - Instale o banco de dados, o php, apache e o pdo
+
+sudo apt install postgresql
+
+sudo apt install -y postgresql-common
+
+sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
+
+sudo apt update
+
+sudo apt -y install postgresql
+
+# instalando a interface de banco 
+# se vc estiver usando wsl pule essa parte
+#########################################################################
+
+curl -fsS https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo gpg --dearmor -o /usr/share/keyrings/packages-pgadmin-org.gpg
+
+sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/packages-pgadmin-org.gpg] https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
+
+sudo apt install pgadmin4
+
+# não me pergunte o q tds esse comando fazem, eles estão na documentação do pgadmin se quiser dar uma olhada
+#########################################################################
+
+# use esse comando para verificar se o postgresql está ativo
+sudo systemctl status postgresql
+
+# entre como root
+sudo su
+
+# troque para entrar como usuário de banco
+su - postgres
+
+# troque a senha do seu usuário postgres pra algo fácil
+\psql
+'\password postgres' ou 'ALTER USER postgres PASSWORD 'postgres';'
+
+#coloque uma senha, repita e depois salve
+\q 
+exit
+
+# use exit novamente para sair de root
+exit
+
+# agora quando quiser entrar como usuário postgres novamente digite o comando
+sudo -u postgres psql
+
+# configure o banco de dados para o projeto, se estiver pelo wsl faça isso
+#########################################################################
+# acesse o postgres
+sudo -u postgres psql
+
+#crie a database de acordo com o nome no arquivo .env(será configurado depois)
+CREATE DATABASE VirtualTest OWNER postgres;
+
+# verifique se a database foi criada e depois saia
+\l
+\q
+\q
+#########################################################################
+
+# instale o php com extensão para o postgres
+sudo apt-get install php libapache2-mod-php
+sudo apt-get install php-pgsql #caso não especifique a versão será baixada a mais recente
+
+#reinicia o apache
+sudo service apache2 reload
+sudo chmod -R 777 /var/www/html
+
+# 3 - Baixe o repositório e as dependências
+# faça login no GitHub de alguma forma e de git clone
+# se estiver com interface use o navegador, senão use conexão ssh no wsl
+
+#conectando via ssh(se via terminal)
+#########################################################################
+# no terminal gere uma nova chave de ssh
+ssh-keygen -t ed25519 -C "seu-email@example.com"
+
+# depois gere um certificado e o valide em sua maquina 
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+
+# copie o conteúdo que aparecer no terminal após esse código
+cat ~/.ssh/id_ed25519.pub
+
+# agora acesse as configurações de sua conta do GitHub em seu Windows e adicione um nova chave ssh
+
+# após isso de git clone no repositório
+cd 
+cd /var/www/html
+mkdir htdocs
+cd htdocs
+git clone git@github.com:cristianoliveira30/ProjVirtualEduc.git
+
+cd ProjVirtualEduc/Application
+#########################################################################
+
+# instale as dependências
+sudo apt install npm
+sudo apt-get install composer
+sudo apt-get install php8.3-xml
+sudo systemctl restart apache2
+sudo composer install --ignore-platform-reqs
+sudo composer update
+sudo npm i
+
+# verifique se está tudo funcionando
+php artisan
+
+# se não aparecer nenhum erro então está funcionando
+
+# após isso crie e configure o seu arquivo .env e depois rode os comandos do artisan
+nano .env # cole aqui as configurações do .env.example e mude a cenexão e a senha de acordo com o que foi configurado no postgres mais cedo
+
+# gere os dado do banco de dados
+php artisan migrate
+
+# se estiver em uma vm ou no próprio host
+php artisan serve
+
+# se estiver no wsl
+php artisan serve --host=0.0.0.0 --port=8000
+
+# abra uma nova guia do wsl
+hostname -I
+# anote o ip que aparecer e acesse pelo navegador do Windows o endereço mais a porta
+# ex.: http://192.168.50.125:8000
+
+# substitua o ip do exemplo pelo o que vc teve no terminal
+
+isso é tudo pessoal...
