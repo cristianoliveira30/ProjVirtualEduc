@@ -32,6 +32,7 @@
 #divprofile {
   position: relative;
   left: 10vh;
+  top: 10vh;
   background-color: #6c757d;
   border: solid 2px #5aa9e6;
 }

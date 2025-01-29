@@ -5,6 +5,7 @@ namespace App\Repositories;
 use App\Models\Relacionamentos;
 use Exception;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class RelacionamentosRepository
 {
@@ -20,31 +21,33 @@ class RelacionamentosRepository
         $this->user = Auth::user();
     }
 
-    public function jaSegue($idSeguido)
+    public function jaSegue($idSeguido, $userId)
     {
-        $resposta = $this->model->where('user_id', $this->user->id)->where('user_choosen', $idSeguido)->select(['seguindo']);
-
-        return $resposta['seguindo'] == true ? true : false;
+        return $this->model
+        ->where('user_id', $userId)
+        ->where('user_choosen', $idSeguido)
+        ->select(['seguindo']);
     }
 
     /**
      * Faz as alteracoes para seguir um usuario
      * 
-     * @param string $idSeguido | ID do usuario que sera seguido
+     * @param int $idSeguido | ID do usuario que sera seguido
+     * @param int $userId | ID do usuario que vai seguir
      * @return bool
      */
-    public function comecarSeguir($idSeguido)
+    public function comecarSeguir(int $idSeguido, int $userId)
     {
         try {
             $this->model
                 ->updateOrInsert(
-                    ['user_id' => $this->user->id, 'user_choosen' => $idSeguido],
+                    ['user_id' => $userId, 'user_choosen' => $idSeguido],
                     ['seguindo' => true]
                 );
 
             $this->model
                 ->updateOrInsert(
-                    ['user_id' => $idSeguido, 'user_choosen' => $this->user->id],
+                    ['user_id' => $idSeguido, 'user_choosen' => $userId],
                     ['seguido' => true]
                 );
         } catch (Exception $e) {
@@ -57,32 +60,110 @@ class RelacionamentosRepository
     /**
      * Faz as alteracoes para desfazer o seguimento.
      * 
-     * @param string $idSeguido | ID do usuario que deixara de ser seguido
-     * @return true|false
+     * @param int $idSeguido | ID do usuario que deixara de ser seguido
+     * @param int $userId | ID do usuario que deixara de seguir
+     * @return bool
      */
-    public function deixarSeguir($idSeguido)
+    public function deixarSeguir(int $idSeguido, int $userId)
     {
-        return $this->model
-            ->where('user_id', $this->user->id)
-            ->where('user_choosen', $idSeguido)
-            ->update(['seguindo' => false]) > 0;
+        try {
+            $this->model
+                ->where('user_id', $userId)
+                ->where('user_choosen', $idSeguido)
+                ->update(['seguindo' => false]) > 0;
+        } catch (Exception $e) {
+            return ['response' => false, 'message' => $e->getMessage() . ' ' . $e->getCode()];
+        }
+
+        return ['response' => true];
     }
 
-    public function taSeguindo($idSeguido)
-    {
-        return $this->model
-            ->where('user_id', $this->user->id)
-            ->where('user_choosen', $idSeguido)
-            ->where('seguindo', true)
-            ->exist();
+    public function getListaSeguindo($id) {
+        try {
+            // IDs de usuários que o usuário já segue
+            $idSeguido = $this->model
+                ->where('user_id', $id)
+                ->where('seguindo', true)
+                ->pluck('user_choosen')
+                ->toArray(); // Converte para array
+            
+            // Se não houver IDs, retorna uma mensagem adequada
+            if (empty($idSeguido)) {
+                return [
+                    'response' => true, 
+                    'message' => 'Nenhum seguidor encontrado.'
+                ];
+            }
+    
+            // Seleção de usuários já seguidos
+            $resposta = DB::table('users')
+                ->select('nomeusu', 'id')
+                ->whereIn('id', $idSeguido) // Usa whereIn para listas de IDs
+                ->where('id', '!=', $id) // Exclui o próprio usuário
+                ->get();
+    
+            // Se a resposta estiver vazia
+            if ($resposta->isEmpty()) {
+                return [
+                    'response' => true,
+                    'message' => 'Nenhum seguidor encontrado na tabela de usuários.'
+                ];
+            }
+        } catch (Exception $e) {
+            return [
+                'response' => false, 
+                'message' => $e->getMessage() . ' ' . $e->getCode()
+            ];
+        }
+    
+        return [
+            'response' => true, 
+            'message' => $resposta
+        ];
     }
 
-    public function eSeguido($idSeguido)
-    {
-        return $this->model
-            ->where('user_id', $this->user->id)
-            ->where('user_choosen', $idSeguido)
-            ->where('seguido', true)
-            ->exist();
+    public function getListaSeguidores($id) {
+        try {
+            // IDs de usuários que o usuário já segue
+            $idSeguido = $this->model
+                ->where('user_id', $id)
+                ->where('seguindo', true)
+                ->pluck('user_choosen')
+                ->toArray(); // Converte para array
+            
+            // Se não houver IDs, retorna uma mensagem adequada
+            if (empty($idSeguido)) {
+                return [
+                    'response' => true, 
+                    'message' => 'Nenhum seguidor encontrado.'
+                ];
+            }
+    
+            // Seleção de usuários já seguidos
+            $resposta = DB::table('users')
+                ->select('nomeusu', 'id')
+                ->whereIn('id', $idSeguido) // Usa whereIn para listas de IDs
+                ->where('id', '!=', $id) // Exclui o próprio usuário
+                ->get();
+    
+            // Se a resposta estiver vazia
+            if ($resposta->isEmpty()) {
+                return [
+                    'response' => true,
+                    'message' => 'Nenhum seguidor encontrado na tabela de usuários.'
+                ];
+            }
+        } catch (Exception $e) {
+            return [
+                'response' => false, 
+                'message' => $e->getMessage() . ' ' . $e->getCode()
+            ];
+        }
+    
+        return [
+            'response' => true, 
+            'message' => $resposta
+        ];
     }
+    
 }

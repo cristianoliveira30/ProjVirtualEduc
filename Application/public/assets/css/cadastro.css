@@ -51,10 +51,6 @@ input[type=submit]:hover {
   color: black;
 }
 
-.etapa02 {
-  display: none;
-}
-
 /* From Uiverse.io by micaelgomestavares */
 .backgroundForm {
   display: flex;

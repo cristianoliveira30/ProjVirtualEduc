@@ -12,6 +12,35 @@ use Illuminate\Support\Facades\Validator;
 
 class AuthController extends Controller
 {
+    private function validaCPF($cpf)
+    {
+
+        // Extrai somente os números
+        $cpf = preg_replace('/[^0-9]/is', '', $cpf);
+
+        // Verifica se foi informado todos os digitos corretamente
+        if (strlen($cpf) != 11) {
+            return false;
+        }
+
+        // Verifica se foi informada uma sequência de digitos repetidos. Ex: 111.111.111-11
+        if (preg_match('/(\d)\1{10}/', $cpf)) {
+            return false;
+        }
+
+        // Faz o calculo para validar o CPF
+        for ($t = 9; $t < 11; $t++) {
+            for ($d = 0, $c = 0; $c < $t; $c++) {
+                $d += $cpf[$c] * (($t + 1) - $c);
+            }
+            $d = ((10 * $d) % 11) % 10;
+            if ($cpf[$c] != $d) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public function loginAction(Request $request)
     {
         // Obtém o conteúdo JSON da solicitação
@@ -44,11 +73,19 @@ class AuthController extends Controller
         $jsonData = $request->getContent();
         $data = json_decode($jsonData, true);
 
-        // Verifica se o e-mail já existe
+        // Verifica se o cpf é válido
+        $cpfValido = $this->validaCPF($data['cpf']);
+        if ($cpfValido == false) {
+            response()->json(['success' => false, 'message' => 'CPF inválido']);
+        }
+
+        // Verifica se algumas informações já existem
         $emailExiste = User::where('email', $data['email'])->exists();
         $cpfExiste = User::where('cpf', $data['cpf'])->exists();
         $nomeusuExiste = User::where('nomeusu', $data['nomeusu'])->exists();
 
+
+        // Responde se as informações já estiverem em uso
         if ($nomeusuExiste) {
             return response()->json(['success' => false, 'message' => 'Nome de usuário já cadstrado']);
         }

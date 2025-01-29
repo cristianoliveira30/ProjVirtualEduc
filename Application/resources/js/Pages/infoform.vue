@@ -159,17 +159,31 @@
         </form>
     </div>
 </template>
-<script>
-import axios from 'axios';
-import { route } from 'ziggy-js';
+<script setup>
+import { ref, onMounted } from 'vue';
+import { useInfo } from '../Composables/useInformation';
+import { usePageTools } from '../Composables/usePagesTools';
 
-$.ajaxSetup({
-    headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-        'Accept': 'application/json',
-    }
-});
+const {
+    disciplinas,
+    disciplinasSelecionadas,
+    form1,
+    getDisciplinas,
+    handleFileUpload,
+    ocultarDisciplina,
+    mostrarDisciplina,
+    addInteresses,
+} = useInfo();
 
+const {
+    ziggyReady,
+    currentStep,
+    waitForZiggyRoutes,
+    nextStep,
+    prevStep,
+} = usePageTools();
+
+// Componente "cadaDisciplina"
 const cadaDisciplina = {
     props: ['disciplina', 'disciplinasSelecionadas'],
     template: `<button 
@@ -181,6 +195,7 @@ const cadaDisciplina = {
                </button>`
 }
 
+// Componente "selDisciplinas"
 const selDisciplinas = {
     props: ['disciplina', 'disciplinasSelecionadas'],
     template: `<button 
@@ -193,142 +208,10 @@ const selDisciplinas = {
                </button>`
 }
 
-export default {
-    name: 'infoform',
-    data() {
-        return {
-            currentStep: 1, // Controla qual parte do formulário é exibida
-            disciplinas: [],  // Array de disciplinas que será preenchido via AJAX
-            disciplinasSelecionadas: [],  // Disciplinas que serão ocultadas
-            form1: {
-                segemail: '',
-                documento: null,
-                foto: null
-            }
-        }
-    },
-    mounted() {
-        this.getDisciplinas();
-    },
-    methods: {
-        handleFileUpload(type, event) {
-            const file = event.target.files[0];
-
-            if (file && file.size < 2000000 && ['image/jpeg', 'application/pdf'].includes(file.type)) {
-                if (type === 'documento') {
-                    this.form1.documento = event.target.files[0];
-                }
-                else if (type === 'foto') {
-                    this.form1.foto = event.target.files[0]
-                }
-            }
-            else {
-                Swal.fire({
-                    icon: "error",
-                    title: "Erro",
-                    text: `Formato inválido ou arquivo muito grande, 
-                    certifique-se que o arquivo tenha menos de 2MB`
-                });
-            }
-        },
-        nextStep() {
-            console.log(this.form1);
-            if (this.currentStep < 2) {
-                this.currentStep++;
-            }
-        },
-        prevStep() {
-            if (this.currentStep > 1) {
-                this.currentStep--;
-            }
-        },
-        async getDisciplinas() {
-            try {
-                // await $.ajax({
-                //     url: route('getListaDisciplinas'),
-                //     method: 'GET',
-                //     success: (response) => {
-                //         this.disciplinas = response.disciplinas;
-                //         console.log(this.disciplinas);
-                //     },
-                //     error: (xhr, status, error) => {
-                //         console.error('Erro ao buscar disciplinas:', (error || xhr || status));
-                //     }
-                // });
-
-                await axios.get(route('getListaDisciplinas'))
-                    .then(
-                        response => {
-                            this.disciplinas = response.data.disciplinas;
-                            console.log(this.disciplinas);
-                        }).catch(
-                            error => {
-                                console.error('Erro ao buscar disciplinas:', (error || xhr || status));
-                            }
-                        );
-            } catch (error) {
-                console.error('Erro ao buscar disciplinas:', error);
-            }
-        },
-        ocultarDisciplina(disciplina) {
-            // Move a disciplina para o array de ocultas e adiciona a selecionadas
-            this.disciplinasSelecionadas.push(disciplina);
-        },
-        mostrarDisciplina(disciplina) {
-            // Remove a disciplina do array de ocultas e de selecionadas
-            this.disciplinasSelecionadas = this.disciplinasSelecionadas.filter(d => d !== disciplina);
-        },
-        addInteresses() {
-            Swal.fire({
-                title: 'Carregando...',
-                html: 'Por favor, aguarde.',
-                allowOutsideClick: false,
-                didOpen: () => {
-                    Swal.showLoading();
-                }
-            });
-            try {
-                const form = new FormData();
-                const link = route('addDisciplinas');
-
-                form.append('segemail', this.form1['segemail']);
-                form.append('documento', this.form1['documento']);
-                form.append('foto', this.form1['foto']);
-                form.append('disciplinas', JSON.stringify(this.disciplinasSelecionadas));
-
-                // Abandone o ajax via jquery, abrace o axios via vue
-                axios.post(link, form, {
-                    headers: {
-                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
-                        'Accept': 'application/json'
-                    }
-                }).then(response => {
-                    console.log(response.data);
-                    Swal.fire({
-                        icon: "success",
-                        title: "Concluído",
-                        text: "Informações Atualizadas!"
-                    }).then(() => {
-                        window.location.href = response.data.redirect;
-                    });
-                })
-                    .catch(error => {
-                        console.error(error.response ? error.response.data : error);
-                        Swal.fire({
-                            icon: "error",
-                            title: "Erro",
-                            text: "Houve um erro ao processar suas informações, tente novamente mais tarde ou entre em contato com o suporte"
-                        });
-                    });
-            }
-            catch {
-                console.log('Erro ao adicionar interesses');
-            }
-        }
-    },
-    components: {
-        cadaDisciplina,
-        selDisciplinas
-    }
-};
+// Monta o componente ao ser carregado
+onMounted(() => {
+    waitForZiggyRoutes(() => {
+        getDisciplinas();
+    });
+});
 </script>

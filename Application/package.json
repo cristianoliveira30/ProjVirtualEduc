@@ -35,6 +35,7 @@
         "jquery-mask-plugin": "^1.14.16",
         "sweetalert2": "^11.6.13",
         "vue": "^3.4.27",
+        "vue-the-mask": "^0.11.1",
         "ziggy": "^2.4.0",
         "ziggy-js": "^2.3.0"
     }

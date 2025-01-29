@@ -1,5 +1,5 @@
 import { createApp } from 'vue';
-
+import VueTheMask from 'vue-the-mask';
 import $ from 'jquery/src/jquery.js';
 
 import { Ziggy } from './ziggy.js'; // Importe o arquivo gerado pelo Ziggy
@@ -12,6 +12,8 @@ import 'bootstrap/dist/js/bootstrap.js';
 import 'bootstrap/dist/css/bootstrap.css';
 
 // Importar seus componentes
+import formCadastro from './Pages/formCadastro.vue';
+import formLogin from './Pages/formLogin.vue';
 import infoform from './Pages/infoform.vue';
 import profile from './Pages/profile.vue';
 
@@ -22,7 +24,8 @@ const mountComponent = (component, selector) => {
   if (element) {
     console.log(`Montando componente em ${selector}`);
     const app = createApp(component);
-    app.use(ZiggyVue, Ziggy);
+    app.use(ZiggyVue, Ziggy); // permite o uso de routes
+    app.use(VueTheMask)
     app.mount(selector);
   }
 };
@@ -32,6 +35,8 @@ window.onload = function() {
   window.Swal = Swal;
 
   mountComponent(profile, '#divprofile');
+  mountComponent(formLogin, '#divFormLogin');
+  mountComponent(formCadastro, '#divFormCadastro');
 };
 
 // montando uma modal com sweet alert

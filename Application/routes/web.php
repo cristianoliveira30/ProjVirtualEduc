@@ -39,8 +39,11 @@ Route::middleware('auth')->group(function () {
     // Métodos do banco de dados
     Route::get('/disciplinas', [DataController::class, 'getListaDisciplinas'])->name('getListaDisciplinas');
     Route::post('/addDisciplinas', [DataController::class, 'addDisciplinas'])->name('addDisciplinas');
-    Route::get('/getQtdSeg/{escolha}/{id}', [RelacionamentosController::class, 'getQtdSeg'])->name('getQtdSeg')->middleware('auth');
-    Route::get('/getSugestaoSeguir/{qtd}', [RelacionamentosController::class, 'getSugestaoSeguir'])->name('getSugestaoSeguir')->middleware('auth');
+    Route::get('/getQtdSeg/{escolha}/{id}', [RelacionamentosController::class, 'getQtdSeg'])->name('getQtdSeg');
+    Route::get('/getSugestaoSeguir/{qtd}', [RelacionamentosController::class, 'getSugestaoSeguir'])->name('getSugestaoSeguir');
+    Route::get('/comecarSeguir/{idSeguido}', [RelacionamentosController::class, 'comecarSeguir'])->name('comecarSeguir');
+    Route::get('/deixarSeguir/{idSeguido}', [RelacionamentosController::class, 'deixarSeguir'])->name('deixarSeguir');
+    Route::get('/getListaSeguindo', [RelacionamentosController::class, 'getListaSeguindo'])->name('getListaSeguindo');
 
     // Páginas de teste
     Route::get('/testeblades', [VirtualController::class, 'testeblades'])->name('testeblades');

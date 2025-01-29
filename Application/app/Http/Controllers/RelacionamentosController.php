@@ -11,7 +11,6 @@ class RelacionamentosController extends Controller
 {
     private $relacionamentos;
     private $usuarios;
-    private $user;
 
     /**
      * Construtor para injeção de dependência.
@@ -21,24 +20,25 @@ class RelacionamentosController extends Controller
         $this->relacionamentos = $relacionamentos;
         $this->usuarios = new UserRepository();
         $this->middleware('auth');
-        $this->user = Auth::user();
     }
 
     /**
      * Verifica se o usuário já segue a pessoa antes de começar a seguir
      * 
-     * @param int|string id da pessoa
+     * @param int id da pessoa
      * @return array 
      */
-    public function comecarSeguir(int $userId)
+    public function comecarSeguir(int $idSeguido)
     {
-        $jaSegue = $this->relacionamentos->jaSegue($userId);
-        $retornoRela = $this->relacionamentos->comecarSeguir($userId);
-        $retornoUser = $this->usuarios->comecarSeguir($userId);
-
-        if ($jaSegue == true) {
-            return ['response' => false, 'message' => 'Você já segue essa pessoa'];
+        $userId = Auth::id();
+        $jaSegue = $this->relacionamentos->jaSegue($idSeguido, $userId);
+        
+        if (!$jaSegue) {
+            return ['response' => false, 'message' => 'ja segue', 'data' => $jaSegue];
         }
+        
+        $retornoRela = $this->relacionamentos->comecarSeguir($idSeguido, $userId);
+        $retornoUser = $this->usuarios->comecarSeguir($idSeguido, $userId);
 
         return
             $retornoRela['response'] == true &&
@@ -54,14 +54,34 @@ class RelacionamentosController extends Controller
     }
 
     /**
+     * Verifica se o usuário segue a pessoa antes de parar de seguir
      * 
+     * @param int id da pessoa
+     * @return array
      */
-    public function deixarSeguir($userId)
+    public function deixarSeguir(int $idSeguido)
     {
-        $retornoRela = $this->relacionamentos->deixarSeguir($userId);
-        $retornoUser = $this->usuarios->deixarSeguir($userId);
+        $userId = Auth::id();
+        $jaSegue = $this->relacionamentos->jaSegue($idSeguido, $userId);
 
-        return $retornoRela && $retornoUser;
+        if (!$jaSegue) {
+            return ['response' => false, 'message' => 'usuário não segue essa pessoa', 'data' => $jaSegue];
+        }
+
+        $retornoRela = $this->relacionamentos->deixarSeguir($idSeguido, $userId);
+        $retornoUser = $this->usuarios->deixarSeguir($idSeguido, $userId);
+
+        return 
+        $retornoRela['response'] == true &&
+        $retornoUser['response'] == true ?
+        ['response' => true, 'message' => 'deixou de seguir'] :
+        [
+            'response' => false,
+            'message' => [
+                'user' => $retornoUser['message'],
+                'relacionamento' => $retornoRela['message']
+            ]
+        ];
     }
 
     /**
@@ -86,25 +106,22 @@ class RelacionamentosController extends Controller
     
         return response()->json($this->usuarios->getQtdSeg($escolha, $id));
     }
-    
 
+    public function getListaSeguindo() {
+        $userId = Auth::id();
+
+        $retorno = $this->relacionamentos->getListaSeguindo($userId);
+
+        return
+        $retorno['response'] == true ?
+        ['response' => true, 'message' => $retorno['message']] :
+        ['response' => false, 'message' => $retorno['message']];
+    }
 
     /**
-     * retorna se o usuário segue ou não o outro
-     * 
-     * @param int $userId = id do usuário que está sendo verificado
-     * @return bool
+     * @param int $var é o quantidade de sugestões que será retornado
+     * @return array retornará um array com 0[[key]->nomeusu]
      */
-    public function taSeguindo(int $userId)
-    {
-        return $this->relacionamentos->taSeguindo($userId);
-    }
-
-    public function eSeguido(int $userId)
-    {
-        return $this->relacionamentos->eSeguido($userId);
-    }
-
     public function getSugestaoSeguir(int $var)
     {
         $user = Auth::id();
